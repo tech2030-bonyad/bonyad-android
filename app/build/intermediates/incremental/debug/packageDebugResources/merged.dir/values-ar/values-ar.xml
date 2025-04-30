@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bonyadandroid</string>
+    <string name="camera">كاميرا</string>
+    <string name="cancel">إلغاء</string>
+    <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
+    <string name="copied">copied</string>
+    <string name="failed_to_connect_to_server_please_repeat_your_requesr">خطأ فى الاتصال بالخادم برجاء المحاولة مرة أخرى</string>
+    <string name="field_required">مطلوب</string>
+    <string name="images">صور</string>
+    <string name="lang">ar</string>
+    <string name="no">لا</string>
+    <string name="no_network">لا يوجد اتصال بالإنترنت</string>
+    <string name="open1">افتح نظام تحديد المواقع</string>
+    <string name="please_activate_permission">الرجاء تفعيل الإذن</string>
+    <string name="plz_camera_gallery">اختر الكاميرا أو الصور</string>
+    <string name="plz_img">اختر الصورة</string>
+    <string name="user_deleted">تم مسح المستخدم أو حظره</string>
+    <string name="yes">نعم</string>
+</resources>

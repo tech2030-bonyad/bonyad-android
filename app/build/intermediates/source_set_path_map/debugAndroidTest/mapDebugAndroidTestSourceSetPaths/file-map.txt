@@ -1,0 +1,7 @@
+fudex.bonyad.test.app-annotation-experimental-1.4.1-0 /Users/mahmoudezzat/.gradle/caches/8.9/transforms/1b7306cb41d3d4f759e0655f953d02cb/transformed/annotation-experimental-1.4.1/res
+fudex.bonyad.test.app-core-1.6.1-1 /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5e6c73f7116d905061641da4e9ec339d/transformed/core-1.6.1/res
+fudex.bonyad.test.app-tracing-1.2.0-2 /Users/mahmoudezzat/.gradle/caches/8.9/transforms/6062460c2b52c792070438394f8e4c8e/transformed/tracing-1.2.0/res
+fudex.bonyad.test.app-androidTest-3 /Volumes/Taleen/Bonyadandroid/app/build/generated/res/resValues/androidTest/debug
+fudex.bonyad.test.app-mergeDebugAndroidTestResources-4 /Volumes/Taleen/Bonyadandroid/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+fudex.bonyad.test.app-mergeDebugAndroidTestResources-5 /Volumes/Taleen/Bonyadandroid/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+fudex.bonyad.test.app-debugAndroidTest-6 /Volumes/Taleen/Bonyadandroid/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Bonyadandroid</string>
+    <string name="camera">Camera</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_your_connection">Check your connection</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="copied">copied</string>
+    <string name="failed_to_connect_to_server_please_repeat_your_requesr">failed to connect to server please repeat your request</string>
+    <string name="field_required">required</string>
+    <string name="images">Images</string>
+    <string name="lang">en</string>
+    <string name="no">no</string>
+    <string name="no_network">No internet</string>
+    <string name="open1">open gps</string>
+    <string name="please_activate_permission">Please Activate Permission</string>
+    <string name="plz_camera_gallery">Please Choose Camera Or Gallery</string>
+    <string name="plz_img">Please Select Image</string>
+    <string name="user_deleted">User Has been Deleted By The System or bloked</string>
+    <string name="yes">yes</string>
+    <style name="Theme.Bonyadandroid" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

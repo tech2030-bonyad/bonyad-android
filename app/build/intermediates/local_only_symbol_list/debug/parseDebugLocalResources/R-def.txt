@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id main
+layout activity_splash
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string camera
+string cancel
+string check_your_connection
+string com.crashlytics.android.build_id
+string copied
+string failed_to_connect_to_server_please_repeat_your_requesr
+string field_required
+string images
+string lang
+string no
+string no_network
+string open1
+string please_activate_permission
+string plz_camera_gallery
+string plz_img
+string user_deleted
+string yes
+style Theme.Bonyadandroid
+xml backup_rules
+xml data_extraction_rules
