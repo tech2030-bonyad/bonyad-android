@@ -32,4 +32,19 @@
     <string name="login">تسجيل الدخول</string>
     <string name="don_t_have_an_account">ليس لديك حساب؟</string>
     <string name="create_an_account">إنشاء حساب</string>
+    <string name="name">الاسم</string>
+    <string name="email">البريد الإلكترونى</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="agree_to_the_terms_and_conditions">الموافقة علي الشروط والاحكام</string>
+    <string name="enter_the_information_below">أدخل المعلومات أدناه</string>
+    <string name="activation_code">رمز التفعيل</string>
+    <string name="enter_the_verification_code_sent_to_you_via_mobile_number">ادخل رمز التحقق المرسل إليك عبر رقم الجوال</string>
+    <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
+    <string name="resend_verification_code">إعادة ارسال رمز التحقق</string>
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="enter_the_mobile_number_to_send_the_activation_code">ادخل رقم الجوال لارسال رمز التفعيل</string>
+    <string name="send">ارسال</string>
+    <string name="reset_a_new_password">إعادة تعيين كلمة مرور جديدة</string>
+    <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
+    <string name="save">حفظ</string>
 </resources>

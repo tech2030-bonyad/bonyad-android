@@ -32,4 +32,19 @@
     <string name="login">Login</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="create_an_account">Create an account</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="agree_to_the_terms_and_conditions">Agree to the Terms and Conditions</string>
+    <string name="enter_the_information_below">Enter the information below</string>
+    <string name="activation_code">Activation code</string>
+    <string name="enter_the_verification_code_sent_to_you_via_mobile_number">Enter the verification code sent to you via mobile number</string>
+    <string name="the_code_has_not_been_received">The code has not been received?</string>
+    <string name="resend_verification_code">Resend verification code</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="enter_the_mobile_number_to_send_the_activation_code">Enter the mobile number to send the activation code</string>
+    <string name="send">Send</string>
+    <string name="reset_a_new_password">Reset a new password</string>
+    <string name="enter_the_new_password">Enter the new password</string>
+    <string name="save">Save</string>
 </resources>
