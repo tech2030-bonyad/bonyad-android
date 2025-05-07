@@ -30,7 +30,7 @@
                 android:textSize="20sp"
                 android:text="@string/language_change"
                 android:fontFamily="@font/cairobold"
-                android:textColor="#24273D"/>
+                android:textColor="@color/darkblue"/>
         </FrameLayout>
         <ImageView
             android:layout_width="wrap_content"

@@ -1470,6 +1470,7 @@ color background_material_dark
 color background_material_light
 color biometric_error_color
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1499,6 +1500,8 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color darkblue
+color darkwhite
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1558,6 +1561,7 @@ color highlighted_text_material_light
 color ic_ad_background
 color ic_ae_background
 color ic_launcher_background
+color lightblue
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2850,6 +2854,7 @@ drawable aw
 drawable ax
 drawable az
 drawable ba
+drawable background
 drawable bb
 drawable bd
 drawable be
@@ -2863,6 +2868,8 @@ drawable bl
 drawable bm
 drawable bn
 drawable bo
+drawable bonyad_logo_08_1
+drawable bonyad_logo_12_1
 drawable bq
 drawable br
 drawable bs
@@ -3053,6 +3060,7 @@ drawable hr
 drawable ht
 drawable hu
 drawable ic_arrow_back_24
+drawable ic_back
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3062,20 +3070,25 @@ drawable ic_call_decline_low
 drawable ic_clock_black_24dp
 drawable ic_flip_24
 drawable ic_keyboard_black_24dp
+drawable ic_language
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_lock
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_mdi_eye_off_outline
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_quill_phone
 drawable ic_rotate_left_24
 drawable ic_rotate_right_24
 drawable id
 drawable ie
 drawable il
+drawable illustration
 drawable im
 drawable in
 drawable io
@@ -3234,6 +3247,7 @@ drawable pw
 drawable py
 drawable qa
 drawable re
+drawable rec_strockblue
 drawable ro
 drawable rs
 drawable ru
@@ -3300,6 +3314,12 @@ drawable yt
 drawable za
 drawable zm
 drawable zw
+font cairoblack
+font cairobold
+font cairoextralight
+font cairolight
+font cairoregular
+font cairosemibold
 font roboto_medium_numbers
 id ALT
 id BOTTOM_END
@@ -3630,7 +3650,6 @@ id linear
 id listMode
 id list_item
 id lottie_layer_name
-id main
 id marquee
 id masked
 id match_constraint
@@ -4034,6 +4053,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_changelangue
+layout activity_login
+layout activity_selecttype
 layout activity_splash
 layout amu_info_window
 layout amu_text_bubble
@@ -4185,6 +4207,7 @@ string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string arabic
 string biometric_or_screen_lock_prompt_message
 string biometric_prompt_message
 string bottom_sheet_behavior
@@ -4229,7 +4252,10 @@ string common_signin_button_text_long
 string confirm_device_credential_password
 string copied
 string crop_image_menu_crop
+string customer_account
 string default_error_msg
+string eng
+string english
 string error_a11y_label
 string error_icon_content_description
 string exo_controls_cc_disabled_description
@@ -4285,6 +4311,7 @@ string exo_track_surround
 string exo_track_surround_5_point_1
 string exo_track_surround_7_point_1
 string exo_track_unknown
+string expert_account
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4303,6 +4330,7 @@ string fingerprint_error_user_canceled
 string fingerprint_not_recognized
 string fingerprint_or_screen_lock_prompt_message
 string fingerprint_prompt_message
+string forgot_your_password
 string generic_error_no_device_credential
 string generic_error_no_keyguard
 string generic_error_user_canceled
@@ -4316,6 +4344,8 @@ string icon_content_description
 string images
 string item_view_role_description
 string lang
+string language_change
+string log_in_to_your_account
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
 string m3_sys_motion_easing_emphasized_decelerate
@@ -4347,6 +4377,8 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string merchant_account
+string mobile_number
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -4406,6 +4438,7 @@ string mtrl_timepicker_confirm
 string no
 string no_network
 string open1
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4421,6 +4454,7 @@ string plz_camera_gallery
 string plz_img
 string screen_lock_prompt_message
 string search_menu_title
+string select_account_type
 string status_bar_notification_info_overflow
 string use_biometric_label
 string use_biometric_or_screen_lock_label
@@ -4430,6 +4464,7 @@ string use_fingerprint_label
 string use_fingerprint_or_screen_lock_label
 string use_screen_lock_label
 string user_deleted
+string welcome_back
 string yes
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "fudex.bonyad.app-debug-67:/font_cairosemibold.ttf.flat",
+        "source": "fudex.bonyad.app-main-69:/font/cairosemibold.ttf"
+    },
+    {
         "merged": "fudex.bonyad.app-debug-67:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "fudex.bonyad.app-main-69:/mipmap-mdpi/ic_launcher.webp"
     },
@@ -20,6 +24,10 @@
         "source": "fudex.bonyad.app-main-69:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_ic_mdi_eye_off_outline.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/ic_mdi_eye_off_outline.xml"
+    },
+    {
         "merged": "fudex.bonyad.app-debug-67:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "fudex.bonyad.app-main-69:/mipmap-hdpi/ic_launcher.webp"
     },
@@ -28,12 +36,84 @@
         "source": "fudex.bonyad.app-main-69:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "fudex.bonyad.app-debug-67:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "fudex.bonyad.app-main-69:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "fudex.bonyad.app-debug-67:/drawable_ic_lock.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/ic_lock.xml"
     },
     {
         "merged": "fudex.bonyad.app-debug-67:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "fudex.bonyad.app-main-69:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/xml_backup_rules.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_illustration.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/illustration.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_changelangue.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_changelangue.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/font_cairoblack.ttf.flat",
+        "source": "fudex.bonyad.app-main-69:/font/cairoblack.ttf"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_splash.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/font_cairoextralight.ttf.flat",
+        "source": "fudex.bonyad.app-main-69:/font/cairoextralight.ttf"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_ic_back.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/font_cairobold.ttf.flat",
+        "source": "fudex.bonyad.app-main-69:/font/cairobold.ttf"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/font_cairoregular.ttf.flat",
+        "source": "fudex.bonyad.app-main-69:/font/cairoregular.ttf"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_bonyad_logo_08_1.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/bonyad_logo_08_1.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_login.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_login.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_background.png.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/background.png"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_ic_quill_phone.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/ic_quill_phone.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "fudex.bonyad.app-main-69:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_rec_strockblue.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/rec_strockblue.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_bonyad_logo_12_1.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/bonyad_logo_12_1.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/drawable_ic_language.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/drawable/ic_language.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_selecttype.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_selecttype.xml"
     },
     {
         "merged": "fudex.bonyad.app-debug-67:/drawable_ic_launcher_background.xml.flat",
@@ -44,8 +124,8 @@
         "source": "fudex.bonyad.app-main-69:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "fudex.bonyad.app-debug-67:/xml_backup_rules.xml.flat",
-        "source": "fudex.bonyad.app-main-69:/xml/backup_rules.xml"
+        "merged": "fudex.bonyad.app-debug-67:/font_cairolight.ttf.flat",
+        "source": "fudex.bonyad.app-main-69:/font/cairolight.ttf"
     },
     {
         "merged": "fudex.bonyad.app-debug-67:/mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -58,10 +138,6 @@
     {
         "merged": "fudex.bonyad.app-debug-67:/drawable_ic_launcher_foreground.xml.flat",
         "source": "fudex.bonyad.app-main-69:/drawable/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "fudex.bonyad.app-debug-67:/layout_activity_splash.xml.flat",
-        "source": "fudex.bonyad.app-main-69:/layout/activity_splash.xml"
     },
     {
         "merged": "fudex.bonyad.app-debug-67:/mipmap-xhdpi_ic_launcher_round.webp.flat",

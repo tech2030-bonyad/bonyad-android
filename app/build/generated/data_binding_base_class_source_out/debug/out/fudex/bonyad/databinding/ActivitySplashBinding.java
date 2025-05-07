@@ -4,9 +4,9 @@ package fudex.bonyad.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import fudex.bonyad.R;
 import java.lang.NullPointerException;
@@ -14,20 +14,15 @@ import java.lang.Override;
 
 public final class ActivitySplashBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
-  @NonNull
-  public final ConstraintLayout main;
-
-  private ActivitySplashBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout main) {
+  private ActivitySplashBinding(@NonNull LinearLayout rootView) {
     this.rootView = rootView;
-    this.main = main;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -52,8 +47,6 @@ public final class ActivitySplashBinding implements ViewBinding {
       throw new NullPointerException("rootView");
     }
 
-    ConstraintLayout main = (ConstraintLayout) rootView;
-
-    return new ActivitySplashBinding((ConstraintLayout) rootView, main);
+    return new ActivitySplashBinding((LinearLayout) rootView);
   }
 }

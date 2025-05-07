@@ -72,6 +72,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bonyadandroid" >
         <activity
+            android:name="fudex.bonyad.ui.Activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.ChangelangueActivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.SelecttypeActivity"
+            android:exported="false" />
+        <activity
             android:name="fudex.bonyad.ui.Activity.SplashActivity"
             android:exported="true" >
             <intent-filter>

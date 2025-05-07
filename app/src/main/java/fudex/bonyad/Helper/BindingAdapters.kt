@@ -2,6 +2,7 @@ package fudex.bonyad.Helper
 
 import android.app.Activity
 import android.graphics.Color
+import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.text.Html
 import android.util.Log
@@ -169,6 +170,12 @@ object BindingAdapters {
     fun sethtml(textView: TextView, txt: String) {
         textView.setText(Html.fromHtml(txt))
 
+    }
+    @BindingAdapter("bind:underline")
+    @JvmStatic
+    fun setunderline(textView: TextView, text: String) {
+        textView.text = text
+        textView.paintFlags = textView.paintFlags or Paint.UNDERLINE_TEXT_FLAG
     }
 //    @BindingAdapter("bind:faqs", "bind:fragment")
 //    @JvmStatic

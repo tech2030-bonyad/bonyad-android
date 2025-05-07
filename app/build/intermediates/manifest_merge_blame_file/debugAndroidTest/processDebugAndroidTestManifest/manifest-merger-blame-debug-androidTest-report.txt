@@ -3,24 +3,24 @@
 3    package="fudex.raha.test" >
 4
 5    <uses-sdk
-5-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:5:5-74
+5-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:5:15-41
+6-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:5:15-41
 7        android:targetSdkVersion="35" />
-7-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:5:42-71
+7-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:5:42-71
 8
 9    <instrumentation
-9-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:11:5-15:60
+9-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:11:5-15:60
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:11:22-76
+10-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:11:22-76
 11        android:functionalTest="false"
-11-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:14:22-52
+11-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:13:22-53
+12-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:13:22-53
 13        android:label="Tests for fudex.raha"
-13-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:15:22-58
+13-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:15:22-58
 14        android:targetPackage="fudex.raha" />
-14-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:12:22-56
+14-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:12:22-56
 15
 16    <queries>
 16-->[androidx.test:runner:1.6.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/a6e4eb1bc28e7b2551862001f701ab86/transformed/runner-1.6.1/AndroidManifest.xml:24:5-28:15
@@ -40,12 +40,12 @@
 22-->[androidx.test:core:1.6.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5e6c73f7116d905061641da4e9ec339d/transformed/core-1.6.1/AndroidManifest.xml:24:22-69
 23
 24    <application
-24-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:7:5-9:19
+24-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:7:5-9:19
 25        android:debuggable="true"
 26        android:extractNativeLibs="false" >
 27        <uses-library android:name="android.test.runner" />
-27-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:8:9-60
-27-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest13132508265863269965.xml:8:23-57
+27-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:8:9-60
+27-->/Volumes/Taleen/Bonyadandroid/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest7366313808135052987.xml:8:23-57
 28
 29        <activity
 29-->[androidx.test:core:1.6.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5e6c73f7116d905061641da4e9ec339d/transformed/core-1.6.1/AndroidManifest.xml:27:9-34:20
