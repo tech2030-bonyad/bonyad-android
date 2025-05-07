@@ -47,4 +47,22 @@
     <string name="reset_a_new_password">إعادة تعيين كلمة مرور جديدة</string>
     <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
     <string name="save">حفظ</string>
+    <string name="home">الرئيسية</string>
+    <string name="my_appointments">مواعيدي</string>
+    <string name="orders">الطلبات</string>
+    <string name="profile">الملف الشخصى</string>
+    <string name="my_data">بياناتى</string>
+    <string name="wallet">المحفظة</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="language">اللغة</string>
+    <string name="about_the_platform">عن المنصة</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="terms_and_conditions">الأحكام والشروط</string>
+    <string name="privacy">الخصوصية</string>
+    <string name="edit_profile_data">تعديل بيانات الملف الشخصي</string>
+    <string name="change_mobile_number">تغير رقم الجوال</string>
+    <string name="change_password">تغير كلمة المرور</string>
+    <string name="delete_account">حذف الحساب</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
 </resources>

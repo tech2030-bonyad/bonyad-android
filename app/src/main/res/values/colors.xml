@@ -12,4 +12,6 @@
     <color name="darkwhite">#FCFDFF</color>
     <color name="darkblue">#24273D</color>
     <color name="lightgray">#8A8A8A</color>
+    <color name="lightblue1">#4CA8F9</color>
+    <color name="red">#FF6665</color>
 </resources>
