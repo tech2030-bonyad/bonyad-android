@@ -38,6 +38,15 @@
         android:theme="@style/Theme.Bonyadandroid"
         tools:targetApi="31">
         <activity
+            android:name=".ui.Activity.StaticpageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity.EditphoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity.user.EdituserdataActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Activity.EditpassActivity"
             android:exported="false" />
         <activity

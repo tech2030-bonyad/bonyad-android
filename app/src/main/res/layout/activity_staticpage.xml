@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Activity.StaticpageActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:rotationY="180"
+                android:layout_marginStart="26dp"
+                android:layout_gravity="center|start"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/about_the_platform"
+                android:fontFamily="@font/cairobold"
+                android:textColor="@color/darkblue"/>
+        </FrameLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bonyad_logo_08_1"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="45dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/cairosemibold"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkblue"
+                    tools:text="المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا
+
+المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا
+
+المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا
+
+المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا المعلومات تكتب هنا "/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>
