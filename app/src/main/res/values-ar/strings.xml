@@ -66,4 +66,6 @@
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="new_password">كلمة المرور الجديدة</string>
     <string name="enter_the_new_mobile_number">ادخل رقم الجوال الجديد</string>
+    <string name="content_of_the_message">مضمون الرسالة</string>
+    <string name="or_contact_us_through_our_platforms">أو تواصل معنا عبر منصاتنا</string>
 </resources>

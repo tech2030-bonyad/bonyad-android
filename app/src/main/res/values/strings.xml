@@ -68,4 +68,6 @@
     <string name="old_password">Old password</string>
     <string name="new_password">New Password</string>
     <string name="enter_the_new_mobile_number">Enter the new mobile number</string>
+    <string name="content_of_the_message">content of the message</string>
+    <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
 </resources>
