@@ -32,6 +32,11 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edittechnicaldata.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edituserdata.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -67,6 +72,16 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_technical_home.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_technicalregister.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_userhome.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -78,6 +93,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_technicalprofile.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
@@ -94,16 +114,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ba91a24-0be8-4d0e-8311-09f93afe2e56" name="Changes" comment="first commmit">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/ContactusActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_insta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_linkedin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_twitter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_whats.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contactus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/technical/EdittechnicaldataActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/technical/TechnicalHomeActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/technical/TechnicalregisterActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/technical/TechnicalprofileFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrowdown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_clock.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_images.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_loc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_suitcase.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edittechnicaldata.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_technical_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_technicalregister.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_technicalprofile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_staticpage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_staticpage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user/UserprofileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/ProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edituserdata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edituserdata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_userprofile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_userprofile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
@@ -175,10 +206,16 @@
       <recent name="$PROJECT_DIR$/app/src/main/res/values-ar" />
       <recent name="$PROJECT_DIR$/app/src/main/res" />
     </key>
+    <key name="android.template.-1486609018">
+      <recent name="fudex.bonyad.ui.Activity.technical" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
     <key name="android.template.-1669281519">
+      <recent name="fudex.bonyad.ui.Activity" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="fudex.bonyad.ui.Activity" />
     </key>
     <key name="android.template.-1176716113">

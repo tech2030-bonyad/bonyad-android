@@ -70,4 +70,12 @@
     <string name="enter_the_new_mobile_number">Enter the new mobile number</string>
     <string name="content_of_the_message">content of the message</string>
     <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
+    <string name="agree_to">Agree to</string>
+    <string name="address">Address</string>
+    <string name="area">Area</string>
+    <string name="years_of_experience">Years of experience</string>
+    <string name="images_of_certificates_and_licenses">Images of certificates and licenses</string>
+    <string name="please_upload_an_image">Please upload an image.</string>
+    <string name="services">Services</string>
+    <string name="appointment_management">Appointment Management</string>
 </resources>

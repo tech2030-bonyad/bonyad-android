@@ -57,7 +57,7 @@
     <string name="language">اللغة</string>
     <string name="about_the_platform">عن المنصة</string>
     <string name="contact_us">تواصل معنا</string>
-    <string name="terms_and_conditions">الأحكام والشروط</string>
+    <string name="terms_and_conditions">الشروط والاحكام</string>
     <string name="privacy">الخصوصية</string>
     <string name="edit_profile_data">تعديل بيانات الملف الشخصي</string>
     <string name="change_mobile_number">تغير رقم الجوال</string>
@@ -68,4 +68,12 @@
     <string name="enter_the_new_mobile_number">ادخل رقم الجوال الجديد</string>
     <string name="content_of_the_message">مضمون الرسالة</string>
     <string name="or_contact_us_through_our_platforms">أو تواصل معنا عبر منصاتنا</string>
+    <string name="agree_to">الموافقة علي</string>
+    <string name="address">العنوان</string>
+    <string name="area">المنطقة</string>
+    <string name="years_of_experience">سنوات الخبرة</string>
+    <string name="images_of_certificates_and_licenses">صور الشهادات والترخيص</string>
+    <string name="please_upload_an_image">قم برفع صورة</string>
+    <string name="services">خدمات</string>
+    <string name="appointment_management">ادارة المواعيد</string>
 </resources>
