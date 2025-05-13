@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.Activity.ActiveuserActivity">
+    <data class="ActivecodeviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.ActivecodeViewModel" />
+    </data>
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -37,41 +43,58 @@
             android:textSize="14sp"
             android:fontFamily="@font/cairoregular"/>
         <LinearLayout
+            android:layoutDirection="ltr"
             android:layout_width="wrap_content"
             android:layout_height="54dp"
             android:layout_gravity="center"
             android:layout_marginTop="34dp"
             android:orientation="horizontal">
-            <TextView
+            <EditText
+                android:id="@+id/code1"
+                android:onTextChanged="@{model.onnum1Changed()}"
                 android:layout_width="60dp"
+                android:inputType="phone"
                 android:layout_height="match_parent"
                 android:textSize="24sp"
                 android:gravity="center"
+                android:maxLength="1"
                 android:textColor="@color/white"
                 android:fontFamily="@font/cairosemibold"
                 android:background="@drawable/rec_strockdarkblue"/>
-            <TextView
+            <EditText
+                android:id="@+id/code2"
+                android:onTextChanged="@{model.onnum2Changed()}"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:textSize="24sp"
                 android:gravity="center"
+                android:inputType="phone"
+                android:textColor="@color/white"
+                android:maxLength="1"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/cairosemibold"
+                android:background="@drawable/rec_strockdarkblue"/>
+            <EditText
+                android:id="@+id/code3"
+                android:onTextChanged="@{model.onnum3Changed()}"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:inputType="phone"
+                android:maxLength="1"
                 android:textColor="@color/white"
                 android:layout_marginStart="20dp"
                 android:fontFamily="@font/cairosemibold"
                 android:background="@drawable/rec_strockdarkblue"/>
-            <TextView
+            <EditText
+                android:id="@+id/code4"
+                android:onTextChanged="@{model.onnum4Changed()}"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:textSize="24sp"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/cairosemibold"
-                android:background="@drawable/rec_strockdarkblue"/>
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:textSize="24sp"
+                android:inputType="phone"
+                android:maxLength="1"
                 android:gravity="center"
                 android:layout_marginStart="20dp"
                 android:textColor="@color/white"
@@ -79,11 +102,13 @@
                 android:background="@drawable/rec_strockdarkblue"/>
         </LinearLayout>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
             android:layout_gravity="center"
+            android:gravity="center"
             android:textSize="14sp"
+            android:text="@{model.timer}"
             android:textColor="#46A8F9"
             android:fontFamily="@font/cairoregular"
             tools:text="59:00"/>
@@ -100,6 +125,7 @@
                 android:textSize="14sp"
                 android:text="@string/the_code_has_not_been_received"/>
             <TextView
+                android:onClick="@{ () -> model.sendsms() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/lightblue"
@@ -109,4 +135,4 @@
                 android:text="@string/resend_verification_code"/>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>

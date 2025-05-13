@@ -23,13 +23,14 @@ object RetrofitClient {
             requestBuilder.header("version", APIModel.version)
             requestBuilder.header("Lang", context.getString(R.string.lang))
             requestBuilder.header("Accept", "application/json")
+            requestBuilder.header("Content-Type", "application/json")
             requestBuilder.header("Accept-Language", context.getString(R.string.lang))
             requestBuilder.header("x-device-type", "android")
             requestBuilder.header("x-app-version", BuildConfig.VERSION_CODE.toString())
             try {
                 requestBuilder.header(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(context).data.token
+                    "Bearer " + LoginSession.getUserData(context).token
                 )
             } catch (e: Exception) {
 
@@ -63,7 +64,7 @@ object RetrofitClient {
             try {
                 requestBuilder.header(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(context).data.token
+                    "Bearer " + LoginSession.getUserData(context).token
                 )
             } catch (e: Exception) {
 

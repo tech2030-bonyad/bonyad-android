@@ -10,9 +10,9 @@ import java.util.ArrayList
 data class LoginData(
     val token_type: String? = null,
     val expires_in: Long? = null,
-    val access_token: String? = null,
+    val token: String? = null,
     val refresh_token: String? = null,
-    var data: UserData? = null,
+    var user: UserModel? = null,
     val message: String? = null
 )
 

@@ -1,5 +1,6 @@
 package fudex.bonyad.NetWorkConnction
 
+import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.AddaressModel
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AddressesModel
@@ -16,8 +17,10 @@ import fudex.bonyad.Model.ServicestypeModel
 import fudex.bonyad.Model.SliderModel
 import fudex.bonyad.Model.SlotsModel
 import fudex.bonyad.Model.StatesModel
+import fudex.bonyad.Model.User
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import onnetysolutions.sadded.Model.AboutModel
 import onnetysolutions.sadded.Model.FaqModel
 import onnetysolutions.sadded.Model.ProfileModel
@@ -27,6 +30,7 @@ import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
@@ -97,8 +101,8 @@ interface ApiInterface {
     @GET("client/profile")
     fun getprofiledata(): Call<ProfileModel?>?
 
-    @POST("client/login")
-    fun login(@Body requestBody: RequestBody): Call<LoginData?>?
+    @POST("login")
+    fun login(@Body data: Userdata): Call<LoginData?>?
 
     @POST("client/checkSocialUser")
     fun sociallogin(@Body requestBody: RequestBody): Call<LoginData?>?
@@ -106,8 +110,8 @@ interface ApiInterface {
     @POST("checkRegisterValidation")
     fun checkregister(@Body requestBody: RequestBody): Call<ErrorResponse?>?
 
-    @POST("client/register")
-    fun register(@Body requestBody: RequestBody): Call<LoginData?>?
+    @POST("register")
+    fun register(@Body requestBody: Userdata): Call<LoginData?>?
 
     @Multipart
     @POST("client/register")
@@ -134,17 +138,20 @@ interface ApiInterface {
         @Part("device_id") device_id: RequestBody
     ): Call<LoginData?>?
 
-    @POST("client/confirm-otp-register")
-    fun verifiyuser(@Body requestBody: RequestBody): Call<LoginData?>?
+    @POST("verify-account")
+    fun verifiyuser(@Body requestBody: Userdata): Call<LoginData?>?
 
-    @POST("client/send-otp")
-    fun sendotp(@Body requestBody: RequestBody): Call<ProfileModel?>?
+    @POST("password/code")
+    fun sendotp(@Body requestBody: Userdata): Call<ProfileModel?>?
+
+    @POST("resend-code")
+    fun resendsendotp(@Body requestBody: Userdata): Call<ProfileModel?>?
 
     @POST("client/check-otp")
     fun checkotp(@Body requestBody: RequestBody): Call<ErrorResponse?>?
 
-    @POST("client/forgotPassword")
-    fun restpass(@Body requestBody: RequestBody): Call<ErrorResponse?>?
+    @POST("password/reset")
+    fun restpass(@Body requestBody: Userdata): Call<ErrorResponse?>?
 
     @POST("client/updatePassword")
     fun editpass(@Body requestBody: RequestBody): Call<ErrorResponse?>?
@@ -152,14 +159,14 @@ interface ApiInterface {
     @POST("client/updateEmail")
     fun editemail(@Body requestBody: RequestBody): Call<ProfileModel?>?
 
-    @POST("client/send-otp")
-    fun editphone(@Body requestBody: RequestBody): Call<ProfileModel?>?
+    @POST("password/code")
+    fun editphone(@Body requestBody: Userdata): Call<ProfileModel?>?
 
     @POST("client/updateProfile")
     fun editprofile(@Body requestBody: RequestBody): Call<ProfileModel?>?
 
-    @POST("client/updateMobile")
-    fun editphone1(@Body requestBody: RequestBody): Call<ProfileModel?>?
+    @POST("edit-phone")
+    fun editphone1(@Body requestBody: Userdata): Call<ProfileModel?>?
 
     @Multipart
     @POST("client/updateProfile")

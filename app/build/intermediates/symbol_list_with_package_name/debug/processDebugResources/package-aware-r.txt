@@ -297,11 +297,6 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
-attr civ_border_color
-attr civ_border_overlay
-attr civ_border_width
-attr civ_circle_background_color
-attr civ_fill_color
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -608,7 +603,6 @@ attr font
 attr fontFamily
 attr fontProviderAuthority
 attr fontProviderCerts
-attr fontProviderFallbackQuery
 attr fontProviderFetchStrategy
 attr fontProviderFetchTimeout
 attr fontProviderPackage
@@ -1483,8 +1477,6 @@ color browser_actions_text_color
 color browser_actions_title_color
 color button_material_dark
 color button_material_light
-color call_notification_answer_color
-color call_notification_decline_color
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1562,6 +1554,8 @@ color ic_ad_background
 color ic_ae_background
 color ic_launcher_background
 color lightblue
+color lightblue1
+color lightgray
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2068,6 +2062,7 @@ color primary_text_disabled_material_light
 color purple_200
 color purple_500
 color purple_700
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -2855,6 +2850,7 @@ drawable ax
 drawable az
 drawable ba
 drawable background
+drawable background1
 drawable bb
 drawable bd
 drawable be
@@ -3023,6 +3019,7 @@ drawable exo_styled_controls_speed
 drawable exo_styled_controls_subtitle_off
 drawable exo_styled_controls_subtitle_on
 drawable exo_styled_controls_vr
+drawable eye
 drawable fi
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
@@ -3059,32 +3056,64 @@ drawable hn
 drawable hr
 drawable ht
 drawable hu
+drawable ic_archive_book
+drawable ic_archive_book1
 drawable ic_arrow_back_24
+drawable ic_arrow_up
+drawable ic_arrow_up1
+drawable ic_arrowdown
 drawable ic_back
-drawable ic_call_answer
-drawable ic_call_answer_low
-drawable ic_call_answer_video
-drawable ic_call_answer_video_low
-drawable ic_call_decline
-drawable ic_call_decline_low
+drawable ic_carbon_rule
+drawable ic_clock
 drawable ic_clock_black_24dp
+drawable ic_document_text
+drawable ic_document_text1
+drawable ic_edit2
 drawable ic_flip_24
+drawable ic_home
+drawable ic_home1
+drawable ic_icon_camera
+drawable ic_iconoir_language
+drawable ic_images
+drawable ic_info
+drawable ic_insta
+drawable ic_ion_person_outline
+drawable ic_ion_person_outline2
 drawable ic_keyboard_black_24dp
 drawable ic_language
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_linkedin
+drawable ic_loc
 drawable ic_lock
+drawable ic_lockactive
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
 drawable ic_mdi_eye_off_outline
+drawable ic_mdi_light_information
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_oui_email
+drawable ic_password_check
+drawable ic_profile
+drawable ic_profile1
 drawable ic_quill_phone
+drawable ic_rectanglehome
 drawable ic_rotate_left_24
 drawable ic_rotate_right_24
+drawable ic_solar_logout_outline
+drawable ic_solar_wallet_linear
+drawable ic_suitcase
+drawable ic_tabler_user_question
+drawable ic_twitter
+drawable ic_user
+drawable ic_user_remove
+drawable ic_whats
+drawable ic_widget
+drawable ic_widget2
 drawable id
 drawable ie
 drawable il
@@ -3217,7 +3246,6 @@ drawable notification_bg_low_pressed
 drawable notification_bg_normal
 drawable notification_bg_normal_pressed
 drawable notification_icon_background
-drawable notification_oversize_large_icon_bg
 drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
@@ -3247,7 +3275,10 @@ drawable pw
 drawable py
 drawable qa
 drawable re
+drawable rec_lightblue
 drawable rec_strockblue
+drawable rec_strockdarkblue
+drawable rec_strockred
 drawable ro
 drawable rs
 drawable ru
@@ -3398,6 +3429,7 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id agreeCheck
 id alertTitle
 id aligned
 id all
@@ -3456,9 +3488,14 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id code1
+id code2
+id code3
+id code4
 id collapseActionView
 id compress
 id confirm_button
+id confirmpass
 id constraint
 id container
 id content
@@ -3511,8 +3548,8 @@ id easeInOut
 id easeOut
 id east
 id edit_query
-id edit_text_id
 id elastic
+id email
 id embed
 id end
 id endToStart
@@ -3571,6 +3608,9 @@ id exo_track_selection_view
 id exo_vr
 id expand_activities_button
 id expanded_menu
+id eye
+id eyeConfirm
+id eyePass
 id fade
 id fill
 id fill_horizontal
@@ -3593,6 +3633,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id fram
 id frost
 id fullscreen_header
 id ghost_view
@@ -3607,7 +3648,6 @@ id groups
 id guideline
 id hardware
 id header_title
-id hide_ime_id
 id hideable
 id home
 id homeAsUp
@@ -3650,6 +3690,7 @@ id linear
 id listMode
 id list_item
 id lottie_layer_name
+id main
 id marquee
 id masked
 id match_constraint
@@ -3709,6 +3750,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3744,11 +3786,13 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id pass
 id password_toggle
 id path
 id pathRelative
 id peekHeight
 id percent
+id phone
 id pin
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
@@ -3770,7 +3814,6 @@ id rectangle
 id rectangleHorizontalOnly
 id rectangleVerticalOnly
 id rectangles
-id report_drawn
 id restart
 id reverse
 id reverseSawtooth
@@ -4053,10 +4096,24 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_activeuser
 layout activity_changelangue
+layout activity_contactus
+layout activity_editpass
+layout activity_editphone
+layout activity_edittechnicaldata
+layout activity_edituserdata
+layout activity_forgetpass
 layout activity_login
+layout activity_resetpassword
 layout activity_selecttype
 layout activity_splash
+layout activity_staticpage
+layout activity_technical_home
+layout activity_technicalregister
+layout activity_userhome
+layout activity_userprofile
+layout activity_userregister
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
@@ -4092,8 +4149,8 @@ layout exo_styled_settings_list_item
 layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
 layout fingerprint_dialog_layout
-layout ime_base_split_test_activity
-layout ime_secondary_split_test_activity
+layout fragment_technicalprofile
+layout fragment_userprofile
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4176,6 +4233,7 @@ plurals exo_controls_rewind_by_amount_description
 plurals mtrl_badge_content_description
 raw com_blongho_country_data_countries
 raw com_blongho_country_data_currencies
+raw firebase_common_keep
 raw keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -4204,10 +4262,17 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_the_platform
+string activation_code
+string address
+string agree_to
+string agree_to_the_terms_and_conditions
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string appointment_management
 string arabic
+string area
 string biometric_or_screen_lock_prompt_message
 string biometric_prompt_message
 string bottom_sheet_behavior
@@ -4216,15 +4281,10 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
-string call_notification_answer_action
-string call_notification_answer_video_action
-string call_notification_decline_action
-string call_notification_hang_up_action
-string call_notification_incoming_text
-string call_notification_ongoing_text
-string call_notification_screening_text
 string camera
 string cancel
+string change_mobile_number
+string change_password
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -4250,12 +4310,28 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string confirm_device_credential_password
+string confirm_password
+string confirm_password_must_same_password
+string contact_us
+string content_of_the_message
 string copied
+string copy_toast_msg
+string create_an_account
 string crop_image_menu_crop
 string customer_account
 string default_error_msg
+string delete_account
+string don_t_have_an_account
+string edit_profile_data
+string email
+string email_foramt_is_wrong
 string eng
 string english
+string enter_the_information_below
+string enter_the_mobile_number_to_send_the_activation_code
+string enter_the_new_mobile_number
+string enter_the_new_password
+string enter_the_verification_code_sent_to_you_via_mobile_number
 string error_a11y_label
 string error_icon_content_description
 string exo_controls_cc_disabled_description
@@ -4318,6 +4394,9 @@ string fab_transformation_sheet_behavior
 string face_or_screen_lock_prompt_message
 string face_prompt_message
 string failed_to_connect_to_server_please_repeat_your_requesr
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string fcm_fallback_notification_channel_label
 string field_required
 string fingerprint_dialog_icon_description
@@ -4330,11 +4409,15 @@ string fingerprint_error_user_canceled
 string fingerprint_not_recognized
 string fingerprint_or_screen_lock_prompt_message
 string fingerprint_prompt_message
+string forgot_password
 string forgot_your_password
 string generic_error_no_device_credential
 string generic_error_no_keyguard
 string generic_error_user_canceled
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string home
+string i_agree_to
 string ic_flip_24
 string ic_flip_24_horizontally
 string ic_flip_24_vertically
@@ -4342,10 +4425,15 @@ string ic_rotate_left_24
 string ic_rotate_right_24
 string icon_content_description
 string images
+string images_of_certificates_and_licenses
 string item_view_role_description
 string lang
+string language
 string language_change
+string length_must_be
 string log_in_to_your_account
+string login
+string logout
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
 string m3_sys_motion_easing_emphasized_decelerate
@@ -4435,9 +4523,16 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string my_appointments
+string my_data
+string name
+string new_password
 string no
 string no_network
+string old_password
 string open1
+string or_contact_us_through_our_platforms
+string orders
 string password
 string password_toggle_content_description
 string path_password_eye
@@ -4450,12 +4545,23 @@ string pick_image_gallery
 string place_autocomplete_clear_button
 string place_autocomplete_search_hint
 string please_activate_permission
+string please_upload_an_image
 string plz_camera_gallery
 string plz_img
+string privacy
+string profile
+string required
+string resend_verification_code
+string reset_a_new_password
+string save
 string screen_lock_prompt_message
 string search_menu_title
 string select_account_type
+string send
+string services
 string status_bar_notification_info_overflow
+string terms_and_conditions
+string the_code_has_not_been_received
 string use_biometric_label
 string use_biometric_or_screen_lock_label
 string use_face_label
@@ -4464,7 +4570,9 @@ string use_fingerprint_label
 string use_fingerprint_or_screen_lock_label
 string use_screen_lock_label
 string user_deleted
+string wallet
 string welcome_back
+string years_of_experience
 string yes
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -5590,7 +5698,6 @@ styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carou
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
-styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color civ_fill_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize
@@ -5616,7 +5723,7 @@ styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavio
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
-styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFallbackQuery fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
+styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable Fragment android_name android_id android_tag
@@ -5727,4 +5834,5 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml image_share_filepaths
 xml library_file_paths

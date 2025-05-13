@@ -11,9 +11,9 @@ import fudex.bonyad.Model.UserModel
 class LoginModel{
     val token_type: String? = null
     val expires_in: Int? = null
-    var access_token: String? = null
+    var token: String? = null
     var refresh_token: String? = null
     val message: String? = null
-    val data= UserData()
+    val user= UserModel()
 }
 

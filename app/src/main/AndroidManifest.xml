@@ -28,14 +28,17 @@
 
     <application
         android:name=".Helper.App"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bonyadandroid"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:supportsRtl"
         tools:targetApi="31" >
         <activity
             android:name=".ui.Activity.technical.EdittechnicaldataActivity"
@@ -90,7 +93,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.Activity.SplashActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

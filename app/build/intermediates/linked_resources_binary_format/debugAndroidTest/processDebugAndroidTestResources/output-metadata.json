@@ -4,7 +4,7 @@
     "type": "LINKED_RESOURCES_BINARY_FORMAT",
     "kind": "Directory"
   },
-  "applicationId": "fudex.raha.test",
+  "applicationId": "fudex.bonyad.test",
   "variantName": "debugAndroidTest",
   "elements": [
     {

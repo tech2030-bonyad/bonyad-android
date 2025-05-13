@@ -76,4 +76,9 @@
     <string name="please_upload_an_image">قم برفع صورة</string>
     <string name="services">خدمات</string>
     <string name="appointment_management">ادارة المواعيد</string>
+    <string name="required">مطلوب</string>
+    <string name="length_must_be">يجب أن يكون عدد الأرقام</string>
+    <string name="confirm_password_must_same_password">تأكيد كلمة المرور يجب أن يكون نفس كلمة المرور</string>
+    <string name="i_agree_to">يجب الموافقه على</string>
+    <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
 </resources>

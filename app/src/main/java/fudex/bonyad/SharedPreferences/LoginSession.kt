@@ -10,6 +10,7 @@ import com.google.gson.reflect.TypeToken
 import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.LoginData
 import fudex.bonyad.Model.UserModel
+import fudex.bonyad.ui.Activity.LoginActivity
 
 import onnetysolutions.sadded.Model.LoginModel
 
@@ -185,10 +186,10 @@ object LoginSession {
         editor.clear()
         editor.apply()
         LoginSession.isLogin = false
-//        val intent = Intent(activity, LoginActivity::class.java)
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//        activity.startActivity(intent)
-//        activity.finish()
+        val intent = Intent(activity, LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.startActivity(intent)
+        activity.finish()
     }
     fun clearData1(activity: Context) {
         initLoginSharedPreference(activity)
@@ -196,10 +197,17 @@ object LoginSession {
         editor.clear()
         editor.apply()
         LoginSession.isLogin = false
-//        val intent = Intent(activity, LoginActivity::class.java)
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//        activity.startActivity(intent)
-//        (activity as Activity).finish()
+        val intent = Intent(activity, LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.startActivity(intent)
+        (activity as Activity).finish()
+    }
+    fun clearData2(activity: Context) {
+        initLoginSharedPreference(activity)
+        val editor = loginFile!!.edit()
+        editor.clear()
+        editor.apply()
+        LoginSession.isLogin = false
     }
     fun maintaninece(activity: Context) {
 //        val intent = Intent(activity, ForceupdateActivity::class.java)
@@ -242,6 +250,17 @@ object LoginSession {
         onboardingFile =
             activity.getSharedPreferences("welcome", Context.MODE_PRIVATE)
         return onboardingFile!!.getBoolean("welcome", false)
+    }
+    fun Addtype(activity: Activity, type: Int) {
+        var onboardingFile = activity.getSharedPreferences("type", Context.MODE_PRIVATE)
+        val editor = onboardingFile!!.edit()
+        editor.putInt("type", type)
+        editor.apply()
+    }
+    fun gettype(activity: Activity): Int {
+        var onboardingFile =
+            activity.getSharedPreferences("type", Context.MODE_PRIVATE)
+        return onboardingFile!!.getInt("type", 0)
     }
 
 //    fun Addclub(activity: Context, country: Club) {

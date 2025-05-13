@@ -4,7 +4,7 @@ package fudex.bonyad.Apimodel;
 public final class APIModel {
     public static final int take = 10;
     @org.jetbrains.annotations.NotNull()
-    private static java.lang.String BASE_URL = "https://demo.raha.fudex-tech.net/api/v1/";
+    private static java.lang.String BASE_URL = "https://bonyad.fudex-tech.net/api/v1/";
     @org.jetbrains.annotations.NotNull()
     private static java.lang.String INTEGRATION_URL = "https://api-football-v1.p.rapidapi.com/v3/";
     private static boolean isproduction = false;

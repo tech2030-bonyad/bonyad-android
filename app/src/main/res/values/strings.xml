@@ -78,4 +78,9 @@
     <string name="please_upload_an_image">Please upload an image.</string>
     <string name="services">Services</string>
     <string name="appointment_management">Appointment Management</string>
+    <string name="required">required</string>
+    <string name="length_must_be">lenght must be</string>
+    <string name="confirm_password_must_same_password">confirm password must same password</string>
+    <string name="i_agree_to">must agree to</string>
+    <string name="email_foramt_is_wrong">Email formate is wrong</string>
 </resources>

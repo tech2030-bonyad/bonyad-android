@@ -130,7 +130,10 @@ object APIModel {
                     activity
                 )
             }
-            USER_DELETE ->  try {
+            USER_DELETE -> LoginSession.clearData1(activity)
+            409 -> LoginSession.clearData1(activity)
+
+            REFRESH_TOKEN -> try {
                 Log.e("data" , responseBody.errors.toString())
                 Dialogs.showToast(
                     if (responseBody.message != null) responseBody.message!! else "",
@@ -142,7 +145,6 @@ object APIModel {
                     activity
                 )
             }
-            REFRESH_TOKEN -> LoginSession.clearData1(activity)
 
             Not_RESPONSE -> {
 //                if (count >= 2){
@@ -249,7 +251,10 @@ object APIModel {
                     activity
                 )
             }
-            USER_DELETE -> try {
+            USER_DELETE -> LoginSession.clearData1(activity)
+            409 -> LoginSession.clearData1(activity)
+
+            REFRESH_TOKEN -> try {
                 Log.e("data" , responseBody.errors.toString())
                 Dialogs.showToast(
                     if (responseBody.message != null) responseBody.message!! else "",
@@ -261,8 +266,6 @@ object APIModel {
                     activity
                 )
             }
-            REFRESH_TOKEN -> LoginSession.clearData1(activity)
-
             Not_RESPONSE -> {
                 if (count >= 2){
                     Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
@@ -308,7 +311,7 @@ object APIModel {
 
                 }.type
                 val data = Gson().fromJson<LoginData>(responseString, dataType)
-                data.data?.user = LoginSession.setdata(currentActivity)
+                data.user = LoginSession.setdata(currentActivity)
                 LoginSession.setUserData1(currentActivity, data)
                 LoginSession.isLogin = true
                 listener.onRefresh();
@@ -341,7 +344,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 
@@ -371,7 +374,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 
@@ -414,7 +417,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 
@@ -444,7 +447,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 
@@ -500,7 +503,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 
@@ -531,7 +534,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 
@@ -562,7 +565,7 @@ object APIModel {
             try {
                 client.addHeader(
                     "Authorization",
-                    "Bearer " + LoginSession.getUserData(currentActivity!!).access_token
+                    "Bearer " + LoginSession.getUserData(currentActivity!!).token
                 )
             } catch (e: Exception) {
 

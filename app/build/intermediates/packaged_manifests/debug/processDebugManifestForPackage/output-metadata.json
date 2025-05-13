@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "fudex.raha",
+  "applicationId": "fudex.bonyad",
   "variantName": "debug",
   "elements": [
     {

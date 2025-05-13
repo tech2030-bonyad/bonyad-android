@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import com.blongho.country_data.World
+import com.google.firebase.FirebaseApp
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.microsoft.applicationinsights.library.ApplicationInsights
 import fudex.bonyad.Apimodel.APIModel
@@ -40,6 +41,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        FirebaseApp.initializeApp(this)
 //        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
         AppLocale.supportedLocales = listOf(Locale.ENGLISH, LOCALE_ARABIC)
         AppLocale.appLocaleRepository = SharedPrefsAppLocaleRepository(this)

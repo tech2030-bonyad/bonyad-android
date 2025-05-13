@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Bonyadandroid" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Bonyadandroid" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="fontFamily">@font/cairoregular</item>
+        <item name="colorPrimary">#1D1D1D</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!--        <item name="android:colorAccent">@color/yellow</item>-->
+        <!-- Secondary brand color. -->
+        <!--        <item name="colorSecondaryVariant">@color/yellow</item>-->
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="lineSpacing">8dp</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
 </resources>

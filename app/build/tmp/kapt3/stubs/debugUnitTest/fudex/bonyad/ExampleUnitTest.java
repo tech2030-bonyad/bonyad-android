@@ -12,7 +12,7 @@ public final class ExampleUnitTest {
         super();
     }
     
-    @org.junit.Test()
+    @error.NonExistentClass()
     public final void addition_isCorrect() {
     }
 }
