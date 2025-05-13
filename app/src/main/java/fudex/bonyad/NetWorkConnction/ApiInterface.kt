@@ -1,5 +1,6 @@
 package fudex.bonyad.NetWorkConnction
 
+import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.AddaressModel
 import fudex.bonyad.Helper.ErrorResponse
@@ -98,7 +99,7 @@ interface ApiInterface {
         @Query("location_type") location_type: String?
     ): Call<BranchsetailsModel?>?
 
-    @GET("client/profile")
+    @GET("user-details")
     fun getprofiledata(): Call<ProfileModel?>?
 
     @POST("login")
@@ -179,7 +180,7 @@ interface ApiInterface {
 //    @GET("setting")
 //    fun getsitting(): Call<SettingModel?>?
 
-    @GET("client/pages/about-us")
+    @GET("pages/about-us")
     fun aboutus(): Call<AboutModel?>?
 
     @GET("client/pages/cancellation-policy")
@@ -188,17 +189,17 @@ interface ApiInterface {
     @GET("client/faqs")
     fun faqs(): Call<FaqModel?>?
 
-    @GET("client/pages/terms-and-conditions")
+    @GET("pages/terms-and-conditions")
     fun terms(): Call<AboutModel?>?
 
-    @GET("client/pages/privacy-policy")
+    @GET("pages/privacy-policy")
     fun privacy(): Call<AboutModel?>?
 
     @POST("client/changeLanguage")
     fun changelang(@Body requestBody: RequestBody): Call<ErrorResponse?>?
 
-    @POST("client/contact-us")
-    fun contactus(@Body requestBody: RequestBody): Call<ErrorResponse?>?
+    @POST("contact-us")
+    fun contactus(@Body requestBody: Contactdata): Call<ErrorResponse?>?
 
     @POST("client/complaintOrSuggest")
     fun sendcomplain(@Body requestBody: RequestBody): Call<ErrorResponse?>?

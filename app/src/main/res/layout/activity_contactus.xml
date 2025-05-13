@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.Activity.ContactusActivity">
+    <data class="ContactusviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.ContactusViewModel" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background1">
         <LinearLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -20,6 +26,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp">
                 <ImageView
+                    android:onClick="@{ () -> model.back() }"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_back"
@@ -53,6 +60,8 @@
                             android:orientation="horizontal">
 
                             <EditText
+                                android:id="@+id/name"
+                                android:onTextChanged="@{model.onnameChanged()}"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -74,6 +83,8 @@
                         android:orientation="horizontal">
 
                         <EditText
+                            android:id="@+id/phone"
+                            android:onTextChanged="@{model.onmobileChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -96,6 +107,8 @@
                         android:orientation="horizontal">
 
                         <EditText
+                            android:id="@+id/email"
+                            android:onTextChanged="@{model.onemailChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -118,6 +131,8 @@
                         android:orientation="horizontal">
 
                         <EditText
+                            android:id="@+id/message"
+                            android:onTextChanged="@{model.onmessageChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -132,6 +147,7 @@
 
                     </LinearLayout>
                     <androidx.cardview.widget.CardView
+                        android:onClick="@{ () -> model.validateInput() }"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginStart="24dp"
@@ -196,7 +212,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTintMode="src_atop"
+            android:visibility="@{model.isloading ? View.VISIBLE : View.GONE}"
             android:indeterminateTint="@color/lightblue"
             android:layout_gravity="center"/>
     </FrameLayout>
-</LinearLayout>
+</layout>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-64:/values-es-rGT/values-es-rGT.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-65:/values-es-rGT/values-es-rGT.xml",
             "map": [
                 {
                     "source": "/Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/res/values-es-rGT/values-es-rGT.xml",

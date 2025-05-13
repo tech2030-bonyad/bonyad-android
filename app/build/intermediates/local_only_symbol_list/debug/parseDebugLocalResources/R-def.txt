@@ -61,6 +61,7 @@ drawable ic_tabler_user_question
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
+drawable ic_wadget
 drawable ic_whats
 drawable ic_widget
 drawable ic_widget2
@@ -69,6 +70,7 @@ drawable rec_lightblue
 drawable rec_strockblue
 drawable rec_strockdarkblue
 drawable rec_strockred
+drawable wadget
 font cairoblack
 font cairobold
 font cairoextralight
@@ -87,9 +89,11 @@ id eyeConfirm
 id eyePass
 id fram
 id main
+id message
 id name
 id pass
 id phone
+id title
 layout activity_activeuser
 layout activity_changelangue
 layout activity_contactus
@@ -109,6 +113,7 @@ layout activity_userhome
 layout activity_userprofile
 layout activity_userregister
 layout fragment_technicalprofile
+layout fragment_userhome
 layout fragment_userprofile
 mipmap ic_launcher
 mipmap ic_launcher_round

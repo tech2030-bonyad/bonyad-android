@@ -139,6 +139,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mahmoudezzat/.grad
 MERGED from [androidx.print:print:1.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/534bebcdc39fa64adb1c9e77b37ba77c/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/4034a0288522708886a46e25460f7d2c/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.omtodkar:ShimmerRecyclerView:v0.4.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2ced31f8b0c935e3e5683a5e332a1d85/transformed/ShimmerRecyclerView-v0.4.1/AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/1273ac49bec6a0f748767aabcd0baa3a/transformed/circleimageview-2.2.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:exifinterface:27.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/82f41c3900fb1d4100955bf2506fa525/transformed/exifinterface-27.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.microsoft.telemetry-client-for-android:AndroidCll:2.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/ff9cdfb3ee6992e9fd3b43938927e353/transformed/AndroidCll-2.0.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/36daa3d4c2fe4178ed75d23a724533f0/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
@@ -393,6 +394,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mahm
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/a53539f40c3ae1a3dcb937edd4b27c73/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/cbc1fefe1f85cea16603340f3759fbf8/transformed/transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/cbc1fefe1f85cea16603340f3759fbf8/transformed/transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/1273ac49bec6a0f748767aabcd0baa3a/transformed/circleimageview-2.2.0/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/1273ac49bec6a0f748767aabcd0baa3a/transformed/circleimageview-2.2.0/AndroidManifest.xml:9:5-20
 	android:extractNativeLibs
 		INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml
 	android:requestLegacyExternalStorage
@@ -817,6 +820,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/mahmoudez
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/4034a0288522708886a46e25460f7d2c/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.github.omtodkar:ShimmerRecyclerView:v0.4.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2ced31f8b0c935e3e5683a5e332a1d85/transformed/ShimmerRecyclerView-v0.4.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.omtodkar:ShimmerRecyclerView:v0.4.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2ced31f8b0c935e3e5683a5e332a1d85/transformed/ShimmerRecyclerView-v0.4.1/AndroidManifest.xml:7:5-9:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/1273ac49bec6a0f748767aabcd0baa3a/transformed/circleimageview-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/1273ac49bec6a0f748767aabcd0baa3a/transformed/circleimageview-2.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:exifinterface:27.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/82f41c3900fb1d4100955bf2506fa525/transformed/exifinterface-27.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:exifinterface:27.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/82f41c3900fb1d4100955bf2506fa525/transformed/exifinterface-27.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.github.microsoft.telemetry-client-for-android:AndroidCll:2.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/ff9cdfb3ee6992e9fd3b43938927e353/transformed/AndroidCll-2.0.0/AndroidManifest.xml:7:5-9:41

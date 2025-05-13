@@ -1,3 +1,0 @@
-fudex.bonyad.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme

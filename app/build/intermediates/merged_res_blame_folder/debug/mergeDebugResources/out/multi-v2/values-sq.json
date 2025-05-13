@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-64:/values-sq/values-sq.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-65:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "/Users/mahmoudezzat/.gradle/caches/8.9/transforms/713cae606de794f4b404425dce42a680/transformed/play-services-base-18.0.1/res/values-sq/values.xml",

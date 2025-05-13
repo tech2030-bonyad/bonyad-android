@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-64:/values-lv/values-lv.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-65:/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "/Users/mahmoudezzat/.gradle/caches/8.9/transforms/dc1b3129212b1092df6aa0cf48740143/transformed/exoplayer-core-2.18.0/res/values-lv/values-lv.xml",

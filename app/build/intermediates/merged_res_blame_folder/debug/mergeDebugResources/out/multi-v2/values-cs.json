@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-64:/values-cs/values-cs.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-65:/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "/Users/mahmoudezzat/.gradle/caches/8.9/transforms/8c0e4fea840ac83eda2630bdb36cc7a3/transformed/biometric-1.2.0-alpha05/res/values-cs/values-cs.xml",

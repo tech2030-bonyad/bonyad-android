@@ -296,6 +296,11 @@ int attr circularflow_defaultAngle 0x7f0400db
 int attr circularflow_defaultRadius 0x7f0400dc
 int attr circularflow_radiusInDP 0x7f0400dd
 int attr circularflow_viewCenter 0x7f0400de
+int attr civ_border_color 0x7f040544
+int attr civ_border_overlay 0x7f040545
+int attr civ_border_width 0x7f040546
+int attr civ_circle_background_color 0x7f040547
+int attr civ_fill_color 0x7f040548
 int attr clearsTag 0x7f0400df
 int attr clickAction 0x7f0400e0
 int attr clockFaceBackgroundColor 0x7f0400e1
@@ -3110,6 +3115,7 @@ int drawable ic_tabler_user_question 0x7f0801a4
 int drawable ic_twitter 0x7f0801a5
 int drawable ic_user 0x7f0801a6
 int drawable ic_user_remove 0x7f0801a7
+int drawable ic_wadget 0x7f080292
 int drawable ic_whats 0x7f0801a8
 int drawable ic_widget 0x7f0801a9
 int drawable ic_widget2 0x7f0801aa
@@ -3335,6 +3341,7 @@ int drawable vg 0x7f080285
 int drawable vi 0x7f080286
 int drawable vn 0x7f080287
 int drawable vu 0x7f080288
+int drawable wadget 0x7f080293
 int drawable wf 0x7f080289
 int drawable white_radius 0x7f08028a
 int drawable ws 0x7f08028b
@@ -4149,6 +4156,7 @@ int layout exo_styled_sub_settings_list_item 0x7f0d004e
 int layout exo_track_selection_dialog 0x7f0d004f
 int layout fingerprint_dialog_layout 0x7f0d0050
 int layout fragment_technicalprofile 0x7f0d0051
+int layout fragment_userhome 0x7f0d009d
 int layout fragment_userprofile 0x7f0d0052
 int layout m3_alert_dialog 0x7f0d0053
 int layout m3_alert_dialog_actions 0x7f0d0054
@@ -6085,6 +6093,12 @@ int styleable ChipGroup_chipSpacingVertical 3
 int styleable ChipGroup_selectionRequired 4
 int styleable ChipGroup_singleLine 5
 int styleable ChipGroup_singleSelection 6
+int[] styleable CircleImageView { 0x7f040544, 0x7f040545, 0x7f040546, 0x7f040547, 0x7f040548 }
+int styleable CircleImageView_civ_border_color 0
+int styleable CircleImageView_civ_border_overlay 1
+int styleable CircleImageView_civ_border_width 2
+int styleable CircleImageView_civ_circle_background_color 3
+int styleable CircleImageView_civ_fill_color 4
 int[] styleable CircularProgressIndicator { 0x7f04024c, 0x7f04024e, 0x7f04024f }
 int styleable CircularProgressIndicator_indicatorDirectionCircular 0
 int styleable CircularProgressIndicator_indicatorInset 1

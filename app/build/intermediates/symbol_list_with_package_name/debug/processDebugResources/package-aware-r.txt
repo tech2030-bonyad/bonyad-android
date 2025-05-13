@@ -297,6 +297,11 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
+attr civ_fill_color
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -3111,6 +3116,7 @@ drawable ic_tabler_user_question
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
+drawable ic_wadget
 drawable ic_whats
 drawable ic_widget
 drawable ic_widget2
@@ -3336,6 +3342,7 @@ drawable vg
 drawable vi
 drawable vn
 drawable vu
+drawable wadget
 drawable wf
 drawable white_radius
 drawable ws
@@ -4150,6 +4157,7 @@ layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
 layout fingerprint_dialog_layout
 layout fragment_technicalprofile
+layout fragment_userhome
 layout fragment_userprofile
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -5698,6 +5706,7 @@ styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carou
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color civ_fill_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

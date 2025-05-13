@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bonyadandroid</string>
+    <string name="app_name">بنياد</string>
     <string name="field_required">مطلوب</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">خطأ فى الاتصال بالخادم برجاء المحاولة مرة أخرى</string>
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-64:/values-gl/values-gl.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-65:/values-gl/values-gl.xml",
             "map": [
                 {
                     "source": "/Users/mahmoudezzat/.gradle/caches/8.9/transforms/26b5cae54d1650a188633170cb221c37/transformed/exoplayer-ui-2.18.0/res/values-gl/values-gl.xml",

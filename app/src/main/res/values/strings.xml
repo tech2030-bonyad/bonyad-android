@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bonyadandroid</string>
+    <string name="app_name">Bonyad</string>
     <string name="no_network">No internet</string>
     <string name="user_deleted">User Has been Deleted By The System or bloked</string>
     <string name="camera">Camera</string>

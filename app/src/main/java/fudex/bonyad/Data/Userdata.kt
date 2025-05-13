@@ -11,3 +11,11 @@ data class Userdata (
     val otp: String? = null,
     val name: String? = null,
     )
+
+data class Contactdata (
+    val name: String? = null,
+    val email: String? = null,
+    val phone: String? = null,
+    val subject: String? = null,
+    val message: String? = null
+)

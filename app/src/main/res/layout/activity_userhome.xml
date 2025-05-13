@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.Activity.user.UserhomeActivity">
+    <data class="UserhomeviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.UserhomeViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,6 +36,7 @@
                android:layout_marginStart="10dp"
                android:layout_marginEnd="10dp">
                <FrameLayout
+                   android:onClick="@{ () -> model.home() }"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_weight="1">
@@ -43,19 +49,20 @@
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_gravity="center"
-                           android:background="@drawable/ic_home"/>
+                           android:background="@{model.type == 0 ? @drawable/ic_home : @drawable/ic_home1}"/>
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:text="@string/home"
                            android:layout_marginTop="4dp"
                            android:textSize="12sp"
-                           android:textColor="@color/lightblue1"
+                           android:textColor="@{model.type == 0 ? @color/lightblue1 : @color/lightblue}"
                            android:fontFamily="@font/cairobold"
                            android:textStyle="bold"/>
                    </LinearLayout>
                </FrameLayout>
                <FrameLayout
+                   android:onClick="@{ () -> model.appointment() }"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_weight="1">
@@ -68,19 +75,20 @@
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_gravity="center"
-                           android:background="@drawable/ic_document_text1"/>
+                           android:background="@{model.type == 1 ? @drawable/ic_document_text : @drawable/ic_document_text1}" />
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:text="@string/my_appointments"
                            android:layout_marginTop="4dp"
                            android:textSize="12sp"
-                           android:textColor="@color/lightblue"
+                           android:textColor="@{model.type == 1 ? @color/lightblue1 : @color/lightblue}"
                            android:fontFamily="@font/cairobold"
                            android:textStyle="bold"/>
                    </LinearLayout>
                </FrameLayout>
                <FrameLayout
+                   android:onClick="@{ () -> model.orders() }"
                    android:visibility="gone"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
@@ -94,19 +102,20 @@
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_gravity="center"
-                           android:background="@drawable/ic_archive_book1"/>
+                           android:background="@{model.type == 2 ? @drawable/ic_archive_book : @drawable/ic_archive_book1}" />
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:text="@string/orders"
                            android:layout_marginTop="4dp"
                            android:textSize="12sp"
-                           android:textColor="@color/lightblue"
+                           android:textColor="@{model.type == 2 ? @color/lightblue1 : @color/lightblue}"
                            android:fontFamily="@font/cairobold"
                            android:textStyle="bold"/>
                    </LinearLayout>
                </FrameLayout>
                <FrameLayout
+                   android:onClick="@{ () -> model.proofile() }"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
                    android:layout_weight="1">
@@ -119,14 +128,14 @@
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_gravity="center"
-                           android:background="@drawable/ic_profile1"/>
+                           android:background="@{model.type == 3 ? @drawable/ic_profile : @drawable/ic_profile1}" />
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:text="@string/profile"
                            android:layout_marginTop="4dp"
                            android:textSize="12sp"
-                           android:textColor="#4CA8F9"
+                           android:textColor="@{model.type == 3 ? @color/lightblue1 : @color/lightblue}"
                            android:fontFamily="@font/cairobold"
                            android:textStyle="bold"/>
                    </LinearLayout>
@@ -134,4 +143,4 @@
            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>
