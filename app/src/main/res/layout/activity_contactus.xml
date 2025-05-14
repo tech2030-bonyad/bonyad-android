@@ -183,20 +183,24 @@
                         android:orientation="horizontal"
                         android:layout_gravity="center">
                         <ImageView
+                            android:onClick="@{ () -> model.whatsclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/ic_whats"/>
                         <ImageView
+                            android:onClick="@{ () -> model.twitterclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:background="@drawable/ic_twitter"/>
                         <ImageView
+                            android:onClick="@{ () -> model.instaclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:background="@drawable/ic_insta"/>
                         <ImageView
+                            android:onClick="@{ () -> model.linkinclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"

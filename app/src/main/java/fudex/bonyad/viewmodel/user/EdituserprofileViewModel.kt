@@ -113,9 +113,9 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         pickImageLauncher = this.activity.registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
             uri?.let {
                 photoUri = it
-                image = photoUri?.path.toString()
+                image = it?.path.toString()
                 Glide.with(activity)
-                    .load(photoUri)
+                    .load(it)
                     .into( this.activity.binding.photo)
             }
         }

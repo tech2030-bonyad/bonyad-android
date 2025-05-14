@@ -52,6 +52,11 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_resetpassword.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -87,11 +92,6 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_userprofile.xml">
-        <config>
-          <theme>@style/Theme.Bonyadandroid</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -119,7 +119,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ba91a24-0be8-4d0e-8311-09f93afe2e56" name="Changes" comment="first commmit">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ContactusModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/ContactusViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/ContactusViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_contactus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contactus.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +136,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/mahmoudezzat/.android/avd/Pixel_8.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=4HOZY9HIKJSOYTYX)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -172,7 +179,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Volumes/Taleen/Bonyadandroid/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/Taleen/Bonyadandroid/app/src/main/res&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -185,11 +192,11 @@
       <recent name="fudex.bonyad.ui.Activity.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/font" />
       <recent name="$PROJECT_DIR$/app/src/main/java/fudex/bonyad" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/values-ar" />
-      <recent name="$PROJECT_DIR$/app/src/main/res" />
     </key>
     <key name="android.template.-1486609018">
       <recent name="fudex.bonyad.ui.Activity.technical" />
@@ -201,6 +208,8 @@
       <recent name="fudex.bonyad.ui.Activity" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="fudex.bonyad.viewmodel" />
+      <recent name="fudex.bonyad.viewmodel.user" />
       <recent name="fudex.bonyad.ui.Fragment.user" />
       <recent name="fudex.bonyad.ui.Activity" />
     </key>
@@ -315,17 +324,91 @@
     <MESSAGE value="first commmit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commmit" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>161</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>162</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>165</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>103</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>107</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>114</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>115</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user/EdituserdataActivity.kt</url>
+          <line>87</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>102</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>113</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>141</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>144</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt</url>
+          <line>142</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="fudex.bonyad">
           <value>
-            <CheckInfo lastCheckTimestamp="1747126904619" />
+            <CheckInfo lastCheckTimestamp="1747214133605" />
           </value>
         </entry>
         <entry key="fudex.bonyad.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1747126904620" />
+            <CheckInfo lastCheckTimestamp="1747214133610" />
           </value>
         </entry>
         <entry key="fudex.raha">

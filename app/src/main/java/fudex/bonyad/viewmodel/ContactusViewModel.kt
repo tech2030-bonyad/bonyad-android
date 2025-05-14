@@ -1,45 +1,35 @@
 package fudex.bonyad.viewmodel
 
 import android.annotation.SuppressLint
-import android.app.DatePickerDialog
-import android.content.Intent
-import android.graphics.BitmapFactory
-import android.graphics.Color
-import android.os.Bundle
+import android.text.Html
 import android.text.InputFilter
 import android.util.Log
 import android.view.Gravity
-import android.view.View
-import android.widget.PopupMenu
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.adapters.TextViewBindingAdapter
 import atiaf.redstone.NetWorkConnction.RetrofitClient
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.gson.Gson
 
 import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Data.Contactdata
-import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
-import fudex.bonyad.Helper.PlayGifView
+import fudex.bonyad.Helper.IntentClass
 import fudex.bonyad.Helper.Utilities
 import fudex.bonyad.Helper.Validations
+import fudex.bonyad.Model.ContactusModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.ContactusActivity
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
+import onnetysolutions.sadded.Model.AboutModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class ContactusViewModel(activity: ContactusActivity) : BaseObservable() {
@@ -53,6 +43,10 @@ class ContactusViewModel(activity: ContactusActivity) : BaseObservable() {
     var isloading: ObservableBoolean = ObservableBoolean(false)
     var isenable: ObservableBoolean = ObservableBoolean(false)
     var maxlenght = 0
+    var insta = ""
+    var whats = ""
+    var twitter = ""
+    var linkidin = ""
 
     @SuppressLint("RestrictedApi")
     fun onmobileChanged(): TextViewBindingAdapter.OnTextChanged {
@@ -107,6 +101,7 @@ class ContactusViewModel(activity: ContactusActivity) : BaseObservable() {
         activity.binding.main.setOnClickListener {
             Utilities.closeKeyboard(activity)
         }
+        getsetting()
 
     }
 
@@ -198,5 +193,69 @@ class ContactusViewModel(activity: ContactusActivity) : BaseObservable() {
             }
         })
     }
+    fun getsetting() {
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(ApiInterface::class.java)
+        val call: Call<ContactusModel?>? = apiService.getsetting()
+        call?.enqueue(object : Callback<ContactusModel?> {
+            override fun onResponse(call: Call<ContactusModel?>, response: Response<ContactusModel?>) {
+                if (response!!.code() == 200 || response!!.code() == 201) {
+                    var data = response.body()
+                    for (item in data?.data!!){
+                        if (item.key == "facebook"){
+                            insta = item.value!!
+                        }
+                        if (item.key == "linkedIn"){
+                            linkidin = item.value!!
+                        }
+                        if (item.key == "twitter"){
+                            twitter = item.value!!
+                        }
+                        if (item.key == "whatsapp"){
+                            whats = item.value!!
+                        }
+                    }
+                }else {
+                    val errorText = response.errorBody()?.string()
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            getsetting()
+                        }
+                    })
+                }
+                isloading.set(false)
 
+            }
+
+            override fun onFailure(call: Call<ContactusModel?>?, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                isloading.set(false)
+            }
+        })
+    }
+    fun instaclisk(){
+        if (insta == ""){
+            return
+        }
+        IntentClass.goToLink(activity,insta)
+    }
+    fun twitterclisk(){
+        if (twitter == ""){
+            return
+        }
+        IntentClass.goToLink(activity,twitter)
+    }
+    fun linkinclisk(){
+        if (linkidin == ""){
+            return
+        }
+        IntentClass.goToLink(activity,linkidin)
+    }
+    fun whatsclisk(){
+        if (whats == ""){
+            return
+        }
+        IntentClass.goToLink(activity,"https://wa.me/" + whats)
+    }
 }

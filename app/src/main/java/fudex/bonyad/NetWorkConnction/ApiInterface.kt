@@ -10,6 +10,7 @@ import fudex.bonyad.Model.BookserviceModel
 import fudex.bonyad.Model.BrachesModel
 import fudex.bonyad.Model.BranchsetailsModel
 import fudex.bonyad.Model.ComplainModel
+import fudex.bonyad.Model.ContactusModel
 import fudex.bonyad.Model.LoginData
 import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.OrderdetailsModel
@@ -164,6 +165,7 @@ interface ApiInterface {
     @POST("edit-phone")
     fun editphone(@Body requestBody: Userdata): Call<ProfileModel?>?
 
+    @Headers("Accept: application/json")
     @POST("edit-user")
     fun editprofile(@Body requestBody: RequestBody): Call<ProfileModel?>?
 
@@ -184,6 +186,9 @@ interface ApiInterface {
 
     @GET("pages/about-us")
     fun aboutus(): Call<AboutModel?>?
+
+    @GET("settings")
+    fun getsetting(): Call<ContactusModel?>?
 
     @GET("client/pages/cancellation-policy")
     fun cancelpolicy(): Call<AboutModel?>?
