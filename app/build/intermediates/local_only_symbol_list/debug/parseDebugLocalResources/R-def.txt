@@ -71,6 +71,7 @@ drawable rec_strockblue
 drawable rec_strockdarkblue
 drawable rec_strockred
 drawable wadget
+drawable widget22
 font cairoblack
 font cairobold
 font cairoextralight
@@ -82,6 +83,7 @@ id code1
 id code2
 id code3
 id code4
+id confirmPass
 id confirmpass
 id email
 id eye
@@ -91,8 +93,11 @@ id fram
 id main
 id message
 id name
+id oldeyePass
+id oldpass
 id pass
 id phone
+id photo
 id title
 layout activity_activeuser
 layout activity_changelangue
@@ -103,6 +108,7 @@ layout activity_edittechnicaldata
 layout activity_edituserdata
 layout activity_forgetpass
 layout activity_login
+layout activity_profile
 layout activity_resetpassword
 layout activity_selecttype
 layout activity_splash
@@ -110,7 +116,6 @@ layout activity_staticpage
 layout activity_technical_home
 layout activity_technicalregister
 layout activity_userhome
-layout activity_userprofile
 layout activity_userregister
 layout fragment_technicalprofile
 layout fragment_userhome
@@ -204,3 +209,4 @@ string yes
 style Theme.Bonyadandroid
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

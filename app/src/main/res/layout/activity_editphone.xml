@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:bind="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.Activity.LoginActivity">
+    <data class="EditphoneViewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.EditphoneViewModel" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background1">
         <LinearLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
+                android:onClick="@{ () -> model.back() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_back"
@@ -60,9 +67,12 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="15dp"/>
                     <EditText
+                        android:id="@+id/phone"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:text="@{model.userdata.data.phone}"
+                        android:onTextChanged="@{model.onphoneChanged()}"
                         android:inputType="phone"
                         android:layout_marginStart="10dp"
                         android:textColor="@color/darkblue"
@@ -104,6 +114,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
             <androidx.cardview.widget.CardView
+                android:onClick="@{ () -> model.verifycode() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="27dp"
@@ -130,7 +141,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTintMode="src_atop"
+            android:visibility="@{model.isloading ? View.VISIBLE : View.GONE}"
             android:indeterminateTint="@color/lightblue"
             android:layout_gravity="center"/>
     </FrameLayout>
-</LinearLayout>
+</layout>

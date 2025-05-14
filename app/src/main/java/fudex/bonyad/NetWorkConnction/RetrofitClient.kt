@@ -51,13 +51,14 @@ object RetrofitClient {
         }
         return retrofit
     }
-    fun getClientintegration(context: Context): Retrofit? {
+    fun getClient1(context: Context): Retrofit? {
         var httpClient = OkHttpClient().newBuilder()
         httpClient.networkInterceptors().add(Interceptor { chain ->
             val requestBuilder = chain.request().newBuilder()
-            requestBuilder.header("x-rapidapi-host", "api-football-v1.p.rapidapi.com")
+            requestBuilder.header("version", APIModel.version)
             requestBuilder.header("Lang", context.getString(R.string.lang))
-            requestBuilder.header("x-rapidapi-key", "a81f0c8fbfmshe382542c405b534p1a4f2fjsnab63334d3305")
+            requestBuilder.header("Accept", "application/json")
+            requestBuilder.header("Content-Type", "application/json")
             requestBuilder.header("Accept-Language", context.getString(R.string.lang))
             requestBuilder.header("x-device-type", "android")
             requestBuilder.header("x-app-version", BuildConfig.VERSION_CODE.toString())
@@ -76,13 +77,13 @@ object RetrofitClient {
             writeTimeout(2, TimeUnit.MINUTES) // write timeout
             readTimeout(2, TimeUnit.MINUTES) // read timeout
         }
-        if (retrofit1 == null) {
-            retrofit1 = Retrofit.Builder()
-                .baseUrl(APIModel.INTEGRATION_URL)
+        if (retrofit == null) {
+            retrofit = Retrofit.Builder()
+                .baseUrl(APIModel.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 .build()
         }
-        return retrofit1
+        return retrofit
     }
 }

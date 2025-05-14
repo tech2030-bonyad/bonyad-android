@@ -19,3 +19,9 @@ data class Contactdata (
     val subject: String? = null,
     val message: String? = null
 )
+
+data class Editpass (
+    val password: String? = null,
+    val new_password: String? = null,
+    val new_password_confirmation: String? = null,
+)

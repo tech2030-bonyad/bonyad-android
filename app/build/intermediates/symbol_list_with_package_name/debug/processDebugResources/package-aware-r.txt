@@ -3345,6 +3345,7 @@ drawable vu
 drawable wadget
 drawable wf
 drawable white_radius
+drawable widget22
 drawable ws
 drawable xk
 drawable ye
@@ -3501,6 +3502,7 @@ id code3
 id code4
 id collapseActionView
 id compress
+id confirmPass
 id confirm_button
 id confirmpass
 id constraint
@@ -3777,6 +3779,8 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id oldeyePass
+id oldpass
 id on
 id onAttachStateChangeListener
 id onDateChanged
@@ -3800,6 +3804,7 @@ id pathRelative
 id peekHeight
 id percent
 id phone
+id photo
 id pin
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
@@ -4112,6 +4117,7 @@ layout activity_edittechnicaldata
 layout activity_edituserdata
 layout activity_forgetpass
 layout activity_login
+layout activity_profile
 layout activity_resetpassword
 layout activity_selecttype
 layout activity_splash
@@ -4119,7 +4125,6 @@ layout activity_staticpage
 layout activity_technical_home
 layout activity_technicalregister
 layout activity_userhome
-layout activity_userprofile
 layout activity_userregister
 layout amu_info_window
 layout amu_text_bubble
@@ -5843,5 +5848,6 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml file_paths
 xml image_share_filepaths
 xml library_file_paths

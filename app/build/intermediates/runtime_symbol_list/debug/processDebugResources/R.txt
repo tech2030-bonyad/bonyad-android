@@ -3344,6 +3344,7 @@ int drawable vu 0x7f080288
 int drawable wadget 0x7f080293
 int drawable wf 0x7f080289
 int drawable white_radius 0x7f08028a
+int drawable widget22 0x7f080294
 int drawable ws 0x7f08028b
 int drawable xk 0x7f08028c
 int drawable ye 0x7f08028d
@@ -3500,6 +3501,7 @@ int id code3 0x7f0a0264
 int id code4 0x7f0a0265
 int id collapseActionView 0x7f0a0087
 int id compress 0x7f0a0088
+int id confirmPass 0x7f0a026b
 int id confirm_button 0x7f0a0089
 int id confirmpass 0x7f0a0266
 int id constraint 0x7f0a008a
@@ -3776,6 +3778,8 @@ int id notification_background 0x7f0a0194
 int id notification_main_column 0x7f0a0195
 int id notification_main_column_container 0x7f0a0196
 int id off 0x7f0a0197
+int id oldeyePass 0x7f0a026c
+int id oldpass 0x7f0a026d
 int id on 0x7f0a0198
 int id onAttachStateChangeListener 0x7f0a0199
 int id onDateChanged 0x7f0a019a
@@ -3799,6 +3803,7 @@ int id pathRelative 0x7f0a01ab
 int id peekHeight 0x7f0a01ac
 int id percent 0x7f0a01ad
 int id phone 0x7f0a01ae
+int id photo 0x7f0a026e
 int id pin 0x7f0a01af
 int id place_autocomplete_clear_button 0x7f0a01b0
 int id place_autocomplete_powered_by_google 0x7f0a01b1
@@ -4111,6 +4116,7 @@ int layout activity_edittechnicaldata 0x7f0d0021
 int layout activity_edituserdata 0x7f0d0022
 int layout activity_forgetpass 0x7f0d0023
 int layout activity_login 0x7f0d0024
+int layout activity_profile 0x7f0d009e
 int layout activity_resetpassword 0x7f0d0025
 int layout activity_selecttype 0x7f0d0026
 int layout activity_splash 0x7f0d0027
@@ -4118,7 +4124,6 @@ int layout activity_staticpage 0x7f0d0028
 int layout activity_technical_home 0x7f0d0029
 int layout activity_technicalregister 0x7f0d002a
 int layout activity_userhome 0x7f0d002b
-int layout activity_userprofile 0x7f0d002c
 int layout activity_userregister 0x7f0d002d
 int layout amu_info_window 0x7f0d002e
 int layout amu_text_bubble 0x7f0d002f
@@ -7962,5 +7967,6 @@ int[] styleable include { 0x7f040124 }
 int styleable include_constraintSet 0
 int xml backup_rules 0x7f160000
 int xml data_extraction_rules 0x7f160001
+int xml file_paths 0x7f160004
 int xml image_share_filepaths 0x7f160002
 int xml library_file_paths 0x7f160003

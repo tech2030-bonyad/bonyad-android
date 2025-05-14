@@ -203,7 +203,7 @@ class ActivecodeViewModel(activity: ActiveuserActivity) : BaseObservable() {
                 }else if (LoginSession.gettype(activity) == 3){
                     type = "technician"
                 }
-                var userdata = Userdata(type, phone.get())
+                var userdata = Userdata(type, phone.get(), otp =  num1Observ.get() + num2Observ.get() + num3Observ.get() + num4Observ.get())
                 val call: Call<ProfileModel?>? = apiService.editphone1(userdata)
                 call?.enqueue(object : Callback<ProfileModel?> {
                     override fun onResponse(call: Call<ProfileModel?>, response: Response<ProfileModel?>) {

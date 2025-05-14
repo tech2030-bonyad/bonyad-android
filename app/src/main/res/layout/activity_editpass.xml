@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:bind="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.Activity.LoginActivity">
+    <data class="EditpasswordViewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.EditpassViewModel" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background1">
         <LinearLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
+                android:onClick="@{ () -> model.back() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_back"
@@ -60,6 +67,8 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="15dp"/>
                     <EditText
+                        android:id="@+id/oldpass"
+                        android:onTextChanged="@{model.onoldpasswordChanged()}"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -70,6 +79,8 @@
                         android:backgroundTint="@android:color/transparent"
                         android:layout_marginEnd="10dp"/>
                     <ImageView
+                        android:id="@+id/oldeyePass"
+                        android:onClick="@{ () -> model.oldpassclick() }"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_mdi_eye_off_outline"
@@ -108,6 +119,8 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="15dp"/>
                     <EditText
+                        android:id="@+id/pass"
+                        android:onTextChanged="@{model.onpasswordChanged()}"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -118,6 +131,8 @@
                         android:backgroundTint="@android:color/transparent"
                         android:layout_marginEnd="10dp"/>
                     <ImageView
+                        android:id="@+id/eyePass"
+                        android:onClick="@{ () -> model.passclick() }"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_mdi_eye_off_outline"
@@ -156,6 +171,8 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="15dp"/>
                     <EditText
+                        android:id="@+id/confirmPass"
+                        android:onTextChanged="@{model.onconfirmpasswordhanged()}"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -166,6 +183,8 @@
                         android:backgroundTint="@android:color/transparent"
                         android:layout_marginEnd="10dp"/>
                     <ImageView
+                        android:id="@+id/eyeConfirm"
+                        android:onClick="@{ () -> model.passconfirmclick() }"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_mdi_eye_off_outline"
@@ -190,6 +209,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
             <androidx.cardview.widget.CardView
+                android:onClick="@{ () -> model.validateInput() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="27dp"
@@ -216,7 +236,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTintMode="src_atop"
+            android:visibility="@{model.isloading ? View.VISIBLE : View.GONE}"
             android:indeterminateTint="@color/lightblue"
             android:layout_gravity="center"/>
     </FrameLayout>
-</LinearLayout>
+</layout>

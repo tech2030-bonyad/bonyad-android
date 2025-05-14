@@ -32,9 +32,7 @@ import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Activity.user.UserregisterActivity
-import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody
-import okhttp3.ResponseBody.Companion.toResponseBody
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

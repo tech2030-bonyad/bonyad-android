@@ -9,8 +9,12 @@ import androidx.databinding.ViewDataBinding;
 import fudex.bonyad.databinding.ActivecodeviewModelBindingImpl;
 import fudex.bonyad.databinding.ChangelanguageviewModelBindingImpl;
 import fudex.bonyad.databinding.ContactusviewModelBindingImpl;
+import fudex.bonyad.databinding.EditpasswordViewModelBindingImpl;
+import fudex.bonyad.databinding.EditphoneViewModelBindingImpl;
+import fudex.bonyad.databinding.EdituserViewModelBindingImpl;
 import fudex.bonyad.databinding.ForgetviewModelBindingImpl;
 import fudex.bonyad.databinding.LoginviewModelBindingImpl;
+import fudex.bonyad.databinding.ProfileviewModelBindingImpl;
 import fudex.bonyad.databinding.ResetpassviewModelBindingImpl;
 import fudex.bonyad.databinding.SelecttypeviewModelBindingImpl;
 import fudex.bonyad.databinding.StaticpageviewModelBindingImpl;
@@ -34,30 +38,42 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYCONTACTUS = 3;
 
-  private static final int LAYOUT_ACTIVITYFORGETPASS = 4;
+  private static final int LAYOUT_ACTIVITYEDITPASS = 4;
 
-  private static final int LAYOUT_ACTIVITYLOGIN = 5;
+  private static final int LAYOUT_ACTIVITYEDITPHONE = 5;
 
-  private static final int LAYOUT_ACTIVITYRESETPASSWORD = 6;
+  private static final int LAYOUT_ACTIVITYEDITUSERDATA = 6;
 
-  private static final int LAYOUT_ACTIVITYSELECTTYPE = 7;
+  private static final int LAYOUT_ACTIVITYFORGETPASS = 7;
 
-  private static final int LAYOUT_ACTIVITYSTATICPAGE = 8;
+  private static final int LAYOUT_ACTIVITYLOGIN = 8;
 
-  private static final int LAYOUT_ACTIVITYUSERHOME = 9;
+  private static final int LAYOUT_ACTIVITYPROFILE = 9;
 
-  private static final int LAYOUT_ACTIVITYUSERREGISTER = 10;
+  private static final int LAYOUT_ACTIVITYRESETPASSWORD = 10;
 
-  private static final int LAYOUT_FRAGMENTUSERPROFILE = 11;
+  private static final int LAYOUT_ACTIVITYSELECTTYPE = 11;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(11);
+  private static final int LAYOUT_ACTIVITYSTATICPAGE = 12;
+
+  private static final int LAYOUT_ACTIVITYUSERHOME = 13;
+
+  private static final int LAYOUT_ACTIVITYUSERREGISTER = 14;
+
+  private static final int LAYOUT_FRAGMENTUSERPROFILE = 15;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(15);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_activeuser, LAYOUT_ACTIVITYACTIVEUSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_changelangue, LAYOUT_ACTIVITYCHANGELANGUE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_contactus, LAYOUT_ACTIVITYCONTACTUS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_editpass, LAYOUT_ACTIVITYEDITPASS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_editphone, LAYOUT_ACTIVITYEDITPHONE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_edituserdata, LAYOUT_ACTIVITYEDITUSERDATA);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_forgetpass, LAYOUT_ACTIVITYFORGETPASS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_login, LAYOUT_ACTIVITYLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_profile, LAYOUT_ACTIVITYPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_resetpassword, LAYOUT_ACTIVITYRESETPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_selecttype, LAYOUT_ACTIVITYSELECTTYPE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_staticpage, LAYOUT_ACTIVITYSTATICPAGE);
@@ -93,6 +109,24 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for activity_contactus is invalid. Received: " + tag);
         }
+        case  LAYOUT_ACTIVITYEDITPASS: {
+          if ("layout/activity_editpass_0".equals(tag)) {
+            return new EditpasswordViewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_editpass is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYEDITPHONE: {
+          if ("layout/activity_editphone_0".equals(tag)) {
+            return new EditphoneViewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_editphone is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYEDITUSERDATA: {
+          if ("layout/activity_edituserdata_0".equals(tag)) {
+            return new EdituserViewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_edituserdata is invalid. Received: " + tag);
+        }
         case  LAYOUT_ACTIVITYFORGETPASS: {
           if ("layout/activity_forgetpass_0".equals(tag)) {
             return new ForgetviewModelBindingImpl(component, view);
@@ -104,6 +138,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new LoginviewModelBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYPROFILE: {
+          if ("layout/activity_profile_0".equals(tag)) {
+            return new ProfileviewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_profile is invalid. Received: " + tag);
         }
         case  LAYOUT_ACTIVITYRESETPASSWORD: {
           if ("layout/activity_resetpassword_0".equals(tag)) {
@@ -195,14 +235,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(11);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(15);
 
     static {
       sKeys.put("layout/activity_activeuser_0", fudex.bonyad.R.layout.activity_activeuser);
       sKeys.put("layout/activity_changelangue_0", fudex.bonyad.R.layout.activity_changelangue);
       sKeys.put("layout/activity_contactus_0", fudex.bonyad.R.layout.activity_contactus);
+      sKeys.put("layout/activity_editpass_0", fudex.bonyad.R.layout.activity_editpass);
+      sKeys.put("layout/activity_editphone_0", fudex.bonyad.R.layout.activity_editphone);
+      sKeys.put("layout/activity_edituserdata_0", fudex.bonyad.R.layout.activity_edituserdata);
       sKeys.put("layout/activity_forgetpass_0", fudex.bonyad.R.layout.activity_forgetpass);
       sKeys.put("layout/activity_login_0", fudex.bonyad.R.layout.activity_login);
+      sKeys.put("layout/activity_profile_0", fudex.bonyad.R.layout.activity_profile);
       sKeys.put("layout/activity_resetpassword_0", fudex.bonyad.R.layout.activity_resetpassword);
       sKeys.put("layout/activity_selecttype_0", fudex.bonyad.R.layout.activity_selecttype);
       sKeys.put("layout/activity_staticpage_0", fudex.bonyad.R.layout.activity_staticpage);

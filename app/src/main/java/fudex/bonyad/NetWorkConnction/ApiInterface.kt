@@ -1,6 +1,7 @@
 package fudex.bonyad.NetWorkConnction
 
 import fudex.bonyad.Data.Contactdata
+import fudex.bonyad.Data.Editpass
 import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.AddaressModel
 import fudex.bonyad.Helper.ErrorResponse
@@ -154,26 +155,27 @@ interface ApiInterface {
     @POST("password/reset")
     fun restpass(@Body requestBody: Userdata): Call<ErrorResponse?>?
 
-    @POST("client/updatePassword")
-    fun editpass(@Body requestBody: RequestBody): Call<ErrorResponse?>?
+    @POST("edit-password")
+    fun editpass(@Body requestBody: Editpass): Call<ErrorResponse?>?
 
     @POST("client/updateEmail")
     fun editemail(@Body requestBody: RequestBody): Call<ProfileModel?>?
 
-    @POST("password/code")
+    @POST("edit-phone")
     fun editphone(@Body requestBody: Userdata): Call<ProfileModel?>?
 
-    @POST("client/updateProfile")
+    @POST("edit-user")
     fun editprofile(@Body requestBody: RequestBody): Call<ProfileModel?>?
 
-    @POST("edit-phone")
+    @POST("verify-new-phone")
     fun editphone1(@Body requestBody: Userdata): Call<ProfileModel?>?
 
     @Multipart
-    @POST("client/updateProfile")
+    @POST("edit-user")
     fun editprofilewithimage(
         @Part imageFile: MultipartBody.Part,
-        @Part("name") name: RequestBody
+        @Part("name") name: RequestBody,
+        @Part("email") email: RequestBody
     ): Call<ProfileModel?>?
 
 

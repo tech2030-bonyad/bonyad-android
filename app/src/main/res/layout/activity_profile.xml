@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:bind="http://schemas.android.com/tools"
     tools:context=".ui.Activity.ProfileActivity">
+    <data class="ProfileviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.ProfileViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +23,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp">
             <ImageView
+                android:onClick="@{ () -> model.back() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_back"
@@ -39,7 +46,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="25dp"
-            android:background="@drawable/ic_widget2">
+            android:background="@drawable/widget22">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -50,6 +57,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    bind:imageUrl="@{model.img}"
                     android:layout_gravity="center"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,6 +65,7 @@
                     android:layout_marginTop="3dp"
                     android:layout_gravity="center"
                     android:textSize="18sp"
+                    android:text="@{model.userdata.data.name}"
                     android:textColor="@color/white"
                     android:fontFamily="@font/cairosemibold"
                     android:textStyle="bold"
@@ -66,12 +75,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textSize="14sp"
+                    android:text="@{model.userdata.data.email}"
                     android:textColor="@color/white"
                     android:fontFamily="@font/cairoregular"
                     tools:text="example@mail.com"/>
             </LinearLayout>
         </FrameLayout>
             <LinearLayout
+                android:onClick="@{ () -> model.editprofile() }"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -106,6 +117,7 @@
 
             </LinearLayout>
         <LinearLayout
+            android:onClick="@{ () -> model.editphone() }"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -140,6 +152,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:onClick="@{ () -> model.editpass() }"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -199,4 +212,4 @@
                 android:fontFamily="@font/cairosemibold"/>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>

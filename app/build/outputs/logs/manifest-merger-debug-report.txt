@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-106:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-106:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-106:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-106:12
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-115:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-115:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-115:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-115:12
 MERGED from [androidx.databinding:databinding-adapters:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/398e4f83d19cfd486f1e93da71aa8b03/transformed/databinding-adapters-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/3fd8e9cb516f1057fbfc374dcb3b2019/transformed/databinding-ktx-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/147482905477bbceea8dc6e7a92b5fa0/transformed/databinding-runtime-8.7.0/AndroidManifest.xml:2:1-7:12
@@ -290,8 +290,8 @@ ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:25:5-2
 	android:name
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:26:9-57
 application
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-104:19
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-104:19
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-113:19
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-113:19
 MERGED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:22:5-36:19
 MERGED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.android.material:material:1.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/AndroidManifest.xml:24:5-20
@@ -546,6 +546,22 @@ category#android.intent.category.LAUNCHER
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:101:17-77
 	android:name
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:101:27-74
+provider#androidx.core.content.FileProvider
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:104:9-112:20
+	android:grantUriPermissions
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:108:13-47
+	android:authorities
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:106:13-56
+	android:exported
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:107:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:105:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:109:13-111:54
+	android:resource
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:111:17-51
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:110:17-67
 uses-sdk
 INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml
@@ -866,12 +882,6 @@ ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gra
 		ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:26:13-37
 	android:name
 		ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:24:13-63
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:28:13-30:62
-	android:resource
-		ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:30:17-59
-	android:name
-		ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:29:17-67
 activity#com.canhub.cropper.CropImageActivity
 ADDED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:33:9-35:39
 	android:exported
