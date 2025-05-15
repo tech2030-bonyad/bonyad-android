@@ -1,5 +1,11 @@
 package fudex.bonyad.Helper;
 
+import android.content.Context;
+import android.os.Build;
+import android.provider.Settings.Secure;
+import com.scottyab.rootbeer.RootBeer;
+import java.io.File;
+
 /**
  * Created by pc on 15/02/2017.
  */

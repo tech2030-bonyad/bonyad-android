@@ -46,6 +46,8 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
+import java.io.File
+import java.io.IOException
 
 object Utilities {
     const val LOCATION_REQUEST_PERMISSION = 1083
@@ -379,5 +381,17 @@ object Utilities {
         recyclerView.layoutParams = params
     }
 
+    fun uriToFile(context: Context, uri: Uri): File? {
+        if (uri == null){
+            return  null
+        }else {
+            val inputStream = context.contentResolver.openInputStream(uri) ?: throw IOException("Cannot open input stream from URI")
+            val file = File.createTempFile("upload_", ".jpg", context.cacheDir)
+            file.outputStream().use { output ->
+                inputStream.copyTo(output)
+            }
+            return file
+        }
+    }
 
 }

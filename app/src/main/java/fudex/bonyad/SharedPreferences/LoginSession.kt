@@ -10,6 +10,7 @@ import com.google.gson.reflect.TypeToken
 import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.LoginData
 import fudex.bonyad.Model.UserModel
+import fudex.bonyad.ui.Activity.ActiveuserActivity
 import fudex.bonyad.ui.Activity.LoginActivity
 
 import onnetysolutions.sadded.Model.LoginModel
@@ -221,6 +222,15 @@ object LoginSession {
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
 //        activity.startActivity(intent)
 //        (activity as Activity).finish()
+    }
+    fun activeuser(activity: Context) {
+        val intent = Intent(activity, ActiveuserActivity::class.java)
+        intent.putExtra("phone",LoginSession.getUserData(activity).user?.phone!!)
+        intent.putExtra("dialcode","+966")
+        intent.putExtra("verify",LoginSession.getUserData(activity).user?.phone!!)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.startActivity(intent)
+        (activity as Activity).finish()
     }
     fun clearaddress(activity: Activity) {
         initcountrySharedPreference(activity)

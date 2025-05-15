@@ -23,6 +23,7 @@
     <string name="appointment_management">Appointment Management</string>
     <string name="arabic">Arabic</string>
     <string name="area">Area</string>
+    <string name="attach_a_picture">Attach a picture</string>
     <string name="camera">Camera</string>
     <string name="cancel">Cancel</string>
     <string name="change_mobile_number">Change mobile number</string>
@@ -67,7 +68,7 @@
     <string name="logout">Logout</string>
     <string name="merchant_account">Merchant Account</string>
     <string name="mobile_number">mobile number</string>
-    <string name="my_appointments">My appointments</string>
+    <string name="my_appointments">Appointments</string>
     <string name="my_data">My data</string>
     <string name="name">Name</string>
     <string name="new_password">New Password</string>
@@ -88,6 +89,7 @@
     <string name="resend_verification_code">Resend verification code</string>
     <string name="reset_a_new_password">Reset a new password</string>
     <string name="save">Save</string>
+    <string name="select">select</string>
     <string name="select_account_type">Select Account Type</string>
     <string name="send">Send</string>
     <string name="services">Services</string>

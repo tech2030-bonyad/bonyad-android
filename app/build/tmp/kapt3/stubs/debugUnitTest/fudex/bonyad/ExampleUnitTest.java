@@ -1,5 +1,7 @@
 package fudex.bonyad;
 
+import org.junit.Test;
+
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -12,7 +14,7 @@ public final class ExampleUnitTest {
         super();
     }
     
-    @error.NonExistentClass()
+    @org.junit.Test()
     public final void addition_isCorrect() {
     }
 }

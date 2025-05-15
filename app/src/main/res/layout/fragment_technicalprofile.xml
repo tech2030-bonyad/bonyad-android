@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".ui.Fragment.user.UserprofileFragment">
+    <data class="TechnicalprofileViewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.technical.TechnicalprofileViewModel" />
+
+    </data>
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,15 +25,17 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
             <LinearLayout
+                android:visibility="@{model.islogin ? View.VISIBLE : View.GONE}"
                 android:layout_width="wrap_content"
                 android:layout_height="134dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:layout_marginTop="55dp">
                 <FrameLayout
+                    android:onClick="@{ () -> model.profile() }"
                     android:layout_width="134dp"
                     android:layout_height="134dp"
-                    android:background="@drawable/ic_widget">
+                    android:background="@drawable/wadget">
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -49,10 +58,11 @@
 
                 </FrameLayout>
                 <FrameLayout
+                    android:visibility="gone"
                     android:layout_width="134dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="18dp"
-                    android:background="@drawable/ic_widget">
+                    android:background="@drawable/wadget">
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -123,6 +133,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.settings() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"
@@ -166,6 +177,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.about() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"
@@ -209,6 +221,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.contactusus() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"
@@ -252,6 +265,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.terms() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"
@@ -295,6 +309,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.privacy() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"
@@ -338,6 +353,8 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <LinearLayout
+                android:visibility="@{model.islogin ? View.VISIBLE : View.GONE}"
+                android:onClick="@{ () -> model.logout() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -360,4 +377,4 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</FrameLayout>
+</layout>

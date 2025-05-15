@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:bind="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.Activity.LoginActivity">
+    <data class="TechnicalregisterviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.technical.TechnicalregisterViewModel" />
+    </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,10 +20,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
+                android:id="@+id/main"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <ImageView
+                    android:onClick="@{ () -> model.back() }"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_back"
@@ -63,6 +70,8 @@
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>
                         <EditText
+                            android:id="@+id/name"
+                            android:onTextChanged="@{model.onnameChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -104,6 +113,8 @@
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>
                         <EditText
+                            android:id="@+id/phone"
+                            android:onTextChanged="@{model.onmobileChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -162,6 +173,8 @@
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>
                         <EditText
+                            android:id="@+id/email"
+                            android:onTextChanged="@{model.onemailChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -203,13 +216,13 @@
                             android:background="@drawable/ic_loc"
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>
-                        <TextView
+                        <EditText
+                            android:id="@+id/address"
+                            android:onTextChanged="@{model.onaddressChanged()}"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:layout_marginStart="10dp"
-                            tools:text="@string/address"
-                            android:layout_gravity="center"
                             android:textColor="@color/darkblue"
                             android:fontFamily="@font/cairosemibold"
                             android:backgroundTint="@android:color/transparent"
@@ -235,6 +248,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp">
                     <LinearLayout
+                        android:id="@+id/zoneLin"
+                        android:onClick="@{ () -> model.zoneclick() }"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginTop="15dp"
@@ -252,6 +267,7 @@
                             android:layout_weight="1"
                             android:layout_marginStart="10dp"
                             tools:text="@string/area"
+                            android:text="@{model.zonename.length() == 0 ? @string/area : model.zonename}"
                             android:layout_gravity="center"
                             android:textColor="@color/darkblue"
                             android:fontFamily="@font/cairosemibold"
@@ -285,6 +301,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp">
                     <LinearLayout
+                        android:onClick="@{ () -> model.expertclick() }"
+                        android:id="@+id/expertLin"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginTop="15dp"
@@ -302,6 +320,7 @@
                             android:layout_weight="1"
                             android:layout_marginStart="10dp"
                             tools:text="@string/years_of_experience"
+                            android:text="@{model.expertname.length() == 0 ? @string/years_of_experience : model.expertname}"
                             android:layout_gravity="center"
                             android:textColor="@color/darkblue"
                             android:fontFamily="@font/cairosemibold"
@@ -335,6 +354,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp">
                     <LinearLayout
+                        android:onClick="@{ () -> model.checkpermission() }"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="15dp"
@@ -379,6 +399,16 @@
                         android:layout_marginStart="15dp"
                         android:textColor="@color/darkblue"/>
                 </FrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    bind:images="@{model.images}"
+                    bind:fragment="@{model.activity}"
+                    android:layout_marginEnd="24dp"/>
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -398,6 +428,8 @@
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>
                         <EditText
+                            android:id="@+id/pass"
+                            android:onTextChanged="@{model.onpasswordChanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -408,6 +440,8 @@
                             android:backgroundTint="@android:color/transparent"
                             android:layout_marginEnd="10dp"/>
                         <ImageView
+                            android:onClick="@{ () -> model.passclick() }"
+                            android:id="@+id/eyePass"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/ic_mdi_eye_off_outline"
@@ -446,6 +480,8 @@
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>
                         <EditText
+                            android:id="@+id/confirmpass"
+                            android:onTextChanged="@{model.onconfirmpasswordhanged()}"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -456,6 +492,8 @@
                             android:backgroundTint="@android:color/transparent"
                             android:layout_marginEnd="10dp"/>
                         <ImageView
+                            android:onClick="@{ () -> model.passconfirmclick() }"
+                            android:id="@+id/eyeConfirm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/ic_mdi_eye_off_outline"
@@ -483,6 +521,7 @@
                     android:layout_marginTop="28dp"
                     android:layout_marginEnd="24dp">
                     <CheckBox
+                        android:id="@+id/agreeCheck"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/lightblue"/>
@@ -496,6 +535,7 @@
                         android:layout_marginStart="8dp"
                         android:textColor="@color/lightblue"/>
                     <TextView
+                        android:onClick="@{ () -> model.terms() }"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
@@ -507,6 +547,7 @@
                         android:textColor="@color/lightblue"/>
                 </LinearLayout>
                 <androidx.cardview.widget.CardView
+                    android:onClick="@{ () -> model.validateInput() }"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginStart="27dp"
@@ -534,7 +575,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTintMode="src_atop"
+            android:visibility="@{model.isloading ? View.VISIBLE : View.GONE}"
             android:indeterminateTint="@color/lightblue"
             android:layout_gravity="center"/>
     </FrameLayout>
-</LinearLayout>
+</layout>

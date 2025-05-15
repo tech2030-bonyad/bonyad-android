@@ -1,5 +1,9 @@
 package fudex.bonyad.Helper;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import fudex.bonyad.Model.AddressesDatum;
+
 /**
  * Created by BEST BUY on 5/7/2018.
  */

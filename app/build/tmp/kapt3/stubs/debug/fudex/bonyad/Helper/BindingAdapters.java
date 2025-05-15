@@ -1,9 +1,33 @@
 package fudex.bonyad.Helper;
 
+import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.text.Html;
+import android.util.Log;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.databinding.BindingAdapter;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import com.blongho.country_data.World;
+import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
+import fudex.bonyad.Model.Certificate;
+import fudex.bonyad.R;
+import fudex.bonyad.ui.Adapter.technical.Certificatesadapter;
+import fudex.bonyad.ui.Adapter.technical.Imagessadapter;
+import onnetysolutions.sadded.Model.RegisterimageModel;
+
 /**
  * Created by BEST BUY on 5/10/2018.
  */
-@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0018\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0007J\u0018\u0010\t\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\f\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\r\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\u0011\u001a\u00020\u00042\u0006\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0011\u001a\u00020\nH\u0007J\u0018\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\nH\u0007J\u0018\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u0017\u001a\u00020\nH\u0007J\u0018\u0010\u001b\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u001c\u001a\u00020\nH\u0007J\u0018\u0010\u001d\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\nH\u0007J\u0018\u0010\u001e\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u001f\u001a\u00020\nH\u0007J\u0018\u0010 \u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007\u00a8\u0006!"}, d2 = {"Lfudex/bonyad/Helper/BindingAdapters;", "", "()V", "drawable", "", "imageView", "Landroid/widget/ImageView;", "url", "Landroid/graphics/drawable/Drawable;", "flag", "", "imageclub", "imageclub1", "loadImage", "opendrawable", "drawerLayout", "Landroidx/drawerlayout/widget/DrawerLayout;", "rate", "ratebar", "Landroid/widget/RatingBar;", "setFontColor", "textView", "Landroid/widget/TextView;", "color", "setcardcolor", "cardView", "Landroidx/cardview/widget/CardView;", "sethtml", "txt", "setrotate", "setunderline", "text", "sliderbUrl", "app_debug"})
+@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000t\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0018\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0007J\u0018\u0010\t\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\f\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\r\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u000fH\u0007J\u0018\u0010\u0010\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0011H\u0007J\u0018\u0010\u0012\u001a\u00020\u00042\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0007\u001a\u00020\nH\u0007J\u0018\u0010\u0015\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0015\u001a\u00020\nH\u0007J\u0018\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\nH\u0007J\u0018\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001b\u001a\u00020\nH\u0007J0\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020!2\u0016\u0010\"\u001a\u0012\u0012\u0004\u0012\u00020\u00110#j\b\u0012\u0004\u0012\u00020\u0011`$2\u0006\u0010%\u001a\u00020&H\u0007J\u0018\u0010\'\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010(\u001a\u00020\nH\u0007J0\u0010)\u001a\u00020\u00042\u0006\u0010 \u001a\u00020!2\u0016\u0010\"\u001a\u0012\u0012\u0004\u0012\u00020*0#j\b\u0012\u0004\u0012\u00020*`$2\u0006\u0010%\u001a\u00020&H\u0007J\u0018\u0010+\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\nH\u0007J\u0018\u0010,\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u001a2\u0006\u0010-\u001a\u00020\nH\u0007J\u0018\u0010.\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\nH\u0007\u00a8\u0006/"}, d2 = {"Lfudex/bonyad/Helper/BindingAdapters;", "", "()V", "drawable", "", "imageView", "Landroid/widget/ImageView;", "url", "Landroid/graphics/drawable/Drawable;", "flag", "", "imageclub", "imageclub1", "loadImage", "loadImage1", "Landroid/net/Uri;", "loadcertificat", "Lfudex/bonyad/Model/Certificate;", "opendrawable", "drawerLayout", "Landroidx/drawerlayout/widget/DrawerLayout;", "rate", "ratebar", "Landroid/widget/RatingBar;", "setFontColor", "textView", "Landroid/widget/TextView;", "color", "setcardcolor", "cardView", "Landroidx/cardview/widget/CardView;", "setcertificates", "recyclerView", "Landroidx/recyclerview/widget/RecyclerView;", "movies", "Ljava/util/ArrayList;", "Lkotlin/collections/ArrayList;", "fragment", "Landroid/app/Activity;", "sethtml", "txt", "setimages", "Lonnetysolutions/sadded/Model/RegisterimageModel;", "setrotate", "setunderline", "text", "sliderbUrl", "app_debug"})
 public final class BindingAdapters {
     @org.jetbrains.annotations.NotNull()
     public static final fudex.bonyad.Helper.BindingAdapters INSTANCE = null;
@@ -17,6 +41,20 @@ public final class BindingAdapters {
     public static final void loadImage(@org.jetbrains.annotations.NotNull()
     android.widget.ImageView imageView, @org.jetbrains.annotations.NotNull()
     java.lang.String url) {
+    }
+    
+    @androidx.databinding.BindingAdapter(value = {"bind:imageUrl1"})
+    @kotlin.jvm.JvmStatic()
+    public static final void loadImage1(@org.jetbrains.annotations.NotNull()
+    android.widget.ImageView imageView, @org.jetbrains.annotations.NotNull()
+    android.net.Uri url) {
+    }
+    
+    @androidx.databinding.BindingAdapter(value = {"bind:certificate"})
+    @kotlin.jvm.JvmStatic()
+    public static final void loadcertificat(@org.jetbrains.annotations.NotNull()
+    android.widget.ImageView imageView, @org.jetbrains.annotations.NotNull()
+    fudex.bonyad.Model.Certificate url) {
     }
     
     @androidx.databinding.BindingAdapter(value = {"bind:sliderbUrl"})
@@ -101,5 +139,21 @@ public final class BindingAdapters {
     public static final void setunderline(@org.jetbrains.annotations.NotNull()
     android.widget.TextView textView, @org.jetbrains.annotations.NotNull()
     java.lang.String text) {
+    }
+    
+    @androidx.databinding.BindingAdapter(value = {"bind:images", "bind:fragment"})
+    @kotlin.jvm.JvmStatic()
+    public static final void setimages(@org.jetbrains.annotations.NotNull()
+    androidx.recyclerview.widget.RecyclerView recyclerView, @org.jetbrains.annotations.NotNull()
+    java.util.ArrayList<onnetysolutions.sadded.Model.RegisterimageModel> movies, @org.jetbrains.annotations.NotNull()
+    android.app.Activity fragment) {
+    }
+    
+    @androidx.databinding.BindingAdapter(value = {"bind:certificates", "bind:fragment"})
+    @kotlin.jvm.JvmStatic()
+    public static final void setcertificates(@org.jetbrains.annotations.NotNull()
+    androidx.recyclerview.widget.RecyclerView recyclerView, @org.jetbrains.annotations.NotNull()
+    java.util.ArrayList<fudex.bonyad.Model.Certificate> movies, @org.jetbrains.annotations.NotNull()
+    android.app.Activity fragment) {
     }
 }

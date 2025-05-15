@@ -1,5 +1,8 @@
 package onnetysolutions.sadded.Model;
 
+import fudex.bonyad.Model.UserData;
+import fudex.bonyad.Model.UserModel;
+
 /**
  * Created by hp on 6/3/2018.
  */

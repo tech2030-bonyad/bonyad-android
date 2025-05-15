@@ -1,5 +1,21 @@
 package fudex.bonyad.Helper;
 
+import android.app.Activity;
+import android.app.SearchManager;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.CalendarContract;
+import android.provider.ContactsContract;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import fudex.bonyad.R;
+
 /**
  * <h1>Implement reusable methods of all intent actions</h1>
  * IntentClass class for all actions of intent

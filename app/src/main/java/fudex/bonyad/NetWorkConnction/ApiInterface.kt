@@ -45,8 +45,8 @@ interface ApiInterface {
     @GET("client/serviceTypes")
     fun getservicestype(): Call<ServicestypeModel?>?
 
-    @GET("client/states")
-    fun getstates(): Call<StatesModel?>?
+    @GET("zones")
+    fun getzones(): Call<StatesModel?>?
 
     @GET("client/cities")
     fun getcities(@Query("state_id") state_id: Int?): Call<StatesModel?>?
@@ -117,15 +117,21 @@ interface ApiInterface {
     fun register(@Body requestBody: Userdata): Call<LoginData?>?
 
     @Multipart
-    @POST("client/register")
-    fun registerimage(
+    @POST("register")
+    fun technicalregister(
+        @Part images: List<MultipartBody.Part>,
+        @Part("type") type: RequestBody,
         @Part("name") name: RequestBody,
-        @Part("mobile") mobile: RequestBody,
+        @Part("phone") mobile: RequestBody,
+        @Part("email") email: RequestBody,
+        @Part("address") address: RequestBody,
+        @Part("experience_years") experience_years: RequestBody,
+        @Part("zone_id") zone_id: RequestBody,
         @Part("password") password: RequestBody,
         @Part("password_confirmation") password_confirmation: RequestBody,
         @Part("fcm_token") fcm_token: RequestBody,
-        @Part("device_type") device_type: RequestBody,
-        @Part("device_id") device_id: RequestBody
+        @Part("firebase_token_type") device_type: RequestBody,
+        @Part("remember_me") device_id: RequestBody
     ): Call<LoginData?>?
 
     @Multipart
@@ -180,7 +186,17 @@ interface ApiInterface {
         @Part("email") email: RequestBody
     ): Call<ProfileModel?>?
 
-
+    @Multipart
+    @POST("edit-user")
+    fun edittechnicalprofilewithimage(
+        @Part imageFile: MultipartBody.Part?,
+        @Part images: List<MultipartBody.Part>?,
+        @Part("name") name: RequestBody,
+        @Part("email") email: RequestBody,
+        @Part("address") address: RequestBody,
+        @Part("experience_years") experience_years: RequestBody,
+        @Part("zone_id") zone_id: RequestBody,
+    ): Call<ProfileModel?>?
 //    @GET("setting")
 //    fun getsitting(): Call<SettingModel?>?
 
@@ -211,7 +227,7 @@ interface ApiInterface {
     @POST("client/complaintOrSuggest")
     fun sendcomplain(@Body requestBody: RequestBody): Call<ErrorResponse?>?
 
-    @POST("client/logout")
+    @POST("logout")
     fun logout(@Body requestBody: RequestBody): Call<ErrorResponse?>?
 
     @POST("client/deleteAccount")

@@ -9,6 +9,7 @@
     <string name="appointment_management">ادارة المواعيد</string>
     <string name="arabic">العربية</string>
     <string name="area">المنطقة</string>
+    <string name="attach_a_picture">إرفاق صورة</string>
     <string name="camera">كاميرا</string>
     <string name="cancel">إلغاء</string>
     <string name="change_mobile_number">تغير رقم الجوال</string>
@@ -72,6 +73,7 @@
     <string name="resend_verification_code">إعادة ارسال رمز التحقق</string>
     <string name="reset_a_new_password">إعادة تعيين كلمة مرور جديدة</string>
     <string name="save">حفظ</string>
+    <string name="select">اختر</string>
     <string name="select_account_type">اختر نوع الحساب</string>
     <string name="send">ارسال</string>
     <string name="services">خدمات</string>

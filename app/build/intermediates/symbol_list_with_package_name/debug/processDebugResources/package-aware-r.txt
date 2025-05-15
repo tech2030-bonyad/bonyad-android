@@ -3050,6 +3050,7 @@ drawable googleg_standard_color_18
 drawable gp
 drawable gq
 drawable gr
+drawable group_7
 drawable gs
 drawable gt
 drawable gu
@@ -3068,9 +3069,12 @@ drawable ic_arrow_up
 drawable ic_arrow_up1
 drawable ic_arrowdown
 drawable ic_back
+drawable ic_calendar_tick
+drawable ic_calendar_tick1
 drawable ic_carbon_rule
 drawable ic_clock
 drawable ic_clock_black_24dp
+drawable ic_deleteimage
 drawable ic_document_text
 drawable ic_document_text1
 drawable ic_edit2
@@ -3435,6 +3439,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id address
 id adjust_height
 id adjust_width
 id agreeCheck
@@ -3617,6 +3622,7 @@ id exo_track_selection_view
 id exo_vr
 id expand_activities_button
 id expanded_menu
+id expertLin
 id eye
 id eyeConfirm
 id eyePass
@@ -3805,6 +3811,7 @@ id peekHeight
 id percent
 id phone
 id photo
+id photos
 id pin
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
@@ -3982,6 +3989,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id zoneLin
 id zoom
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -4161,9 +4169,12 @@ layout exo_styled_settings_list_item
 layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
 layout fingerprint_dialog_layout
+layout fragment_technicalhome
 layout fragment_technicalprofile
 layout fragment_userhome
 layout fragment_userprofile
+layout item_certificate
+layout item_image
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4286,6 +4297,7 @@ string appbar_scrolling_view_behavior
 string appointment_management
 string arabic
 string area
+string attach_a_picture
 string biometric_or_screen_lock_prompt_message
 string biometric_prompt_message
 string bottom_sheet_behavior
@@ -4569,6 +4581,7 @@ string reset_a_new_password
 string save
 string screen_lock_prompt_message
 string search_menu_title
+string select
 string select_account_type
 string send
 string services

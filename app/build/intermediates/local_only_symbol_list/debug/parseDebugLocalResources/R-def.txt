@@ -19,14 +19,18 @@ drawable background1
 drawable bonyad_logo_08_1
 drawable bonyad_logo_12_1
 drawable eye
+drawable group_7
 drawable ic_archive_book
 drawable ic_archive_book1
 drawable ic_arrow_up
 drawable ic_arrow_up1
 drawable ic_arrowdown
 drawable ic_back
+drawable ic_calendar_tick
+drawable ic_calendar_tick1
 drawable ic_carbon_rule
 drawable ic_clock
+drawable ic_deleteimage
 drawable ic_document_text
 drawable ic_document_text1
 drawable ic_edit2
@@ -78,6 +82,7 @@ font cairoextralight
 font cairolight
 font cairoregular
 font cairosemibold
+id address
 id agreeCheck
 id code1
 id code2
@@ -86,6 +91,7 @@ id code4
 id confirmPass
 id confirmpass
 id email
+id expertLin
 id eye
 id eyeConfirm
 id eyePass
@@ -98,7 +104,9 @@ id oldpass
 id pass
 id phone
 id photo
+id photos
 id title
+id zoneLin
 layout activity_activeuser
 layout activity_changelangue
 layout activity_contactus
@@ -117,9 +125,12 @@ layout activity_technical_home
 layout activity_technicalregister
 layout activity_userhome
 layout activity_userregister
+layout fragment_technicalhome
 layout fragment_technicalprofile
 layout fragment_userhome
 layout fragment_userprofile
+layout item_certificate
+layout item_image
 mipmap ic_launcher
 mipmap ic_launcher_round
 string about_the_platform
@@ -131,6 +142,7 @@ string app_name
 string appointment_management
 string arabic
 string area
+string attach_a_picture
 string camera
 string cancel
 string change_mobile_number
@@ -196,6 +208,7 @@ string required
 string resend_verification_code
 string reset_a_new_password
 string save
+string select
 string select_account_type
 string send
 string services

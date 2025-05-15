@@ -1,5 +1,11 @@
 package fudex.bonyad.SharedPreferences;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import java.util.Locale;
+
 /**
  * Created by ATIAF on 3/14/2018.
  */

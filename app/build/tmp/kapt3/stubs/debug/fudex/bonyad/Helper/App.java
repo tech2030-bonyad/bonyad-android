@@ -1,5 +1,32 @@
 package fudex.bonyad.Helper;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.ComponentCallbacks2;
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.StrictMode;
+import android.provider.UserDictionary.Words;
+import android.util.Log;
+import android.view.View;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.lifecycle.ViewModelStore;
+import androidx.lifecycle.ViewModelStoreOwner;
+import com.blongho.country_data.World;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
+import com.microsoft.applicationinsights.library.ApplicationInsights;
+import fudex.bonyad.Apimodel.APIModel;
+import dev.b3nedikt.app_locale.AppLocale;
+import dev.b3nedikt.app_locale.SharedPrefsAppLocaleRepository;
+import dev.b3nedikt.reword.RewordInterceptor;
+import dev.b3nedikt.viewpump.ViewPump;
+import java.util.*;
+
 @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\u0018\u0000 \u00072\u00020\u0001:\u0001\u0007B\u0005\u00a2\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H\u0016J\b\u0010\u0005\u001a\u00020\u0006H\u0016\u00a8\u0006\b"}, d2 = {"Lfudex/bonyad/Helper/App;", "Landroid/app/Application;", "()V", "getResources", "Landroid/content/res/Resources;", "onCreate", "", "Companion", "app_debug"})
 public final class App extends android.app.Application {
     @org.jetbrains.annotations.NotNull()

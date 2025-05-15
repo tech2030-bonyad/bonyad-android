@@ -1,6 +1,55 @@
 package fudex.bonyad.Helper;
 
-@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000z\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0006\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\f\n\u0002\b\u0004\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0016\u0010\b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\nJ\u0018\u0010\f\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0010\u001a\u00020\u0011J\u0018\u0010\u0012\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0010\u001a\u00020\u0011J\u0016\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0016\u001a\u00020\u0006J\u0018\u0010\u0017\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u0004H\u0007J\u000e\u0010\u001a\u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\u001cJ\u0016\u0010\u001d\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u001e\u001a\u00020\u0004J\u0016\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0006J\u0016\u0010\"\u001a\u00020\u00042\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020&J\u000e\u0010\'\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u001cJ\u000e\u0010(\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u001cJ\u0016\u0010)\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0006J\u0016\u0010*\u001a\u00020$2\u0006\u0010+\u001a\u00020\u00042\u0006\u0010%\u001a\u00020&J\u000e\u0010,\u001a\u00020\r2\u0006\u0010-\u001a\u00020.J\u0018\u0010/\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u0002002\u0006\u0010\u0019\u001a\u00020\u0004H\u0007J\u001e\u00101\u001a\u00020\u00042\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u00102\u001a\u00020\u0004J\u001e\u00101\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u00102\u001a\u00020\u00042\u0006\u00103\u001a\u00020\u0004J\u0016\u00104\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u00102\u001a\u00020\u0004J\u000e\u00105\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\u000fJ&\u00106\u001a\u0002072\u0006\u00108\u001a\u00020\u00142\u0006\u00109\u001a\u00020\u00142\u0006\u0010:\u001a\u00020\u00142\u0006\u0010;\u001a\u00020\u0014J\u000e\u0010<\u001a\u00020\u00042\u0006\u0010=\u001a\u00020\u0006J\u0018\u0010>\u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\u001c2\b\u0010?\u001a\u0004\u0018\u00010@J\u000e\u0010A\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u0004J&\u0010B\u001a\u00020C2\u0006\u0010D\u001a\u00020C2\u0006\u0010!\u001a\u00020\u00062\u0006\u0010E\u001a\u00020C2\u0006\u0010F\u001a\u00020CR\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0006X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006G"}, d2 = {"Lfudex/bonyad/Helper/Utilities;", "", "()V", "KEY_ALIAS", "", "LOCATION_REQUEST_PERMISSION", "", "LOCATION_SETTINGS_RESULT_CODE", "CalculationByDistance", "StartP", "Lcom/google/android/gms/maps/model/LatLng;", "EndP", "animImage", "", "context", "Landroid/content/Context;", "textViewObject", "Landroidx/cardview/widget/CardView;", "animImage1", "aroundUp", "", "number", "canDecimal", "changeformate", "date", "lang", "closeKeyboard", "activity", "Landroid/app/Activity;", "copyToClipboard", "text", "decrypt", "input", "shift", "decryptData", "encryptedData", "", "secretKey", "Ljavax/crypto/SecretKey;", "disabletouch", "enabletouch", "encrypt", "encryptData", "data", "expandRecyclerViewHeight", "recyclerView", "Landroidx/recyclerview/widget/RecyclerView;", "formatDateToArabic", "Lorg/joda/time/LocalDate;", "formatMessageDateTime", "pattern", "local", "formatMessageDateTimefromdate", "getDeviceId", "movetodistance", "", "orginlat", "orginlng", "destlat", "destlng", "pad", "time", "requestPermissions", "fragment", "Landroidx/fragment/app/Fragment;", "setDate", "shiftChar", "", "char", "start", "end", "app_debug"})
+import android.Manifest;
+import fudex.bonyad.R;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.provider.Settings;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import com.google.android.gms.maps.model.LatLng;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormat;
+import java.nio.charset.Charset;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import androidx.recyclerview.widget.RecyclerView;
+import java.io.File;
+import java.io.IOException;
+
+@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u0086\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0006\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\f\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u0016\u0010\b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\nJ\u0018\u0010\f\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0010\u001a\u00020\u0011J\u0018\u0010\u0012\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0010\u001a\u00020\u0011J\u0016\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0016\u001a\u00020\u0006J\u0018\u0010\u0017\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u0004H\u0007J\u000e\u0010\u001a\u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\u001cJ\u0016\u0010\u001d\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u001e\u001a\u00020\u0004J\u0016\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0006J\u0016\u0010\"\u001a\u00020\u00042\u0006\u0010#\u001a\u00020$2\u0006\u0010%\u001a\u00020&J\u000e\u0010\'\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u001cJ\u000e\u0010(\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u001cJ\u0016\u0010)\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u0006J\u0016\u0010*\u001a\u00020$2\u0006\u0010+\u001a\u00020\u00042\u0006\u0010%\u001a\u00020&J\u000e\u0010,\u001a\u00020\r2\u0006\u0010-\u001a\u00020.J\u0018\u0010/\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u0002002\u0006\u0010\u0019\u001a\u00020\u0004H\u0007J\u001e\u00101\u001a\u00020\u00042\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u00102\u001a\u00020\u0004J\u001e\u00101\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u00102\u001a\u00020\u00042\u0006\u00103\u001a\u00020\u0004J\u0016\u00104\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u00042\u0006\u00102\u001a\u00020\u0004J\u000e\u00105\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\u000fJ&\u00106\u001a\u0002072\u0006\u00108\u001a\u00020\u00142\u0006\u00109\u001a\u00020\u00142\u0006\u0010:\u001a\u00020\u00142\u0006\u0010;\u001a\u00020\u0014J\u000e\u0010<\u001a\u00020\u00042\u0006\u0010=\u001a\u00020\u0006J\u0018\u0010>\u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\u001c2\b\u0010?\u001a\u0004\u0018\u00010@J\u000e\u0010A\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u0004J&\u0010B\u001a\u00020C2\u0006\u0010D\u001a\u00020C2\u0006\u0010!\u001a\u00020\u00062\u0006\u0010E\u001a\u00020C2\u0006\u0010F\u001a\u00020CJ\u0018\u0010G\u001a\u0004\u0018\u00010H2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010I\u001a\u00020JR\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0006X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006K"}, d2 = {"Lfudex/bonyad/Helper/Utilities;", "", "()V", "KEY_ALIAS", "", "LOCATION_REQUEST_PERMISSION", "", "LOCATION_SETTINGS_RESULT_CODE", "CalculationByDistance", "StartP", "Lcom/google/android/gms/maps/model/LatLng;", "EndP", "animImage", "", "context", "Landroid/content/Context;", "textViewObject", "Landroidx/cardview/widget/CardView;", "animImage1", "aroundUp", "", "number", "canDecimal", "changeformate", "date", "lang", "closeKeyboard", "activity", "Landroid/app/Activity;", "copyToClipboard", "text", "decrypt", "input", "shift", "decryptData", "encryptedData", "", "secretKey", "Ljavax/crypto/SecretKey;", "disabletouch", "enabletouch", "encrypt", "encryptData", "data", "expandRecyclerViewHeight", "recyclerView", "Landroidx/recyclerview/widget/RecyclerView;", "formatDateToArabic", "Lorg/joda/time/LocalDate;", "formatMessageDateTime", "pattern", "local", "formatMessageDateTimefromdate", "getDeviceId", "movetodistance", "", "orginlat", "orginlng", "destlat", "destlng", "pad", "time", "requestPermissions", "fragment", "Landroidx/fragment/app/Fragment;", "setDate", "shiftChar", "", "char", "start", "end", "uriToFile", "Ljava/io/File;", "uri", "Landroid/net/Uri;", "app_debug"})
 public final class Utilities {
     public static final int LOCATION_REQUEST_PERMISSION = 1083;
     @org.jetbrains.annotations.NotNull()
@@ -148,5 +197,12 @@ public final class Utilities {
     
     public final void expandRecyclerViewHeight(@org.jetbrains.annotations.NotNull()
     androidx.recyclerview.widget.RecyclerView recyclerView) {
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.io.File uriToFile(@org.jetbrains.annotations.NotNull()
+    android.content.Context context, @org.jetbrains.annotations.NotNull()
+    android.net.Uri uri) {
+        return null;
     }
 }

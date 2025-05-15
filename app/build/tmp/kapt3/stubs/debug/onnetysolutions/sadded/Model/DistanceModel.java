@@ -1,5 +1,9 @@
 package onnetysolutions.sadded.Model;
 
+import com.google.common.primitives.Booleans;
+import fudex.bonyad.Model.UserModel;
+import org.joda.time.LocalDate;
+
 /**
  * Created by hp on 6/3/2018.
  */

@@ -81,4 +81,6 @@
     <string name="confirm_password_must_same_password">تأكيد كلمة المرور يجب أن يكون نفس كلمة المرور</string>
     <string name="i_agree_to">يجب الموافقه على</string>
     <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
+    <string name="select">اختر</string>
+    <string name="attach_a_picture">إرفاق صورة</string>
 </resources>

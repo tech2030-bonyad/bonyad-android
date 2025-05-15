@@ -48,7 +48,7 @@
     <string name="enter_the_new_password">Enter the new password</string>
     <string name="save">Save</string>
     <string name="home">Home</string>
-    <string name="my_appointments">My appointments</string>
+    <string name="my_appointments">Appointments</string>
     <string name="orders">Orders</string>
     <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -83,4 +83,6 @@
     <string name="confirm_password_must_same_password">confirm password must same password</string>
     <string name="i_agree_to">must agree to</string>
     <string name="email_foramt_is_wrong">Email formate is wrong</string>
+    <string name="select">select</string>
+    <string name="attach_a_picture">Attach a picture</string>
 </resources>

@@ -214,6 +214,7 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     intent.putExtra("phone",phone1)
                     intent.putExtra("dialcode","+966")
+                    intent.putExtra("verify",phone1)
                     activity.startActivity(intent)
                     activity.finish()
                 }else {

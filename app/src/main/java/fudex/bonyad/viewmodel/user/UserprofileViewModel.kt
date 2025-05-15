@@ -30,6 +30,8 @@ import fudex.bonyad.ui.Activity.LoginActivity
 import fudex.bonyad.ui.Activity.ProfileActivity
 import fudex.bonyad.ui.Activity.StaticpageActivity
 import fudex.bonyad.ui.Fragment.user.UserprofileFragment
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 
 import onnetysolutions.sadded.Model.ProfileModel
 import retrofit2.Call
@@ -80,6 +82,40 @@ class UserprofileViewModel(var catogaryFragment: UserprofileFragment) : BaseObse
         activity.startActivity(intent)
     }
     fun logout(){
+        Utilities.disabletouch(activity)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+        var requestBody: RequestBody? = null
+        requestBody =  MultipartBody.Builder()
+            .setType(MultipartBody.FORM)
+            .addFormDataPart("device_id",Utilities.getDeviceId(activity))
+            .build()
+        val call: Call<ErrorResponse?>? = apiService.logout(requestBody)
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    LoginSession.clearData(activity)
+                }else {
+                    val errorText = response.errorBody()?.string() ?:"{}"
+                    Log.e("data",errorText!!)
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            logout()
+                        }
+                    })
+                }
+
+                Utilities.enabletouch(activity)
+
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                Utilities.enabletouch(activity)
+            }
+        })
+
 //        var fragment = LogoutFragment()
 //        fragment.show((activity as HomeActivity).supportFragmentManager , "logout")
     }

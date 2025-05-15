@@ -131,19 +131,28 @@ object APIModel {
                 )
             }
             USER_DELETE -> LoginSession.clearData1(activity)
-            409 -> LoginSession.clearData1(activity)
+            409 -> LoginSession.activeuser(activity)
 
             REFRESH_TOKEN -> try {
                 Log.e("data" , responseBody.errors.toString())
-                Dialogs.showToast(
-                    if (responseBody.message != null) responseBody.message!! else "",
-                    activity
-                )
+                if (LoginSession.isLogin){
+                    LoginSession.clearData1(activity)
+                }else {
+                    Dialogs.showToast(
+                        if (responseBody.message != null) responseBody.message!! else "",
+                        activity
+                    )
+                }
             }catch (e:Exception){
-                Dialogs.showToast(
-                    if (responseBody.message != null) responseBody.message!! else "",
-                    activity
-                )
+                if (LoginSession.isLogin){
+                    LoginSession.clearData1(activity)
+                }else {
+                    Dialogs.showToast(
+                        if (responseBody.message != null) responseBody.message!! else "",
+                        activity
+                    )
+                }
+
             }
 
             Not_RESPONSE -> {
@@ -252,19 +261,28 @@ object APIModel {
                 )
             }
             USER_DELETE -> LoginSession.clearData1(activity)
-            409 -> LoginSession.clearData1(activity)
+            409 -> LoginSession.activeuser(activity)
 
             REFRESH_TOKEN -> try {
                 Log.e("data" , responseBody.errors.toString())
-                Dialogs.showToast(
-                    if (responseBody.message != null) responseBody.message!! else "",
-                    activity
-                )
+                if (LoginSession.isLogin){
+                    LoginSession.clearData1(activity)
+                }else {
+                    Dialogs.showToast(
+                        if (responseBody.message != null) responseBody.message!! else "",
+                        activity
+                    )
+                }
             }catch (e:Exception){
-                Dialogs.showToast(
-                    if (responseBody.message != null) responseBody.message!! else "",
-                    activity
-                )
+                if (LoginSession.isLogin){
+                    LoginSession.clearData1(activity)
+                }else {
+                    Dialogs.showToast(
+                        if (responseBody.message != null) responseBody.message!! else "",
+                        activity
+                    )
+                }
+
             }
             Not_RESPONSE -> {
                 if (count >= 2){

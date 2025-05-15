@@ -202,8 +202,8 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java)
-        val imageFile =  File(image)
-        val fileSizeInBytes = imageFile.length()
+        val imageFile =  Utilities.uriToFile(activity,photoUri!!)
+        val fileSizeInBytes = imageFile!!.length()
         val fileSizeInKB = fileSizeInBytes / 1024
         val fileSizeInMB = fileSizeInKB / 1024
 
@@ -213,7 +213,7 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         Log.d("ImageCapture", "File size: $fileSizeInMB MB")
 
         val requestFile = RequestBody.create(MediaType.parse("image/jpeg"), imageFile)
-        val imageBody = MultipartBody.Part.createFormData("avatar", imageFile.name, requestFile)
+        val imageBody = MultipartBody.Part.createFormData("avatar", imageFile!!.name, requestFile)
         val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
         val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
 

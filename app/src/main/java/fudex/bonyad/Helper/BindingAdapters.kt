@@ -4,6 +4,7 @@ import android.app.Activity
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.text.Html
 import android.util.Log
 import android.widget.ImageView
@@ -13,13 +14,17 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.databinding.BindingAdapter
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.RecyclerView
 
 import com.blongho.country_data.World
 import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
+import fudex.bonyad.Model.Certificate
 
 import fudex.bonyad.R
-
+import fudex.bonyad.ui.Adapter.technical.Certificatesadapter
+import fudex.bonyad.ui.Adapter.technical.Imagessadapter
+import onnetysolutions.sadded.Model.RegisterimageModel
 
 
 /**
@@ -42,6 +47,47 @@ object BindingAdapters {
                 e.printStackTrace()
                 imageView.setImageResource(R.mipmap.ic_launcher_round)
             }
+
+    }
+    @BindingAdapter("bind:imageUrl1")
+    @JvmStatic
+    fun loadImage1(imageView: ImageView, url: Uri) {
+        try {
+//                GlobalScope.launch(Dispatchers.Main) {
+            Glide.with(imageView.context)
+                .load(url) // Use the file path where the image is saved
+                .placeholder(R.mipmap.ic_launcher_round)
+                .into(imageView)
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            imageView.setImageResource(R.mipmap.ic_launcher_round)
+        }
+
+    }
+    @BindingAdapter("bind:certificate")
+    @JvmStatic
+    fun loadcertificat(imageView: ImageView, url: Certificate) {
+        try {
+//                GlobalScope.launch(Dispatchers.Main) {
+            if (url.id != -1){
+                if (url.id == 0){
+                    Glide.with(imageView.context)
+                        .load(url.uri) // Use the file path where the image is saved
+                        .placeholder(R.mipmap.ic_launcher_round)
+                        .into(imageView)
+                }else {
+                    Glide.with(imageView.context)
+                        .load(url.url) // Use the file path where the image is saved
+                        .placeholder(R.mipmap.ic_launcher_round)
+                        .into(imageView)
+                }
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            imageView.setImageResource(R.mipmap.ic_launcher_round)
+        }
 
     }
     @BindingAdapter("bind:sliderbUrl")
@@ -177,27 +223,27 @@ object BindingAdapters {
         textView.text = text
         textView.paintFlags = textView.paintFlags or Paint.UNDERLINE_TEXT_FLAG
     }
-//    @BindingAdapter("bind:faqs", "bind:fragment")
-//    @JvmStatic
-//    fun setfaqs(recyclerView: RecyclerView, movies: ArrayList<FaqdataModel>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Faqadapter) {
-//            (adapter as Faqadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:images", "bind:fragment")
+    @JvmStatic
+    fun setimages(recyclerView: RecyclerView, movies: ArrayList<RegisterimageModel>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Imagessadapter) {
+            (adapter as Imagessadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
-//    @BindingAdapter("bind:addresses", "bind:fragment")
-//    @JvmStatic
-//    fun setaddresses(recyclerView: RecyclerView, movies: ArrayList<AddressesDatum>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Addressesadapter) {
-//            (adapter as Addressesadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:certificates", "bind:fragment")
+    @JvmStatic
+    fun setcertificates(recyclerView: RecyclerView, movies: ArrayList<Certificate>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Certificatesadapter) {
+            (adapter as Certificatesadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
 //    @BindingAdapter("bind:changeaddresses", "bind:fragment")
 //    @JvmStatic
