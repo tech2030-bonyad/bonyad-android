@@ -83,4 +83,15 @@
     <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
     <string name="select">اختر</string>
     <string name="attach_a_picture">إرفاق صورة</string>
+    <string name="services1">الخدمات</string>
+    <string name="add">اضافة</string>
+    <string name="search">البحث</string>
+    <string name="add_a_service">اضافة خدمة</string>
+    <string name="service_name">اسم الخدمة</string>
+    <string name="service_description">وصف الخدمة</string>
+    <string name="service_images">صور الخدمة</string>
+    <string name="details">التفاصيل</string>
+    <string name="description">الوصف</string>
+    <string name="delete">حذف</string>
+    <string name="edit_service">تعديل الخدمة</string>
 </resources>

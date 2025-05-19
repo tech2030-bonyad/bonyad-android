@@ -8,8 +8,9 @@ data class StatesModel (
 
 data class StatesDatum (
     val id: Int? = null,
-    val name: String? = null
-)
+    val name: String? = null,
+    val image: String? = null
+    )
 
 data class ServicetypeDatum (
     val key: String? = null,

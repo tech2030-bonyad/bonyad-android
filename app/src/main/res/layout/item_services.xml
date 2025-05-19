@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="ServiceviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.technical.ServiceViewModel" />
+    </data>
+   <LinearLayout
+       android:onClick="@{ () -> model.clickitem() }"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginBottom="23dp"
+       android:layout_marginEnd="10dp">
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_width="72dp"
+           android:layout_height="72dp"
+           android:layout_gravity="center"
+           bind:imageUrl="@{model.onservse.image}"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="25dp"
+           android:gravity="center"
+           android:paddingBottom="5dp"
+           android:textSize="12sp"
+           android:text="@{model.onservse.name}"
+           tools:text="فنى ميكانيكا"
+           android:textColor="@color/darkblue"
+           android:layout_gravity="center"
+           />
+   </LinearLayout>
+</layout>

@@ -547,13 +547,14 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
     private fun openCamera() {
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale("en")).format(Date())
         val imageFileName = "$timeStamp.jpg"
-        val storageDir = Environment.getExternalStoragePublicDirectory(
-            Environment.DIRECTORY_DOWNLOADS
-        )
-        var pictureImagePath = storageDir.absolutePath + "/" + imageFileName
+        val storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+        val pictureImagePath = "${storageDir.absolutePath}/$imageFileName"
         val file = File(pictureImagePath)
-        photoUri = Uri.fromFile(file)
-        takePictureLauncher.launch(photoUri)
+        val uri = Uri.fromFile(file) // local val, safe for smart cast
+        photoUri = uri // assign to your class-level property if needed
+
+        takePictureLauncher.launch(uri) // use the local `uri` here
+
     }
 
     private fun pickImageFromGallery() {

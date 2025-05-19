@@ -2,6 +2,8 @@
 <resources>
     <string name="about_the_platform">عن المنصة</string>
     <string name="activation_code">رمز التفعيل</string>
+    <string name="add">اضافة</string>
+    <string name="add_a_service">اضافة خدمة</string>
     <string name="address">العنوان</string>
     <string name="agree_to">الموافقة علي</string>
     <string name="agree_to_the_terms_and_conditions">الموافقة علي الشروط والاحكام</string>
@@ -22,9 +24,13 @@
     <string name="copied">copied</string>
     <string name="create_an_account">إنشاء حساب</string>
     <string name="customer_account">حساب عميل</string>
+    <string name="delete">حذف</string>
     <string name="delete_account">حذف الحساب</string>
+    <string name="description">الوصف</string>
+    <string name="details">التفاصيل</string>
     <string name="don_t_have_an_account">ليس لديك حساب؟</string>
     <string name="edit_profile_data">تعديل بيانات الملف الشخصي</string>
+    <string name="edit_service">تعديل الخدمة</string>
     <string name="email">البريد الإلكترونى</string>
     <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
     <string name="eng">AR</string>
@@ -73,10 +79,15 @@
     <string name="resend_verification_code">إعادة ارسال رمز التحقق</string>
     <string name="reset_a_new_password">إعادة تعيين كلمة مرور جديدة</string>
     <string name="save">حفظ</string>
+    <string name="search">البحث</string>
     <string name="select">اختر</string>
     <string name="select_account_type">اختر نوع الحساب</string>
     <string name="send">ارسال</string>
+    <string name="service_description">وصف الخدمة</string>
+    <string name="service_images">صور الخدمة</string>
+    <string name="service_name">اسم الخدمة</string>
     <string name="services">خدمات</string>
+    <string name="services1">الخدمات</string>
     <string name="terms_and_conditions">الشروط والاحكام</string>
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>

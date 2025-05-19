@@ -1482,6 +1482,8 @@ color browser_actions_text_color
 color browser_actions_title_color
 color button_material_dark
 color button_material_light
+color call_notification_answer_color
+color call_notification_decline_color
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
@@ -1498,6 +1500,7 @@ color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
 color darkblue
+color darkgray
 color darkwhite
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
@@ -3062,6 +3065,7 @@ drawable hn
 drawable hr
 drawable ht
 drawable hu
+drawable ic_add_circle
 drawable ic_archive_book
 drawable ic_archive_book1
 drawable ic_arrow_back_24
@@ -3071,6 +3075,12 @@ drawable ic_arrowdown
 drawable ic_back
 drawable ic_calendar_tick
 drawable ic_calendar_tick1
+drawable ic_call_answer
+drawable ic_call_answer_low
+drawable ic_call_answer_video
+drawable ic_call_answer_video_low
+drawable ic_call_decline
+drawable ic_call_decline_low
 drawable ic_carbon_rule
 drawable ic_clock
 drawable ic_clock_black_24dp
@@ -3113,6 +3123,7 @@ drawable ic_quill_phone
 drawable ic_rectanglehome
 drawable ic_rotate_left_24
 drawable ic_rotate_right_24
+drawable ic_search22
 drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
 drawable ic_suitcase
@@ -3256,6 +3267,7 @@ drawable notification_bg_low_pressed
 drawable notification_bg_normal
 drawable notification_bg_normal_pressed
 drawable notification_icon_background
+drawable notification_oversize_large_icon_bg
 drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
@@ -3286,9 +3298,11 @@ drawable py
 drawable qa
 drawable re
 drawable rec_lightblue
+drawable rec_lightblue1
 drawable rec_strockblue
 drawable rec_strockdarkblue
 drawable rec_strockred
+drawable rec_strockred1
 drawable ro
 drawable rs
 drawable ru
@@ -3535,6 +3549,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id des
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3562,6 +3577,7 @@ id easeInOut
 id easeOut
 id east
 id edit_query
+id edit_text_id
 id elastic
 id email
 id embed
@@ -3663,6 +3679,7 @@ id groups
 id guideline
 id hardware
 id header_title
+id hide_ime_id
 id hideable
 id home
 id homeAsUp
@@ -3682,6 +3699,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id images
 id immediateStop
 id included
 id indeterminate
@@ -3812,6 +3830,7 @@ id percent
 id phone
 id photo
 id photos
+id photosedit
 id pin
 id place_autocomplete_clear_button
 id place_autocomplete_powered_by_google
@@ -3833,6 +3852,7 @@ id rectangle
 id rectangleHorizontalOnly
 id rectangleVerticalOnly
 id rectangles
+id report_drawn
 id restart
 id reverse
 id reverseSawtooth
@@ -3854,6 +3874,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchTxt
 id search_badge
 id search_bar
 id search_button
@@ -3867,6 +3888,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id serviceList
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -4117,6 +4139,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_activeuser
+layout activity_addservice
 layout activity_changelangue
 layout activity_contactus
 layout activity_editpass
@@ -4132,6 +4155,7 @@ layout activity_splash
 layout activity_staticpage
 layout activity_technical_home
 layout activity_technicalregister
+layout activity_technicalservicedetails
 layout activity_userhome
 layout activity_userregister
 layout amu_info_window
@@ -4171,10 +4195,15 @@ layout exo_track_selection_dialog
 layout fingerprint_dialog_layout
 layout fragment_technicalhome
 layout fragment_technicalprofile
+layout fragment_technicalservices
 layout fragment_userhome
 layout fragment_userprofile
+layout ime_base_split_test_activity
+layout ime_secondary_split_test_activity
 layout item_certificate
 layout item_image
+layout item_serviceimage
+layout item_services
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4251,6 +4280,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu crop_image_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals exo_controls_fastforward_by_amount_description
 plurals exo_controls_rewind_by_amount_description
@@ -4288,6 +4318,8 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about_the_platform
 string activation_code
+string add
+string add_a_service
 string address
 string agree_to
 string agree_to_the_terms_and_conditions
@@ -4306,6 +4338,13 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string call_notification_answer_action
+string call_notification_answer_video_action
+string call_notification_decline_action
+string call_notification_hang_up_action
+string call_notification_incoming_text
+string call_notification_ongoing_text
+string call_notification_screening_text
 string camera
 string cancel
 string change_mobile_number
@@ -4345,9 +4384,13 @@ string create_an_account
 string crop_image_menu_crop
 string customer_account
 string default_error_msg
+string delete
 string delete_account
+string description
+string details
 string don_t_have_an_account
 string edit_profile_data
+string edit_service
 string email
 string email_foramt_is_wrong
 string eng
@@ -4580,11 +4623,16 @@ string resend_verification_code
 string reset_a_new_password
 string save
 string screen_lock_prompt_message
+string search
 string search_menu_title
 string select
 string select_account_type
 string send
+string service_description
+string service_images
+string service_name
 string services
+string services1
 string status_bar_notification_info_overflow
 string terms_and_conditions
 string the_code_has_not_been_received

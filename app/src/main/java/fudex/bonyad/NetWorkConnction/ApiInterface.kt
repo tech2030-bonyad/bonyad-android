@@ -16,6 +16,7 @@ import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.OrderdetailsModel
 import fudex.bonyad.Model.OrdersModel
 import fudex.bonyad.Model.RatingModel
+import fudex.bonyad.Model.ServicesdetailsModel
 import fudex.bonyad.Model.ServicestypeModel
 import fudex.bonyad.Model.SliderModel
 import fudex.bonyad.Model.SlotsModel
@@ -197,6 +198,14 @@ interface ApiInterface {
         @Part("experience_years") experience_years: RequestBody,
         @Part("zone_id") zone_id: RequestBody,
     ): Call<ProfileModel?>?
+
+    @Multipart
+    @POST("services/create")
+    fun addservice(
+        @Part images: List<MultipartBody.Part>?,
+        @Part("name") name: RequestBody,
+        @Part("description") email: RequestBody,
+    ): Call<ErrorResponse?>?
 //    @GET("setting")
 //    fun getsitting(): Call<SettingModel?>?
 
@@ -274,4 +283,10 @@ interface ApiInterface {
 
     @POST("client/notifications/delete")
     fun deletenots(): Call<ErrorResponse?>?
+
+    @GET("my-services")
+    fun getmyservices(@Query("name") name: String?): Call<StatesModel?>?
+
+    @GET("services/{serviceId}")
+    fun getservicesdetails(@Path("serviceId") serviceId: Int): Call<ServicesdetailsModel?>?
 }

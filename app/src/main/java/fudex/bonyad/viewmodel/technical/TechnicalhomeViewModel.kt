@@ -26,6 +26,7 @@ import fudex.bonyad.ui.Activity.LoginActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalhomeFragment
 import fudex.bonyad.ui.Fragment.technical.TechnicalprofileFragment
+import fudex.bonyad.ui.Fragment.technical.TechnicalservicesFragment
 import fudex.bonyad.ui.Fragment.user.UserhomeFragment
 import fudex.bonyad.ui.Fragment.user.UserprofileFragment
 import okhttp3.MultipartBody
@@ -106,8 +107,8 @@ class TechnicalhomeViewModel(var catogaryFragment: TechnicalHomeActivity) : Base
     fun orders() {
         if (type.get()!= 2){
            if (LoginSession.isLogin){
-//               var fragment = ReservationFragment()
-//               replaceFragment(fragment)
+               var fragment = TechnicalservicesFragment()
+               replaceFragment(fragment)
                type.set(2)
            }else {
                var intent: Intent = Intent(activity, LoginActivity::class.java)
