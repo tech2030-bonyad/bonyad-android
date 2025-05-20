@@ -15,4 +15,5 @@
     <color name="lightblue1">#4CA8F9</color>
     <color name="red">#FF6665</color>
     <color name="darkgray">#4D4D52</color>
+    <color name="darkblack">#101010</color>
 </resources>

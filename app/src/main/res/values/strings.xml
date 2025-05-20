@@ -96,4 +96,19 @@
     <string name="description">Description</string>
     <string name="delete">Delete</string>
     <string name="edit_service">Edit service</string>
+    <string name="departments">Departments</string>
+    <string name="specialists">Specialists</string>
+    <string name="more">More</string>
+    <string name="products">Products</string>
+    <string name="description1">Description</string>
+    <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
+    <string name="time">Time</string>
+    <string name="reservation_request">Reservation request</string>
+    <string name="reservation_request_has_been_sent_successfully">Reservation request has been sent successfully.</string>
+    <string name="please_follow_up_on_the_status_of_the_order_once_it_is_accepted">Please follow up on the status of the order once it is accepted.</string>
+    <string name="filter">Filter</string>
+    <string name="city">City</string>
+    <string name="specialty">Specialty</string>
+    <string name="clear">Clear</string>
+    <string name="main_sections">Main Sections</string>
 </resources>

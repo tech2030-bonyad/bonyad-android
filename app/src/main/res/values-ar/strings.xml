@@ -94,4 +94,19 @@
     <string name="description">الوصف</string>
     <string name="delete">حذف</string>
     <string name="edit_service">تعديل الخدمة</string>
+    <string name="departments">الاقسام</string>
+    <string name="specialists">المتخصصين</string>
+    <string name="more">المزيد</string>
+    <string name="products">المنتجات</string>
+    <string name="description1">وصف</string>
+    <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
+    <string name="time">الوقت</string>
+    <string name="reservation_request">طلب حجز</string>
+    <string name="reservation_request_has_been_sent_successfully">تم ارسال طلب الحجز بنجاح</string>
+    <string name="please_follow_up_on_the_status_of_the_order_once_it_is_accepted">يرجى متابعة حالة الطلب حال قبولة</string>
+    <string name="filter">فلتر</string>
+    <string name="city">المدينة</string>
+    <string name="specialty">التخصص</string>
+    <string name="clear">مسح</string>
+    <string name="main_sections">الاقسام الرئيسية</string>
 </resources>
