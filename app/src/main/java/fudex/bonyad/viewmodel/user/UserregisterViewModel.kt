@@ -431,6 +431,7 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
 
     fun terms(){
         var intent: Intent = Intent(activity, StaticpageActivity::class.java)
+        intent.putExtra("type",2)
         activity.startActivity(intent)
     }
 

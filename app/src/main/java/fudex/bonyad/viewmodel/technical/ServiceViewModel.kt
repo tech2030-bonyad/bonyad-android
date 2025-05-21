@@ -9,7 +9,7 @@ import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalservicedetailsActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.RegisterimageModel
 
 
 /**

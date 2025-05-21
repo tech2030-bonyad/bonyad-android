@@ -4,7 +4,7 @@ import android.app.Activity
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableField
 import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.RegisterimageModel
 
 
 /**

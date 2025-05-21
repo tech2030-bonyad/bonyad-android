@@ -8,7 +8,7 @@ import androidx.databinding.ObservableField
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.ui.Activity.technical.EdittechnicaldataActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.RegisterimageModel
 
 
 /**

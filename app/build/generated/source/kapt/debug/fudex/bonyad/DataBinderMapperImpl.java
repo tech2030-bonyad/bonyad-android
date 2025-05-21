@@ -8,9 +8,12 @@ import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import fudex.bonyad.databinding.ActivecodeviewModelBindingImpl;
 import fudex.bonyad.databinding.AddserviceviewModelBindingImpl;
+import fudex.bonyad.databinding.AppointmentmanageviewModelBindingImpl;
+import fudex.bonyad.databinding.AvailbiltyviewModelBindingImpl;
 import fudex.bonyad.databinding.CertificatviewModelBindingImpl;
 import fudex.bonyad.databinding.ChangelanguageviewModelBindingImpl;
 import fudex.bonyad.databinding.ContactusviewModelBindingImpl;
+import fudex.bonyad.databinding.DayviewModelBindingImpl;
 import fudex.bonyad.databinding.EditpasswordViewModelBindingImpl;
 import fudex.bonyad.databinding.EditphoneViewModelBindingImpl;
 import fudex.bonyad.databinding.EdittechnicalViewModelBindingImpl;
@@ -47,59 +50,66 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYADDSERVICE = 2;
 
-  private static final int LAYOUT_ACTIVITYCHANGELANGUE = 3;
+  private static final int LAYOUT_ACTIVITYAPPOINTMENTMANAGECTIVITY = 3;
 
-  private static final int LAYOUT_ACTIVITYCONTACTUS = 4;
+  private static final int LAYOUT_ACTIVITYCHANGELANGUE = 4;
 
-  private static final int LAYOUT_ACTIVITYEDITPASS = 5;
+  private static final int LAYOUT_ACTIVITYCONTACTUS = 5;
 
-  private static final int LAYOUT_ACTIVITYEDITPHONE = 6;
+  private static final int LAYOUT_ACTIVITYEDITPASS = 6;
 
-  private static final int LAYOUT_ACTIVITYEDITTECHNICALDATA = 7;
+  private static final int LAYOUT_ACTIVITYEDITPHONE = 7;
 
-  private static final int LAYOUT_ACTIVITYEDITUSERDATA = 8;
+  private static final int LAYOUT_ACTIVITYEDITTECHNICALDATA = 8;
 
-  private static final int LAYOUT_ACTIVITYFORGETPASS = 9;
+  private static final int LAYOUT_ACTIVITYEDITUSERDATA = 9;
 
-  private static final int LAYOUT_ACTIVITYLOGIN = 10;
+  private static final int LAYOUT_ACTIVITYFORGETPASS = 10;
 
-  private static final int LAYOUT_ACTIVITYPROFILE = 11;
+  private static final int LAYOUT_ACTIVITYLOGIN = 11;
 
-  private static final int LAYOUT_ACTIVITYRESETPASSWORD = 12;
+  private static final int LAYOUT_ACTIVITYPROFILE = 12;
 
-  private static final int LAYOUT_ACTIVITYSELECTTYPE = 13;
+  private static final int LAYOUT_ACTIVITYRESETPASSWORD = 13;
 
-  private static final int LAYOUT_ACTIVITYSTATICPAGE = 14;
+  private static final int LAYOUT_ACTIVITYSELECTTYPE = 14;
 
-  private static final int LAYOUT_ACTIVITYTECHNICALHOME = 15;
+  private static final int LAYOUT_ACTIVITYSTATICPAGE = 15;
 
-  private static final int LAYOUT_ACTIVITYTECHNICALREGISTER = 16;
+  private static final int LAYOUT_ACTIVITYTECHNICALHOME = 16;
 
-  private static final int LAYOUT_ACTIVITYTECHNICALSERVICEDETAILS = 17;
+  private static final int LAYOUT_ACTIVITYTECHNICALREGISTER = 17;
 
-  private static final int LAYOUT_ACTIVITYUSERHOME = 18;
+  private static final int LAYOUT_ACTIVITYTECHNICALSERVICEDETAILS = 18;
 
-  private static final int LAYOUT_ACTIVITYUSERREGISTER = 19;
+  private static final int LAYOUT_ACTIVITYUSERHOME = 19;
 
-  private static final int LAYOUT_FRAGMENTTECHNICALPROFILE = 20;
+  private static final int LAYOUT_ACTIVITYUSERREGISTER = 20;
 
-  private static final int LAYOUT_FRAGMENTTECHNICALSERVICES = 21;
+  private static final int LAYOUT_FRAGMENTTECHNICALPROFILE = 21;
 
-  private static final int LAYOUT_FRAGMENTUSERPROFILE = 22;
+  private static final int LAYOUT_FRAGMENTTECHNICALSERVICES = 22;
 
-  private static final int LAYOUT_ITEMCERTIFICATE = 23;
+  private static final int LAYOUT_FRAGMENTUSERPROFILE = 23;
 
-  private static final int LAYOUT_ITEMIMAGE = 24;
+  private static final int LAYOUT_ITEMAVAILABLITY = 24;
 
-  private static final int LAYOUT_ITEMSERVICEIMAGE = 25;
+  private static final int LAYOUT_ITEMCERTIFICATE = 25;
 
-  private static final int LAYOUT_ITEMSERVICES = 26;
+  private static final int LAYOUT_ITEMDAY = 26;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(26);
+  private static final int LAYOUT_ITEMIMAGE = 27;
+
+  private static final int LAYOUT_ITEMSERVICEIMAGE = 28;
+
+  private static final int LAYOUT_ITEMSERVICES = 29;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(29);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_activeuser, LAYOUT_ACTIVITYACTIVEUSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_addservice, LAYOUT_ACTIVITYADDSERVICE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_appointmentmanagectivity, LAYOUT_ACTIVITYAPPOINTMENTMANAGECTIVITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_changelangue, LAYOUT_ACTIVITYCHANGELANGUE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_contactus, LAYOUT_ACTIVITYCONTACTUS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_editpass, LAYOUT_ACTIVITYEDITPASS);
@@ -120,7 +130,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_technicalprofile, LAYOUT_FRAGMENTTECHNICALPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_technicalservices, LAYOUT_FRAGMENTTECHNICALSERVICES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_userprofile, LAYOUT_FRAGMENTUSERPROFILE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_availablity, LAYOUT_ITEMAVAILABLITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_certificate, LAYOUT_ITEMCERTIFICATE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_day, LAYOUT_ITEMDAY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_image, LAYOUT_ITEMIMAGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_serviceimage, LAYOUT_ITEMSERVICEIMAGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_services, LAYOUT_ITEMSERVICES);
@@ -146,6 +158,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new AddserviceviewModelBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_addservice is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYAPPOINTMENTMANAGECTIVITY: {
+          if ("layout/activity_appointmentmanagectivity_0".equals(tag)) {
+            return new AppointmentmanageviewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_appointmentmanagectivity is invalid. Received: " + tag);
         }
         case  LAYOUT_ACTIVITYCHANGELANGUE: {
           if ("layout/activity_changelangue_0".equals(tag)) {
@@ -267,11 +285,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_userprofile is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMAVAILABLITY: {
+          if ("layout/item_availablity_0".equals(tag)) {
+            return new AvailbiltyviewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_availablity is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMCERTIFICATE: {
           if ("layout/item_certificate_0".equals(tag)) {
             return new CertificatviewModelBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for item_certificate is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMDAY: {
+          if ("layout/item_day_0".equals(tag)) {
+            return new DayviewModelBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_day is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMIMAGE: {
           if ("layout/item_image_0".equals(tag)) {
@@ -345,11 +375,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(26);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(29);
 
     static {
       sKeys.put("layout/activity_activeuser_0", fudex.bonyad.R.layout.activity_activeuser);
       sKeys.put("layout/activity_addservice_0", fudex.bonyad.R.layout.activity_addservice);
+      sKeys.put("layout/activity_appointmentmanagectivity_0", fudex.bonyad.R.layout.activity_appointmentmanagectivity);
       sKeys.put("layout/activity_changelangue_0", fudex.bonyad.R.layout.activity_changelangue);
       sKeys.put("layout/activity_contactus_0", fudex.bonyad.R.layout.activity_contactus);
       sKeys.put("layout/activity_editpass_0", fudex.bonyad.R.layout.activity_editpass);
@@ -370,7 +401,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_technicalprofile_0", fudex.bonyad.R.layout.fragment_technicalprofile);
       sKeys.put("layout/fragment_technicalservices_0", fudex.bonyad.R.layout.fragment_technicalservices);
       sKeys.put("layout/fragment_userprofile_0", fudex.bonyad.R.layout.fragment_userprofile);
+      sKeys.put("layout/item_availablity_0", fudex.bonyad.R.layout.item_availablity);
       sKeys.put("layout/item_certificate_0", fudex.bonyad.R.layout.item_certificate);
+      sKeys.put("layout/item_day_0", fudex.bonyad.R.layout.item_day);
       sKeys.put("layout/item_image_0", fudex.bonyad.R.layout.item_image);
       sKeys.put("layout/item_serviceimage_0", fudex.bonyad.R.layout.item_serviceimage);
       sKeys.put("layout/item_services_0", fudex.bonyad.R.layout.item_services);

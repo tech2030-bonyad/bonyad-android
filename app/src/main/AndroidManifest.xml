@@ -41,6 +41,9 @@
         tools:replace="android:supportsRtl"
         tools:targetApi="31">
         <activity
+            android:name=".ui.Activity.technical.Appointmentmanagectivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Activity.user.DetailsspeciallistActivity"
             android:exported="false" />
         <activity

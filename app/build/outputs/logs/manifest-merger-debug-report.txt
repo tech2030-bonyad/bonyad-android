@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-122:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-122:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-122:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-122:12
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-131:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-131:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-131:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-131:12
 MERGED from [androidx.databinding:databinding-adapters:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/398e4f83d19cfd486f1e93da71aa8b03/transformed/databinding-adapters-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/3fd8e9cb516f1057fbfc374dcb3b2019/transformed/databinding-ktx-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/147482905477bbceea8dc6e7a92b5fa0/transformed/databinding-runtime-8.7.0/AndroidManifest.xml:2:1-7:12
@@ -292,8 +292,8 @@ ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:25:5-2
 	android:name
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:26:9-57
 application
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-120:19
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-120:19
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-129:19
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-129:19
 MERGED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:22:5-36:19
 MERGED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.android.material:material:1.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/AndroidManifest.xml:24:5-20
@@ -428,154 +428,172 @@ MERGED from [de.hdodenhof:circleimageview:2.2.0] /Users/mahmoudezzat/.gradle/cac
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:40:9-44
 	android:name
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:30:9-35
-activity#fudex.bonyad.ui.Activity.technical.TechnicalservicedetailsActivity
+activity#fudex.bonyad.ui.Activity.technical.Appointmentmanagectivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:43:9-45:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:44:13-82
-activity#fudex.bonyad.ui.Activity.technical.AddserviceActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:44:13-75
+activity#fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:46:9-48:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:47:13-69
-activity#fudex.bonyad.ui.Activity.technical.EdittechnicaldataActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:47:13-72
+activity#fudex.bonyad.ui.Activity.user.SpecialistsActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:49:9-51:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:50:13-76
-activity#fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:50:13-65
+activity#fudex.bonyad.ui.Activity.technical.TechnicalservicedetailsActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:52:9-54:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:53:13-72
-activity#fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:53:13-82
+activity#fudex.bonyad.ui.Activity.technical.AddserviceActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:55:9-57:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:56:13-76
-activity#fudex.bonyad.ui.Activity.ContactusActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:56:13-69
+activity#fudex.bonyad.ui.Activity.technical.EdittechnicaldataActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:58:9-60:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:59:13-58
-activity#fudex.bonyad.ui.Activity.StaticpageActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:59:13-76
+activity#fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:61:9-63:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:62:13-59
-activity#fudex.bonyad.ui.Activity.EditphoneActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:62:13-72
+activity#fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:64:9-66:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:66:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:65:13-58
-activity#fudex.bonyad.ui.Activity.user.EdituserdataActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:65:13-76
+activity#fudex.bonyad.ui.Activity.ContactusActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:67:9-69:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:68:13-66
-activity#fudex.bonyad.ui.Activity.EditpassActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:68:13-58
+activity#fudex.bonyad.ui.Activity.StaticpageActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:70:9-72:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:71:13-57
-activity#fudex.bonyad.ui.Activity.ProfileActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:71:13-59
+activity#fudex.bonyad.ui.Activity.EditphoneActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:73:9-75:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:75:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:74:13-56
-activity#fudex.bonyad.ui.Activity.user.UserhomeActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:74:13-58
+activity#fudex.bonyad.ui.Activity.user.EdituserdataActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:76:9-78:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:78:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:77:13-62
-activity#fudex.bonyad.ui.Activity.ResetpasswordActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:77:13-66
+activity#fudex.bonyad.ui.Activity.EditpassActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:79:9-81:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:81:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:80:13-62
-activity#fudex.bonyad.ui.Activity.ForgetpassActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:80:13-57
+activity#fudex.bonyad.ui.Activity.ProfileActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:82:9-84:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:84:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:83:13-59
-activity#fudex.bonyad.ui.Activity.ActiveuserActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:83:13-56
+activity#fudex.bonyad.ui.Activity.user.UserhomeActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:85:9-87:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:87:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:86:13-59
-activity#fudex.bonyad.ui.Activity.user.UserregisterActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:86:13-62
+activity#fudex.bonyad.ui.Activity.ResetpasswordActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:88:9-90:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:90:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:89:13-66
-activity#fudex.bonyad.ui.Activity.LoginActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:89:13-62
+activity#fudex.bonyad.ui.Activity.ForgetpassActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:91:9-93:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:93:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:92:13-54
-activity#fudex.bonyad.ui.Activity.ChangelangueActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:92:13-59
+activity#fudex.bonyad.ui.Activity.ActiveuserActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:94:9-96:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:96:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:95:13-61
-activity#fudex.bonyad.ui.Activity.SelecttypeActivity
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:95:13-59
+activity#fudex.bonyad.ui.Activity.user.UserregisterActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:97:9-99:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:99:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:98:13-59
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:98:13-66
+activity#fudex.bonyad.ui.Activity.LoginActivity
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:100:9-102:40
+	android:exported
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:102:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:101:13-54
+activity#fudex.bonyad.ui.Activity.ChangelangueActivity
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:103:9-105:40
+	android:exported
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:105:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:104:13-61
+activity#fudex.bonyad.ui.Activity.SelecttypeActivity
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:106:9-108:40
+	android:exported
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:108:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:107:13-59
 activity#fudex.bonyad.ui.Activity.SplashActivity
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:100:9-109:20
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:109:9-118:20
 	android:label
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:103:13-45
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:112:13-45
 	android:exported
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:102:13-36
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:111:13-36
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:101:13-55
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:110:13-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:104:13-108:29
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:113:13-117:29
 action#android.intent.action.MAIN
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:105:17-69
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:114:17-69
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:105:25-66
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:114:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:107:17-77
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:116:17-77
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:107:27-74
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:116:27-74
 provider#androidx.core.content.FileProvider
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:111:9-119:20
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:120:9-128:20
 	android:grantUriPermissions
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:115:13-47
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:124:13-47
 	android:authorities
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:113:13-56
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:122:13-56
 	android:exported
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:114:13-37
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:123:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:112:13-62
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:121:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:116:13-118:54
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:125:13-127:54
 	android:resource
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:118:17-51
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:127:17-51
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:117:17-67
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:126:17-67
 uses-sdk
 INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml

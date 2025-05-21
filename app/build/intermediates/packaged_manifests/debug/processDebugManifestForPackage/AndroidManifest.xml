@@ -75,6 +75,15 @@
         android:theme="@style/Theme.Bonyadandroid"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="fudex.bonyad.ui.Activity.technical.Appointmentmanagectivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.user.SpecialistsActivity"
+            android:exported="false" />
+        <activity
             android:name="fudex.bonyad.ui.Activity.technical.TechnicalservicedetailsActivity"
             android:exported="false" />
         <activity

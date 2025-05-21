@@ -16,6 +16,7 @@ import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.OrderdetailsModel
 import fudex.bonyad.Model.OrdersModel
 import fudex.bonyad.Model.RatingModel
+import fudex.bonyad.Model.ScheduleResponse
 import fudex.bonyad.Model.ServicesdetailsModel
 import fudex.bonyad.Model.ServicestypeModel
 import fudex.bonyad.Model.SliderModel
@@ -25,9 +26,10 @@ import fudex.bonyad.Model.User
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
-import onnetysolutions.sadded.Model.AboutModel
-import onnetysolutions.sadded.Model.FaqModel
-import onnetysolutions.sadded.Model.ProfileModel
+import fudex.bonyad.Model.AboutModel
+import fudex.bonyad.Model.Dateadd
+import fudex.bonyad.Model.FaqModel
+import fudex.bonyad.Model.ProfileModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -289,4 +291,10 @@ interface ApiInterface {
 
     @GET("services/{serviceId}")
     fun getservicesdetails(@Path("serviceId") serviceId: Int): Call<ServicesdetailsModel?>?
+
+    @GET("availability")
+    fun getavailbilty(): Call<ScheduleResponse?>?
+
+    @POST("availability/bulk")
+    fun adddates(@Body data: Dateadd): Call<ErrorResponse?>?
 }

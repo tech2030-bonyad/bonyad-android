@@ -26,7 +26,7 @@ import fudex.bonyad.ui.Activity.EditphoneActivity
 import fudex.bonyad.ui.Activity.ProfileActivity
 import fudex.bonyad.ui.Activity.technical.EdittechnicaldataActivity
 import fudex.bonyad.ui.Activity.user.EdituserdataActivity
-import onnetysolutions.sadded.Model.ProfileModel
+import fudex.bonyad.Model.ProfileModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

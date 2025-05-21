@@ -50,8 +50,8 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
 
-import onnetysolutions.sadded.Model.DistanceModel
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.DistanceModel
+import fudex.bonyad.Model.RegisterimageModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -398,6 +398,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
 
     fun terms(){
         var intent: Intent = Intent(activity, StaticpageActivity::class.java)
+        intent.putExtra("type",2)
         activity.startActivity(intent)
     }
     fun expertclick() {

@@ -109,4 +109,17 @@
     <string name="specialty">التخصص</string>
     <string name="clear">مسح</string>
     <string name="main_sections">الاقسام الرئيسية</string>
+    <string name="you_can_add_and_edit_your_appointments">يمكنك اضافة المواعيد الخاصة بك وتعديلها</string>
+    <string name="work_days">أيام العمل</string>
+    <string name="available_appointments">المواعيد المتاحة</string>
+    <string name="add_a_new_appointment">إضافة موعد جديد</string>
+    <string name="saturday">السبت</string>
+    <string name="sunday">الأحد</string>
+    <string name="monday">الاثنين</string>
+    <string name="tuesday">الثلاثاء</string>
+    <string name="wednesday">الأربعاء</string>
+    <string name="thursday">الخميس</string>
+    <string name="friday">الجمعة</string>
+    <string name="added_before">Added before</string>
+    <string name="there_is_time_not_added_in_day">there is time not added in day</string>
 </resources>

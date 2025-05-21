@@ -27,7 +27,7 @@ import fudex.bonyad.ui.Activity.ActiveuserActivity
 import fudex.bonyad.ui.Activity.EditphoneActivity
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import onnetysolutions.sadded.Model.ProfileModel
+import fudex.bonyad.Model.ProfileModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

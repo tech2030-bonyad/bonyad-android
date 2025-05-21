@@ -34,7 +34,8 @@ import fudex.bonyad.ui.Fragment.user.UserprofileFragment
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
-import onnetysolutions.sadded.Model.ProfileModel
+import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.ui.Activity.technical.Appointmentmanagectivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,6 +53,10 @@ class TechnicalprofileViewModel(var catogaryFragment: TechnicalprofileFragment) 
         this.context = catogaryFragment
         activity = context.requireActivity()
         islogin.set(LoginSession.isLogin)
+    }
+    fun appointmentmanage(){
+        var intent: Intent = Intent(activity, Appointmentmanagectivity::class.java)
+        activity.startActivity(intent)
     }
     fun about(){
         var intent: Intent = Intent(activity, StaticpageActivity::class.java)

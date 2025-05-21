@@ -13,7 +13,7 @@ import fudex.bonyad.Model.UserModel
 import fudex.bonyad.ui.Activity.ActiveuserActivity
 import fudex.bonyad.ui.Activity.LoginActivity
 
-import onnetysolutions.sadded.Model.LoginModel
+import fudex.bonyad.Model.LoginModel
 
 
 /**

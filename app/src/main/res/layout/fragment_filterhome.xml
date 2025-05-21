@@ -75,7 +75,6 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginTop="8dp"/>
             <LinearLayout
-                android:visibility="@{model.isloading  ? View.GONE : View.VISIBLE}"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:orientation="horizontal"

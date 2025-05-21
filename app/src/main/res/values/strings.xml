@@ -111,4 +111,17 @@
     <string name="specialty">Specialty</string>
     <string name="clear">Clear</string>
     <string name="main_sections">Main Sections</string>
+    <string name="you_can_add_and_edit_your_appointments">You can add and edit your appointments.</string>
+    <string name="work_days">Work days</string>
+    <string name="available_appointments">Available appointments</string>
+    <string name="add_a_new_appointment">Add a new appointment</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="added_before">Added before</string>
+    <string name="there_is_time_not_added_in_day">there is time not added in day</string>
 </resources>

@@ -1,4 +1,4 @@
-package onnetysolutions.sadded.Model
+package fudex.bonyad.Model
 
 import fudex.bonyad.Model.UserModel
 

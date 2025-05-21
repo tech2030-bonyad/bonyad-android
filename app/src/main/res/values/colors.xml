@@ -16,4 +16,6 @@
     <color name="red">#FF6665</color>
     <color name="darkgray">#4D4D52</color>
     <color name="darkblack">#101010</color>
+    <color name="darkblack1">#1F2937</color>
+    <color name="darkgray1">#6B7280</color>
 </resources>

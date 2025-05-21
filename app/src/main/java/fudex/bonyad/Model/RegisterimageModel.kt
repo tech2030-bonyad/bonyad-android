@@ -1,4 +1,4 @@
-package onnetysolutions.sadded.Model
+package fudex.bonyad.Model
 
 import android.net.Uri
 

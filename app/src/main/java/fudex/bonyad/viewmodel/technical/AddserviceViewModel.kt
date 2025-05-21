@@ -50,8 +50,8 @@ import kotlinx.coroutines.withContext
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import onnetysolutions.sadded.Model.ProfileModel
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.Model.RegisterimageModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

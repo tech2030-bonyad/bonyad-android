@@ -20,7 +20,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.blongho.country_data.World
 import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
+import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
+import fudex.bonyad.Model.DistanceModel
 import fudex.bonyad.Model.StatesDatum
 
 import fudex.bonyad.R
@@ -28,7 +30,9 @@ import fudex.bonyad.ui.Adapter.technical.Certificatesadapter
 import fudex.bonyad.ui.Adapter.technical.Imagessadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.RegisterimageModel
+import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
+import fudex.bonyad.ui.Adapter.technical.Daysadapter
 
 
 /**
@@ -271,27 +275,27 @@ object BindingAdapters {
         }
     }
 //
-//    @BindingAdapter("bind:orders", "bind:fragment")
-//    @JvmStatic
-//    fun setorders(recyclerView: RecyclerView, movies: ArrayList<OrderDatum>, fragment: Fragment) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Ordersadapter) {
-//            (adapter as Ordersadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:days", "bind:fragment")
+    @JvmStatic
+    fun setdays(recyclerView: RecyclerView, movies: ArrayList<DistanceModel>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Daysadapter) {
+            (adapter as Daysadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
-//    @BindingAdapter("bind:servicestype", "bind:fragment")
-//    @JvmStatic
-//    fun setservicestype(recyclerView: RecyclerView, movies: ArrayList<String>, fragment: Fragment) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicestypeadapter) {
-//            (adapter as Servicestypeadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:availability", "bind:fragment")
+    @JvmStatic
+    fun setavailability(recyclerView: RecyclerView, movies: ArrayList<Availability>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Avalibiltyadapter) {
+            (adapter as Avalibiltyadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
 //    @BindingAdapter("bind:servicestypeselect", "bind:fragment")
 //    @JvmStatic

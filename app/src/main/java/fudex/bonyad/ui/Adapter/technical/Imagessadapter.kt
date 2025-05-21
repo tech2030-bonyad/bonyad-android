@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import fudex.bonyad.R
 import fudex.bonyad.databinding.ImagesviewModelBinding
 import fudex.bonyad.viewmodel.technical.ImagesViewModel
-import onnetysolutions.sadded.Model.RegisterimageModel
+import fudex.bonyad.Model.RegisterimageModel
 import java.util.*
 
 

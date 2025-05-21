@@ -13,7 +13,7 @@ import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.StaticpageActivity
-import onnetysolutions.sadded.Model.AboutModel
+import fudex.bonyad.Model.AboutModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

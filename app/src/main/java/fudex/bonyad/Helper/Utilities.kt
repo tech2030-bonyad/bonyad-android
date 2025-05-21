@@ -4,6 +4,7 @@ import fudex.bonyad.R
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
+import android.app.TimePickerDialog
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -46,6 +47,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
+import fudex.bonyad.Model.Availability
 import java.io.File
 import java.io.IOException
 
@@ -393,5 +395,67 @@ object Utilities {
             return file
         }
     }
+    fun showTimePickerDialog(
+        context: Context,
+        initialTime: String = "00:00",
+        onTimeSelected: (String) -> Unit
+    ) {
+        val (hour, minute) = initialTime.split(":").map { it.toInt() }
+
+        val timePickerDialog = TimePickerDialog(
+            context,
+            { _, selectedHour, selectedMinute ->
+                val formattedTime = String.format("%02d:%02d", selectedHour, selectedMinute)
+                onTimeSelected(formattedTime)
+            },
+            hour,
+            minute,
+            true // is24HourView
+        )
+
+        timePickerDialog.show()
+    }
+    fun isOverlapping(date: String, existingRanges: List<Availability>): Boolean {
+        val format = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val newTime = format.parse(date) ?: return false
+
+        for (range in existingRanges) {
+            val startStr = range.start_time.orEmpty()
+            val endStr = range.end_time.orEmpty()
+
+            // Skip invalid ranges
+            if (startStr.isEmpty() && endStr.isEmpty()) continue
+
+            // Only end time is set
+            if (startStr.isEmpty() && endStr.isNotEmpty()) {
+                val existingEnd = format.parse(endStr)
+                if (existingEnd != null && newTime.after(existingEnd)) {
+                    return true
+                }
+            }
+
+            // Only start time is set
+            if (startStr.isNotEmpty() && endStr.isEmpty()) {
+                val existingStart = format.parse(startStr)
+                if (existingStart != null && newTime.before(existingStart)) {
+                    return true
+                }
+            }
+
+            // Both start and end times are set
+            if (startStr.isNotEmpty() && endStr.isNotEmpty()) {
+                val existingStart = format.parse(startStr)
+                val existingEnd = format.parse(endStr)
+                if (existingStart != null && existingEnd != null &&
+                    newTime >= existingStart && newTime < existingEnd
+                ) {
+                    return true
+                }
+            }
+        }
+
+        return false
+    }
+
 
 }
