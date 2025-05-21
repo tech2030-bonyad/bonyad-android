@@ -161,10 +161,20 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
         }
     }
     fun changetime(type:String,id:Int,time:String){
+        var index1 = 0
+        for (index in availabilityList) {
+            index1 = 0
+            for (item in index.availabilities!!) {
+                if (id == item.id!!) {
+                    break
+                }
+                index1 = index1 + 1
+            }
+        }
         Utilities.showTimePickerDialog(activity, if (time == ""){"00:00"}else{time}) { selectedTime ->
             for (index in availabilityList){
                 if (index.day_of_week!! == day){
-                    val isConflict = isOverlapping(selectedTime, index.availabilities!!)
+                    val isConflict = isOverlapping(selectedTime, index.availabilities!!,index1,type)
                     if (isConflict == true){
                         Dialogs.showToast(activity.getString(R.string.added_before),activity)
                     }else {
@@ -175,6 +185,7 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
                                 }else {
                                     item.end_time = selectedTime
                                 }
+                                notifyChange()
                             }
                         }
                     }

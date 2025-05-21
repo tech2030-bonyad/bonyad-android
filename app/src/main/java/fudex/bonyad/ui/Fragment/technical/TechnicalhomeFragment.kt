@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 
 
 class TechnicalhomeFragment : Fragment() {
@@ -15,6 +16,11 @@ class TechnicalhomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_technicalhome, container, false)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as TechnicalHomeActivity).technicalhomeViewModel.type.set(0)
     }
 
 }

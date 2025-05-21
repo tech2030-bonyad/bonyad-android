@@ -60,12 +60,13 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
     var  linearlayout: LinearLayoutManager? = null
     private val serviceadapter = Serviceadapter()
     var handler: Handler = Handler()
-
+    var page = 1
+    private var mLoading = false
     init {
         this.context = catogaryFragment
         activity = context.requireActivity()
-        linearlayout = GridLayoutManager(activity,4)
-        linearlayout!!.orientation = LinearLayoutManager.HORIZONTAL
+        linearlayout = LinearLayoutManager(activity)
+        linearlayout!!.orientation = LinearLayoutManager.VERTICAL
         context.binding.serviceList.layoutManager = linearlayout
         context.binding.serviceList.adapter = serviceadapter
         if (activity.getString(R.string.lang) == "ar"){
@@ -91,6 +92,7 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
                 }, 1000)
             }
         })
+        scroll()
     }
     fun getservices() {
         context.binding.serviceList.showShimmer()
@@ -98,13 +100,19 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java)
         var call: Call<StatesModel?>? = null
-        call = apiService.getmyservices(if (context.binding.searchTxt.text.toString() == ""){null}else{context.binding.searchTxt.text.toString()})
+        call = apiService.getservices(if (context.binding.searchTxt.text.toString() == ""){null}else{context.binding.searchTxt.text.toString()},page,10)
         call?.enqueue(object : Callback<StatesModel?> {
             override fun onResponse(call: Call<StatesModel?>, response: Response<StatesModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
-                    servicesList.clear()
+                    if (page == 1) {
+                        servicesList.clear()
+                    }
                     servicesList.addAll(data?.data!!)
+                    if (response.body()!!.data!!.size > 0) {
+                        page++
+                        mLoading = false
+                    }
                     notifyChange()
                 }else {
                     val errorText = response.errorBody()?.string()
@@ -124,5 +132,28 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
                 isloading.set(false)
                 context.binding.serviceList.hideShimmer()
             }
-        }) }
+        })
+    }
+    fun scroll() {
+        context.binding.serviceList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val totalItemCount: Int = linearlayout!!.getItemCount()
+                val visibleItemCount: Int = linearlayout!!.findLastVisibleItemPosition()
+                Log.e("pos", visibleItemCount.toString())
+                if (!mLoading && visibleItemCount >= totalItemCount - 3 && page > 1) {
+                    mLoading = true
+                    getservices()
+                }
+
+                super.onScrolled(recyclerView, dx, dy)
+            }
+
+
+        })
+
+    }
 }

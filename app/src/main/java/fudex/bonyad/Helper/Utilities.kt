@@ -415,10 +415,10 @@ object Utilities {
 
         timePickerDialog.show()
     }
-    fun isOverlapping(date: String, existingRanges: List<Availability>): Boolean {
+    fun isOverlapping(date: String, existingRanges: List<Availability>, index1 : Int , type: String): Boolean {
         val format = SimpleDateFormat("HH:mm", Locale.getDefault())
         val newTime = format.parse(date) ?: return false
-
+        var item = 0
         for (range in existingRanges) {
             val startStr = range.start_time.orEmpty()
             val endStr = range.end_time.orEmpty()
@@ -443,15 +443,33 @@ object Utilities {
             }
 
             // Both start and end times are set
-            if (startStr.isNotEmpty() && endStr.isNotEmpty()) {
-                val existingStart = format.parse(startStr)
-                val existingEnd = format.parse(endStr)
-                if (existingStart != null && existingEnd != null &&
-                    newTime >= existingStart && newTime < existingEnd
-                ) {
-                    return true
+            if (index1 != item){
+                if (startStr.isNotEmpty() && endStr.isNotEmpty()) {
+                    val existingStart = format.parse(startStr)
+                    val existingEnd = format.parse(endStr)
+                    if (existingStart != null && existingEnd != null &&
+                        newTime >= existingStart && newTime < existingEnd
+                    ) {
+                        return true
+                    }
+                }
+            }else {
+                if (startStr.isNotEmpty() && endStr.isNotEmpty()) {
+                    val existingStart = format.parse(startStr)
+                    val existingEnd = format.parse(endStr)
+                    if (type == "from"){
+                        if (existingEnd != null && newTime.after(existingEnd)) {
+                            return true
+                        }
+                    }
+                    if (type == "to"){
+                        if (existingEnd != null && newTime.before(existingStart)) {
+                            return true
+                        }
+                    }
                 }
             }
+            item = item + 1
         }
 
         return false

@@ -58,7 +58,6 @@
 
                 </FrameLayout>
                 <FrameLayout
-                    android:visibility="gone"
                     android:layout_width="134dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="18dp"
@@ -73,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:rotationY="180"
-                            android:background="@drawable/ic_solar_wallet_linear"/>
+                            android:background="@drawable/ic_bookmark"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -81,7 +80,7 @@
                             android:textSize="14sp"
                             android:layout_marginTop="8dp"
                             android:textColor="@color/white"
-                            android:text="@string/wallet"/>
+                            android:text="@string/my_services"/>
                     </LinearLayout>
 
                 </FrameLayout>
@@ -111,6 +110,51 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/appointment_management"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/darkblue"
+                        android:fontFamily="@font/cairoregular"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_up"
+                        android:rotationY="180"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="#208FC3FF"/>
+            </FrameLayout>
+            <FrameLayout
+                android:onClick="@{ () -> model.subsribe() }"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="26dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:rotationY="180"
+                        android:background="@drawable/ic_clipboard_tick"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/subscriptions"
                         android:layout_gravity="center"
                         android:layout_marginStart="16dp"
                         android:textSize="14sp"

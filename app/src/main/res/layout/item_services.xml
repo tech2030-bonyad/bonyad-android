@@ -12,26 +12,65 @@
     </data>
    <LinearLayout
        android:onClick="@{ () -> model.clickitem() }"
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical"
-       android:layout_marginBottom="23dp"
-       android:layout_marginEnd="10dp">
-       <de.hdodenhof.circleimageview.CircleImageView
-           android:layout_width="72dp"
-           android:layout_height="72dp"
-           android:layout_gravity="center"
-           bind:imageUrl="@{model.onservse.image}"/>
+       android:background="@drawable/rec_strockblue2"
+       android:layout_marginBottom="16dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginTop="16dp">
+           <androidx.cardview.widget.CardView
+               android:layout_width="66dp"
+               android:layout_height="57dp"
+               bind:cardCornerRadius="8dp">
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="centerCrop"
+                   bind:imageUrl="@{model.onservse.image}"/>
+           </androidx.cardview.widget.CardView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:paddingBottom="5dp"
+               android:textSize="20sp"
+               android:fontFamily="@font/cairosemibold"
+               android:textStyle="bold"
+               android:text="@{model.onservse.name}"
+               tools:text="عامل بناء"
+               android:layout_marginStart="12dp"
+               android:textColor="@color/darkblue"
+               android:layout_gravity="center"
+               />
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"/>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="top"
+               android:background="@{model.onservse.is_technician_service() == 1 ? @drawable/ic_point :@drawable/ic_addservice}"/>
+       </LinearLayout>
        <TextView
            android:layout_width="wrap_content"
-           android:layout_height="25dp"
-           android:gravity="center"
+           android:layout_height="wrap_content"
            android:paddingBottom="5dp"
-           android:textSize="12sp"
+           android:textSize="13sp"
            android:text="@{model.onservse.name}"
-           tools:text="فنى ميكانيكا"
-           android:textColor="@color/darkblue"
-           android:layout_gravity="center"
+           tools:text="عامل بناء"
+           android:layout_marginTop="12dp"
+           android:fontFamily="@font/cairoregular"
+           android:layout_marginStart="12dp"
+           android:layout_marginEnd="12dp"
+           android:layout_marginBottom="16dp"
+           android:textColor="@color/darkgray1"
            />
    </LinearLayout>
 </layout>

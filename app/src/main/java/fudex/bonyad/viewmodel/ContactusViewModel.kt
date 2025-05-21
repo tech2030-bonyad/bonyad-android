@@ -203,18 +203,19 @@ class ContactusViewModel(activity: ContactusActivity) : BaseObservable() {
                     var data = response.body()
                     for (item in data?.data!!){
                         if (item.key == "facebook"){
-                            insta = item.value!!
+                            insta = item.value ?: ""
                         }
                         if (item.key == "linkedIn"){
-                            linkidin = item.value!!
+                            linkidin = item.value ?: ""
                         }
                         if (item.key == "twitter"){
-                            twitter = item.value!!
+                            twitter = item.value ?: ""
                         }
                         if (item.key == "whatsapp"){
-                            whats = item.value!!
+                            whats = item.value ?: ""
                         }
                     }
+                    notifyChange()
                 }else {
                     val errorText = response.errorBody()?.string()
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)

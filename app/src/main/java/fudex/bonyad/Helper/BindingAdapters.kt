@@ -23,6 +23,7 @@ import com.squareup.picasso.Picasso
 import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DistanceModel
+import fudex.bonyad.Model.PlanData
 import fudex.bonyad.Model.StatesDatum
 
 import fudex.bonyad.R
@@ -33,6 +34,7 @@ import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
+import fudex.bonyad.ui.Adapter.technical.Planadapter
 
 
 /**
@@ -297,16 +299,16 @@ object BindingAdapters {
         }
     }
 //
-//    @BindingAdapter("bind:servicestypeselect", "bind:fragment")
-//    @JvmStatic
-//    fun setservicestypeselect(recyclerView: RecyclerView, movies: ArrayList<ServicetypeDatum>, fragment: Fragment) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicestypeselectadapter) {
-//            (adapter as Servicestypeselectadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:plan", "bind:fragment")
+    @JvmStatic
+    fun setplan(recyclerView: RecyclerView, movies: ArrayList<PlanData>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Planadapter) {
+            (adapter as Planadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
 //    @BindingAdapter("bind:servicestypeselect1", "bind:fragment")
 //    @JvmStatic

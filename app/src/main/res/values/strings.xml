@@ -122,6 +122,15 @@
     <string name="wednesday">Wednesday</string>
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
-    <string name="added_before">Added before</string>
+    <string name="added_before">Make sure you did not add it before or the time is not suitable.</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
+    <string name="my_services">My services</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="packages">Packages</string>
+    <string name="my_subscriptions">My subscriptions</string>
+    <string name="price">Price</string>
+    <string name="r_s">R.S</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscription_date">Subscription date</string>
+    <string name="payment_failer">payment failed</string>
 </resources>

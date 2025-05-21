@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="PlanViewBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.technical.PlanViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rec_strockblue2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@{model.onservse.name}"
+            android:fontFamily="@font/cairosemibold"
+            tools:text="باقة بنياد"
+            android:textColor="@color/darkgray"/>
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/cairoregular"
+                android:text="@string/price"
+                android:textColor="@color/darkgray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:text="@{model.onservse.price}"
+                android:fontFamily="@font/cairoregular"
+                tools:text="200"
+                android:textColor="@color/lightblue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/cairoregular"
+                android:text="@string/r_s"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/darkgray"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <androidx.cardview.widget.CardView
+                android:onClick="@{ () -> model.subscribe() }"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="@color/lightblue"
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/cairobold"
+                    android:text="@string/subscribe"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

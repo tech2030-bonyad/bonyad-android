@@ -3070,6 +3070,7 @@ drawable ht
 drawable hu
 drawable ic_add22
 drawable ic_add_circle
+drawable ic_addservice
 drawable ic_archive_book
 drawable ic_archive_book1
 drawable ic_arrow_back_24
@@ -3077,6 +3078,7 @@ drawable ic_arrow_up
 drawable ic_arrow_up1
 drawable ic_arrowdown
 drawable ic_back
+drawable ic_bookmark
 drawable ic_calendar_remove
 drawable ic_calendar_tick
 drawable ic_calendar_tick1
@@ -3089,6 +3091,7 @@ drawable ic_call_decline_low
 drawable ic_carbon_rule
 drawable ic_cart
 drawable ic_check345
+drawable ic_clipboard_tick
 drawable ic_clock
 drawable ic_clock_black_24dp
 drawable ic_close
@@ -3122,6 +3125,7 @@ drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
 drawable ic_mdi_eye_off_outline
 drawable ic_mdi_light_information
+drawable ic_menu
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -3129,6 +3133,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_notification_bing
 drawable ic_oui_email
 drawable ic_password_check
+drawable ic_point
 drawable ic_profile
 drawable ic_profile1
 drawable ic_quill_phone
@@ -3317,6 +3322,7 @@ drawable rec_lightblue
 drawable rec_lightblue1
 drawable rec_strockblue
 drawable rec_strockblue1
+drawable rec_strockblue2
 drawable rec_strockdarkblue
 drawable rec_strockgray
 drawable rec_strockred
@@ -3839,6 +3845,7 @@ id outline
 id outward
 id oval
 id overshoot
+id packageList
 id packed
 id parallax
 id parent
@@ -4026,6 +4033,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id webView
 id webview
 id west
 id when_playing
@@ -4184,11 +4192,13 @@ layout activity_selecttype
 layout activity_specialists
 layout activity_splash
 layout activity_staticpage
+layout activity_subscriptions
 layout activity_technical_home
 layout activity_technicalregister
 layout activity_technicalservicedetails
 layout activity_userhome
 layout activity_userregister
+layout activity_webview
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
@@ -4239,6 +4249,7 @@ layout item_certificate
 layout item_date
 layout item_day
 layout item_image
+layout item_packages
 layout item_serviceimage
 layout item_services
 layout item_slider
@@ -4647,6 +4658,8 @@ string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string my_appointments
 string my_data
+string my_services
+string my_subscriptions
 string name
 string new_password
 string no
@@ -4655,12 +4668,14 @@ string old_password
 string open1
 string or_contact_us_through_our_platforms
 string orders
+string packages
 string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string payment_failer
 string pick_image_camera
 string pick_image_chooser_title
 string pick_image_gallery
@@ -4671,9 +4686,11 @@ string please_follow_up_on_the_status_of_the_order_once_it_is_accepted
 string please_upload_an_image
 string plz_camera_gallery
 string plz_img
+string price
 string privacy
 string products
 string profile
+string r_s
 string required
 string resend_verification_code
 string reservation_request
@@ -4695,6 +4712,9 @@ string services1
 string specialists
 string specialty
 string status_bar_notification_info_overflow
+string subscribe
+string subscription_date
+string subscriptions
 string sunday
 string terms_and_conditions
 string the_code_has_not_been_received

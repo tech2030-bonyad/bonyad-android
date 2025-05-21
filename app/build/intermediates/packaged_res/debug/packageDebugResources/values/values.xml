@@ -24,7 +24,7 @@
     <string name="add">Add</string>
     <string name="add_a_new_appointment">Add a new appointment</string>
     <string name="add_a_service">Add a service</string>
-    <string name="added_before">Added before</string>
+    <string name="added_before">Make sure you did not add it before or the time is not suitable.</string>
     <string name="address">Address</string>
     <string name="agree_to">Agree to</string>
     <string name="agree_to_the_terms_and_conditions">Agree to the Terms and Conditions</string>
@@ -94,6 +94,8 @@
     <string name="more">More</string>
     <string name="my_appointments">Appointments</string>
     <string name="my_data">My data</string>
+    <string name="my_services">My services</string>
+    <string name="my_subscriptions">My subscriptions</string>
     <string name="name">Name</string>
     <string name="new_password">New Password</string>
     <string name="no">no</string>
@@ -102,15 +104,19 @@
     <string name="open1">open gps</string>
     <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
     <string name="orders">Orders</string>
+    <string name="packages">Packages</string>
     <string name="password">Password</string>
+    <string name="payment_failer">payment failed</string>
     <string name="please_activate_permission">Please Activate Permission</string>
     <string name="please_follow_up_on_the_status_of_the_order_once_it_is_accepted">Please follow up on the status of the order once it is accepted.</string>
     <string name="please_upload_an_image">Please upload an image.</string>
     <string name="plz_camera_gallery">Please Choose Camera Or Gallery</string>
     <string name="plz_img">Please Select Image</string>
+    <string name="price">Price</string>
     <string name="privacy">Privacy</string>
     <string name="products">Products</string>
     <string name="profile">Profile</string>
+    <string name="r_s">R.S</string>
     <string name="required">required</string>
     <string name="resend_verification_code">Resend verification code</string>
     <string name="reservation_request">Reservation request</string>
@@ -129,6 +135,9 @@
     <string name="services1">Services</string>
     <string name="specialists">Specialists</string>
     <string name="specialty">Specialty</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscription_date">Subscription date</string>
+    <string name="subscriptions">Subscriptions</string>
     <string name="sunday">Sunday</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="the_code_has_not_been_received">The code has not been received?</string>

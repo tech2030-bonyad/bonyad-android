@@ -120,6 +120,15 @@
     <string name="wednesday">الأربعاء</string>
     <string name="thursday">الخميس</string>
     <string name="friday">الجمعة</string>
-    <string name="added_before">Added before</string>
-    <string name="there_is_time_not_added_in_day">there is time not added in day</string>
+    <string name="added_before">اتاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
+    <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
+    <string name="my_services">خدماتي</string>
+    <string name="subscriptions">الاشتراكات</string>
+    <string name="packages">الباقات</string>
+    <string name="my_subscriptions">اشتراكاتي</string>
+    <string name="price">السعر</string>
+    <string name="r_s">ر.س</string>
+    <string name="subscribe">اشترك</string>
+    <string name="subscription_date">خدماتي</string>
+    <string name="payment_failer">فشل الدفع</string>
 </resources>

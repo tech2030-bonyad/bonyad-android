@@ -133,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/lightblue"
                     android:fontFamily="@font/cairosemibold"
+                    android:enabled="@{model.isresend}"
                     android:textSize="14sp"
                     android:layout_marginStart="8dp"
                     android:text="@string/resend_verification_code"/>

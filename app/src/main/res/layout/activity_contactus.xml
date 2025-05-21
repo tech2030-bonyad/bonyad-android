@@ -183,23 +183,27 @@
                         android:orientation="horizontal"
                         android:layout_gravity="center">
                         <ImageView
+                            android:visibility="@{model.whats.length() == 0 ? View.GONE : View.VISIBLE}"
                             android:onClick="@{ () -> model.whatsclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/ic_whats"/>
                         <ImageView
+                            android:visibility="@{model.twitter.length() == 0 ? View.GONE : View.VISIBLE}"
                             android:onClick="@{ () -> model.twitterclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:background="@drawable/ic_twitter"/>
                         <ImageView
+                            android:visibility="@{model.insta.length() == 0 ? View.GONE : View.VISIBLE}"
                             android:onClick="@{ () -> model.instaclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:background="@drawable/ic_insta"/>
                         <ImageView
+                            android:visibility="@{model.linkidin.length() == 0 ? View.GONE : View.VISIBLE}"
                             android:onClick="@{ () -> model.linkinclisk() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

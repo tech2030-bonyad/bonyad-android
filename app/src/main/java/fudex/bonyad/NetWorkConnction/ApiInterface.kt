@@ -29,7 +29,10 @@ import okhttp3.ResponseBody
 import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.Dateadd
 import fudex.bonyad.Model.FaqModel
+import fudex.bonyad.Model.MYSubsribeModel
+import fudex.bonyad.Model.PlanModel
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.Model.SubsribeModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Field
@@ -289,6 +292,9 @@ interface ApiInterface {
     @GET("my-services")
     fun getmyservices(@Query("name") name: String?): Call<StatesModel?>?
 
+    @GET("services")
+    fun getservices(@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<StatesModel?>?
+
     @GET("services/{serviceId}")
     fun getservicesdetails(@Path("serviceId") serviceId: Int): Call<ServicesdetailsModel?>?
 
@@ -297,4 +303,13 @@ interface ApiInterface {
 
     @POST("availability/bulk")
     fun adddates(@Body data: Dateadd): Call<ErrorResponse?>?
+
+    @GET("plans")
+    fun getplans(): Call<PlanModel?>?
+
+    @GET("plans/{subsctibeId}/subscribe")
+    fun subsribe(@Path("subsctibeId") subsctibeId: Int): Call<SubsribeModel?>?
+
+    @GET("plans/my-plan")
+    fun getmyplan(): Call<MYSubsribeModel?>?
 }
