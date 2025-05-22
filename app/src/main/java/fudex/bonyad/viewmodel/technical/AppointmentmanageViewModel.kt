@@ -33,7 +33,6 @@ import fudex.bonyad.ui.Activity.ActiveuserActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
-import fudex.bonyad.ui.Adapter.technical.Certificatesadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import retrofit2.Call
 import retrofit2.Callback

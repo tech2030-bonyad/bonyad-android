@@ -41,7 +41,6 @@ import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.technical.AddserviceActivity
-import fudex.bonyad.ui.Adapter.technical.Certificatesadapter
 import fudex.bonyad.ui.Adapter.technical.Imagessadapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

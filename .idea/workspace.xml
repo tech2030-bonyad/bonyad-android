@@ -67,6 +67,11 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_myservices.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -123,6 +128,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_delete.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
@@ -192,6 +202,11 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_services1.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_slider.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -221,11 +236,17 @@
     <list default="true" id="3ba91a24-0be8-4d0e-8311-09f93afe2e56" name="Changes" comment="first commmit">
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ServicesdetailsModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ServicesdetailsModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/ServiceViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/ServiceViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/TechnicalserviceViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/TechnicalserviceViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_services.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/technical/Certificatesadapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/technical/Certificatesadapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/AddserviceViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/AddserviceViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/AppointmentmanageViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/technical/AppointmentmanageViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/EdituserprofileViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserregisterViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserregisterViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_activeuser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_activeuser.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_userregister.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_technicalprofile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_technicalprofile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_userprofile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_userprofile.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,6 +313,28 @@
       <recent name="fudex.bonyad.ui.Activity" />
       <recent name="fudex.bonyad.ui.Activity.user" />
     </key>
+    <key name="android.template.-1486609018">
+      <recent name="fudex.bonyad.ui.Activity.technical" />
+    </key>
+    <key name="android.template.1883747729">
+      <recent name="fudex.bonyad.ui.Activity.technical" />
+    </key>
+    <key name="android.template.1717751660">
+      <recent name="fudex.bonyad.ui.Activity.technical" />
+    </key>
+    <key name="android.template.-1176716113">
+      <recent name="fudex.bonyad.ui.Activity" />
+    </key>
+    <key name="android.template.867007488">
+      <recent name="fudex.bonyad.ui.Activity.technical" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="fudex.bonyad.viewmodel" />
+      <recent name="fudex.bonyad.ui.Fragment" />
+      <recent name="fudex.bonyad.viewmodel.technical" />
+      <recent name="fudex.bonyad.ui.Adapter.technical" />
+      <recent name="fudex.bonyad.ui.Activity.technical" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
@@ -299,14 +342,8 @@
       <recent name="$PROJECT_DIR$/app/src/main/res" />
       <recent name="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user" />
     </key>
-    <key name="android.template.-1486609018">
-      <recent name="fudex.bonyad.ui.Activity.technical" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-    </key>
-    <key name="android.template.1883747729">
-      <recent name="fudex.bonyad.ui.Activity.technical" />
     </key>
     <key name="android.template.-1669281519">
       <recent name="fudex.bonyad.ui.Activity" />
@@ -320,19 +357,6 @@
       <recent name="fudex.bonyad.viewmodel" />
       <recent name="fudex.bonyad.viewmodel.user" />
       <recent name="fudex.bonyad.ui.Fragment.user" />
-    </key>
-    <key name="android.template.1717751660">
-      <recent name="fudex.bonyad.ui.Activity.technical" />
-    </key>
-    <key name="android.template.-1176716113">
-      <recent name="fudex.bonyad.ui.Activity" />
-    </key>
-    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="fudex.bonyad.ui.Adapter.technical" />
-      <recent name="fudex.bonyad.viewmodel.technical" />
-      <recent name="fudex.bonyad.ui.Activity.technical" />
-      <recent name="fudex.bonyad.viewmodel" />
-      <recent name="fudex.bonyad.viewmodel.user" />
     </key>
     <key name="android.template.358968174">
       <recent name="fudex.bonyad.ui.Activity" />

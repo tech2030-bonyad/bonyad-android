@@ -4,10 +4,6 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_whats.xml"
     },
     {
-        "merged": "fudex.bonyad.app-debug-67:/layout_fragment_delete.xml.flat",
-        "source": "fudex.bonyad.app-main-69:/layout/fragment_delete.xml"
-    },
-    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/drawable_ic_oui_email.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_oui_email.xml"
     },
@@ -38,6 +34,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/layout_fragment_userhome.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/fragment_userhome.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_activeuser.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_activeuser.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/drawable_ic_user_remove.xml.flat",
@@ -196,6 +196,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_solar_wallet_linear.xml"
     },
     {
+        "merged": "fudex.bonyad.app-debug-67:/layout_fragment_userprofile.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/fragment_userprofile.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/drawable_ic_menu.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_menu.xml"
     },
@@ -258,6 +262,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/drawable_ic_deleteimage.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_deleteimage.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_userregister.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_userregister.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/drawable_ic_solar_logout_outline.xml.flat",
@@ -406,6 +414,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/layout_fragment_speciallistreservedone.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/fragment_speciallistreservedone.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-67:/layout_fragment_technicalprofile.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/fragment_technicalprofile.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/layout_fragment_userprofile.xml.flat",
@@ -626,10 +638,6 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/drawable_ic_add_circle.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_add_circle.xml"
-    },
-    {
-        "merged": "fudex.bonyad.app-debug-67:/layout_activity_myservices.xml.flat",
-        "source": "fudex.bonyad.app-main-69:/layout/activity_myservices.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/layout_item_special1.xml.flat",

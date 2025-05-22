@@ -332,6 +332,9 @@
                     android:textColor="@color/lightblue"
                     android:fontFamily="@font/cairosemibold"/>
             </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

@@ -129,13 +129,13 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
             error = true
             activity.binding.name.setError(activity.getString(R.string.required))
         }
-        if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.required))
-        }
-        if (emailObserv.get() != null && emailObserv.get()!!.isNotEmpty()  && !Validations.isValidEmail(emailObserv.get().toString().trim())) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.email_foramt_is_wrong))
+        if (emailObserv.get() != null && emailObserv.get()!!.isNotEmpty()) {
+            if (emailObserv.get() != null && emailObserv.get()!!
+                    .isNotEmpty() && !Validations.isValidEmail(emailObserv.get().toString().trim())
+            ) {
+                error = true
+                activity.binding.email.setError(activity.getString(R.string.email_foramt_is_wrong))
+            }
         }
         if (!error) {
             Utilities.closeKeyboard(activity)
@@ -160,7 +160,7 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         requestBody =  MultipartBody.Builder()
             .setType(MultipartBody.FORM)
             .addFormDataPart("name", nameObserv.get().toString())
-            .addFormDataPart("email", emailObserv.get().toString())
+            .addFormDataPart("email", if (emailObserv.get() ?: "" == ""){null}else{emailObserv.get().toString()})
             .build()
         Log.e("name",nameObserv.get().toString())
         val call: Call<ProfileModel?>? = apiService.editprofile(requestBody)
@@ -217,7 +217,7 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
         val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
 
-        val call: Call<ProfileModel?>? = apiService.editprofilewithimage(imageBody,name,email)
+        val call: Call<ProfileModel?>? = apiService.editprofilewithimage(imageBody,name,if (emailObserv.get() ?: "" == ""){null}else{email})
         call?.enqueue(object : Callback<ProfileModel?> {
             override fun onResponse(call: Call<ProfileModel?>, response: Response<ProfileModel?>) {
                 if (response.code() == 200 || response.code() == 201) {

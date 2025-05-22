@@ -51,7 +51,6 @@ import kotlin.collections.ArrayList
 class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
     var activity: UserregisterActivity = UserregisterActivity()
     val phoneObserv = ObservableField<String>()
-    val emailObserv = ObservableField<String>()
     val passwordObserv = ObservableField<String>()
     val confirmpasswordObserv = ObservableField<String>()
     val nameObserv = ObservableField<String>()
@@ -65,12 +64,6 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
     fun onnameChanged(): TextViewBindingAdapter.OnTextChanged {
         return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
             nameObserv.set(s.toString())
-        }
-    }
-    @SuppressLint("RestrictedApi")
-    fun onemailChanged(): TextViewBindingAdapter.OnTextChanged {
-        return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
-            emailObserv.set(s.toString())
         }
     }
 
@@ -101,7 +94,6 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
         this.activity = activity
         if (activity.getString(R.string.lang) == "ar"){
             activity.binding.name.gravity = Gravity.RIGHT
-            activity.binding.email.gravity = Gravity.RIGHT
             activity.binding.phone.gravity = Gravity.RIGHT
             activity.binding.pass.gravity = Gravity.RIGHT
             activity.binding.confirmpass.gravity = Gravity.RIGHT
@@ -127,14 +119,6 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
         if (phoneObserv.get() == null || phoneObserv.get()!!.isEmpty()) {
             error = true
             activity.binding.phone.setError(activity.getString(R.string.required))
-        }
-        if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.required))
-        }
-        if (emailObserv.get() != null && emailObserv.get()!!.isNotEmpty()  && !Validations.isValidEmail(emailObserv.get().toString().trim())) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.email_foramt_is_wrong))
         }
         if (activity.intent.hasExtra("type") == false) {
             if (passwordObserv.get() == null || passwordObserv.get()!!.isEmpty()) {
@@ -203,7 +187,7 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
         }else if (LoginSession.gettype(activity) == 3){
             type = "technician"
         }
-        var userdata = Userdata(type,phone1,passwordObserv.get(),"ddd",1,emailObserv.get(),confirmpasswordObserv.get(), name = nameObserv.get())
+        var userdata = Userdata(type,phone1,passwordObserv.get(),"ddd",1,null,confirmpasswordObserv.get(), name = nameObserv.get())
         val call: Call<LoginData?>? = apiService.register(userdata)
         call?.enqueue(object : Callback<LoginData?> {
             override fun onResponse(call: Call<LoginData?>, response: Response<LoginData?>) {

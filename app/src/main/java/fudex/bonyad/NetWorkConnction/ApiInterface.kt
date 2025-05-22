@@ -192,7 +192,7 @@ interface ApiInterface {
     fun editprofilewithimage(
         @Part imageFile: MultipartBody.Part,
         @Part("name") name: RequestBody,
-        @Part("email") email: RequestBody
+        @Part("email") email: RequestBody?
     ): Call<ProfileModel?>?
 
     @Multipart

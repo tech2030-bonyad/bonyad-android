@@ -169,50 +169,6 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/ic_oui_email"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="15dp"/>
-                        <EditText
-                            android:id="@+id/email"
-                            android:onTextChanged="@{model.onemailChanged()}"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:inputType="textEmailAddress"
-                            android:layout_marginStart="10dp"
-                            android:textColor="@color/darkblue"
-                            android:fontFamily="@font/cairosemibold"
-                            android:backgroundTint="@android:color/transparent"
-                            android:layout_marginEnd="10dp"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/cairoregular"
-                        android:text="@string/email"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:background="@color/white"
-                        android:layout_gravity="start|top"
-                        android:layout_marginStart="15dp"
-                        android:textColor="@color/darkblue"/>
-                </FrameLayout>
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@drawable/rec_strockblue"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:background="@drawable/ic_lock"
                             android:layout_gravity="center"
                             android:layout_marginStart="15dp"/>

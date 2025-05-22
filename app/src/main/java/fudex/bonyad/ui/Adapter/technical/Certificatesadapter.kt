@@ -71,7 +71,7 @@ class Certificatesadapter : RecyclerView.Adapter<Certificatesadapter.MyViewHolde
     }
 
     override fun getItemCount(): Int {
-        return horizontalList.size
+        return horizontalList.size + 1
     }
 
 
