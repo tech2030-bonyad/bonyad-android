@@ -628,6 +628,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/drawable/ic_add_circle.xml"
     },
     {
+        "merged": "fudex.bonyad.app-debug-67:/layout_activity_myservices.xml.flat",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_myservices.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-67:/layout_item_special1.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/item_special1.xml"
     },
