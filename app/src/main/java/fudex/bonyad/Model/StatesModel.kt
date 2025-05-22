@@ -10,6 +10,7 @@ data class StatesDatum (
     val id: Int? = null,
     val name: String? = null,
     val image: String? = null,
+    val description: String? = null,
     var is_technician_service: Int? = null
     )
 

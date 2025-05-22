@@ -12,6 +12,8 @@
     <string name="app_name">بنياد</string>
     <string name="appointment_management">ادارة المواعيد</string>
     <string name="arabic">العربية</string>
+    <string name="are_you_sure_to_log_out_of_the_app">هل أنت متأكد من تسجيل الخروج من التطبيق؟</string>
+    <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
     <string name="area">المنطقة</string>
     <string name="attach_a_picture">إرفاق صورة</string>
     <string name="available_appointments">المواعيد المتاحة</string>
@@ -32,6 +34,7 @@
     <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
     <string name="delete">حذف</string>
     <string name="delete_account">حذف الحساب</string>
+    <string name="delete_the_service">حذف الخدمة</string>
     <string name="departments">الاقسام</string>
     <string name="description">الوصف</string>
     <string name="description1">وصف</string>
@@ -63,6 +66,7 @@
     <string name="language">اللغة</string>
     <string name="language_change">تغير اللغة</string>
     <string name="length_must_be">يجب أن يكون عدد الأرقام</string>
+    <string name="load_more">عرض المزيد</string>
     <string name="log_in_to_your_account">سجل الدخول لحسابك</string>
     <string name="login">تسجيل الدخول</string>
     <string name="logout">تسجيل الخروج</string>
@@ -112,6 +116,7 @@
     <string name="service_name">اسم الخدمة</string>
     <string name="services">خدمات</string>
     <string name="services1">الخدمات</string>
+    <string name="show_less">عرض أقل</string>
     <string name="specialists">المتخصصين</string>
     <string name="specialty">التخصص</string>
     <string name="subscribe">اشترك</string>
@@ -120,6 +125,7 @@
     <string name="sunday">الأحد</string>
     <string name="terms_and_conditions">الشروط والاحكام</string>
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
+    <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
     <string name="thursday">الخميس</string>
     <string name="time">الوقت</string>

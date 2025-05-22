@@ -35,6 +35,7 @@ import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
+import fudex.bonyad.ui.Adapter.technical.Service1adapter
 
 
 /**
@@ -305,6 +306,17 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is Planadapter) {
             (adapter as Planadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:services1", "bind:fragment")
+    @JvmStatic
+    fun setservices1(recyclerView: RecyclerView, movies: ArrayList<StatesDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Service1adapter) {
+            (adapter as Service1adapter).setdata(movies, fragment)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

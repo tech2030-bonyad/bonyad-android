@@ -11,6 +11,7 @@
     <color name="ic_launcher_background">#0861AD</color>
     <color name="lightblue">#0080E0</color>
     <color name="lightblue1">#4CA8F9</color>
+    <color name="lightblue2">#8FC3FF</color>
     <color name="lightgray">#8A8A8A</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -31,6 +32,8 @@
     <string name="app_name">Bonyad</string>
     <string name="appointment_management">Appointment Management</string>
     <string name="arabic">Arabic</string>
+    <string name="are_you_sure_to_log_out_of_the_app">Are you sure to log out of the app?</string>
+    <string name="are_you_sure_you_want_to_delete_the_service">Are you sure you want to delete the service?</string>
     <string name="area">Area</string>
     <string name="attach_a_picture">Attach a picture</string>
     <string name="available_appointments">Available appointments</string>
@@ -52,6 +55,7 @@
     <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
     <string name="delete">Delete</string>
     <string name="delete_account">Delete Account</string>
+    <string name="delete_the_service">Delete the service</string>
     <string name="departments">Departments</string>
     <string name="description">Description</string>
     <string name="description1">Description</string>
@@ -84,6 +88,7 @@
     <string name="language">Language</string>
     <string name="language_change">Language change</string>
     <string name="length_must_be">lenght must be</string>
+    <string name="load_more">Load More</string>
     <string name="log_in_to_your_account">Log in to your account</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
@@ -133,6 +138,7 @@
     <string name="service_name">Service name</string>
     <string name="services">Services</string>
     <string name="services1">Services</string>
+    <string name="show_less">Show Less</string>
     <string name="specialists">Specialists</string>
     <string name="specialty">Specialty</string>
     <string name="subscribe">Subscribe</string>
@@ -141,6 +147,7 @@
     <string name="sunday">Sunday</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="the_code_has_not_been_received">The code has not been received?</string>
+    <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
     <string name="thursday">Thursday</string>
     <string name="time">Time</string>

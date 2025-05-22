@@ -1565,6 +1565,7 @@ int color ic_ae_background 0x7f060080
 int color ic_launcher_background 0x7f060081
 int color lightblue 0x7f060082
 int color lightblue1 0x7f060083
+int color lightblue2 0x7f060292
 int color lightgray 0x7f060084
 int color m3_appbar_overlay_color 0x7f060085
 int color m3_assist_chip_icon_tint_color 0x7f060086
@@ -3108,6 +3109,7 @@ int drawable ic_icon_camera 0x7f080197
 int drawable ic_iconoir_language 0x7f080198
 int drawable ic_images 0x7f080199
 int drawable ic_info 0x7f08019a
+int drawable ic_info_circle 0x7f0802b9
 int drawable ic_insta 0x7f08019b
 int drawable ic_ion_person_outline 0x7f08019c
 int drawable ic_ion_person_outline2 0x7f08019d
@@ -3326,6 +3328,7 @@ int drawable rec_strockdarkblue 0x7f080271
 int drawable rec_strockgray 0x7f080272
 int drawable rec_strockred 0x7f080273
 int drawable rec_strockred1 0x7f080274
+int drawable rectrans 0x7f0802ba
 int drawable ro 0x7f080275
 int drawable rs 0x7f080276
 int drawable ru 0x7f080277
@@ -3505,6 +3508,7 @@ int id beginOnFirstDraw 0x7f0a0064
 int id beginning 0x7f0a0065
 int id bestChoice 0x7f0a0066
 int id blocking 0x7f0a0067
+int id body 0x7f0a0287
 int id bottom 0x7f0a0068
 int id bottom_to_top 0x7f0a0069
 int id bounce 0x7f0a006a
@@ -3521,6 +3525,7 @@ int id cache_measures 0x7f0a0074
 int id callMeasure 0x7f0a0075
 int id cancel_action 0x7f0a0076
 int id cancel_button 0x7f0a0077
+int id canceltxt 0x7f0a0288
 int id carryVelocity 0x7f0a0078
 int id center 0x7f0a0079
 int id centerCrop 0x7f0a007a
@@ -3728,6 +3733,7 @@ int id ignore 0x7f0a0143
 int id ignoreRequest 0x7f0a0144
 int id image 0x7f0a0145
 int id images 0x7f0a0146
+int id img 0x7f0a0289
 int id immediateStop 0x7f0a0147
 int id included 0x7f0a0148
 int id indeterminate 0x7f0a0149
@@ -3751,6 +3757,7 @@ int id line3 0x7f0a015a
 int id linear 0x7f0a015b
 int id listMode 0x7f0a015c
 int id list_item 0x7f0a015d
+int id logoutTxt 0x7f0a028a
 int id lottie_layer_name 0x7f0a015e
 int id main 0x7f0a015f
 int id marquee 0x7f0a0160
@@ -4185,6 +4192,7 @@ int layout activity_edittechnicaldata 0x7f0d0024
 int layout activity_edituserdata 0x7f0d0025
 int layout activity_forgetpass 0x7f0d0026
 int layout activity_login 0x7f0d0027
+int layout activity_myservices 0x7f0d00b8
 int layout activity_profile 0x7f0d0028
 int layout activity_resetpassword 0x7f0d0029
 int layout activity_selecttype 0x7f0d002a
@@ -4233,6 +4241,7 @@ int layout exo_styled_settings_list_item 0x7f0d0053
 int layout exo_styled_sub_settings_list_item 0x7f0d0054
 int layout exo_track_selection_dialog 0x7f0d0055
 int layout fingerprint_dialog_layout 0x7f0d0056
+int layout fragment_delete 0x7f0d00ba
 int layout fragment_filterhome 0x7f0d0057
 int layout fragment_filterspecial 0x7f0d0058
 int layout fragment_speciallistreservedone 0x7f0d0059
@@ -4251,6 +4260,7 @@ int layout item_image 0x7f0d0065
 int layout item_packages 0x7f0d0066
 int layout item_serviceimage 0x7f0d0067
 int layout item_services 0x7f0d0068
+int layout item_services1 0x7f0d00b9
 int layout item_slider 0x7f0d0069
 int layout item_special 0x7f0d006a
 int layout item_special1 0x7f0d006b
@@ -4381,6 +4391,8 @@ int string app_name 0x7f130025
 int string appbar_scrolling_view_behavior 0x7f130026
 int string appointment_management 0x7f130027
 int string arabic 0x7f130028
+int string are_you_sure_to_log_out_of_the_app 0x7f13018f
+int string are_you_sure_you_want_to_delete_the_service 0x7f130190
 int string area 0x7f130029
 int string attach_a_picture 0x7f13002a
 int string available_appointments 0x7f13002b
@@ -4443,6 +4455,7 @@ int string date_and_time_of_receipt 0x7f130063
 int string default_error_msg 0x7f130064
 int string delete 0x7f130065
 int string delete_account 0x7f130066
+int string delete_the_service 0x7f130191
 int string departments 0x7f130067
 int string description 0x7f130068
 int string description1 0x7f130069
@@ -4560,6 +4573,7 @@ int string lang 0x7f1300d8
 int string language 0x7f1300d9
 int string language_change 0x7f1300da
 int string length_must_be 0x7f1300db
+int string load_more 0x7f13018c
 int string log_in_to_your_account 0x7f1300dc
 int string login 0x7f1300dd
 int string logout 0x7f1300de
@@ -4708,6 +4722,7 @@ int string service_images 0x7f13016b
 int string service_name 0x7f13016c
 int string services 0x7f13016d
 int string services1 0x7f13016e
+int string show_less 0x7f13018d
 int string specialists 0x7f13016f
 int string specialty 0x7f130170
 int string status_bar_notification_info_overflow 0x7f130171
@@ -4717,6 +4732,7 @@ int string subscriptions 0x7f130174
 int string sunday 0x7f130175
 int string terms_and_conditions 0x7f130176
 int string the_code_has_not_been_received 0x7f130177
+int string there_are_no_services_available 0x7f13018e
 int string there_is_time_not_added_in_day 0x7f130178
 int string thursday 0x7f130179
 int string time 0x7f13017a

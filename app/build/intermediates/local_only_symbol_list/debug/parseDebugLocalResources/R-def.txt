@@ -11,6 +11,7 @@ color darkwhite
 color ic_launcher_background
 color lightblue
 color lightblue1
+color lightblue2
 color lightgray
 color purple_200
 color purple_500
@@ -57,6 +58,7 @@ drawable ic_icon_camera
 drawable ic_iconoir_language
 drawable ic_images
 drawable ic_info
+drawable ic_info_circle
 drawable ic_insta
 drawable ic_ion_person_outline
 drawable ic_ion_person_outline2
@@ -104,6 +106,7 @@ drawable rec_strockdarkblue
 drawable rec_strockgray
 drawable rec_strockred
 drawable rec_strockred1
+drawable rectrans
 drawable wadget
 drawable widget22
 font cairoblack
@@ -115,6 +118,8 @@ font cairosemibold
 id address
 id agreeCheck
 id appointment
+id body
+id canceltxt
 id cityLin
 id code1
 id code2
@@ -133,7 +138,9 @@ id eyeConfirm
 id eyePass
 id fram
 id images
+id img
 id indicator
+id logoutTxt
 id main
 id message
 id name
@@ -166,6 +173,7 @@ layout activity_edittechnicaldata
 layout activity_edituserdata
 layout activity_forgetpass
 layout activity_login
+layout activity_myservices
 layout activity_profile
 layout activity_resetpassword
 layout activity_selecttype
@@ -179,6 +187,7 @@ layout activity_technicalservicedetails
 layout activity_userhome
 layout activity_userregister
 layout activity_webview
+layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
 layout fragment_speciallistreservedone
@@ -195,6 +204,7 @@ layout item_image
 layout item_packages
 layout item_serviceimage
 layout item_services
+layout item_services1
 layout item_slider
 layout item_special
 layout item_special1
@@ -214,6 +224,8 @@ string agree_to_the_terms_and_conditions
 string app_name
 string appointment_management
 string arabic
+string are_you_sure_to_log_out_of_the_app
+string are_you_sure_you_want_to_delete_the_service
 string area
 string attach_a_picture
 string available_appointments
@@ -235,6 +247,7 @@ string customer_account
 string date_and_time_of_receipt
 string delete
 string delete_account
+string delete_the_service
 string departments
 string description
 string description1
@@ -267,6 +280,7 @@ string lang
 string language
 string language_change
 string length_must_be
+string load_more
 string log_in_to_your_account
 string login
 string logout
@@ -316,6 +330,7 @@ string service_images
 string service_name
 string services
 string services1
+string show_less
 string specialists
 string specialty
 string subscribe
@@ -324,6 +339,7 @@ string subscriptions
 string sunday
 string terms_and_conditions
 string the_code_has_not_been_received
+string there_are_no_services_available
 string there_is_time_not_added_in_day
 string thursday
 string time

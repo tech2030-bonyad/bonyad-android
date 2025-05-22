@@ -11,7 +11,8 @@ data class PlanData(
     val name: String? = null,
     val duration: Int? = null,      // in minutes
     val price: String? = null,      // keep as String if using it for display or currency formatting
-    val image: String? = null       // URL or base64, could be empty
+    val image: String? = null,
+    val created_at: String? = null
 )
 data class SubsribeModel(
     val data: SubsribeData? = null,

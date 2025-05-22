@@ -13,3 +13,6 @@ data class ServicesdetailsModelData (
     val images: ArrayList<Certificate>? = ArrayList()
 )
 
+data class AddserviceModel(
+    val service_ids: ArrayList<Int>? = ArrayList()
+)

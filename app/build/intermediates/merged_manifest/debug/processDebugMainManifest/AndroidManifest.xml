@@ -75,6 +75,9 @@
         android:theme="@style/Theme.Bonyadandroid"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="fudex.bonyad.ui.Activity.technical.MyservicesActivity"
+            android:exported="false" />
+        <activity
             android:name="fudex.bonyad.ui.Activity.technical.SubscriptionsActivity"
             android:exported="false" />
         <activity

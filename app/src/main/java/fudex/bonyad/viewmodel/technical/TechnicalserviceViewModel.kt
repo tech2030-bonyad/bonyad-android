@@ -1,19 +1,16 @@
 package fudex.bonyad.viewmodel.technical
 
 import android.app.Activity
-import android.content.Intent
-import android.graphics.Color
+import android.os.Build
 import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.Gravity
-import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
-import androidx.datastore.preferences.core.intPreferencesKey
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import atiaf.redstone.NetWorkConnction.RetrofitClient
@@ -22,28 +19,16 @@ import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Helper.Utilities
+import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.Model.StatesModel
 import fudex.bonyad.Model.UserModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
-import fudex.bonyad.SharedPreferences.LoginSession
-import fudex.bonyad.ui.Activity.ChangelangueActivity
 
-import fudex.bonyad.ui.Activity.ContactusActivity
-
-import fudex.bonyad.ui.Activity.LoginActivity
-import fudex.bonyad.ui.Activity.ProfileActivity
-import fudex.bonyad.ui.Activity.StaticpageActivity
-import fudex.bonyad.ui.Adapter.technical.Imagessadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceadapter
-import fudex.bonyad.ui.Fragment.technical.TechnicalprofileFragment
 import fudex.bonyad.ui.Fragment.technical.TechnicalservicesFragment
-import fudex.bonyad.ui.Fragment.user.UserprofileFragment
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 
-import fudex.bonyad.Model.ProfileModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -95,7 +80,9 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
         scroll()
     }
     fun getservices() {
-        context.binding.serviceList.showShimmer()
+        if (page == 1) {
+            context.binding.serviceList.showShimmer()
+        }
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java)
@@ -155,5 +142,90 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
 
         })
 
+    }
+    fun addservice(id: Int){
+        Utilities.disabletouch(activity)
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+        var serviceids: ArrayList<Int> = ArrayList()
+        serviceids.add(id)
+        var services  = AddserviceModel(serviceids)
+        val call: Call<ErrorResponse?>? = apiService.addservices(services)
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            @RequiresApi(Build.VERSION_CODES.O)
+            override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var index = 0
+                    for (item in servicesList){
+                        if (item.id == id){
+                            servicesList[index].is_technician_service = 1
+                        }
+                        index = index + 1
+                    }
+                    notifyChange()
+                } else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            addservice(id)
+                        }
+                    })
+                }
+                isloading.set(false)
+                Utilities.enabletouch(activity)
+
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                isloading.set(false)
+                Utilities.enabletouch(activity)
+            }
+        })
+    }
+
+    fun deleteservice(id: Int){
+        Utilities.disabletouch(activity)
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+        var serviceids: ArrayList<Int> = ArrayList()
+        serviceids.add(id)
+        var services  = AddserviceModel(serviceids)
+        val call: Call<ErrorResponse?>? = apiService.deleteservices(services)
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            @RequiresApi(Build.VERSION_CODES.O)
+            override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var index = 0
+                    for (item in servicesList){
+                        if (item.id == id){
+                            servicesList[index].is_technician_service = 0
+                        }
+                        index = index + 1
+                    }
+                    notifyChange()
+                } else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            deleteservice(id)
+                        }
+                    })
+                }
+                isloading.set(false)
+                Utilities.enabletouch(activity)
+
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                isloading.set(false)
+                Utilities.enabletouch(activity)
+            }
+        })
     }
 }

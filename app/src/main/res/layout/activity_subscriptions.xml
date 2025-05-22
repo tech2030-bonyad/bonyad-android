@@ -40,6 +40,15 @@
                 android:fontFamily="@font/cairobold"
                 android:textColor="@color/darkblue"/>
         </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="220dp"
             android:layout_height="40dp"
@@ -112,6 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="@{model.type == 1 ? View.VISIBLE : View.INVISIBLE}"
+                app:shimmer_recycler_layout="@layout/item_packages"
                 bind:plan="@{model.planList}"
                 bind:fragment="@{model.activity}"/>
             <LinearLayout
@@ -191,11 +201,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
+                        android:text="@{model.mydata.created_at}"
                         android:fontFamily="@font/cairoregular"
                         tools:text="18/05/2025"
                         android:textColor="@color/darkgray"/>
                 </LinearLayout>
             </LinearLayout>
+        </FrameLayout>
+            </LinearLayout>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/lightblue"
+                android:visibility="@{model.isloading &amp;&amp; model.planList.size() > 0 ? View.VISIBLE : View.GONE}"
+                android:layout_gravity="center"/>
         </FrameLayout>
     </LinearLayout>
 </layout>

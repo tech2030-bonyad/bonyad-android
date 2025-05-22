@@ -36,6 +36,7 @@ import okhttp3.RequestBody
 
 import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.ui.Activity.technical.Appointmentmanagectivity
+import fudex.bonyad.ui.Activity.technical.MyservicesActivity
 import fudex.bonyad.ui.Activity.technical.SubscriptionsActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -54,6 +55,10 @@ class TechnicalprofileViewModel(var catogaryFragment: TechnicalprofileFragment) 
         this.context = catogaryFragment
         activity = context.requireActivity()
         islogin.set(LoginSession.isLogin)
+    }
+    fun myservice(){
+        var intent: Intent = Intent(activity, MyservicesActivity::class.java)
+        activity.startActivity(intent)
     }
     fun subsribe(){
         var intent: Intent = Intent(activity, SubscriptionsActivity::class.java)

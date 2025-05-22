@@ -131,4 +131,10 @@
     <string name="subscribe">اشترك</string>
     <string name="subscription_date">خدماتي</string>
     <string name="payment_failer">فشل الدفع</string>
+    <string name="load_more">عرض المزيد</string>
+    <string name="show_less">عرض أقل</string>
+    <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
+    <string name="are_you_sure_to_log_out_of_the_app">هل أنت متأكد من تسجيل الخروج من التطبيق؟</string>
+    <string name="delete_the_service">حذف الخدمة</string>
+    <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
 </resources>

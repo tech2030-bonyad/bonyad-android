@@ -10,6 +10,7 @@ import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalservicedetailsActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.Model.RegisterimageModel
+import fudex.bonyad.ui.Fragment.technical.TechnicalservicesFragment
 
 
 /**
@@ -26,9 +27,16 @@ class ServiceViewModel : BaseObservable() {
         this.context = context
     }
     fun clickitem(){
-        var intent: Intent = Intent(context?.requireActivity(), TechnicalservicedetailsActivity::class.java)
-        intent.putExtra("id", onservse.get()!!.id!!)
-        context?.startActivity(intent)
+
+    }
+    fun changestatus(){
+        if (context is TechnicalservicesFragment){
+            if (onservse.get()!!.is_technician_service == 0){
+                (context as TechnicalservicesFragment).technicalserviceViewModel.addservice(onservse.get()!!.id!!)
+            }else {
+                (context as TechnicalservicesFragment).technicalserviceViewModel.deleteservice(onservse.get()!!.id!!)
+            }
+        }
     }
 
 

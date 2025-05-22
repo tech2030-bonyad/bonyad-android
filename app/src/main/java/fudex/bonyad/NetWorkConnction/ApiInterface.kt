@@ -27,6 +27,7 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import fudex.bonyad.Model.AboutModel
+import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.Dateadd
 import fudex.bonyad.Model.FaqModel
 import fudex.bonyad.Model.MYSubsribeModel
@@ -35,10 +36,12 @@ import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.Model.SubsribeModel
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.HTTP
 import retrofit2.http.Headers
 import retrofit2.http.Multipart
 import retrofit2.http.POST
@@ -290,7 +293,7 @@ interface ApiInterface {
     fun deletenots(): Call<ErrorResponse?>?
 
     @GET("my-services")
-    fun getmyservices(@Query("name") name: String?): Call<StatesModel?>?
+    fun getmyservices(): Call<StatesModel?>?
 
     @GET("services")
     fun getservices(@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<StatesModel?>?
@@ -312,4 +315,10 @@ interface ApiInterface {
 
     @GET("plans/my-plan")
     fun getmyplan(): Call<MYSubsribeModel?>?
+
+    @POST("services/add")
+    fun addservices(@Body data: AddserviceModel): Call<ErrorResponse?>?
+
+    @HTTP(method = "DELETE", path = "services/delete", hasBody = true)
+    fun deleteservices(@Body data: AddserviceModel): Call<ErrorResponse?>?
 }

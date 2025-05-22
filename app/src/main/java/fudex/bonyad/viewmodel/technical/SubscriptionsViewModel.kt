@@ -62,6 +62,7 @@ class SubscriptionsViewModel(activity: SubscriptionsActivity) : BaseObservable()
         activity.onBackPressed()
     }
     fun getpalns() {
+        activity.binding.packageList.showShimmer()
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java)
@@ -83,13 +84,14 @@ class SubscriptionsViewModel(activity: SubscriptionsActivity) : BaseObservable()
                         }
                     })
                 }
-
+                activity.binding.packageList.hideShimmer()
                 isloading.set(false)
             }
 
             override fun onFailure(call: Call<PlanModel?>, t: Throwable) {
                 Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
                 isloading.set(false)
+                activity.binding.packageList.hideShimmer()
             }
         })
     }

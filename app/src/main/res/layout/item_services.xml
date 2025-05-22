@@ -53,17 +53,18 @@
                android:layout_height="wrap_content"
                android:layout_weight="1"/>
            <ImageView
+               android:onClick="@{ () -> model.changestatus() }"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_gravity="top"
                android:background="@{model.onservse.is_technician_service() == 1 ? @drawable/ic_point :@drawable/ic_addservice}"/>
        </LinearLayout>
        <TextView
+           android:id="@+id/des"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:paddingBottom="5dp"
            android:textSize="13sp"
-           android:text="@{model.onservse.name}"
            tools:text="عامل بناء"
            android:layout_marginTop="12dp"
            android:fontFamily="@font/cairoregular"
