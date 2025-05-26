@@ -202,7 +202,7 @@ class ContactusViewModel(activity: ContactusActivity) : BaseObservable() {
                 if (response!!.code() == 200 || response!!.code() == 201) {
                     var data = response.body()
                     for (item in data?.data!!){
-                        if (item.key == "facebook"){
+                        if (item.key == "instagram"){
                             insta = item.value ?: ""
                         }
                         if (item.key == "linkedIn"){

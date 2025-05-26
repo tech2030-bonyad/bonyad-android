@@ -134,6 +134,94 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.address() }"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="26dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_location2"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addresses"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/darkblue"
+                        android:fontFamily="@font/cairoregular"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_up"
+                        android:rotationY="180"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="#208FC3FF"/>
+            </FrameLayout>
+            <FrameLayout
+                android:onClick="@{ () -> model.accountbank() }"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="26dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_bank"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_account"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/darkblue"
+                        android:fontFamily="@font/cairoregular"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_up"
+                        android:rotationY="180"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="#208FC3FF"/>
+            </FrameLayout>
+            <FrameLayout
                 android:onClick="@{ () -> model.about() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"

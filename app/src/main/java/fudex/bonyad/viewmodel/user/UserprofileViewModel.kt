@@ -81,6 +81,22 @@ class UserprofileViewModel(var catogaryFragment: UserprofileFragment) : BaseObse
         var intent: Intent = Intent(activity, ProfileActivity::class.java)
         activity.startActivity(intent)
     }
+    fun address(){
+        if (LoginSession.isLogin) {
+
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            activity.startActivity(intent)
+        }
+    }
+    fun accountbank(){
+        if (LoginSession.isLogin) {
+
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            activity.startActivity(intent)
+        }
+    }
     fun logout(){
         Utilities.disabletouch(activity)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Fragment.user.FilterspecialFragment">
+    <data class="FiltertechnicalViewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.FiltertechnicalViewModel" />
+    </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="500dp"
@@ -40,6 +47,7 @@
                 android:text="@string/city"
                 android:layout_marginTop="24dp"/>
             <LinearLayout
+                android:onClick="@{ () -> model.zoneclick() }"
                 android:id="@+id/cityLin"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -49,17 +57,21 @@
                 android:background="@drawable/rec_strockblue"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="16dp"
                     tools:text="@string/city"
+                    android:text="@{model.zonename.length() == 0 ? @string/city : model.zonename}"
                     android:textSize="12sp"
                     android:layout_gravity="center"
                     android:textColor="@color/darkblue"
                     android:fontFamily="@font/cairosemibold"
                     android:backgroundTint="@android:color/transparent"
                     android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,12 +90,15 @@
                 android:text="@string/specialty"
                 android:layout_marginTop="20dp"/>
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/serviceList"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                bind:fragment="@{model.context}"
+                bind:technicalfilter="@{model.servicesList}"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
@@ -93,6 +108,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp">
                 <androidx.cardview.widget.CardView
+                    android:onClick="@{ () -> model.clearall() }"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -110,6 +126,7 @@
                         android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:onClick="@{ () -> model.save() }"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -129,4 +146,4 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</FrameLayout>
+</layout>

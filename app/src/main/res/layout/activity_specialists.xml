@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:bind="http://schemas.android.com/tools"
     tools:context=".ui.Activity.user.SpecialistsActivity">
+    <data class="TechnicalListviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.TechnicallistViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +23,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp">
             <ImageView
+                android:onClick="@{ () -> model.back() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_back"
@@ -33,6 +40,7 @@
                 android:fontFamily="@font/cairobold"
                 android:textColor="@color/darkblue"/>
             <ImageView
+                android:onClick="@{ () -> model.filter() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_filter"
@@ -47,6 +55,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:layout_marginTop="23dp"
+            bind:technical="@{model.technicalList}"
+            bind:fragment="@{model.context}"
             />
     </LinearLayout>
-</LinearLayout>
+</layout>

@@ -16,11 +16,8 @@ data class DistanceModel(
 
 
 data class FilterModel(
-    val service_type: String? = null,
-    val max_distance: String? = null,
-    val location_type: String? = null,
-    val employee_gender: String? = null,
-    val rate: String? = null,
+    val serviceId: Int? = null,
+    val cityId: Int? = null
 )
 
 data class CalendarDay(

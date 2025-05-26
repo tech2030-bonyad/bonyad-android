@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="TechnicailservicesviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.TechnicalservicesViewModel" />
+    </data>
+    <LinearLayout
+        android:onClick="@{ () -> model.clickitem() }"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="عامل بناء"
+            android:text="@{model.onservse.name}"
+            android:fontFamily="@font/cairoregular"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:textColor="@color/darkblue"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:onClick="@{ () -> model.clickitem() }"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:buttonTint="@{model.onservse.id == model.serviceId ? @color/lightblue : @color/darkgray}"
+            android:checked="@{model.onservse.id == model.serviceId ? true : false}"/>
+    </LinearLayout>
+</layout>

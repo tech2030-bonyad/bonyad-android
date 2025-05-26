@@ -3,10 +3,13 @@
     <string name="about_the_platform">عن المنصة</string>
     <string name="activation_code">رمز التفعيل</string>
     <string name="add">اضافة</string>
+    <string name="add_a_new_address">اضافة عنوان جديد</string>
     <string name="add_a_new_appointment">إضافة موعد جديد</string>
     <string name="add_a_service">اضافة خدمة</string>
-    <string name="added_before">اتاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
+    <string name="added_before">تاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
     <string name="address">العنوان</string>
+    <string name="address_details">العنوان بالتفصيل</string>
+    <string name="addresses">العناوين</string>
     <string name="agree_to">الموافقة علي</string>
     <string name="agree_to_the_terms_and_conditions">الموافقة علي الشروط والاحكام</string>
     <string name="app_name">بنياد</string>
@@ -17,6 +20,7 @@
     <string name="area">المنطقة</string>
     <string name="attach_a_picture">إرفاق صورة</string>
     <string name="available_appointments">المواعيد المتاحة</string>
+    <string name="bank_account">الحساب البنكي</string>
     <string name="camera">كاميرا</string>
     <string name="cancel">إلغاء</string>
     <string name="change_mobile_number">تغير رقم الجوال</string>
@@ -32,6 +36,7 @@
     <string name="create_an_account">إنشاء حساب</string>
     <string name="customer_account">حساب عميل</string>
     <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
+    <string name="default_address">العنوان الافتراضي</string>
     <string name="delete">حذف</string>
     <string name="delete_account">حذف الحساب</string>
     <string name="delete_the_service">حذف الخدمة</string>
@@ -46,6 +51,7 @@
     <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
     <string name="eng">AR</string>
     <string name="english">الإنجليزية</string>
+    <string name="enter_the_address">ادخل العنوان</string>
     <string name="enter_the_information_below">أدخل المعلومات أدناه</string>
     <string name="enter_the_mobile_number_to_send_the_activation_code">ادخل رقم الجوال لارسال رمز التفعيل</string>
     <string name="enter_the_new_mobile_number">ادخل رقم الجوال الجديد</string>
@@ -110,6 +116,7 @@
     <string name="search">البحث</string>
     <string name="select">اختر</string>
     <string name="select_account_type">اختر نوع الحساب</string>
+    <string name="select_as_default_address">تعيين كعنوان افتراضي</string>
     <string name="send">ارسال</string>
     <string name="service_description">وصف الخدمة</string>
     <string name="service_images">صور الخدمة</string>
@@ -119,12 +126,15 @@
     <string name="show_less">عرض أقل</string>
     <string name="specialists">المتخصصين</string>
     <string name="specialty">التخصص</string>
+    <string name="street">الشارع</string>
+    <string name="street_name">اسم الشارع</string>
     <string name="subscribe">اشترك</string>
     <string name="subscription_date">خدماتي</string>
     <string name="subscriptions">الاشتراكات</string>
     <string name="sunday">الأحد</string>
     <string name="terms_and_conditions">الشروط والاحكام</string>
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
+    <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
     <string name="thursday">الخميس</string>
@@ -133,6 +143,7 @@
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>
     <string name="wallet">المحفظة</string>
     <string name="wednesday">الأربعاء</string>
+    <string name="welcome">مرحبا</string>
     <string name="welcome_back">مرحباً بعودتك</string>
     <string name="work_days">أيام العمل</string>
     <string name="years_of_experience">سنوات الخبرة</string>

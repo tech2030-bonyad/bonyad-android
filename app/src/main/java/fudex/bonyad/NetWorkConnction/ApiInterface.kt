@@ -30,10 +30,12 @@ import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.Dateadd
 import fudex.bonyad.Model.FaqModel
+import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.MYSubsribeModel
 import fudex.bonyad.Model.PlanModel
 import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.Model.SubsribeModel
+import fudex.bonyad.Model.TechnicalModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
@@ -56,6 +58,12 @@ interface ApiInterface {
 
     @GET("zones")
     fun getzones(): Call<StatesModel?>?
+
+    @GET("user-home")
+    fun gethome(@Query("name") name: String?): Call<HomeModel?>?
+
+    @GET("technicians")
+    fun gettechnicals( @Query("page") page: Int? , @Query("paginate") paginate: Int?, @Query("zones[]") zones: List<Int>?, @Query("services[]") services: List<Int>?): Call<TechnicalModel?>?
 
     @GET("client/cities")
     fun getcities(@Query("state_id") state_id: Int?): Call<StatesModel?>?

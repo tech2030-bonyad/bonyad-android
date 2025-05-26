@@ -212,7 +212,7 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
         var error = ""
         for (index in availabilityList){
             for (item in index.availabilities!!){
-                if (item.start_time == ""){
+                if (item.start_time == "" || item.end_time == ""){
                     error = error + activity.getString(R.string.there_is_time_not_added_in_day) + " " + index.day_name!! +"\n"
                 }
             }

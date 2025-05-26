@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="83dp">
+    xmlns:bind="http://schemas.android.com/tools">
+    <data class="TechnicailviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.TechnicailViewModel" />
+    </data>
     <FrameLayout
-        android:layout_width="230dp"
+        android:onClick="@{ () -> model.clickitem() }"
+        android:layout_width="200dp"
         android:layout_height="83dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/rec_strockgray">
@@ -23,7 +30,8 @@
                 android:orientation="horizontal">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="32dp"
-                    android:layout_height="32dp"/>
+                    android:layout_height="32dp"
+                    bind:imageUrl="@{model.onservse.avatar}"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -31,6 +39,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_gravity="center"
                     android:textSize="16sp"
+                    android:text="@{model.onservse.name}"
                     tools:text="علي بن محمد"
                     android:textColor="@color/darkblack"/>
                 <TextView
@@ -40,6 +49,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_gravity="center"
                     android:textSize="10sp"
+                    android:text="4.7"
                     tools:text="4.7"
                     android:textColor="@color/darkblack"/>
                 <ImageView
@@ -55,6 +65,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_gravity="center"
                     android:textSize="10sp"
+                    android:text="(12)"
                     tools:text="(12)"
                     android:textColor="@color/darkgray"/>
 
@@ -67,4 +78,4 @@
                 android:layout_marginTop="7dp"/>
         </LinearLayout>
     </FrameLayout>
-</LinearLayout>
+</layout>

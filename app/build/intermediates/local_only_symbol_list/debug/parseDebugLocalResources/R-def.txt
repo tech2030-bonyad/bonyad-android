@@ -35,6 +35,7 @@ drawable ic_arrow_up
 drawable ic_arrow_up1
 drawable ic_arrowdown
 drawable ic_back
+drawable ic_bank
 drawable ic_bookmark
 drawable ic_calendar_remove
 drawable ic_calendar_tick
@@ -46,10 +47,12 @@ drawable ic_clipboard_tick
 drawable ic_clock
 drawable ic_close
 drawable ic_delete22
+drawable ic_delete3
 drawable ic_deleteimage
 drawable ic_document_text
 drawable ic_document_text1
 drawable ic_edit2
+drawable ic_edit223
 drawable ic_edit333
 drawable ic_filter
 drawable ic_home
@@ -67,6 +70,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_linkedin
 drawable ic_loc
+drawable ic_location2
 drawable ic_lock
 drawable ic_lockactive
 drawable ic_mdi_eye_off_outline
@@ -87,6 +91,8 @@ drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
 drawable ic_suitcase
 drawable ic_tabler_user_question
+drawable ic_toggle
+drawable ic_toggle2
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
@@ -115,7 +121,9 @@ font cairoextralight
 font cairolight
 font cairoregular
 font cairosemibold
+id addresList
 id address
+id addressdetails
 id agreeCheck
 id appointment
 id body
@@ -157,11 +165,14 @@ id searchTxt
 id serviceList
 id slider
 id specialList
+id swip
 id timeList
 id title
 id webView
 id zoneLin
 layout activity_activeuser
+layout activity_addadress
+layout activity_addresses
 layout activity_addservice
 layout activity_appointmentmanagectivity
 layout activity_changelangue
@@ -196,6 +207,7 @@ layout fragment_technicalprofile
 layout fragment_technicalservices
 layout fragment_userhome
 layout fragment_userprofile
+layout item_address
 layout item_availablity
 layout item_certificate
 layout item_date
@@ -208,6 +220,7 @@ layout item_services1
 layout item_slider
 layout item_special
 layout item_special1
+layout item_technicalservice
 layout item_time
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -215,10 +228,13 @@ mipmap ic_launcher_round
 string about_the_platform
 string activation_code
 string add
+string add_a_new_address
 string add_a_new_appointment
 string add_a_service
 string added_before
 string address
+string address_details
+string addresses
 string agree_to
 string agree_to_the_terms_and_conditions
 string app_name
@@ -229,6 +245,7 @@ string are_you_sure_you_want_to_delete_the_service
 string area
 string attach_a_picture
 string available_appointments
+string bank_account
 string camera
 string cancel
 string change_mobile_number
@@ -245,6 +262,7 @@ string copied
 string create_an_account
 string customer_account
 string date_and_time_of_receipt
+string default_address
 string delete
 string delete_account
 string delete_the_service
@@ -259,6 +277,7 @@ string email
 string email_foramt_is_wrong
 string eng
 string english
+string enter_the_address
 string enter_the_information_below
 string enter_the_mobile_number_to_send_the_activation_code
 string enter_the_new_mobile_number
@@ -324,6 +343,7 @@ string save
 string search
 string select
 string select_account_type
+string select_as_default_address
 string send
 string service_description
 string service_images
@@ -333,12 +353,15 @@ string services1
 string show_less
 string specialists
 string specialty
+string street
+string street_name
 string subscribe
 string subscription_date
 string subscriptions
 string sunday
 string terms_and_conditions
 string the_code_has_not_been_received
+string there_are_no_addresses_available
 string there_are_no_services_available
 string there_is_time_not_added_in_day
 string thursday
@@ -347,6 +370,7 @@ string tuesday
 string user_deleted
 string wallet
 string wednesday
+string welcome
 string welcome_back
 string work_days
 string years_of_experience

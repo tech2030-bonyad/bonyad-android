@@ -120,7 +120,7 @@
     <string name="wednesday">الأربعاء</string>
     <string name="thursday">الخميس</string>
     <string name="friday">الجمعة</string>
-    <string name="added_before">اتاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
+    <string name="added_before">تاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
     <string name="my_services">خدماتي</string>
     <string name="subscriptions">الاشتراكات</string>
@@ -137,4 +137,15 @@
     <string name="are_you_sure_to_log_out_of_the_app">هل أنت متأكد من تسجيل الخروج من التطبيق؟</string>
     <string name="delete_the_service">حذف الخدمة</string>
     <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
+    <string name="welcome">مرحبا</string>
+    <string name="addresses">العناوين</string>
+    <string name="bank_account">الحساب البنكي</string>
+    <string name="default_address">العنوان الافتراضي</string>
+    <string name="add_a_new_address">اضافة عنوان جديد</string>
+    <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
+    <string name="street">الشارع</string>
+    <string name="street_name">اسم الشارع</string>
+    <string name="address_details">العنوان بالتفصيل</string>
+    <string name="enter_the_address">ادخل العنوان</string>
+    <string name="select_as_default_address">تعيين كعنوان افتراضي</string>
 </resources>

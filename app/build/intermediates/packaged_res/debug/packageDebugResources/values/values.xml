@@ -23,10 +23,13 @@
     <string name="about_the_platform">About the platform</string>
     <string name="activation_code">Activation code</string>
     <string name="add">Add</string>
+    <string name="add_a_new_address">Add a new address</string>
     <string name="add_a_new_appointment">Add a new appointment</string>
     <string name="add_a_service">Add a service</string>
     <string name="added_before">Make sure you did not add it before or the time is not suitable.</string>
     <string name="address">Address</string>
+    <string name="address_details">Address details</string>
+    <string name="addresses">Addresses</string>
     <string name="agree_to">Agree to</string>
     <string name="agree_to_the_terms_and_conditions">Agree to the Terms and Conditions</string>
     <string name="app_name">Bonyad</string>
@@ -37,6 +40,7 @@
     <string name="area">Area</string>
     <string name="attach_a_picture">Attach a picture</string>
     <string name="available_appointments">Available appointments</string>
+    <string name="bank_account">Bank account</string>
     <string name="camera">Camera</string>
     <string name="cancel">Cancel</string>
     <string name="change_mobile_number">Change mobile number</string>
@@ -53,6 +57,7 @@
     <string name="create_an_account">Create an account</string>
     <string name="customer_account">Customer account</string>
     <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
+    <string name="default_address">default address</string>
     <string name="delete">Delete</string>
     <string name="delete_account">Delete Account</string>
     <string name="delete_the_service">Delete the service</string>
@@ -67,6 +72,7 @@
     <string name="email_foramt_is_wrong">Email formate is wrong</string>
     <string name="eng">ENG</string>
     <string name="english">English</string>
+    <string name="enter_the_address">Enter the address</string>
     <string name="enter_the_information_below">Enter the information below</string>
     <string name="enter_the_mobile_number_to_send_the_activation_code">Enter the mobile number to send the activation code</string>
     <string name="enter_the_new_mobile_number">Enter the new mobile number</string>
@@ -132,6 +138,7 @@
     <string name="search">Search</string>
     <string name="select">select</string>
     <string name="select_account_type">Select Account Type</string>
+    <string name="select_as_default_address">Set as default address</string>
     <string name="send">Send</string>
     <string name="service_description">Service description</string>
     <string name="service_images">Service Images</string>
@@ -141,12 +148,15 @@
     <string name="show_less">Show Less</string>
     <string name="specialists">Specialists</string>
     <string name="specialty">Specialty</string>
+    <string name="street">Street</string>
+    <string name="street_name">Street name</string>
     <string name="subscribe">Subscribe</string>
     <string name="subscription_date">Subscription date</string>
     <string name="subscriptions">Subscriptions</string>
     <string name="sunday">Sunday</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="the_code_has_not_been_received">The code has not been received?</string>
+    <string name="there_are_no_addresses_available">there are no addresses available</string>
     <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
     <string name="thursday">Thursday</string>
@@ -155,6 +165,7 @@
     <string name="user_deleted">User Has been Deleted By The System or bloked</string>
     <string name="wallet">Wallet</string>
     <string name="wednesday">Wednesday</string>
+    <string name="welcome">Welcome</string>
     <string name="welcome_back">Welcome back</string>
     <string name="work_days">Work days</string>
     <string name="years_of_experience">Years of experience</string>

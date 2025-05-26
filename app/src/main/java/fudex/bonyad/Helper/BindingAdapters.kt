@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.blongho.country_data.World
 import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
+import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DistanceModel
@@ -32,10 +33,15 @@ import fudex.bonyad.ui.Adapter.technical.Imagessadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
 import fudex.bonyad.Model.RegisterimageModel
+import fudex.bonyad.Model.Technician
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
 import fudex.bonyad.ui.Adapter.technical.Service1adapter
+import fudex.bonyad.ui.Adapter.user.Addressesadapter
+import fudex.bonyad.ui.Adapter.user.Technicafilterladapter
+import fudex.bonyad.ui.Adapter.user.Technical1adapter
+import fudex.bonyad.ui.Adapter.user.Technicaladapter
 
 
 /**
@@ -322,27 +328,49 @@ object BindingAdapters {
         }
     }
 //
-//    @BindingAdapter("bind:servicestypeselect1", "bind:fragment")
-//    @JvmStatic
-//    fun setservicestypeselec1t(recyclerView: RecyclerView, movies: ArrayList<ServicetypeDatum>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicestypeselect1adapter) {
-//            (adapter as Servicestypeselect1adapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:technicalhome", "bind:fragment")
+    @JvmStatic
+    fun settechnicalhome(recyclerView: RecyclerView, movies: ArrayList<Technician>, fragment: Fragment) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Technicaladapter) {
+            (adapter as Technicaladapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:technical", "bind:fragment")
+    @JvmStatic
+    fun settechnical(recyclerView: RecyclerView, movies: ArrayList<Technician>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Technical1adapter) {
+            (adapter as Technical1adapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
-//    @BindingAdapter("bind:services", "bind:fragment")
-//    @JvmStatic
-//    fun setservices(recyclerView: RecyclerView, movies: ArrayList<Service>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicesadapter) {
-//            (adapter as Servicesadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:address", "bind:fragment")
+    @JvmStatic
+    fun setaddress(recyclerView: RecyclerView, movies: ArrayList<AddressesDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Addressesadapter) {
+            (adapter as Addressesadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:technicalfilter", "bind:fragment")
+    @JvmStatic
+    fun settechnicalfilter(recyclerView: RecyclerView, movies: ArrayList<StatesDatum>, fragment: Fragment) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Technicafilterladapter) {
+            (adapter as Technicafilterladapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
 //    @BindingAdapter("bind:servicesorder", "bind:fragment")
 //    @JvmStatic

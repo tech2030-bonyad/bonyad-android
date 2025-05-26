@@ -34,6 +34,7 @@ import fudex.bonyad.Model.ProfileModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.Locale
 import java.util.concurrent.TimeUnit
 
 
@@ -131,11 +132,14 @@ class ActivecodeViewModel(activity: ActiveuserActivity) : BaseObservable() {
     fun timershow(){
         object : CountDownTimer((time * 1000).toLong(), 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                timer.set(""+String.format("%02d:%02d",
-                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
-                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
-                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+                val minutes = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) -
+                        TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished))
+                val seconds = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))
+
+                val formattedTime = String.format(Locale(activity.getString(R.string.lang)), "%02d:%02d", minutes, seconds)
+                val localizedText = formattedTime
+                timer.set(localizedText)
             }
 
             override fun onFinish() {
