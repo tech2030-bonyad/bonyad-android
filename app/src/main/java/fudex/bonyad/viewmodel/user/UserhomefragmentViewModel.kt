@@ -110,6 +110,7 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
                     technicallist.clear()
                     technicallist.addAll(data?.data!!.technicians!!)
                     sliderlist.addAll(data?.data!!.sliders!!)
+                    pagerAdapter.notifyDataSetChanged()
                     notifyChange()
                 }else {
                     val errorText = response.errorBody()?.string()

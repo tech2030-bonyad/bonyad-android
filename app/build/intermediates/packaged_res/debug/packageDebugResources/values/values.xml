@@ -26,6 +26,7 @@
     <string name="add_a_new_address">Add a new address</string>
     <string name="add_a_new_appointment">Add a new appointment</string>
     <string name="add_a_service">Add a service</string>
+    <string name="add_address">add address</string>
     <string name="added_before">Make sure you did not add it before or the time is not suitable.</string>
     <string name="address">Address</string>
     <string name="address_details">Address details</string>
@@ -49,6 +50,7 @@
     <string name="city">City</string>
     <string name="clear">Clear</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="confirm">Confirm</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="confirm_password_must_same_password">confirm password must same password</string>
     <string name="contact_us">Contact Us</string>

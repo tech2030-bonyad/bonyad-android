@@ -1,6 +1,7 @@
 package fudex.bonyad.NetWorkConnction
 
 import fudex.bonyad.Data.Contactdata
+import fudex.bonyad.Data.Craetereserve
 import fudex.bonyad.Data.Editpass
 import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.AddaressModel
@@ -29,6 +30,7 @@ import okhttp3.ResponseBody
 import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.Dateadd
+import fudex.bonyad.Model.DetailstechnicalModel
 import fudex.bonyad.Model.FaqModel
 import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.MYSubsribeModel
@@ -109,14 +111,10 @@ interface ApiInterface {
     @GET("client/sliders")
     fun getsliders(): Call<SliderModel?>?
 
-    @GET("client/branches/{branchId}")
-    fun getbranchdetails(
-        @Path("branchId") tripId: Int,
-        @Query("lat") lat: String?,
-        @Query("lng") lng: String?,
-        @Query("service_type") service_type: String?,
-        @Query("location_type") location_type: String?
-    ): Call<BranchsetailsModel?>?
+    @GET("technicians/{technicalId}")
+    fun gettechnical(
+        @Path("technicalId") technicalId: Int,
+    ): Call<DetailstechnicalModel?>?
 
     @GET("user-details")
     fun getprofiledata(): Call<ProfileModel?>?
@@ -258,12 +256,11 @@ interface ApiInterface {
     @POST("client/deleteAccount")
     fun deleteaccount(): Call<ErrorResponse?>?
 
-    @GET("client/slots") // Append this to the base URL
+    @GET("technician/availability-dates/{technicalId}") // Append this to the base URL
     fun getSlots(
+        @Path("technicalId") technicalId: Int,
         @Query("date") date: String,
-        @Query("branch_id") branchId: Int,
-        @Query("service_ids[]") serviceIds: List<Int>
-    ): Call<SlotsModel?>?
+    ): Call<ScheduleResponse?>?
 
     @FormUrlEncoded
     @POST("client/order")
@@ -329,4 +326,7 @@ interface ApiInterface {
 
     @HTTP(method = "DELETE", path = "services/delete", hasBody = true)
     fun deleteservices(@Body data: AddserviceModel): Call<ErrorResponse?>?
+
+    @POST("reservations")
+    fun createreserve(@Body data: Craetereserve): Call<ErrorResponse?>?
 }

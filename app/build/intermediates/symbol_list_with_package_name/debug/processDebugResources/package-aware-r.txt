@@ -3092,6 +3092,7 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_carbon_rule
 drawable ic_cart
+drawable ic_check223
 drawable ic_check345
 drawable ic_clipboard_tick
 drawable ic_clock
@@ -3531,6 +3532,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id buttonPanel
 id cache_measures
+id calender
 id callMeasure
 id cancel_action
 id cancel_button
@@ -3544,6 +3546,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id check
 id checkbox
 id checked
 id chronometer
@@ -3583,6 +3586,8 @@ id dark
 id dataBinding
 id dateList
 id date_picker_actions
+id dayName
+id dayNumber
 id daysList
 id decelerate
 id decelerateAndComplete
@@ -4253,6 +4258,7 @@ layout exo_styled_settings_list_item
 layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
 layout fingerprint_dialog_layout
+layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
@@ -4266,6 +4272,7 @@ layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_address
 layout item_availablity
+layout item_calendar
 layout item_certificate
 layout item_date
 layout item_day
@@ -4274,6 +4281,7 @@ layout item_packages
 layout item_serviceimage
 layout item_services
 layout item_services1
+layout item_servicesdetails
 layout item_slider
 layout item_special
 layout item_special1
@@ -4397,6 +4405,7 @@ string add
 string add_a_new_address
 string add_a_new_appointment
 string add_a_service
+string add_address
 string added_before
 string address
 string address_details
@@ -4459,6 +4468,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confirm
 string confirm_device_credential_password
 string confirm_password
 string confirm_password_must_same_password

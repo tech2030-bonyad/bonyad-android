@@ -42,6 +42,7 @@ drawable ic_calendar_tick
 drawable ic_calendar_tick1
 drawable ic_carbon_rule
 drawable ic_cart
+drawable ic_check223
 drawable ic_check345
 drawable ic_clipboard_tick
 drawable ic_clock
@@ -127,7 +128,9 @@ id addressdetails
 id agreeCheck
 id appointment
 id body
+id calender
 id canceltxt
+id check
 id cityLin
 id code1
 id code2
@@ -136,6 +139,8 @@ id code4
 id confirmPass
 id confirmpass
 id dateList
+id dayName
+id dayNumber
 id daysList
 id depList
 id des
@@ -198,6 +203,7 @@ layout activity_technicalservicedetails
 layout activity_userhome
 layout activity_userregister
 layout activity_webview
+layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
@@ -209,6 +215,7 @@ layout fragment_userhome
 layout fragment_userprofile
 layout item_address
 layout item_availablity
+layout item_calendar
 layout item_certificate
 layout item_date
 layout item_day
@@ -217,6 +224,7 @@ layout item_packages
 layout item_serviceimage
 layout item_services
 layout item_services1
+layout item_servicesdetails
 layout item_slider
 layout item_special
 layout item_special1
@@ -231,6 +239,7 @@ string add
 string add_a_new_address
 string add_a_new_appointment
 string add_a_service
+string add_address
 string added_before
 string address
 string address_details
@@ -254,6 +263,7 @@ string check_your_connection
 string city
 string clear
 string com.crashlytics.android.build_id
+string confirm
 string confirm_password
 string confirm_password_must_same_password
 string contact_us

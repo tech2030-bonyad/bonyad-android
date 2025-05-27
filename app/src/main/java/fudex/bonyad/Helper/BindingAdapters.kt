@@ -39,9 +39,11 @@ import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
 import fudex.bonyad.ui.Adapter.technical.Service1adapter
 import fudex.bonyad.ui.Adapter.user.Addressesadapter
+import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
 import fudex.bonyad.ui.Adapter.user.Technicafilterladapter
 import fudex.bonyad.ui.Adapter.user.Technical1adapter
 import fudex.bonyad.ui.Adapter.user.Technicaladapter
+import fudex.bonyad.ui.Adapter.user.Timesadapter
 
 
 /**
@@ -367,6 +369,26 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is Technicafilterladapter) {
             (adapter as Technicafilterladapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+    @BindingAdapter("bind:times", "bind:fragment")
+    @JvmStatic
+    fun settimes(recyclerView: RecyclerView, movies: ArrayList<Availability>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Timesadapter) {
+            (adapter as Timesadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+    @BindingAdapter("bind:servicedetails", "bind:fragment")
+    @JvmStatic
+    fun setservicedetails(recyclerView: RecyclerView, movies: ArrayList<StatesDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Servicesdetailsadapter) {
+            (adapter as Servicesdetailsadapter).setdata(movies, fragment)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

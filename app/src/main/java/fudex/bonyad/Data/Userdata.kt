@@ -25,3 +25,12 @@ data class Editpass (
     val new_password: String? = null,
     val new_password_confirmation: String? = null,
 )
+
+data class Craetereserve (
+    val technician_id: Int? = null,
+    val day: Int? = null,
+    val date_of_reservation: String? = null,
+    val date_id: Int? = null,
+    val lat: String? = null,
+    val long: String? = null
+)

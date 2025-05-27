@@ -12,7 +12,7 @@
     </data>
     <FrameLayout
         android:onClick="@{ () -> model.clickitem() }"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="83dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/rec_strockgray">

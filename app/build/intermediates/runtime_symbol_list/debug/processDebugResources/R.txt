@@ -3091,6 +3091,7 @@ int drawable ic_call_decline 0x7f080185
 int drawable ic_call_decline_low 0x7f080186
 int drawable ic_carbon_rule 0x7f080187
 int drawable ic_cart 0x7f080188
+int drawable ic_check223 0x7f0802c1
 int drawable ic_check345 0x7f080189
 int drawable ic_clipboard_tick 0x7f08018a
 int drawable ic_clock 0x7f08018b
@@ -3530,6 +3531,7 @@ int id browser_actions_menu_items 0x7f0a0074
 int id browser_actions_menu_view 0x7f0a0075
 int id buttonPanel 0x7f0a0076
 int id cache_measures 0x7f0a0077
+int id calender 0x7f0a0291
 int id callMeasure 0x7f0a0078
 int id cancel_action 0x7f0a0079
 int id cancel_button 0x7f0a007a
@@ -3543,6 +3545,7 @@ int id center_vertical 0x7f0a0081
 int id chain 0x7f0a0082
 int id chain2 0x7f0a0083
 int id chains 0x7f0a0084
+int id check 0x7f0a028e
 int id checkbox 0x7f0a0085
 int id checked 0x7f0a0086
 int id chronometer 0x7f0a0087
@@ -3582,6 +3585,8 @@ int id dark 0x7f0a00a8
 int id dataBinding 0x7f0a00a9
 int id dateList 0x7f0a00aa
 int id date_picker_actions 0x7f0a00ab
+int id dayName 0x7f0a028f
+int id dayNumber 0x7f0a0290
 int id daysList 0x7f0a00ac
 int id decelerate 0x7f0a00ad
 int id decelerateAndComplete 0x7f0a00ae
@@ -4252,6 +4257,7 @@ int layout exo_styled_settings_list_item 0x7f0d0057
 int layout exo_styled_sub_settings_list_item 0x7f0d0058
 int layout exo_track_selection_dialog 0x7f0d0059
 int layout fingerprint_dialog_layout 0x7f0d005a
+int layout fragment_calenderdialog 0x7f0d00c1
 int layout fragment_delete 0x7f0d005b
 int layout fragment_filterhome 0x7f0d005c
 int layout fragment_filterspecial 0x7f0d005d
@@ -4265,6 +4271,7 @@ int layout ime_base_split_test_activity 0x7f0d0064
 int layout ime_secondary_split_test_activity 0x7f0d0065
 int layout item_address 0x7f0d0066
 int layout item_availablity 0x7f0d0067
+int layout item_calendar 0x7f0d00bf
 int layout item_certificate 0x7f0d0068
 int layout item_date 0x7f0d0069
 int layout item_day 0x7f0d006a
@@ -4273,6 +4280,7 @@ int layout item_packages 0x7f0d006c
 int layout item_serviceimage 0x7f0d006d
 int layout item_services 0x7f0d006e
 int layout item_services1 0x7f0d006f
+int layout item_servicesdetails 0x7f0d00c0
 int layout item_slider 0x7f0d0070
 int layout item_special 0x7f0d0071
 int layout item_special1 0x7f0d0072
@@ -4396,6 +4404,7 @@ int string add 0x7f13001d
 int string add_a_new_address 0x7f13001e
 int string add_a_new_appointment 0x7f13001f
 int string add_a_service 0x7f130020
+int string add_address 0x7f13019d
 int string added_before 0x7f130021
 int string address 0x7f130022
 int string address_details 0x7f130023
@@ -4458,6 +4467,7 @@ int string common_google_play_services_wear_update_text 0x7f13005b
 int string common_open_on_phone 0x7f13005c
 int string common_signin_button_text 0x7f13005d
 int string common_signin_button_text_long 0x7f13005e
+int string confirm 0x7f13019e
 int string confirm_device_credential_password 0x7f13005f
 int string confirm_password 0x7f130060
 int string confirm_password_must_same_password 0x7f130061

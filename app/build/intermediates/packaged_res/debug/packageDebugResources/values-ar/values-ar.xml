@@ -6,6 +6,7 @@
     <string name="add_a_new_address">اضافة عنوان جديد</string>
     <string name="add_a_new_appointment">إضافة موعد جديد</string>
     <string name="add_a_service">اضافة خدمة</string>
+    <string name="add_address">add address</string>
     <string name="added_before">تاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
     <string name="address">العنوان</string>
     <string name="address_details">العنوان بالتفصيل</string>
@@ -28,6 +29,7 @@
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
     <string name="city">المدينة</string>
     <string name="clear">مسح</string>
+    <string name="confirm">Confirm</string>
     <string name="confirm_password">تأكيد كلمة المرور</string>
     <string name="confirm_password_must_same_password">تأكيد كلمة المرور يجب أن يكون نفس كلمة المرور</string>
     <string name="contact_us">تواصل معنا</string>

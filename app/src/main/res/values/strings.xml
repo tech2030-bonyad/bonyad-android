@@ -150,4 +150,6 @@
     <string name="address_details">Address details</string>
     <string name="enter_the_address">Enter the address</string>
     <string name="select_as_default_address">Set as default address</string>
+    <string name="add_address">add address</string>
+    <string name="confirm">Confirm</string>
 </resources>

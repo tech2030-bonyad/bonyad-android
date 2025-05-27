@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:bind="http://schemas.android.com/tools"
     tools:context=".ui.Activity.user.DetailsspeciallistActivity">
+    <data class="DetailstechnicalModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.DetailstechnicalViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +23,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp">
             <ImageView
+                android:onClick="@{ () -> model.back() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_back"
@@ -39,7 +46,8 @@
            android:layout_weight="1">
            <androidx.core.widget.NestedScrollView
                android:layout_width="match_parent"
-               android:layout_height="match_parent">
+               android:layout_height="match_parent"
+               android:visibility="@{model.isloading &amp;&amp; model.services.size() == 0 ? View.GONE : View.VISIBLE}">
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
@@ -52,7 +60,8 @@
                        android:layout_marginTop="21dp">
                        <de.hdodenhof.circleimageview.CircleImageView
                            android:layout_width="48dp"
-                           android:layout_height="48dp"/>
+                           android:layout_height="48dp"
+                           bind:imageUrl="@{model.img}"/>
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
@@ -60,6 +69,7 @@
                            android:layout_marginStart="6dp"
                            android:layout_gravity="center"
                            android:textSize="16sp"
+                           android:text="@{model.details.data.name}"
                            tools:text="علي بن محمد"
                            android:textColor="@color/darkblack"/>
                        <TextView
@@ -67,6 +77,7 @@
                            android:layout_height="wrap_content"
                            />
                       <LinearLayout
+                          android:visibility="gone"
                           android:layout_width="wrap_content"
                           android:layout_height="24dp"
                           android:layout_gravity="center"
@@ -99,11 +110,14 @@
                       </LinearLayout>
                    </LinearLayout>
                    <androidx.recyclerview.widget.RecyclerView
+                       android:id="@+id/serviceList"
                        android:layout_width="match_parent"
                        android:layout_height="26dp"
                        android:layout_marginStart="26dp"
                        android:layout_marginEnd="26dp"
-                       android:layout_marginTop="12dp"/>
+                       android:layout_marginTop="12dp"
+                       bind:servicedetails="@{model.services}"
+                       bind:fragment="@{model.context}"/>
                    <TextView
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -148,6 +162,7 @@
                            android:gravity="center_vertical">
 
                            <ImageView
+                               android:onClick="@{ () -> model.calender() }"
                                android:layout_width="24dp"
                                android:layout_height="24dp"
                                android:layout_gravity="end|center"
@@ -169,6 +184,7 @@
                            android:textColor="@color/blue"
                            android:fontFamily="@font/cairosemibold"
                            android:textSize="16sp"
+                           android:text="@{model.dateString}"
                            tools:text="الأربعاء 07 ديسمبر"
                            android:layout_marginTop="20dp"
                            android:textStyle="bold"
@@ -178,11 +194,12 @@
                        <androidx.recyclerview.widget.RecyclerView
                            android:id="@+id/dateList"
                            android:layout_width="match_parent"
-                           android:layout_height="75dp"
+                           android:layout_height="wrap_content"
                            android:layout_marginTop="9dp"
                            android:layout_marginStart="23dp"
                            android:layout_marginEnd="23dp"
-                           android:orientation="horizontal" />
+                           android:orientation="horizontal"
+                           />
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
@@ -202,11 +219,14 @@
                            android:layout_marginTop="9dp"
                            android:layout_marginStart="23dp"
                            android:layout_marginEnd="23dp"
-                           android:orientation="horizontal" />
+                           android:orientation="horizontal"
+                           bind:times="@{model.times}"
+                           bind:fragment="@{model.context}"/>
                    </LinearLayout>
                </LinearLayout>
            </androidx.core.widget.NestedScrollView>
            <ProgressBar
+               android:visibility="@{model.isloading ? View.VISIBLE : View.GONE}"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:indeterminateTintMode="src_atop"
@@ -214,6 +234,7 @@
                android:layout_gravity="center"/>
        </FrameLayout>
         <androidx.cardview.widget.CardView
+            android:onClick="@{ () -> model.validate() }"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="24dp"
@@ -235,4 +256,4 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"/>
     </LinearLayout>
-</LinearLayout>
+</layout>

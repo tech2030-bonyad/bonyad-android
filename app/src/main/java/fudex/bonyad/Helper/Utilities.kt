@@ -163,6 +163,12 @@ object Utilities {
         simpleDateFormat = SimpleDateFormat(pattern, Locale(local))
         return simpleDateFormat.format(date1)
     }
+    fun formatMessageDateTime1(date: String , pattern : String , local : String): String {
+        var simpleDateFormat = SimpleDateFormat("HH:mm", Locale("en"))
+        var date1 = simpleDateFormat.parse(date)
+        simpleDateFormat = SimpleDateFormat(pattern, Locale(local))
+        return simpleDateFormat.format(date1)
+    }
     @SuppressLint("NewApi")
     fun changeformate(date: String , lang: String) : String {
         val utcDateTime = ZonedDateTime.parse(date)
@@ -173,7 +179,7 @@ object Utilities {
     }
     @RequiresApi(Build.VERSION_CODES.O)
     fun formatDateToArabic(date: LocalDate, lang: String): String {
-        val formatter: org.joda.time.format.DateTimeFormatter? = DateTimeFormat.forPattern("MMMM yyyy").withLocale(Locale(lang))
+        val formatter: org.joda.time.format.DateTimeFormatter? = DateTimeFormat.forPattern("EEEE MMMM yyyy").withLocale(Locale(lang))
         return formatter!!.print(date)
     }
     fun setDate(date: String): String {

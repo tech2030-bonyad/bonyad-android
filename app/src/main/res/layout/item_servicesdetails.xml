@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="ServicedetailsviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.ServicedetailsViewModel" />
+    </data>
+   <FrameLayout
+       android:layout_width="wrap_content"
+       android:layout_height="26dp"
+       android:orientation="vertical"
+       android:background="@drawable/rec_strockblue2"
+       android:layout_marginEnd="10dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:textSize="13sp"
+           android:fontFamily="@font/cairoregular"
+           android:text="@{model.onservse.name}"
+           tools:text="عامل بناء"
+           android:layout_marginStart="12dp"
+           android:layout_marginEnd="12dp"
+           android:textColor="@color/darkblack"
+           android:layout_gravity="center"
+           />
+   </FrameLayout>
+</layout>
