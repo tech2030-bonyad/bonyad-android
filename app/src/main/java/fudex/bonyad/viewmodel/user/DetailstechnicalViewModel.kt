@@ -26,11 +26,13 @@ import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
+import fudex.bonyad.ui.Activity.user.LocationmapActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Adapter.user.CalendarAdapter
 import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
 import fudex.bonyad.ui.Adapter.user.Timesadapter
 import fudex.bonyad.ui.Fragment.user.CalenderdialogFragment
+import fudex.bonyad.ui.Fragment.user.SpeciallistreservedoneFragment
 import org.joda.time.LocalDate
 import retrofit2.Call
 import retrofit2.Callback
@@ -42,6 +44,7 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
     var isloading: ObservableBoolean = ObservableBoolean(false)
     var context: DetailsspeciallistActivity = DetailsspeciallistActivity()
     var img = ObservableField<String>("")
+    var addressname = ObservableField<String>("")
     var dateString = ObservableField<String>("")
     var date1 = ""
     var times: ArrayList<Availability> = ArrayList()
@@ -51,8 +54,8 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
     var dayId = 0
     private val timesadapter = Timesadapter()
     private val servicesdetailsadapter = Servicesdetailsadapter()
-    var lat = "56.46465"
-    var lng = "54.65456"
+    var lat = ""
+    var lng = ""
     init {
         this.context = catogaryFragment
         context.binding.dateList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -219,17 +222,13 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
     fun createorder() {
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(ApiInterface::class.java)
-        var createorder = Craetereserve(context.intent.getIntExtra("id", 0),dayId,date1,dayId,lat,lng)
+        var createorder = Craetereserve(context.intent.getIntExtra("id", 0),dayId,date1,timeId,lat,lng)
         val call: Call<ErrorResponse?>? = apiService.createreserve(createorder)
         call?.enqueue(object : Callback<ErrorResponse?> {
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response!!.code() == 200 || response!!.code() == 201) {
-                    var data = response.body()
-                    Dialogs.showToast(data?.message!!,context)
-                    var intent: Intent = Intent(context, UserhomeActivity::class.java)
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    context.startActivity(intent)
-                    context.finish()
+                    var fragment = SpeciallistreservedoneFragment()
+                    fragment.show(context.supportFragmentManager , "promo")
                 }else {
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -257,5 +256,16 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
 
         val date = java.time.LocalDate.parse(input, inputFormatter)
         return date.format(outputFormatter)
+    }
+    fun addaddress(){
+        val i = Intent(context, LocationmapActivity::class.java)
+        if (lat == "") {
+            i.putExtra("lat" , 0.0)
+            i.putExtra("lng" , 0.0)
+        }else {
+            i.putExtra("lat" , lat.toDouble())
+            i.putExtra("lng" , lng.toDouble())
+        }
+        context.startActivityForResult(i, 111)
     }
 }

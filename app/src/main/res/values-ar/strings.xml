@@ -16,7 +16,7 @@
     <string name="yes">نعم</string>
     <string name="no">لا</string>
     <string name="copied">copied</string>
-    <string name="eng">AR</string>
+    <string name="eng">ENG</string>
     <string name="select_account_type">اختر نوع الحساب</string>
     <string name="customer_account">حساب عميل</string>
     <string name="merchant_account">حساب تاجر</string>
@@ -150,4 +150,18 @@
     <string name="select_as_default_address">تعيين كعنوان افتراضي</string>
     <string name="add_address">add address</string>
     <string name="confirm">Confirm</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="done">Done</string>
+    <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
+    <string name="all_construction_needs_are_in_your_hands">كل احتياجات البناء... بين يديك!</string>
+    <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
+    <string name="your_smart_solution_for_construction_and_maintenance">حلّك الذكي للبناء والصيانة</string>
+    <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">جاهز تبني؟ إحنا نوصلك بكل اللي تحتاجه</string>
+    <string name="reliable_labor">عمالة موثوقة</string>
+    <string name="check_the_reviews_and_choose_the_worker_that_suits_you">اطلع على التقييمات واختر العامل المناسب لك.</string>
+    <string name="your_work_is_ready_and_waiting_for_you">شغلك جاهز... ومستنيك</string>
+    <string name="nearby_requests_direct_money_and_you_control_your_time">طلبات قريبة، فلوس مباشرة، وإنت تتحكم في وقتك</string>
+    <string name="today_s_task_from_the_application">شغل اليوم... من التطبيق</string>
+    <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
+    <string name="skip">تخطي</string>
 </resources>

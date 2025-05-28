@@ -12,6 +12,9 @@
             name="model"
             type="fudex.bonyad.viewmodel.user.TechnicallistViewModel" />
     </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -48,6 +51,38 @@
                 android:layout_marginEnd="29dp"
                 android:layout_gravity="end"/>
         </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rec_lightblue1">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_search22"
+                android:layout_gravity="center"
+                android:rotationY="180"
+                android:layout_marginStart="12dp"/>
+            <EditText
+                android:id="@+id/searchTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/search"
+                android:textSize="14sp"
+                android:textColor="@color/darkblue"
+                android:textColorHint="@color/darkblue"
+                android:paddingBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="start|center"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/cairoregular"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </LinearLayout>
         <com.todkars.shimmer.ShimmerRecyclerView
             android:id="@+id/specialList"
             android:layout_width="match_parent"
@@ -58,5 +93,28 @@
             bind:technical="@{model.technicalList}"
             bind:fragment="@{model.context}"
             />
+
     </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{model.isloading || model.technicalList.size() > 0 ? View.GONE : View.VISIBLE}"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bonyad_logo_08_1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkblack"
+                android:textSize="16sp"
+                android:text="@string/there_are_no_technicals_available"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                tools:text = "No result"/>
+        </LinearLayout>
+    </FrameLayout>
 </layout>

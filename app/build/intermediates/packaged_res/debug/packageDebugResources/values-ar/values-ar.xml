@@ -13,6 +13,7 @@
     <string name="addresses">العناوين</string>
     <string name="agree_to">الموافقة علي</string>
     <string name="agree_to_the_terms_and_conditions">الموافقة علي الشروط والاحكام</string>
+    <string name="all_construction_needs_are_in_your_hands">كل احتياجات البناء... بين يديك!</string>
     <string name="app_name">بنياد</string>
     <string name="appointment_management">ادارة المواعيد</string>
     <string name="arabic">العربية</string>
@@ -22,10 +23,12 @@
     <string name="attach_a_picture">إرفاق صورة</string>
     <string name="available_appointments">المواعيد المتاحة</string>
     <string name="bank_account">الحساب البنكي</string>
+    <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
     <string name="camera">كاميرا</string>
     <string name="cancel">إلغاء</string>
     <string name="change_mobile_number">تغير رقم الجوال</string>
     <string name="change_password">تغير كلمة المرور</string>
+    <string name="check_the_reviews_and_choose_the_worker_that_suits_you">اطلع على التقييمات واختر العامل المناسب لك.</string>
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
     <string name="city">المدينة</string>
     <string name="clear">مسح</string>
@@ -47,11 +50,12 @@
     <string name="description1">وصف</string>
     <string name="details">التفاصيل</string>
     <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="done">Done</string>
     <string name="edit_profile_data">تعديل بيانات الملف الشخصي</string>
     <string name="edit_service">تعديل الخدمة</string>
     <string name="email">البريد الإلكترونى</string>
     <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
-    <string name="eng">AR</string>
+    <string name="eng">ENG</string>
     <string name="english">الإنجليزية</string>
     <string name="enter_the_address">ادخل العنوان</string>
     <string name="enter_the_information_below">أدخل المعلومات أدناه</string>
@@ -88,6 +92,7 @@
     <string name="my_services">خدماتي</string>
     <string name="my_subscriptions">اشتراكاتي</string>
     <string name="name">الاسم</string>
+    <string name="nearby_requests_direct_money_and_you_control_your_time">طلبات قريبة، فلوس مباشرة، وإنت تتحكم في وقتك</string>
     <string name="new_password">كلمة المرور الجديدة</string>
     <string name="no">لا</string>
     <string name="no_network">لا يوجد اتصال بالإنترنت</string>
@@ -108,6 +113,8 @@
     <string name="products">المنتجات</string>
     <string name="profile">الملف الشخصى</string>
     <string name="r_s">ر.س</string>
+    <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">جاهز تبني؟ إحنا نوصلك بكل اللي تحتاجه</string>
+    <string name="reliable_labor">عمالة موثوقة</string>
     <string name="required">مطلوب</string>
     <string name="resend_verification_code">إعادة ارسال رمز التحقق</string>
     <string name="reservation_request">طلب حجز</string>
@@ -126,6 +133,8 @@
     <string name="services">خدمات</string>
     <string name="services1">الخدمات</string>
     <string name="show_less">عرض أقل</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="skip">تخطي</string>
     <string name="specialists">المتخصصين</string>
     <string name="specialty">التخصص</string>
     <string name="street">الشارع</string>
@@ -138,17 +147,22 @@
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
     <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
+    <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
     <string name="thursday">الخميس</string>
     <string name="time">الوقت</string>
+    <string name="today_s_task_from_the_application">شغل اليوم... من التطبيق</string>
     <string name="tuesday">الثلاثاء</string>
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>
     <string name="wallet">المحفظة</string>
     <string name="wednesday">الأربعاء</string>
     <string name="welcome">مرحبا</string>
     <string name="welcome_back">مرحباً بعودتك</string>
+    <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
     <string name="work_days">أيام العمل</string>
     <string name="years_of_experience">سنوات الخبرة</string>
     <string name="yes">نعم</string>
     <string name="you_can_add_and_edit_your_appointments">يمكنك اضافة المواعيد الخاصة بك وتعديلها</string>
+    <string name="your_smart_solution_for_construction_and_maintenance">حلّك الذكي للبناء والصيانة</string>
+    <string name="your_work_is_ready_and_waiting_for_you">شغلك جاهز... ومستنيك</string>
 </resources>

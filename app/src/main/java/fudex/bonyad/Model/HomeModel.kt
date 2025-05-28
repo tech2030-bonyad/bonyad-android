@@ -17,6 +17,7 @@ data class Technician (
     val email: String? = null,
     val phone: String? = null,
     val avatar: String? = null,
+    val services: ArrayList<StatesDatum>? = ArrayList(),
     val type_label: String? = null
 )
 

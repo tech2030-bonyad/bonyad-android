@@ -71,7 +71,6 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Bonyadandroid"
         android:usesCleartextTraffic="true" >
         <activity
@@ -153,7 +152,13 @@
             android:name="fudex.bonyad.ui.Activity.SelecttypeActivity"
             android:exported="false" />
         <activity
+            android:name="fudex.bonyad.ui.Activity.user.LocationmapActivity"
+            android:exported="false" />
+        <activity
             android:name="fudex.bonyad.ui.Activity.WebviewActivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.OnboardingActivity"
             android:exported="false" />
         <activity
             android:name="fudex.bonyad.ui.Activity.SplashActivity"
@@ -165,6 +170,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDUc7N2lfakNIv56tK0LKgexC4bdJblY_c" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -256,10 +272,7 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service> <!-- Needs to be explicitly declared on P+ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
+        </service>
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
@@ -375,9 +388,6 @@
             </intent-filter>
         </receiver>
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.microsoft.applicationinsights.library.sdkVersion"
             android:value="1.0-beta.10" />

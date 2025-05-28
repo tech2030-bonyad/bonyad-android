@@ -16,7 +16,7 @@
     <string name="yes">yes</string>
     <string name="no">no</string>
     <string name="copied">copied</string>
-    <string name="eng">ENG</string>
+    <string name="eng">AR</string>
     <string name="select_account_type">Select Account Type</string>
     <string name="customer_account">Customer account</string>
     <string name="merchant_account">Merchant Account</string>
@@ -152,4 +152,18 @@
     <string name="select_as_default_address">Set as default address</string>
     <string name="add_address">add address</string>
     <string name="confirm">Confirm</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="done">Done</string>
+    <string name="there_are_no_technicals_available">there are no technicals available</string>
+    <string name="all_construction_needs_are_in_your_hands">All construction needs... are in your hands!</string>
+    <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">Browse thousands of products, from cement and tools to paints and decor, and choose what suits your project with the click of a button!</string>
+    <string name="your_smart_solution_for_construction_and_maintenance">Your smart solution for construction and maintenance</string>
+    <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">Ready to adopt? We will provide you with everything you need.</string>
+    <string name="reliable_labor">Reliable labor</string>
+    <string name="check_the_reviews_and_choose_the_worker_that_suits_you">Check the reviews and choose the worker that suits you.</string>
+    <string name="your_work_is_ready_and_waiting_for_you">Your work is ready... and waiting for you.</string>
+    <string name="nearby_requests_direct_money_and_you_control_your_time">Nearby requests, direct money, and you control your time.</string>
+    <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
+    <string name="with_you_every_step_of_the_way_in_your_career_journey">With you every step of the way in your career journey.</string>
+    <string name="skip">Skip</string>
 </resources>

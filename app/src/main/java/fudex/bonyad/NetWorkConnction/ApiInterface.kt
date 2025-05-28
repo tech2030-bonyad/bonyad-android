@@ -65,7 +65,7 @@ interface ApiInterface {
     fun gethome(@Query("name") name: String?): Call<HomeModel?>?
 
     @GET("technicians")
-    fun gettechnicals( @Query("page") page: Int? , @Query("paginate") paginate: Int?, @Query("zones[]") zones: List<Int>?, @Query("services[]") services: List<Int>?): Call<TechnicalModel?>?
+    fun gettechnicals( @Query("page") page: Int? , @Query("paginate") paginate: Int?, @Query("zones[]") zones: List<Int>?, @Query("services[]") services: List<Int>?, @Query("name") name: String?): Call<TechnicalModel?>?
 
     @GET("client/cities")
     fun getcities(@Query("state_id") state_id: Int?): Call<StatesModel?>?

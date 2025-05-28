@@ -16,6 +16,7 @@ import androidx.databinding.BindingAdapter
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 
 import com.blongho.country_data.World
 import com.bumptech.glide.Glide
@@ -24,6 +25,7 @@ import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DistanceModel
+import fudex.bonyad.Model.OnbaordModel
 import fudex.bonyad.Model.PlanData
 import fudex.bonyad.Model.StatesDatum
 
@@ -34,6 +36,7 @@ import fudex.bonyad.ui.Adapter.technical.Serviceadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.Model.Technician
+import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
@@ -389,6 +392,16 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is Servicesdetailsadapter) {
             (adapter as Servicesdetailsadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+    @BindingAdapter("bind:onboarding")
+    @JvmStatic
+    fun setonboarding(recyclerView: ViewPager, movies: ArrayList<OnbaordModel>) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is OnboardPagerAdapter) {
+            (adapter as OnboardPagerAdapter).setdata(movies)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-146:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-146:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-146:12
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-146:12
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-162:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-162:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-162:12
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:2:1-162:12
 MERGED from [androidx.databinding:databinding-adapters:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/398e4f83d19cfd486f1e93da71aa8b03/transformed/databinding-adapters-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/3fd8e9cb516f1057fbfc374dcb3b2019/transformed/databinding-ktx-8.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/147482905477bbceea8dc6e7a92b5fa0/transformed/databinding-runtime-8.7.0/AndroidManifest.xml:2:1-7:12
@@ -292,8 +292,8 @@ ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:25:5-2
 	android:name
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:26:9-57
 application
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-144:19
-INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-144:19
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-160:19
+INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:29:5-160:19
 MERGED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:22:5-36:19
 MERGED from [com.vanniktech:android-image-cropper:4.5.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/2819e0a2d3436ae905ed921e9caf722f/transformed/android-image-cropper-4.5.0/AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.android.material:material:1.7.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/AndroidManifest.xml:24:5-20
@@ -584,46 +584,82 @@ ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:118:9-
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:120:13-37
 	android:name
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:119:13-59
-activity#fudex.bonyad.ui.Activity.WebviewActivity
+activity#fudex.bonyad.ui.Activity.user.LocationmapActivity
 ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:121:9-123:40
 	android:exported
 		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:123:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:122:13-56
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:122:13-65
+activity#fudex.bonyad.ui.Activity.WebviewActivity
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:124:9-126:40
+	android:exported
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:126:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:125:13-56
+activity#fudex.bonyad.ui.Activity.OnboardingActivity
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:127:9-129:40
+	android:exported
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:129:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:128:13-59
 activity#fudex.bonyad.ui.Activity.SplashActivity
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:124:9-133:20
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:130:9-139:20
 	android:label
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:127:13-45
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:133:13-45
 	android:exported
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:126:13-36
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:132:13-36
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:125:13-55
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:131:13-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:128:13-132:29
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:134:13-138:29
 action#android.intent.action.MAIN
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:129:17-69
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:135:17-69
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:129:25-66
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:135:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:131:17-77
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:137:17-77
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:131:27-74
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:137:27-74
+uses-library#org.apache.http.legacy
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:140:9-142:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:142:13-37
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:141:13-50
+meta-data#com.google.android.gms.version
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:144:9-146:69
+MERGED from [com.google.maps.android:android-maps-utils:3.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5ae0e221b8c358c30f3a5b2559ad8ee7/transformed/android-maps-utils-3.3.0/AndroidManifest.xml:10:9-12:69
+MERGED from [com.google.maps.android:android-maps-utils:3.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5ae0e221b8c358c30f3a5b2559ad8ee7/transformed/android-maps-utils-3.3.0/AndroidManifest.xml:10:9-12:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/c883183904b3e635b5a1a958a9ab6861/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/c883183904b3e635b5a1a958a9ab6861/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:146:13-66
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:145:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:147:9-149:71
+	android:value
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:149:13-68
+	android:name
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:148:13-58
 provider#androidx.core.content.FileProvider
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:135:9-143:20
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:151:9-159:20
 	android:grantUriPermissions
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:139:13-47
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:155:13-47
 	android:authorities
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:137:13-56
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:153:13-56
 	android:exported
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:138:13-37
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:154:13-37
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:136:13-62
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:152:13-62
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:140:13-142:54
+ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:156:13-158:54
 	android:resource
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:142:17-51
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:158:17-51
 	android:name
-		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:141:17-67
+		ADDED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml:157:17-67
 uses-sdk
 INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Volumes/Taleen/Bonyadandroid/app/src/main/AndroidManifest.xml
@@ -1024,12 +1060,6 @@ ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezza
 		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
 	android:required
 		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
-uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
-	android:required
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/222e7c427e71e76d2eab947a580723fc/transformed/play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/fba1551b8b8f90d5dec4b8602021a290/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
 	android:authorities
@@ -1290,14 +1320,6 @@ action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
 ADDED from [androidx.work:work-runtime:2.7.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/3204c8311ae9a898c872e6632275b392/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
 	android:name
 		ADDED from [androidx.work:work-runtime:2.7.1] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/3204c8311ae9a898c872e6632275b392/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.maps.android:android-maps-utils:3.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5ae0e221b8c358c30f3a5b2559ad8ee7/transformed/android-maps-utils-3.3.0/AndroidManifest.xml:10:9-12:69
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/c883183904b3e635b5a1a958a9ab6861/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/c883183904b3e635b5a1a958a9ab6861/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.maps.android:android-maps-utils:3.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5ae0e221b8c358c30f3a5b2559ad8ee7/transformed/android-maps-utils-3.3.0/AndroidManifest.xml:12:13-66
-	android:name
-		ADDED from [com.google.maps.android:android-maps-utils:3.3.0] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/5ae0e221b8c358c30f3a5b2559ad8ee7/transformed/android-maps-utils-3.3.0/AndroidManifest.xml:11:13-58
 meta-data#com.microsoft.applicationinsights.library.sdkVersion
 ADDED from [com.microsoft.azure:applicationinsights-android:1.0-beta.10] /Users/mahmoudezzat/.gradle/caches/8.9/transforms/45a940abcacfec1b5a7eb8ea4042d8f4/transformed/applicationinsights-android-1.0-beta.10/AndroidManifest.xml:15:9-17:43
 	android:value

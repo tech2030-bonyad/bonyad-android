@@ -3,7 +3,10 @@ package fudex.bonyad.viewmodel.user
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.view.Gravity
 import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
@@ -24,6 +27,7 @@ import fudex.bonyad.Model.Technician
 import fudex.bonyad.Model.UserModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.LoginActivity
 import fudex.bonyad.ui.Activity.user.SpecialistsActivity
 
 import fudex.bonyad.ui.Adapter.user.Technical1adapter
@@ -57,8 +61,32 @@ class TechnicallistViewModel(var catogaryFragment: SpecialistsActivity) : BaseOb
         linearlayout!!.orientation = LinearLayoutManager.VERTICAL
         context.binding.specialList.layoutManager = linearlayout
         context.binding.specialList.adapter = technicaladapter
+        if (context.getString(R.string.lang) == "ar"){
+            context.binding.searchTxt.gravity = Gravity.RIGHT
+        }
         gettechnicals()
         scroll()
+        context.binding.searchTxt.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                if (handler != null) handler.removeCallbacksAndMessages(null)
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+//                if (edit.getText().toString().equals("")){
+//                    subCategoriesBeans.clear();
+//                    subCatogaryadapter.notifyDataSetChanged();
+//                }else {
+//                    gethome();
+//                }
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                handler.postDelayed(Runnable {
+                    page = 1
+                    gettechnicals()
+                }, 1000)
+            }
+        })
     }
     fun back(){
         context.onBackPressed()
@@ -79,7 +107,7 @@ class TechnicallistViewModel(var catogaryFragment: SpecialistsActivity) : BaseOb
         if (serviceId != 0 ){
             services.add(serviceId)
         }
-        call = apiService.gettechnicals(page,10,if (zones.size == 0){null}else{zones},if (services.size == 0){null}else{services})
+        call = apiService.gettechnicals(page,10,if (zones.size == 0){null}else{zones},if (services.size == 0){null}else{services},if (context.binding.searchTxt.text.toString() == ""){null}else{context.binding.searchTxt.text.toString()})
         call?.enqueue(object : Callback<TechnicalModel?> {
             override fun onResponse(call: Call<TechnicalModel?>, response: Response<TechnicalModel?>) {
                 if (response.code() == 200 || response.code() == 201) {

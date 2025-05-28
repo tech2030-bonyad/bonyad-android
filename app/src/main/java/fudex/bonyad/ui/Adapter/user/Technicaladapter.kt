@@ -61,7 +61,7 @@ class Technicaladapter : RecyclerView.Adapter<Technicaladapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val designs = horizontalList[position]
         val design = TechnicailViewModel()
-        design.setdata(designs , context!!)
+        design.setdata(designs , context!!,movieItem)
         holder.bind(design)
     }
 

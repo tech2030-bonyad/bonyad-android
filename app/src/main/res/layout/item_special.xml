@@ -71,11 +71,14 @@
 
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/serviceList"
                 android:layout_width="match_parent"
                 android:layout_height="21dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="7dp"/>
+                android:layout_marginTop="7dp"
+                bind:servicedetails="@{model.services}"
+                bind:fragment="@{model.context.requireActivity()}"/>
         </LinearLayout>
     </FrameLayout>
 </layout>

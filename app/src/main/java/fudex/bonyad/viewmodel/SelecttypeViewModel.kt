@@ -10,6 +10,7 @@ import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 
 import fudex.bonyad.ui.Activity.LoginActivity
+import fudex.bonyad.ui.Activity.OnboardingActivity
 import fudex.bonyad.ui.Activity.SelecttypeActivity
 import fudex.bonyad.ui.Activity.SplashActivity
 import java.util.*
@@ -24,10 +25,15 @@ class SelecttypeViewModel(activity: SelecttypeActivity) : BaseObservable() {
 
     fun settype(type : Int){
         LoginSession.Addtype(activity,type)
-        var intent: Intent = Intent(activity, LoginActivity::class.java)
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        activity.startActivity(intent)
-        activity.finish()
+        if (LoginSession.getwelcome(activity) == false){
+            var intent: Intent = Intent(activity, OnboardingActivity::class.java)
+            activity.startActivity(intent)
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            activity.startActivity(intent)
+            activity.finish()
+        }
     }
     fun lang(){
         if (activity.getString(R.string.lang) == "ar"){

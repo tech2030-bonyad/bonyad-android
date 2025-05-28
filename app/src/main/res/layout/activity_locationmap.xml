@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.Activity.LocationmapActivity">
+    <data class="LocateonmapviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.AddplacemapViewModel" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/workerMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp">
+            <ImageView
+                android:onClick="@{ () -> model.back() }"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:layout_gravity="start|center"
+                android:rotationY="180"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show_on_map"
+                android:layout_gravity="center"
+                android:textColor="@color/darkblack"
+                android:fontFamily="@font/cairosemibold"
+                android:textSize="16sp"/>
+        </FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:onClick="@{ () -> model.addplace() }"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardBackgroundColor="@color/lightblue"
+            app:cardCornerRadius="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginEnd="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/done"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairosemibold"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>
