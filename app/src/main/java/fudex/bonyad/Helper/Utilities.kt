@@ -411,12 +411,19 @@ object Utilities {
         val timePickerDialog = TimePickerDialog(
             context,
             { _, selectedHour, selectedMinute ->
-                val formattedTime = String.format("%02d:%02d", selectedHour, selectedMinute)
+                val calendar = Calendar.getInstance()
+                calendar.set(Calendar.HOUR_OF_DAY, selectedHour)
+                calendar.set(Calendar.MINUTE, selectedMinute)
+
+                // Format the time in Arabic
+                val formatter = SimpleDateFormat("HH:mm", Locale("en"))
+                val formattedTime = formatter.format(calendar.time)
+
                 onTimeSelected(formattedTime)
             },
             hour,
             minute,
-            true // is24HourView
+            false // false = 12-hour view to show AM/PM
         )
 
         timePickerDialog.show()

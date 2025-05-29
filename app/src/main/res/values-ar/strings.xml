@@ -148,10 +148,10 @@
     <string name="address_details">العنوان بالتفصيل</string>
     <string name="enter_the_address">ادخل العنوان</string>
     <string name="select_as_default_address">تعيين كعنوان افتراضي</string>
-    <string name="add_address">add address</string>
-    <string name="confirm">Confirm</string>
-    <string name="show_on_map">Show on map</string>
-    <string name="done">Done</string>
+    <string name="add_address">اضافه عنوان</string>
+    <string name="confirm">تأكيد</string>
+    <string name="show_on_map">عرض على الخريطه</string>
+    <string name="done">تم</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
     <string name="all_construction_needs_are_in_your_hands">كل احتياجات البناء... بين يديك!</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>

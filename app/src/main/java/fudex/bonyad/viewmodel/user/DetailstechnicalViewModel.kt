@@ -196,6 +196,7 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
             override fun onResponse(call: Call<ScheduleResponse?>, response: Response<ScheduleResponse?>) {
                 if (response!!.code() == 200 || response!!.code() == 201) {
                     var data = response.body()
+                    times.clear()
                     if (data?.data?.size ?: 0 > 0 ){
                         times.addAll(data?.data?.get(0)!!.availabilities!!)
                     }

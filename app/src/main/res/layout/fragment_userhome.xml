@@ -48,6 +48,7 @@
                     android:orientation="horizontal"
                     android:layout_gravity="end">
                     <FrameLayout
+                        android:visibility="gone"
                         android:layout_width="28dp"
                         android:layout_height="29dp"
                         android:layout_gravity="center">
@@ -135,6 +136,7 @@
                     android:layout_gravity="center"/>
             </LinearLayout>
             <FrameLayout
+                android:visibility="@{model.sliderlist.size() == 0 ? View.GONE : View.VISIBLE}"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
                 android:layout_marginTop="16dp"

@@ -56,6 +56,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/activity_addadress.xml"
     },
     {
+        "merged": "fudex.bonyad.app-mergeDebugResources-66:/layout/activity_onboarding.xml",
+        "source": "fudex.bonyad.app-main-69:/layout/activity_onboarding.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/activity_addresses.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/activity_addresses.xml"
     },
@@ -94,6 +98,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/activity_userregister.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/activity_userregister.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-mergeDebugResources-66:/layout/fragment_userhome.xml",
+        "source": "fudex.bonyad.app-main-69:/layout/fragment_userhome.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/activity_webview.xml",
@@ -154,6 +162,14 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/item_date.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/item_date.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-mergeDebugResources-66:/layout/item_slider.xml",
+        "source": "fudex.bonyad.app-main-69:/layout/item_slider.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-mergeDebugResources-66:/layout/item_servicesdetails.xml",
+        "source": "fudex.bonyad.app-main-69:/layout/item_servicesdetails.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/item_calendar.xml",
@@ -218,10 +234,6 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/activity_appointmentmanagectivity.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-69:/layout/activity_appointmentmanagectivity.xml"
-    },
-    {
-        "merged": "fudex.bonyad.app-mergeDebugResources-66:/layout/item_onboarding.xml",
-        "source": "fudex.bonyad.app-main-69:/layout/item_onboarding.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-66:/layout/activity_edituserdata.xml",

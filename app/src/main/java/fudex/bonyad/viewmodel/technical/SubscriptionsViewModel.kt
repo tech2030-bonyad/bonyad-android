@@ -143,7 +143,11 @@ class SubscriptionsViewModel(activity: SubscriptionsActivity) : BaseObservable()
             override fun onResponse(call: Call<MYSubsribeModel?>, response: Response<MYSubsribeModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
-                    mydata.set(data?.data!!)
+                    try {
+                        mydata.set(data?.data!!)
+                    }catch (e:Exception){
+
+                    }
                     notifyChange()
                 }else {
                     val errorText = response.errorBody()?.string()

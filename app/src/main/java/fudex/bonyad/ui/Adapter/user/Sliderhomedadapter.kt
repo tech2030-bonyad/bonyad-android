@@ -53,7 +53,8 @@ class Sliderhomedadapter(
             Picasso.get().load(slidesDataBeans[position].image).error(R.drawable.bonyad_logo_08_1).into(img)
         } catch (e: Exception) {
         }
-
+        title?.text = slidesDataBeans[position].name ?: ""
+        des?.text = slidesDataBeans[position].description ?: ""
         container.addView(itemView)
         return itemView
     }
@@ -64,7 +65,8 @@ class Sliderhomedadapter(
 
     private fun initView(view: View) {
         img = view.findViewById(R.id.img)
-
+        title = view.findViewById(R.id.title)
+        des = view.findViewById(R.id.des)
     }
 
     init {

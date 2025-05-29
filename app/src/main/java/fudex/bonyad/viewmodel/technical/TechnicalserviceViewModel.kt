@@ -73,6 +73,7 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
 
             override fun afterTextChanged(s: Editable) {
                 handler.postDelayed(Runnable {
+                    page = 1
                     getservices()
                 }, 1000)
             }

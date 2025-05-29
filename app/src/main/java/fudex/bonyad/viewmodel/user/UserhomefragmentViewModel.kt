@@ -89,7 +89,21 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
             }
         })
         if (LoginSession.isLogin) {
-            username.set(context.getString(R.string.welcome) + " " + LoginSession.getUserData(activity).user.name!!)
+            if (LoginSession.getUserData(activity).user.name!!.contains( " ") == true) {
+                username.set(
+                    context.getString(R.string.welcome) + " " + LoginSession.getUserData(
+                        activity
+                    ).user.name!!.substring(0,LoginSession.getUserData(
+                        activity
+                    ).user.name!!.indexOf(" "))
+                )
+            }else {
+                username.set(
+                    context.getString(R.string.welcome) + " " + LoginSession.getUserData(
+                        activity
+                    ).user.name!!
+                )
+            }
         }
     }
     fun back(){
