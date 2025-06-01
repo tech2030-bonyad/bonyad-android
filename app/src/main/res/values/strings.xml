@@ -166,4 +166,18 @@
     <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">With you every step of the way in your career journey.</string>
     <string name="skip">Skip</string>
+    <string name="current_appointments">Current appointments</string>
+    <string name="completed_appointments">Completed appointments</string>
+    <string name="rejected_appointments">Rejected appointments</string>
+    <string name="booking_date_and_time">Booking date and time:</string>
+    <string name="details1">Details</string>
+    <string name="refused">Refused</string>
+    <string name="modify_the_request">Modify the request</string>
+    <string name="reason_for_rejection">Reason for rejection</string>
+    <string name="rate_your_reservation">Rate your reservation</string>
+    <string name="write_your_comment">Write a comment</string>
+    <string name="must_male_rate">must make rate</string>
+    <string name="date_and_time">Date and time</string>
+    <string name="location">Location</string>
+    <string name="evaluation">Evaluation</string>
 </resources>

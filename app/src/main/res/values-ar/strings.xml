@@ -164,4 +164,18 @@
     <string name="today_s_task_from_the_application">شغل اليوم... من التطبيق</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
     <string name="skip">تخطي</string>
+    <string name="current_appointments">المواعيد الحالية</string>
+    <string name="completed_appointments">المواعيد المكتمله</string>
+    <string name="rejected_appointments">المواعيد المرفوضة</string>
+    <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
+    <string name="details1">تفاصيل</string>
+    <string name="refused">رفض</string>
+    <string name="modify_the_request">تعديل الطلب</string>
+    <string name="reason_for_rejection">سبب الرفض</string>
+    <string name="rate_your_reservation">اعطي تقيم لحجزك</string>
+    <string name="write_your_comment">اكتب تعليق</string>
+    <string name="must_male_rate">لا بد من اضافه تقييم</string>
+    <string name="date_and_time">تاريخ ووقت</string>
+    <string name="location">الموقع</string>
+    <string name="evaluation">تقيم</string>
 </resources>
