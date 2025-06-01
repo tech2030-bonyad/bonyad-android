@@ -55,6 +55,11 @@ class Sliderhomedadapter(
         }
         title?.text = slidesDataBeans[position].name ?: ""
         des?.text = slidesDataBeans[position].description ?: ""
+        if (mContext.getString(R.string.lang) == "ar") {
+            img?.rotationY = 180f
+            title?.rotationY = 180f
+            des?.rotationY = 180f
+        }
         container.addView(itemView)
         return itemView
     }

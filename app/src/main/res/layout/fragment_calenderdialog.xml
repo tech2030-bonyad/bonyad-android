@@ -74,7 +74,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/cairosemibold"
                         android:textColor="@color/darkblack"
-                        android:text="Back"
+                        android:text="@string/back"
                         android:textSize="14sp"/>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>

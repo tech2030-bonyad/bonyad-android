@@ -129,7 +129,7 @@
     <string name="price">السعر</string>
     <string name="r_s">ر.س</string>
     <string name="subscribe">اشترك</string>
-    <string name="subscription_date">خدماتي</string>
+    <string name="subscription_date">تاريخ الاشتراك</string>
     <string name="payment_failer">فشل الدفع</string>
     <string name="load_more">عرض المزيد</string>
     <string name="show_less">عرض أقل</string>
@@ -164,4 +164,5 @@
     <string name="today_s_task_from_the_application">شغل اليوم... من التطبيق</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
     <string name="skip">تخطي</string>
+    <string name="back">رجوع</string>
 </resources>

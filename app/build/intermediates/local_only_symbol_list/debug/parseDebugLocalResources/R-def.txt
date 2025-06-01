@@ -269,6 +269,7 @@ string are_you_sure_you_want_to_delete_the_service
 string area
 string attach_a_picture
 string available_appointments
+string back
 string bank_account
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
 string camera
