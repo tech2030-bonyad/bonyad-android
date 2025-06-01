@@ -46,6 +46,23 @@ class UserhomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         userhomefragmentViewModel.gethome()
+        if (LoginSession.isLogin) {
+            if (LoginSession.getUserData(activity).user.name!!.contains( " ") == true) {
+                userhomefragmentViewModel.username.set(
+                    getString(R.string.welcome) + " " + LoginSession.getUserData(
+                        activity
+                    ).user.name!!.substring(0,LoginSession.getUserData(
+                        activity
+                    ).user.name!!.indexOf(" "))
+                )
+            }else {
+                userhomefragmentViewModel. username.set(
+                    getString(R.string.welcome) + " " + LoginSession.getUserData(
+                        activity
+                    ).user.name!!
+                )
+            }
+        }
         (activity as UserhomeActivity).userhomeViewModel.type.set(0)
     }
 

@@ -1,4 +1,4 @@
-#Thu May 29 15:49:38 EEST 2025
+#Sun Jun 01 15:23:42 EEST 2025
 base.0=/Volumes/Taleen/Bonyadandroid/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Volumes/Taleen/Bonyadandroid/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/Volumes/Taleen/Bonyadandroid/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex

@@ -22,6 +22,7 @@
     <string name="area">المنطقة</string>
     <string name="attach_a_picture">إرفاق صورة</string>
     <string name="available_appointments">المواعيد المتاحة</string>
+    <string name="back">رجوع</string>
     <string name="bank_account">الحساب البنكي</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
     <string name="camera">كاميرا</string>
@@ -140,7 +141,7 @@
     <string name="street">الشارع</string>
     <string name="street_name">اسم الشارع</string>
     <string name="subscribe">اشترك</string>
-    <string name="subscription_date">خدماتي</string>
+    <string name="subscription_date">تاريخ الاشتراك</string>
     <string name="subscriptions">الاشتراكات</string>
     <string name="sunday">الأحد</string>
     <string name="terms_and_conditions">الشروط والاحكام</string>

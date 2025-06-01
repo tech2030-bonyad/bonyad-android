@@ -180,4 +180,5 @@
     <string name="date_and_time">Date and time</string>
     <string name="location">Location</string>
     <string name="evaluation">Evaluation</string>
+    <string name="back">Back</string>
 </resources>
