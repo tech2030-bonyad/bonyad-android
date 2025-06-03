@@ -71,7 +71,9 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_linkedin
 drawable ic_loc
+drawable ic_loc3452
 drawable ic_location2
+drawable ic_location3
 drawable ic_lock
 drawable ic_lockactive
 drawable ic_mdi_eye_off_outline
@@ -102,6 +104,7 @@ drawable ic_whats
 drawable ic_widget
 drawable ic_widget2
 drawable illustration
+drawable image14
 drawable map
 drawable onboardingunselect
 drawable onboardingunselect1
@@ -145,6 +148,7 @@ id code1
 id code2
 id code3
 id code4
+id comment
 id confirmPass
 id confirmpass
 id dateList
@@ -168,6 +172,7 @@ id message
 id name
 id oldeyePass
 id oldpass
+id orderList
 id packageList
 id pager
 id pass
@@ -176,6 +181,7 @@ id photo
 id photos
 id photosedit
 id productList
+id rate
 id searchTxt
 id serviceList
 id slider
@@ -193,6 +199,7 @@ layout activity_addservice
 layout activity_appointmentmanagectivity
 layout activity_changelangue
 layout activity_contactus
+layout activity_detailsappointment
 layout activity_detailsspeciallist
 layout activity_editpass
 layout activity_editphone
@@ -211,6 +218,7 @@ layout activity_splash
 layout activity_staticpage
 layout activity_subscriptions
 layout activity_technical_home
+layout activity_technicaldetailsapointment
 layout activity_technicalregister
 layout activity_technicalservicedetails
 layout activity_userhome
@@ -220,10 +228,13 @@ layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
+layout fragment_ratingdialog
 layout fragment_speciallistreservedone
+layout fragment_technicalappointment
 layout fragment_technicalhome
 layout fragment_technicalprofile
 layout fragment_technicalservices
+layout fragment_userappointment
 layout fragment_userhome
 layout fragment_userprofile
 layout item_address
@@ -242,8 +253,10 @@ layout item_servicesdetails
 layout item_slider
 layout item_special
 layout item_special1
+layout item_technicalappointment
 layout item_technicalservice
 layout item_time
+layout item_userappointment
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
@@ -271,6 +284,7 @@ string attach_a_picture
 string available_appointments
 string back
 string bank_account
+string booking_date_and_time
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
 string camera
 string cancel
@@ -281,6 +295,7 @@ string check_your_connection
 string city
 string clear
 string com.crashlytics.android.build_id
+string completed_appointments
 string confirm
 string confirm_password
 string confirm_password_must_same_password
@@ -288,7 +303,9 @@ string contact_us
 string content_of_the_message
 string copied
 string create_an_account
+string current_appointments
 string customer_account
+string date_and_time
 string date_and_time_of_receipt
 string default_address
 string delete
@@ -298,6 +315,7 @@ string departments
 string description
 string description1
 string details
+string details1
 string don_t_have_an_account
 string done
 string edit_profile_data
@@ -312,6 +330,7 @@ string enter_the_mobile_number_to_send_the_activation_code
 string enter_the_new_mobile_number
 string enter_the_new_password
 string enter_the_verification_code_sent_to_you_via_mobile_number
+string evaluation
 string expert_account
 string failed_to_connect_to_server_please_repeat_your_requesr
 string field_required
@@ -329,14 +348,17 @@ string language
 string language_change
 string length_must_be
 string load_more
+string location
 string log_in_to_your_account
 string login
 string logout
 string main_sections
 string merchant_account
 string mobile_number
+string modify_the_request
 string monday
 string more
+string must_male_rate
 string my_appointments
 string my_data
 string my_services
@@ -363,7 +385,11 @@ string privacy
 string products
 string profile
 string r_s
+string rate_your_reservation
 string ready_to_adopt_we_will_provide_you_with_everything_you_need
+string reason_for_rejection
+string refused
+string rejected_appointments
 string reliable_labor
 string required
 string resend_verification_code
@@ -396,6 +422,7 @@ string sunday
 string terms_and_conditions
 string the_code_has_not_been_received
 string there_are_no_addresses_available
+string there_are_no_appointment_available
 string there_are_no_services_available
 string there_are_no_technicals_available
 string there_is_time_not_added_in_day
@@ -410,6 +437,7 @@ string welcome
 string welcome_back
 string with_you_every_step_of_the_way_in_your_career_journey
 string work_days
+string write_your_comment
 string years_of_experience
 string yes
 string you_can_add_and_edit_your_appointments

@@ -214,6 +214,8 @@
                 android:layout_marginTop="8dp"
                 bind:technicalhome="@{model.technicallist}"
                 bind:fragment="@{model.context}"
+                bind:shimmer_recycler_layout="@layout/item_special"
+                bind:shimmer_recycler_item_count="5"
                 />
             <FrameLayout
                 android:layout_width="match_parent"

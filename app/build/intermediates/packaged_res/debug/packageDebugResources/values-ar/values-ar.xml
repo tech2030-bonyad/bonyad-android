@@ -24,6 +24,7 @@
     <string name="available_appointments">المواعيد المتاحة</string>
     <string name="back">رجوع</string>
     <string name="bank_account">الحساب البنكي</string>
+    <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
     <string name="camera">كاميرا</string>
     <string name="cancel">إلغاء</string>
@@ -33,6 +34,7 @@
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
     <string name="city">المدينة</string>
     <string name="clear">مسح</string>
+    <string name="completed_appointments">المواعيد المكتمله</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_password">تأكيد كلمة المرور</string>
     <string name="confirm_password_must_same_password">تأكيد كلمة المرور يجب أن يكون نفس كلمة المرور</string>
@@ -40,7 +42,9 @@
     <string name="content_of_the_message">مضمون الرسالة</string>
     <string name="copied">copied</string>
     <string name="create_an_account">إنشاء حساب</string>
+    <string name="current_appointments">المواعيد الحالية</string>
     <string name="customer_account">حساب عميل</string>
+    <string name="date_and_time">تاريخ ووقت</string>
     <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
     <string name="default_address">العنوان الافتراضي</string>
     <string name="delete">حذف</string>
@@ -50,6 +54,7 @@
     <string name="description">الوصف</string>
     <string name="description1">وصف</string>
     <string name="details">التفاصيل</string>
+    <string name="details1">تفاصيل</string>
     <string name="don_t_have_an_account">ليس لديك حساب؟</string>
     <string name="done">تم</string>
     <string name="edit_profile_data">تعديل بيانات الملف الشخصي</string>
@@ -64,6 +69,7 @@
     <string name="enter_the_new_mobile_number">ادخل رقم الجوال الجديد</string>
     <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">ادخل رمز التحقق المرسل إليك عبر رقم الجوال</string>
+    <string name="evaluation">تقيم</string>
     <string name="expert_account">حساب متخصص</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">خطأ فى الاتصال بالخادم برجاء المحاولة مرة أخرى</string>
     <string name="field_required">مطلوب</string>
@@ -80,14 +86,17 @@
     <string name="language_change">تغير اللغة</string>
     <string name="length_must_be">يجب أن يكون عدد الأرقام</string>
     <string name="load_more">عرض المزيد</string>
+    <string name="location">الموقع</string>
     <string name="log_in_to_your_account">سجل الدخول لحسابك</string>
     <string name="login">تسجيل الدخول</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="main_sections">الاقسام الرئيسية</string>
     <string name="merchant_account">حساب تاجر</string>
     <string name="mobile_number">رقم الجوال</string>
+    <string name="modify_the_request">تعديل الطلب</string>
     <string name="monday">الاثنين</string>
     <string name="more">المزيد</string>
+    <string name="must_male_rate">لا بد من اضافه تقييم</string>
     <string name="my_appointments">مواعيدي</string>
     <string name="my_data">بياناتى</string>
     <string name="my_services">خدماتي</string>
@@ -114,7 +123,11 @@
     <string name="products">المنتجات</string>
     <string name="profile">الملف الشخصى</string>
     <string name="r_s">ر.س</string>
+    <string name="rate_your_reservation">اعطي تقيم لحجزك</string>
     <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">جاهز تبني؟ إحنا نوصلك بكل اللي تحتاجه</string>
+    <string name="reason_for_rejection">سبب الرفض</string>
+    <string name="refused">رفض</string>
+    <string name="rejected_appointments">المواعيد المرفوضة</string>
     <string name="reliable_labor">عمالة موثوقة</string>
     <string name="required">مطلوب</string>
     <string name="resend_verification_code">إعادة ارسال رمز التحقق</string>
@@ -147,6 +160,7 @@
     <string name="terms_and_conditions">الشروط والاحكام</string>
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
     <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
+    <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
@@ -161,6 +175,7 @@
     <string name="welcome_back">مرحباً بعودتك</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
     <string name="work_days">أيام العمل</string>
+    <string name="write_your_comment">اكتب تعليق</string>
     <string name="years_of_experience">سنوات الخبرة</string>
     <string name="yes">نعم</string>
     <string name="you_can_add_and_edit_your_appointments">يمكنك اضافة المواعيد الخاصة بك وتعديلها</string>

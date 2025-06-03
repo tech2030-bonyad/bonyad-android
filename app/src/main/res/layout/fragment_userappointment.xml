@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:bind="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Fragment.user.UserappointmentFragment">
+    <data class="UserordersfragmentviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.OrdersListViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,6 +30,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp">
             <FrameLayout
+                android:onClick="@{ () -> model.setstatus(1) }"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -40,17 +47,19 @@
                         android:gravity="center"
                         android:fontFamily="@font/cairosemibold"
                         android:layout_gravity="center"
-                        android:textColor="@color/lightblue"
+                        android:textColor="@{model.status == 1 ? @color/lightblue :@color/darkgray}"
                         android:text="@string/current_appointments"/>
                     <TextView
                         android:layout_width="24dp"
                         android:layout_height="2dp"
                         android:layout_marginTop="8dp"
                         android:layout_gravity="center"
+                        android:visibility="@{model.status == 1 ? View.VISIBLE : View.GONE}"
                         android:background="@color/lightblue"/>
                 </LinearLayout>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.setstatus(3) }"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -67,18 +76,19 @@
                         android:gravity="center"
                         android:fontFamily="@font/cairosemibold"
                         android:layout_gravity="center"
-                        android:textColor="@color/darkgray"
+                        android:textColor="@{model.status == 3 ? @color/lightblue :@color/darkgray}"
                         android:text="@string/completed_appointments"/>
                     <TextView
                         android:layout_width="24dp"
                         android:layout_height="2dp"
                         android:layout_marginTop="8dp"
                         android:layout_gravity="center"
-                        android:visibility="gone"
+                        android:visibility="@{model.status == 3 ? View.VISIBLE : View.GONE}"
                         android:background="@color/lightblue"/>
                 </LinearLayout>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.setstatus(2) }"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -95,26 +105,56 @@
                         android:gravity="center"
                         android:fontFamily="@font/cairosemibold"
                         android:layout_gravity="center"
-                        android:textColor="@color/darkgray"
+                        android:textColor="@{model.status == 2 ? @color/lightblue :@color/darkgray}"
                         android:text="@string/rejected_appointments"/>
                     <TextView
                         android:layout_width="24dp"
                         android:layout_height="2dp"
                         android:layout_marginTop="8dp"
                         android:layout_gravity="center"
-                        android:visibility="gone"
+                        android:visibility="@{model.status == 2 ? View.VISIBLE : View.GONE}"
                         android:background="@color/lightblue"/>
                 </LinearLayout>
             </FrameLayout>
 
         </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
         <com.todkars.shimmer.ShimmerRecyclerView
-            android:id="@+id/serviceList"
+            android:id="@+id/orderList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="12dp"
+            bind:orders="@{model.orderList}"
+            bind:fragment="@{model.context}"
+            bind:shimmer_recycler_layout="@layout/item_userappointment"
+            bind:shimmer_recycler_item_count="5"
             />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="@{model.isloading || model.orderList.size() > 0 ? View.GONE : View.VISIBLE}"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bonyad_logo_08_1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkblack"
+                    android:textSize="16sp"
+                    android:text="@string/there_are_no_appointment_available"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    tools:text = "No result"/>
+            </LinearLayout>
+        </FrameLayout>
     </LinearLayout>
-</FrameLayout>
+</layout>

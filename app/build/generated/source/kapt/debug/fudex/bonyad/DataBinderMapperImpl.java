@@ -33,6 +33,7 @@ import fudex.bonyad.databinding.OnboardingListViewModelBindingImpl;
 import fudex.bonyad.databinding.PlanViewBindingImpl;
 import fudex.bonyad.databinding.PlanviewModelBindingImpl;
 import fudex.bonyad.databinding.ProfileviewModelBindingImpl;
+import fudex.bonyad.databinding.RatingViewModelBindingImpl;
 import fudex.bonyad.databinding.ReservedoneviewModelBindingImpl;
 import fudex.bonyad.databinding.ResetpassviewModelBindingImpl;
 import fudex.bonyad.databinding.SelecttypeviewModelBindingImpl;
@@ -53,6 +54,8 @@ import fudex.bonyad.databinding.TechnicalserviceviewModelBindingImpl;
 import fudex.bonyad.databinding.TimeviewModelBindingImpl;
 import fudex.bonyad.databinding.UserhomefragmentviewModelBindingImpl;
 import fudex.bonyad.databinding.UserhomeviewModelBindingImpl;
+import fudex.bonyad.databinding.UserordersfragmentviewModelBindingImpl;
+import fudex.bonyad.databinding.UserorderviewModelBindingImpl;
 import fudex.bonyad.databinding.UserprofileViewModelBindingImpl;
 import fudex.bonyad.databinding.UserregisterviewModelBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -126,45 +129,51 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTFILTERSPECIAL = 30;
 
-  private static final int LAYOUT_FRAGMENTSPECIALLISTRESERVEDONE = 31;
+  private static final int LAYOUT_FRAGMENTRATINGDIALOG = 31;
 
-  private static final int LAYOUT_FRAGMENTTECHNICALPROFILE = 32;
+  private static final int LAYOUT_FRAGMENTSPECIALLISTRESERVEDONE = 32;
 
-  private static final int LAYOUT_FRAGMENTTECHNICALSERVICES = 33;
+  private static final int LAYOUT_FRAGMENTTECHNICALPROFILE = 33;
 
-  private static final int LAYOUT_FRAGMENTUSERHOME = 34;
+  private static final int LAYOUT_FRAGMENTTECHNICALSERVICES = 34;
 
-  private static final int LAYOUT_FRAGMENTUSERPROFILE = 35;
+  private static final int LAYOUT_FRAGMENTUSERAPPOINTMENT = 35;
 
-  private static final int LAYOUT_ITEMADDRESS = 36;
+  private static final int LAYOUT_FRAGMENTUSERHOME = 36;
 
-  private static final int LAYOUT_ITEMAVAILABLITY = 37;
+  private static final int LAYOUT_FRAGMENTUSERPROFILE = 37;
 
-  private static final int LAYOUT_ITEMCERTIFICATE = 38;
+  private static final int LAYOUT_ITEMADDRESS = 38;
 
-  private static final int LAYOUT_ITEMDAY = 39;
+  private static final int LAYOUT_ITEMAVAILABLITY = 39;
 
-  private static final int LAYOUT_ITEMIMAGE = 40;
+  private static final int LAYOUT_ITEMCERTIFICATE = 40;
 
-  private static final int LAYOUT_ITEMPACKAGES = 41;
+  private static final int LAYOUT_ITEMDAY = 41;
 
-  private static final int LAYOUT_ITEMSERVICEIMAGE = 42;
+  private static final int LAYOUT_ITEMIMAGE = 42;
 
-  private static final int LAYOUT_ITEMSERVICES = 43;
+  private static final int LAYOUT_ITEMPACKAGES = 43;
 
-  private static final int LAYOUT_ITEMSERVICES1 = 44;
+  private static final int LAYOUT_ITEMSERVICEIMAGE = 44;
 
-  private static final int LAYOUT_ITEMSERVICESDETAILS = 45;
+  private static final int LAYOUT_ITEMSERVICES = 45;
 
-  private static final int LAYOUT_ITEMSPECIAL = 46;
+  private static final int LAYOUT_ITEMSERVICES1 = 46;
 
-  private static final int LAYOUT_ITEMSPECIAL1 = 47;
+  private static final int LAYOUT_ITEMSERVICESDETAILS = 47;
 
-  private static final int LAYOUT_ITEMTECHNICALSERVICE = 48;
+  private static final int LAYOUT_ITEMSPECIAL = 48;
 
-  private static final int LAYOUT_ITEMTIME = 49;
+  private static final int LAYOUT_ITEMSPECIAL1 = 49;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(49);
+  private static final int LAYOUT_ITEMTECHNICALSERVICE = 50;
+
+  private static final int LAYOUT_ITEMTIME = 51;
+
+  private static final int LAYOUT_ITEMUSERAPPOINTMENT = 52;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(52);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.activity_activeuser, LAYOUT_ACTIVITYACTIVEUSER);
@@ -197,9 +206,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_calenderdialog, LAYOUT_FRAGMENTCALENDERDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_delete, LAYOUT_FRAGMENTDELETE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_filterspecial, LAYOUT_FRAGMENTFILTERSPECIAL);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_ratingdialog, LAYOUT_FRAGMENTRATINGDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_speciallistreservedone, LAYOUT_FRAGMENTSPECIALLISTRESERVEDONE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_technicalprofile, LAYOUT_FRAGMENTTECHNICALPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_technicalservices, LAYOUT_FRAGMENTTECHNICALSERVICES);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_userappointment, LAYOUT_FRAGMENTUSERAPPOINTMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_userhome, LAYOUT_FRAGMENTUSERHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.fragment_userprofile, LAYOUT_FRAGMENTUSERPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_address, LAYOUT_ITEMADDRESS);
@@ -216,6 +227,333 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_special1, LAYOUT_ITEMSPECIAL1);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_technicalservice, LAYOUT_ITEMTECHNICALSERVICE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_time, LAYOUT_ITEMTIME);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(fudex.bonyad.R.layout.item_userappointment, LAYOUT_ITEMUSERAPPOINTMENT);
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding0(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
+      case  LAYOUT_ACTIVITYACTIVEUSER: {
+        if ("layout/activity_activeuser_0".equals(tag)) {
+          return new ActivecodeviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_activeuser is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYADDRESSES: {
+        if ("layout/activity_addresses_0".equals(tag)) {
+          return new AddressesListViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_addresses is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYADDSERVICE: {
+        if ("layout/activity_addservice_0".equals(tag)) {
+          return new AddserviceviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_addservice is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYAPPOINTMENTMANAGECTIVITY: {
+        if ("layout/activity_appointmentmanagectivity_0".equals(tag)) {
+          return new AppointmentmanageviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_appointmentmanagectivity is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYCHANGELANGUE: {
+        if ("layout/activity_changelangue_0".equals(tag)) {
+          return new ChangelanguageviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_changelangue is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYCONTACTUS: {
+        if ("layout/activity_contactus_0".equals(tag)) {
+          return new ContactusviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_contactus is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYDETAILSSPECIALLIST: {
+        if ("layout/activity_detailsspeciallist_0".equals(tag)) {
+          return new DetailstechnicalModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_detailsspeciallist is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYEDITPASS: {
+        if ("layout/activity_editpass_0".equals(tag)) {
+          return new EditpasswordViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_editpass is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYEDITPHONE: {
+        if ("layout/activity_editphone_0".equals(tag)) {
+          return new EditphoneViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_editphone is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYEDITTECHNICALDATA: {
+        if ("layout/activity_edittechnicaldata_0".equals(tag)) {
+          return new EdittechnicalViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_edittechnicaldata is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYEDITUSERDATA: {
+        if ("layout/activity_edituserdata_0".equals(tag)) {
+          return new EdituserViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_edituserdata is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYFORGETPASS: {
+        if ("layout/activity_forgetpass_0".equals(tag)) {
+          return new ForgetviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_forgetpass is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYLOCATIONMAP: {
+        if ("layout/activity_locationmap_0".equals(tag)) {
+          return new LocateonmapviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_locationmap is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYLOGIN: {
+        if ("layout/activity_login_0".equals(tag)) {
+          return new LoginviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYMYSERVICES: {
+        if ("layout/activity_myservices_0".equals(tag)) {
+          return new MyerviceviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_myservices is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYONBOARDING: {
+        if ("layout/activity_onboarding_0".equals(tag)) {
+          return new OnboardingListViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_onboarding is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYPROFILE: {
+        if ("layout/activity_profile_0".equals(tag)) {
+          return new ProfileviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_profile is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYRESETPASSWORD: {
+        if ("layout/activity_resetpassword_0".equals(tag)) {
+          return new ResetpassviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_resetpassword is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYSELECTTYPE: {
+        if ("layout/activity_selecttype_0".equals(tag)) {
+          return new SelecttypeviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_selecttype is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYSPECIALISTS: {
+        if ("layout/activity_specialists_0".equals(tag)) {
+          return new TechnicalListviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_specialists is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYSTATICPAGE: {
+        if ("layout/activity_staticpage_0".equals(tag)) {
+          return new StaticpageviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_staticpage is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYSUBSCRIPTIONS: {
+        if ("layout/activity_subscriptions_0".equals(tag)) {
+          return new PlanviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_subscriptions is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYTECHNICALHOME: {
+        if ("layout/activity_technical_home_0".equals(tag)) {
+          return new TechnicalhomeviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_technical_home is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYTECHNICALREGISTER: {
+        if ("layout/activity_technicalregister_0".equals(tag)) {
+          return new TechnicalregisterviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_technicalregister is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYTECHNICALSERVICEDETAILS: {
+        if ("layout/activity_technicalservicedetails_0".equals(tag)) {
+          return new TechnicalservicedetailsviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_technicalservicedetails is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYUSERHOME: {
+        if ("layout/activity_userhome_0".equals(tag)) {
+          return new UserhomeviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_userhome is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ACTIVITYUSERREGISTER: {
+        if ("layout/activity_userregister_0".equals(tag)) {
+          return new UserregisterviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for activity_userregister is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTCALENDERDIALOG: {
+        if ("layout/fragment_calenderdialog_0".equals(tag)) {
+          return new CalenderViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_calenderdialog is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTDELETE: {
+        if ("layout/fragment_delete_0".equals(tag)) {
+          return new DeleteviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_delete is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTFILTERSPECIAL: {
+        if ("layout/fragment_filterspecial_0".equals(tag)) {
+          return new FiltertechnicalViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_filterspecial is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTRATINGDIALOG: {
+        if ("layout/fragment_ratingdialog_0".equals(tag)) {
+          return new RatingViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_ratingdialog is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTSPECIALLISTRESERVEDONE: {
+        if ("layout/fragment_speciallistreservedone_0".equals(tag)) {
+          return new ReservedoneviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_speciallistreservedone is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTTECHNICALPROFILE: {
+        if ("layout/fragment_technicalprofile_0".equals(tag)) {
+          return new TechnicalprofileViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_technicalprofile is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTTECHNICALSERVICES: {
+        if ("layout/fragment_technicalservices_0".equals(tag)) {
+          return new TechnicalserviceviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_technicalservices is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTUSERAPPOINTMENT: {
+        if ("layout/fragment_userappointment_0".equals(tag)) {
+          return new UserordersfragmentviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_userappointment is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTUSERHOME: {
+        if ("layout/fragment_userhome_0".equals(tag)) {
+          return new UserhomefragmentviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_userhome is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTUSERPROFILE: {
+        if ("layout/fragment_userprofile_0".equals(tag)) {
+          return new UserprofileViewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_userprofile is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMADDRESS: {
+        if ("layout/item_address_0".equals(tag)) {
+          return new AddressesiewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_address is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMAVAILABLITY: {
+        if ("layout/item_availablity_0".equals(tag)) {
+          return new AvailbiltyviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_availablity is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMCERTIFICATE: {
+        if ("layout/item_certificate_0".equals(tag)) {
+          return new CertificatviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_certificate is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMDAY: {
+        if ("layout/item_day_0".equals(tag)) {
+          return new DayviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_day is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMIMAGE: {
+        if ("layout/item_image_0".equals(tag)) {
+          return new ImagesviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_image is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMPACKAGES: {
+        if ("layout/item_packages_0".equals(tag)) {
+          return new PlanViewBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_packages is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMSERVICEIMAGE: {
+        if ("layout/item_serviceimage_0".equals(tag)) {
+          return new TechnicalimagesviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_serviceimage is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMSERVICES: {
+        if ("layout/item_services_0".equals(tag)) {
+          return new ServiceviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_services is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMSERVICES1: {
+        if ("layout/item_services1_0".equals(tag)) {
+          return new Service1viewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_services1 is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMSERVICESDETAILS: {
+        if ("layout/item_servicesdetails_0".equals(tag)) {
+          return new ServicedetailsviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_servicesdetails is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMSPECIAL: {
+        if ("layout/item_special_0".equals(tag)) {
+          return new TechnicailviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_special is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMSPECIAL1: {
+        if ("layout/item_special1_0".equals(tag)) {
+          return new Technicail1viewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_special1 is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMTECHNICALSERVICE: {
+        if ("layout/item_technicalservice_0".equals(tag)) {
+          return new TechnicailservicesviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_technicalservice is invalid. Received: " + tag);
+      }
+    }
+    return null;
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
+      case  LAYOUT_ITEMTIME: {
+        if ("layout/item_time_0".equals(tag)) {
+          return new TimeviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_time is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMUSERAPPOINTMENT: {
+        if ("layout/item_userappointment_0".equals(tag)) {
+          return new UserorderviewModelBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_userappointment is invalid. Received: " + tag);
+      }
+    }
+    return null;
   }
 
   @Override
@@ -226,300 +564,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       if(tag == null) {
         throw new RuntimeException("view must have a tag");
       }
-      switch(localizedLayoutId) {
-        case  LAYOUT_ACTIVITYACTIVEUSER: {
-          if ("layout/activity_activeuser_0".equals(tag)) {
-            return new ActivecodeviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_activeuser is invalid. Received: " + tag);
+      // find which method will have it. -1 is necessary becausefirst id starts with 1;
+      int methodIndex = (localizedLayoutId - 1) / 50;
+      switch(methodIndex) {
+        case 0: {
+          return internalGetViewDataBinding0(component, view, localizedLayoutId, tag);
         }
-        case  LAYOUT_ACTIVITYADDRESSES: {
-          if ("layout/activity_addresses_0".equals(tag)) {
-            return new AddressesListViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_addresses is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYADDSERVICE: {
-          if ("layout/activity_addservice_0".equals(tag)) {
-            return new AddserviceviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_addservice is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYAPPOINTMENTMANAGECTIVITY: {
-          if ("layout/activity_appointmentmanagectivity_0".equals(tag)) {
-            return new AppointmentmanageviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_appointmentmanagectivity is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYCHANGELANGUE: {
-          if ("layout/activity_changelangue_0".equals(tag)) {
-            return new ChangelanguageviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_changelangue is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYCONTACTUS: {
-          if ("layout/activity_contactus_0".equals(tag)) {
-            return new ContactusviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_contactus is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYDETAILSSPECIALLIST: {
-          if ("layout/activity_detailsspeciallist_0".equals(tag)) {
-            return new DetailstechnicalModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_detailsspeciallist is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYEDITPASS: {
-          if ("layout/activity_editpass_0".equals(tag)) {
-            return new EditpasswordViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_editpass is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYEDITPHONE: {
-          if ("layout/activity_editphone_0".equals(tag)) {
-            return new EditphoneViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_editphone is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYEDITTECHNICALDATA: {
-          if ("layout/activity_edittechnicaldata_0".equals(tag)) {
-            return new EdittechnicalViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_edittechnicaldata is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYEDITUSERDATA: {
-          if ("layout/activity_edituserdata_0".equals(tag)) {
-            return new EdituserViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_edituserdata is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYFORGETPASS: {
-          if ("layout/activity_forgetpass_0".equals(tag)) {
-            return new ForgetviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_forgetpass is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYLOCATIONMAP: {
-          if ("layout/activity_locationmap_0".equals(tag)) {
-            return new LocateonmapviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_locationmap is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYLOGIN: {
-          if ("layout/activity_login_0".equals(tag)) {
-            return new LoginviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYMYSERVICES: {
-          if ("layout/activity_myservices_0".equals(tag)) {
-            return new MyerviceviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_myservices is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYONBOARDING: {
-          if ("layout/activity_onboarding_0".equals(tag)) {
-            return new OnboardingListViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_onboarding is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYPROFILE: {
-          if ("layout/activity_profile_0".equals(tag)) {
-            return new ProfileviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_profile is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYRESETPASSWORD: {
-          if ("layout/activity_resetpassword_0".equals(tag)) {
-            return new ResetpassviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_resetpassword is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYSELECTTYPE: {
-          if ("layout/activity_selecttype_0".equals(tag)) {
-            return new SelecttypeviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_selecttype is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYSPECIALISTS: {
-          if ("layout/activity_specialists_0".equals(tag)) {
-            return new TechnicalListviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_specialists is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYSTATICPAGE: {
-          if ("layout/activity_staticpage_0".equals(tag)) {
-            return new StaticpageviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_staticpage is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYSUBSCRIPTIONS: {
-          if ("layout/activity_subscriptions_0".equals(tag)) {
-            return new PlanviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_subscriptions is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYTECHNICALHOME: {
-          if ("layout/activity_technical_home_0".equals(tag)) {
-            return new TechnicalhomeviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_technical_home is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYTECHNICALREGISTER: {
-          if ("layout/activity_technicalregister_0".equals(tag)) {
-            return new TechnicalregisterviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_technicalregister is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYTECHNICALSERVICEDETAILS: {
-          if ("layout/activity_technicalservicedetails_0".equals(tag)) {
-            return new TechnicalservicedetailsviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_technicalservicedetails is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYUSERHOME: {
-          if ("layout/activity_userhome_0".equals(tag)) {
-            return new UserhomeviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_userhome is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ACTIVITYUSERREGISTER: {
-          if ("layout/activity_userregister_0".equals(tag)) {
-            return new UserregisterviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for activity_userregister is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTCALENDERDIALOG: {
-          if ("layout/fragment_calenderdialog_0".equals(tag)) {
-            return new CalenderViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_calenderdialog is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTDELETE: {
-          if ("layout/fragment_delete_0".equals(tag)) {
-            return new DeleteviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_delete is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTFILTERSPECIAL: {
-          if ("layout/fragment_filterspecial_0".equals(tag)) {
-            return new FiltertechnicalViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_filterspecial is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTSPECIALLISTRESERVEDONE: {
-          if ("layout/fragment_speciallistreservedone_0".equals(tag)) {
-            return new ReservedoneviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_speciallistreservedone is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTTECHNICALPROFILE: {
-          if ("layout/fragment_technicalprofile_0".equals(tag)) {
-            return new TechnicalprofileViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_technicalprofile is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTTECHNICALSERVICES: {
-          if ("layout/fragment_technicalservices_0".equals(tag)) {
-            return new TechnicalserviceviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_technicalservices is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTUSERHOME: {
-          if ("layout/fragment_userhome_0".equals(tag)) {
-            return new UserhomefragmentviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_userhome is invalid. Received: " + tag);
-        }
-        case  LAYOUT_FRAGMENTUSERPROFILE: {
-          if ("layout/fragment_userprofile_0".equals(tag)) {
-            return new UserprofileViewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for fragment_userprofile is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMADDRESS: {
-          if ("layout/item_address_0".equals(tag)) {
-            return new AddressesiewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_address is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMAVAILABLITY: {
-          if ("layout/item_availablity_0".equals(tag)) {
-            return new AvailbiltyviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_availablity is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMCERTIFICATE: {
-          if ("layout/item_certificate_0".equals(tag)) {
-            return new CertificatviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_certificate is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMDAY: {
-          if ("layout/item_day_0".equals(tag)) {
-            return new DayviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_day is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMIMAGE: {
-          if ("layout/item_image_0".equals(tag)) {
-            return new ImagesviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_image is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMPACKAGES: {
-          if ("layout/item_packages_0".equals(tag)) {
-            return new PlanViewBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_packages is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMSERVICEIMAGE: {
-          if ("layout/item_serviceimage_0".equals(tag)) {
-            return new TechnicalimagesviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_serviceimage is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMSERVICES: {
-          if ("layout/item_services_0".equals(tag)) {
-            return new ServiceviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_services is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMSERVICES1: {
-          if ("layout/item_services1_0".equals(tag)) {
-            return new Service1viewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_services1 is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMSERVICESDETAILS: {
-          if ("layout/item_servicesdetails_0".equals(tag)) {
-            return new ServicedetailsviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_servicesdetails is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMSPECIAL: {
-          if ("layout/item_special_0".equals(tag)) {
-            return new TechnicailviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_special is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMSPECIAL1: {
-          if ("layout/item_special1_0".equals(tag)) {
-            return new Technicail1viewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_special1 is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMTECHNICALSERVICE: {
-          if ("layout/item_technicalservice_0".equals(tag)) {
-            return new TechnicailservicesviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_technicalservice is invalid. Received: " + tag);
-        }
-        case  LAYOUT_ITEMTIME: {
-          if ("layout/item_time_0".equals(tag)) {
-            return new TimeviewModelBindingImpl(component, view);
-          }
-          throw new IllegalArgumentException("The tag for item_time is invalid. Received: " + tag);
+        case 1: {
+          return internalGetViewDataBinding1(component, view, localizedLayoutId, tag);
         }
       }
     }
@@ -575,7 +627,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(49);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(52);
 
     static {
       sKeys.put("layout/activity_activeuser_0", fudex.bonyad.R.layout.activity_activeuser);
@@ -608,9 +660,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_calenderdialog_0", fudex.bonyad.R.layout.fragment_calenderdialog);
       sKeys.put("layout/fragment_delete_0", fudex.bonyad.R.layout.fragment_delete);
       sKeys.put("layout/fragment_filterspecial_0", fudex.bonyad.R.layout.fragment_filterspecial);
+      sKeys.put("layout/fragment_ratingdialog_0", fudex.bonyad.R.layout.fragment_ratingdialog);
       sKeys.put("layout/fragment_speciallistreservedone_0", fudex.bonyad.R.layout.fragment_speciallistreservedone);
       sKeys.put("layout/fragment_technicalprofile_0", fudex.bonyad.R.layout.fragment_technicalprofile);
       sKeys.put("layout/fragment_technicalservices_0", fudex.bonyad.R.layout.fragment_technicalservices);
+      sKeys.put("layout/fragment_userappointment_0", fudex.bonyad.R.layout.fragment_userappointment);
       sKeys.put("layout/fragment_userhome_0", fudex.bonyad.R.layout.fragment_userhome);
       sKeys.put("layout/fragment_userprofile_0", fudex.bonyad.R.layout.fragment_userprofile);
       sKeys.put("layout/item_address_0", fudex.bonyad.R.layout.item_address);
@@ -627,6 +681,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_special1_0", fudex.bonyad.R.layout.item_special1);
       sKeys.put("layout/item_technicalservice_0", fudex.bonyad.R.layout.item_technicalservice);
       sKeys.put("layout/item_time_0", fudex.bonyad.R.layout.item_time);
+      sKeys.put("layout/item_userappointment_0", fudex.bonyad.R.layout.item_userappointment);
     }
   }
 }

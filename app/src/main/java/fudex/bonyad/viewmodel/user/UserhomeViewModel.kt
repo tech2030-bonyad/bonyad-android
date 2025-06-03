@@ -28,6 +28,7 @@ import fudex.bonyad.ui.Fragment.user.UserprofileFragment
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -91,8 +92,8 @@ class UserhomeViewModel(var catogaryFragment: UserhomeActivity) : BaseObservable
     fun appointment() {
         if (type.get()!= 1){
             if (LoginSession.isLogin){
-//                var fragment = ReservationFragment()
-//                replaceFragment(fragment)
+                var fragment = UserappointmentFragment()
+                replaceFragment(fragment)
                 type.set(1)
             }else {
                 var intent: Intent = Intent(activity, LoginActivity::class.java)

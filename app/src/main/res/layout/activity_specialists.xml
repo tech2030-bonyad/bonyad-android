@@ -92,6 +92,8 @@
             android:layout_marginTop="23dp"
             bind:technical="@{model.technicalList}"
             bind:fragment="@{model.context}"
+            app:shimmer_recycler_layout="@layout/item_special1"
+            app:shimmer_recycler_item_count="5"
             />
 
     </LinearLayout>

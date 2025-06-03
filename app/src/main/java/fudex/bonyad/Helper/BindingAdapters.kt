@@ -26,6 +26,7 @@ import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DistanceModel
 import fudex.bonyad.Model.OnbaordModel
+import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.PlanData
 import fudex.bonyad.Model.StatesDatum
 
@@ -42,6 +43,7 @@ import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
 import fudex.bonyad.ui.Adapter.technical.Service1adapter
 import fudex.bonyad.ui.Adapter.user.Addressesadapter
+import fudex.bonyad.ui.Adapter.user.Ordersadapter
 import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
 import fudex.bonyad.ui.Adapter.user.Technicafilterladapter
 import fudex.bonyad.ui.Adapter.user.Technical1adapter
@@ -402,6 +404,17 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is OnboardPagerAdapter) {
             (adapter as OnboardPagerAdapter).setdata(movies)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:orders", "bind:fragment")
+    @JvmStatic
+    fun setorders(recyclerView: RecyclerView, movies: ArrayList<OrdersDatum>, fragment: Fragment) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Ordersadapter) {
+            (adapter as Ordersadapter).setdata(movies, fragment)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

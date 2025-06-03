@@ -115,6 +115,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="12dp"
+            bind:shimmer_recycler_layout="@layout/item_technicalappointment"
+            bind:shimmer_recycler_item_count="5"
             />
     </LinearLayout>
 </FrameLayout>

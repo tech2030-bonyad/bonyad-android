@@ -54,6 +54,7 @@
                 bind:shimmer_recycler_layout="@layout/item_services1"
                 bind:services1="@{model.servicesList}"
                 bind:fragment="@{model.context}"
+                bind:shimmer_recycler_item_count="5"
                 />
         </LinearLayout>
         <ProgressBar

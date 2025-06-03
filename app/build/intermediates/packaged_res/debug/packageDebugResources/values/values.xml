@@ -44,6 +44,7 @@
     <string name="available_appointments">Available appointments</string>
     <string name="back">Back</string>
     <string name="bank_account">Bank account</string>
+    <string name="booking_date_and_time">Booking date and time:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">Browse thousands of products, from cement and tools to paints and decor, and choose what suits your project with the click of a button!</string>
     <string name="camera">Camera</string>
     <string name="cancel">Cancel</string>
@@ -54,6 +55,7 @@
     <string name="city">City</string>
     <string name="clear">Clear</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="completed_appointments">Completed appointments</string>
     <string name="confirm">Confirm</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="confirm_password_must_same_password">confirm password must same password</string>
@@ -61,7 +63,9 @@
     <string name="content_of_the_message">content of the message</string>
     <string name="copied">copied</string>
     <string name="create_an_account">Create an account</string>
+    <string name="current_appointments">Current appointments</string>
     <string name="customer_account">Customer account</string>
+    <string name="date_and_time">Date and time</string>
     <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
     <string name="default_address">default address</string>
     <string name="delete">Delete</string>
@@ -71,6 +75,7 @@
     <string name="description">Description</string>
     <string name="description1">Description</string>
     <string name="details">Details</string>
+    <string name="details1">Details</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="done">Done</string>
     <string name="edit_profile_data">Edit profile data</string>
@@ -85,6 +90,7 @@
     <string name="enter_the_new_mobile_number">Enter the new mobile number</string>
     <string name="enter_the_new_password">Enter the new password</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">Enter the verification code sent to you via mobile number</string>
+    <string name="evaluation">Evaluation</string>
     <string name="expert_account">Expert Account</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">failed to connect to server please repeat your request</string>
     <string name="field_required">required</string>
@@ -102,14 +108,17 @@
     <string name="language_change">Language change</string>
     <string name="length_must_be">lenght must be</string>
     <string name="load_more">Load More</string>
+    <string name="location">Location</string>
     <string name="log_in_to_your_account">Log in to your account</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="main_sections">Main Sections</string>
     <string name="merchant_account">Merchant Account</string>
     <string name="mobile_number">mobile number</string>
+    <string name="modify_the_request">Modify the request</string>
     <string name="monday">Monday</string>
     <string name="more">More</string>
+    <string name="must_male_rate">must make rate</string>
     <string name="my_appointments">Appointments</string>
     <string name="my_data">My data</string>
     <string name="my_services">My services</string>
@@ -136,7 +145,11 @@
     <string name="products">Products</string>
     <string name="profile">Profile</string>
     <string name="r_s">R.S</string>
+    <string name="rate_your_reservation">Rate your reservation</string>
     <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">Ready to adopt? We will provide you with everything you need.</string>
+    <string name="reason_for_rejection">Reason for rejection</string>
+    <string name="refused">Refused</string>
+    <string name="rejected_appointments">Rejected appointments</string>
     <string name="reliable_labor">Reliable labor</string>
     <string name="required">required</string>
     <string name="resend_verification_code">Resend verification code</string>
@@ -169,6 +182,7 @@
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="the_code_has_not_been_received">The code has not been received?</string>
     <string name="there_are_no_addresses_available">there are no addresses available</string>
+    <string name="there_are_no_appointment_available">there are no appointment available</string>
     <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_are_no_technicals_available">there are no technicals available</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
@@ -183,6 +197,7 @@
     <string name="welcome_back">Welcome back</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">With you every step of the way in your career journey.</string>
     <string name="work_days">Work days</string>
+    <string name="write_your_comment">Write a comment</string>
     <string name="years_of_experience">Years of experience</string>
     <string name="yes">yes</string>
     <string name="you_can_add_and_edit_your_appointments">You can add and edit your appointments.</string>

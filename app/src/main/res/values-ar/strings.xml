@@ -179,4 +179,5 @@
     <string name="location">الموقع</string>
     <string name="evaluation">تقيم</string>
     <string name="back">رجوع</string>
+    <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
 </resources>

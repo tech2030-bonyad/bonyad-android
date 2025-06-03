@@ -181,4 +181,5 @@
     <string name="location">Location</string>
     <string name="evaluation">Evaluation</string>
     <string name="back">Back</string>
+    <string name="there_are_no_appointment_available">there are no appointment available</string>
 </resources>

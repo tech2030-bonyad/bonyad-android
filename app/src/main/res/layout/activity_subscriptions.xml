@@ -123,7 +123,8 @@
                 android:visibility="@{model.type == 1 ? View.VISIBLE : View.INVISIBLE}"
                 app:shimmer_recycler_layout="@layout/item_packages"
                 bind:plan="@{model.planList}"
-                bind:fragment="@{model.activity}"/>
+                bind:fragment="@{model.activity}"
+                app:shimmer_recycler_item_count="5" />
             <LinearLayout
                 android:visibility="@{model.type == 2 &amp;&amp; model.mydata.id != null ? View.VISIBLE : View.INVISIBLE}"
                 android:layout_width="match_parent"

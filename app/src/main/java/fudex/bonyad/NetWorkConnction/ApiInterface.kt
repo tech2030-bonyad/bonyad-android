@@ -303,6 +303,9 @@ interface ApiInterface {
     @GET("services")
     fun getservices(@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<StatesModel?>?
 
+    @GET("reservations")
+    fun getusermyreservation(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<OrdersModel?>?
+
     @GET("services/{serviceId}")
     fun getservicesdetails(@Path("serviceId") serviceId: Int): Call<ServicesdetailsModel?>?
 
