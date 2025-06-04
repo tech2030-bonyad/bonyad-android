@@ -4284,6 +4284,8 @@ layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
 layout fragment_ratingdialog
+layout fragment_refuse
+layout fragment_refuse1
 layout fragment_speciallistreservedone
 layout fragment_technicalappointment
 layout fragment_technicalhome

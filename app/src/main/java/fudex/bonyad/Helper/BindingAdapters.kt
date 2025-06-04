@@ -419,6 +419,16 @@ object BindingAdapters {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }
     }
+    @BindingAdapter("bind:technicalorders", "bind:fragment")
+    @JvmStatic
+    fun settechnicalorders(recyclerView: RecyclerView, movies: ArrayList<OrdersDatum>, fragment: Fragment) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is fudex.bonyad.ui.Adapter.technical.Ordersadapter) {
+            (adapter as fudex.bonyad.ui.Adapter.technical.Ordersadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
 //    @BindingAdapter("bind:servicesorder", "bind:fragment")
 //    @JvmStatic

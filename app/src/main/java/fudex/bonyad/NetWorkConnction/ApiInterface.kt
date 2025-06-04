@@ -29,6 +29,7 @@ import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.AddserviceModel
+import fudex.bonyad.Model.AppointmentdetailsModel
 import fudex.bonyad.Model.Dateadd
 import fudex.bonyad.Model.DetailstechnicalModel
 import fudex.bonyad.Model.FaqModel
@@ -305,6 +306,25 @@ interface ApiInterface {
 
     @GET("reservations")
     fun getusermyreservation(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<OrdersModel?>?
+
+    @GET("technician/reservations")
+    fun gettechnicalmyreservation(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<OrdersModel?>?
+
+    @GET("technician/reservations/{technicalId}")
+    fun gettechnicalappointmentdetails(
+        @Path("technicalId") technicalId: Int,
+    ): Call<AppointmentdetailsModel?>?
+
+    @POST("technician/reservations/{technicalId}/refuse")
+    fun refusetechnicalappointment(
+        @Path("technicalId") technicalId: Int,
+        @Body data: Userdata
+    ): Call<ErrorResponse?>?
+
+    @POST("technician/reservations/{technicalId}/accept")
+    fun accepttechnicalappointment(
+        @Path("technicalId") technicalId: Int
+    ): Call<ErrorResponse?>?
 
     @GET("services/{serviceId}")
     fun getservicesdetails(@Path("serviceId") serviceId: Int): Call<ServicesdetailsModel?>?

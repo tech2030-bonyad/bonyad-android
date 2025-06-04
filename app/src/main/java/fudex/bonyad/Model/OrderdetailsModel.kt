@@ -45,5 +45,6 @@ data class Rating (
 data class User (
     val id: Int? = null,
     val name: String? = null,
+    val avatar: String? = null,
     val avatar_url: String? = null
 )

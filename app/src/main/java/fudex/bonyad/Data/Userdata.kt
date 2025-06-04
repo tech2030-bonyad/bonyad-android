@@ -10,6 +10,7 @@ data class Userdata (
     val password_confirmation: String? = null,
     val otp: String? = null,
     val name: String? = null,
+    val notes: String? = null,
     )
 
 data class Contactdata (

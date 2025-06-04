@@ -4283,6 +4283,8 @@ int layout fragment_delete 0x7f0d0060
 int layout fragment_filterhome 0x7f0d0061
 int layout fragment_filterspecial 0x7f0d0062
 int layout fragment_ratingdialog 0x7f0d0063
+int layout fragment_refuse 0x7f0d00cc
+int layout fragment_refuse1 0x7f0d00cd
 int layout fragment_speciallistreservedone 0x7f0d0064
 int layout fragment_technicalappointment 0x7f0d0065
 int layout fragment_technicalhome 0x7f0d0066
