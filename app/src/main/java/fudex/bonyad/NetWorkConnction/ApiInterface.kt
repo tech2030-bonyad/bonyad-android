@@ -310,9 +310,14 @@ interface ApiInterface {
     @GET("technician/reservations")
     fun gettechnicalmyreservation(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<OrdersModel?>?
 
-    @GET("technician/reservations/{technicalId}")
+    @GET("technician/reservations/{reservationId}")
     fun gettechnicalappointmentdetails(
-        @Path("technicalId") technicalId: Int,
+        @Path("reservationId") reservationId: Int,
+    ): Call<AppointmentdetailsModel?>?
+
+    @GET("reservations/{reservationId}")
+    fun getappointmentdetails(
+        @Path("reservationId") reservationId: Int,
     ): Call<AppointmentdetailsModel?>?
 
     @POST("technician/reservations/{technicalId}/refuse")

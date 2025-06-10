@@ -11,6 +11,8 @@ import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
+import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
+import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
 import java.io.IOException
 import java.util.Locale
 
@@ -48,7 +50,8 @@ class OrderViewModel : BaseObservable() {
 
     }
     fun reject() {
-
+        (context as UserappointmentFragment).ordersListViewModel.appointmentId = onservse.get()!!.id!!
+        (context as UserappointmentFragment).ordersListViewModel.makereject()
     }
 
 

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import atiaf.redstone.NetWorkConnction.RetrofitClient
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
+import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.OrdersModel
@@ -17,6 +18,7 @@ import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Adapter.user.Ordersadapter
+import fudex.bonyad.ui.Fragment.technical.Refuse1Fragment
 import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,6 +36,8 @@ class OrdersListViewModel(var catogaryFragment: UserappointmentFragment) : BaseO
     var page = 1
     private var mLoading = false
     var addressId = 0
+    var appointmentId = 0
+
     init {
         this.context = catogaryFragment
         activity = context.requireActivity()
@@ -126,6 +130,53 @@ class OrdersListViewModel(var catogaryFragment: UserappointmentFragment) : BaseO
         this.status.set(status)
         page = 1
         getorders()
+    }
+    fun makereject(){
+        var fragment = Refuse1Fragment()
+        fragment.setTargetFragment(context, 1)
+        fragment.show(context.parentFragmentManager , "")
+    }
+    fun refuseorder(notes:String) {
+        return
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java
+        )
+        var userdata = Userdata(notes = notes)
+        val call: Call<ErrorResponse?>? =
+            apiService.refusetechnicalappointment(appointmentId,userdata)
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(
+                call: Call<ErrorResponse?>,
+                response: Response<ErrorResponse?>
+            ) {
+                if (response.code() == 200 || response.code() == 201) {
+                    for (index in orderList){
+                        if (index.id == appointmentId){
+                            orderList.remove(index)
+                            notifyChange()
+                            break
+                        }
+                    }
+                }else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            refuseorder(notes)
+                        }
+                    })
+                }
+                isloading.set(false)
+                notifyChange()
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection), activity)
+                isloading.set(false)
+
+            }
+        })
     }
 
 //    fun swiptorefresh() {

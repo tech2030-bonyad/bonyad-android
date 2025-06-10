@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import fudex.bonyad.NetWorkConnction.DialogListener
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.databinding.UserordersfragmentviewModelBinding
@@ -13,7 +14,7 @@ import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.viewmodel.user.OrdersListViewModel
 
 
-class UserappointmentFragment : Fragment() {
+class UserappointmentFragment : Fragment(), DialogListener {
     lateinit var ordersListViewModel: OrdersListViewModel
     lateinit var binding: UserordersfragmentviewModelBinding
 
@@ -48,6 +49,12 @@ class UserappointmentFragment : Fragment() {
         ordersListViewModel.page = 1
         ordersListViewModel.getorders()
         (activity as UserhomeActivity).userhomeViewModel.type.set(1)
+    }
+
+    override fun onDataReceived(data: String) {
+        if(data.contains("refuse")){
+            ordersListViewModel.refuseorder(data.replace("refuse",""))
+        }
     }
 
 }
