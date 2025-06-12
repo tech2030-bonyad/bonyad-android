@@ -189,4 +189,5 @@
     <string name="completed_requests">Completed requests</string>
     <string name="upcoming_appointments">Upcoming appointments</string>
     <string name="previous_appointments">Previous appointments</string>
+    <string name="complete_reservation">Complete reservation</string>
 </resources>

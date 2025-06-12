@@ -187,4 +187,5 @@
     <string name="completed_requests">الطلبات المكتمله</string>
     <string name="upcoming_appointments">المواعيد القادمة</string>
     <string name="previous_appointments">المواعيد السابقة</string>
+    <string name="complete_reservation">إتمام الحجز</string>
 </resources>

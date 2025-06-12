@@ -57,6 +57,7 @@
     <string name="city">City</string>
     <string name="clear">Clear</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="complete_reservation">Complete reservation</string>
     <string name="completed_appointments">Completed appointments</string>
     <string name="completed_requests">Completed requests</string>
     <string name="confirm">Confirm</string>

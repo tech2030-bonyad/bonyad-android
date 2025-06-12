@@ -306,6 +306,7 @@ string check_your_connection
 string city
 string clear
 string com.crashlytics.android.build_id
+string complete_reservation
 string completed_appointments
 string completed_requests
 string confirm

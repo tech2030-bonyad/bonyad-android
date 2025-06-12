@@ -35,6 +35,7 @@
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
     <string name="city">المدينة</string>
     <string name="clear">مسح</string>
+    <string name="complete_reservation">إتمام الحجز</string>
     <string name="completed_appointments">المواعيد المكتمله</string>
     <string name="completed_requests">الطلبات المكتمله</string>
     <string name="confirm">تأكيد</string>

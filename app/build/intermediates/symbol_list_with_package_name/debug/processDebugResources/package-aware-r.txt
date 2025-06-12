@@ -4511,6 +4511,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string complete_reservation
 string completed_appointments
 string completed_requests
 string confirm

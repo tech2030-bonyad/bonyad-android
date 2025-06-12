@@ -57,6 +57,10 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                     img.set(data?.data?.technician?.avatar ?: "")
                     data?.data?.date = data?.data?.date_of_reservation!! + " " + data?.data?.start_time!!
                     detailsdata.set(data!!)
+                    if (data?.data?.status?.value ?: 0 == 2){
+                        context.binding.title.text =
+                            context.getString(R.string.complete_reservation)
+                    }
                     val geocoder = Geocoder(context, Locale(context.getString(R.string.lang)))
                     var address1 = "Unknown location"
                     try {
@@ -198,13 +202,15 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
         context.onBackPressed()
     }
 
-    fun edit(){
-       if (detailsdata.get()?.data?.status?.value ?: 0 == 1){
-           var intent: Intent = Intent(context, DetailsspeciallistActivity::class.java)
-           intent.putExtra("id",detailsdata.get()?.data?.technician?.id ?: 0)
-           intent.putExtra("reservaionid",detailsdata.get()?.data?.id ?: 0)
-           context?.startActivity(intent)
-       }
+    fun edit() {
+        if (detailsdata.get()?.data?.status?.value ?: 0 == 1) {
+            var intent: Intent = Intent(context, DetailsspeciallistActivity::class.java)
+            intent.putExtra("id", detailsdata.get()?.data?.technician?.id ?: 0)
+            intent.putExtra("reservaionid", detailsdata.get()?.data?.id ?: 0)
+            context?.startActivity(intent)
+        } else if (detailsdata.get()?.data?.status?.value ?: 0 == 2) {
+            completereservation()
+        }
     }
 
 }

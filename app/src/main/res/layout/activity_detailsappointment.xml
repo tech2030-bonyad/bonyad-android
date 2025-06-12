@@ -325,7 +325,7 @@
                android:onClick="@{ () -> model.edit() }"
                android:layout_width="0dp"
                android:layout_weight="1"
-               android:visibility="@{model.detailsdata.data.status.value == 1 ? View.VISIBLE : View.GONE}"
+               android:visibility="@{model.detailsdata.data.status.value == 1 || model.detailsdata.data.status.value == 2 ? View.VISIBLE : View.GONE}"
                android:layout_height="48dp"
                android:layout_marginStart="12dp"
                app:cardBackgroundColor="@color/lightblue"
