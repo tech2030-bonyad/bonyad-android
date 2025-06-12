@@ -289,11 +289,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ba91a24-0be8-4d0e-8311-09f93afe2e56" name="Changes" comment="first commmit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/user/Sliderhomedadapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/user/Sliderhomedadapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/user/UserhomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/user/UserhomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserhomefragmentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserhomefragmentViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_calenderdialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_calenderdialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/OrderdetailsModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/OrderdetailsModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/OrdersModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/OrdersModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ScheduleResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ScheduleResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserAvailbiltyViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserAvailbiltyViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_subscriptions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_subscriptions.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
@@ -589,15 +589,6 @@
           <line>244</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt</url>
-          <line>88</line>
-          <properties class="fudex.bonyad.NetWorkConnction.ApiInterface" method="getrating">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -606,12 +597,12 @@
       <map>
         <entry key="fudex.bonyad">
           <value>
-            <CheckInfo lastCheckTimestamp="1748780065564" />
+            <CheckInfo lastCheckTimestamp="1749734467065" />
           </value>
         </entry>
         <entry key="fudex.bonyad.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1748780065555" />
+            <CheckInfo lastCheckTimestamp="1749734467063" />
           </value>
         </entry>
         <entry key="fudex.raha">

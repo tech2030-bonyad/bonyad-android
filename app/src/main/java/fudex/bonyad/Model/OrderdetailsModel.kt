@@ -15,7 +15,10 @@ data class OrderdetailsData (
     val price: String? = null,
     val is_gift: Int? = null,
     val location_type: String? = null,
-    val date: String? = null,
+    val start_time: String? = null,
+    val end_time: String? = null,
+    val date_of_reservation: String? = null,
+    var date: String? = null,
     val time: String? = null,
     val branch: Branch? = null,
     val rating: Rating? = null,
@@ -45,5 +48,6 @@ data class Rating (
 data class User (
     val id: Int? = null,
     val name: String? = null,
+    val avatar: String? = null,
     val avatar_url: String? = null
 )
