@@ -10,6 +10,7 @@ import com.google.gson.Gson
 import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.R
+import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
@@ -25,7 +26,10 @@ class OrderViewModel : BaseObservable() {
     var onservse = ObservableField<OrdersDatum>()
     var catModel : OrdersDatum? = null
     var context : Fragment? = null
+    var txt = ""
     fun setdata(catModel: OrdersDatum , context : Fragment) {
+        txt = LoginSession.getservice(context.requireActivity())
+        catModel.date = catModel.date_of_reservation + " " + catModel.start_time
         onservse.set(catModel)
         this.catModel = catModel
         this.context = context
@@ -36,7 +40,8 @@ class OrderViewModel : BaseObservable() {
         context?.startActivity(intent)
     }
     fun accept() {
-
+        (context as TechnicalappointmentFragment).ordersListViewModel.appointmentId = onservse.get()!!.id!!
+        (context as TechnicalappointmentFragment).ordersListViewModel.acceptorder()
     }
     fun reject() {
         (context as TechnicalappointmentFragment).ordersListViewModel.appointmentId = onservse.get()!!.id!!

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about_the_platform">عن المنصة</string>
+    <string name="accept">قبول</string>
     <string name="activation_code">رمز التفعيل</string>
     <string name="add">اضافة</string>
     <string name="add_a_new_address">اضافة عنوان جديد</string>
@@ -35,6 +36,7 @@
     <string name="city">المدينة</string>
     <string name="clear">مسح</string>
     <string name="completed_appointments">المواعيد المكتمله</string>
+    <string name="completed_requests">الطلبات المكتمله</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_password">تأكيد كلمة المرور</string>
     <string name="confirm_password_must_same_password">تأكيد كلمة المرور يجب أن يكون نفس كلمة المرور</string>
@@ -81,6 +83,7 @@
     <string name="i_agree_to">يجب الموافقه على</string>
     <string name="images">صور</string>
     <string name="images_of_certificates_and_licenses">صور الشهادات والترخيص</string>
+    <string name="it_booked_before">تم الحجز من قبل</string>
     <string name="lang">ar</string>
     <string name="language">اللغة</string>
     <string name="language_change">تغير اللغة</string>
@@ -113,11 +116,13 @@
     <string name="packages">الباقات</string>
     <string name="password">كلمة المرور</string>
     <string name="payment_failer">فشل الدفع</string>
+    <string name="pending_requests">الطلبات المعلقة</string>
     <string name="please_activate_permission">الرجاء تفعيل الإذن</string>
     <string name="please_follow_up_on_the_status_of_the_order_once_it_is_accepted">يرجى متابعة حالة الطلب حال قبولة</string>
     <string name="please_upload_an_image">قم برفع صورة</string>
     <string name="plz_camera_gallery">اختر الكاميرا أو الصور</string>
     <string name="plz_img">اختر الصورة</string>
+    <string name="previous_appointments">المواعيد السابقة</string>
     <string name="price">السعر</string>
     <string name="privacy">الخصوصية</string>
     <string name="products">المنتجات</string>
@@ -167,7 +172,9 @@
     <string name="thursday">الخميس</string>
     <string name="time">الوقت</string>
     <string name="today_s_task_from_the_application">شغل اليوم... من التطبيق</string>
+    <string name="total_orders">اجمالي الطلبات</string>
     <string name="tuesday">الثلاثاء</string>
+    <string name="upcoming_appointments">المواعيد القادمة</string>
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>
     <string name="wallet">المحفظة</string>
     <string name="wednesday">الأربعاء</string>

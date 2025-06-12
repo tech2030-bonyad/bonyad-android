@@ -17,7 +17,8 @@ data class Availability(
     val day_of_week: Int?,
     val day_name: String?,
     var start_time: String?,
-    var end_time: String?
+    var end_time: String?,
+    var is_reserved:Boolean?
 )
 data class Dateadd(
     val dates: ArrayList<Availabilityadd>? = ArrayList()

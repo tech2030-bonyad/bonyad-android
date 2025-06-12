@@ -429,6 +429,16 @@ object BindingAdapters {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }
     }
+    @BindingAdapter("bind:technicalhomeorders", "bind:fragment")
+    @JvmStatic
+    fun settechnicalhomeorders(recyclerView: RecyclerView, movies: ArrayList<OrdersDatum>, fragment: Fragment) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is fudex.bonyad.ui.Adapter.technical.TechnicalhomeOrdersadapter) {
+            (adapter as fudex.bonyad.ui.Adapter.technical.TechnicalhomeOrdersadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
 //    @BindingAdapter("bind:servicesorder", "bind:fragment")
 //    @JvmStatic

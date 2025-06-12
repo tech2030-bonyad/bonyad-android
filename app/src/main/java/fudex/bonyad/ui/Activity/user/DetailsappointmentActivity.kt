@@ -8,7 +8,7 @@ import fudex.bonyad.databinding.DetailappointmentsviewModelBinding
 import fudex.bonyad.ui.Activity.BaseActivity
 import fudex.bonyad.viewmodel.user.DetailsappointmentViewModel
 
-class DetailsappointmentActivity : BaseActivity(), DialogListener {
+class DetailsappointmentActivity : BaseActivity() {
     lateinit var detailsappointmentViewModel: DetailsappointmentViewModel
     lateinit var binding: DetailappointmentsviewModelBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,11 +17,5 @@ class DetailsappointmentActivity : BaseActivity(), DialogListener {
         detailsappointmentViewModel = DetailsappointmentViewModel(this@DetailsappointmentActivity)
         binding.model = detailsappointmentViewModel
 
-    }
-
-    override fun onDataReceived(data: String) {
-        if (data.contains("refuse")) {
-            detailsappointmentViewModel.refuseorder(data.replace("refuse", ""))
-        }
     }
 }

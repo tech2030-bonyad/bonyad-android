@@ -180,4 +180,11 @@
     <string name="evaluation">تقيم</string>
     <string name="back">رجوع</string>
     <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
+    <string name="accept">قبول</string>
+    <string name="it_booked_before">تم الحجز من قبل</string>
+    <string name="total_orders">اجمالي الطلبات</string>
+    <string name="pending_requests">الطلبات المعلقة</string>
+    <string name="completed_requests">الطلبات المكتمله</string>
+    <string name="upcoming_appointments">المواعيد القادمة</string>
+    <string name="previous_appointments">المواعيد السابقة</string>
 </resources>

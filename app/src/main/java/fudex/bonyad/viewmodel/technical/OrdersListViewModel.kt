@@ -171,6 +171,46 @@ class OrdersListViewModel(var catogaryFragment: TechnicalappointmentFragment) : 
             }
         })
     }
+    fun acceptorder() {
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java
+        )
+        val call: Call<ErrorResponse?>? =
+            apiService.accepttechnicalappointment(appointmentId)
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(
+                call: Call<ErrorResponse?>,
+                response: Response<ErrorResponse?>
+            ) {
+                if (response.code() == 200 || response.code() == 201) {
+                    for (index in orderList){
+                        if (index.id == appointmentId){
+                           index.status?.value = 2
+                            notifyChange()
+                            break
+                        }
+                    }
+                }else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            acceptorder()
+                        }
+                    })
+                }
+                isloading.set(false)
+                notifyChange()
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection), activity)
+                isloading.set(false)
+
+            }
+        })
+    }
     fun makereject(){
         var fragment = Refuse1Fragment()
         fragment.setTargetFragment(context, 1)

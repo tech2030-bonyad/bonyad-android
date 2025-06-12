@@ -131,20 +131,13 @@ class OrdersListViewModel(var catogaryFragment: UserappointmentFragment) : BaseO
         page = 1
         getorders()
     }
-    fun makereject(){
-        var fragment = Refuse1Fragment()
-        fragment.setTargetFragment(context, 1)
-        fragment.show(context.parentFragmentManager , "")
-    }
-    fun refuseorder(notes:String) {
-        return
+    fun cancelorder() {
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java
         )
-        var userdata = Userdata(notes = notes)
         val call: Call<ErrorResponse?>? =
-            apiService.refusetechnicalappointment(appointmentId,userdata)
+            apiService.cancelappointment(appointmentId)
         call?.enqueue(object : Callback<ErrorResponse?> {
             override fun onResponse(
                 call: Call<ErrorResponse?>,
@@ -163,7 +156,7 @@ class OrdersListViewModel(var catogaryFragment: UserappointmentFragment) : BaseO
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
                     APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
                         override fun onRefresh() {
-                            refuseorder(notes)
+                            cancelorder()
                         }
                     })
                 }
@@ -178,6 +171,8 @@ class OrdersListViewModel(var catogaryFragment: UserappointmentFragment) : BaseO
             }
         })
     }
+
+
 
 //    fun swiptorefresh() {
 //        context.binding.swip.setOnRefreshListener {

@@ -16,4 +16,9 @@ class TechnicalHomeActivity : BaseActivity() {
         technicalhomeViewModel = TechnicalhomeViewModel(this@TechnicalHomeActivity)
         binding.model = technicalhomeViewModel
     }
+
+    override fun onResume() {
+        super.onResume()
+        technicalhomeViewModel.getservices()
+    }
 }

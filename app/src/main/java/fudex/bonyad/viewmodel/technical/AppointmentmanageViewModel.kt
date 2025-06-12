@@ -144,14 +144,14 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
         for (index in availabilityList){
             if (index.day_of_week == day){
                 isgood = true
-                var availability = Availability(index.availabilities?.size!! + 1,day,index.day_name,"","")
+                var availability = Availability(index.availabilities?.size!! + 1,day,index.day_name,"","",true)
                 index.availabilities?.add(availability)
                 selectdate(day)
                 break
             }
         }
         if (isgood == false){
-            var availability = Availability(1,day,dayname,"","")
+            var availability = Availability(1,day,dayname,"","",true)
             var availabilitylist : ArrayList<Availability> = ArrayList()
             availabilitylist.add(availability)
             var days = DayAvailability(day,dayname,availabilitylist)

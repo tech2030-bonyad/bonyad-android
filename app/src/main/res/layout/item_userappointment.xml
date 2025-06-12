@@ -120,7 +120,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"
-                android:text="@{model.onservse.created_at}"
+                android:text="@{model.onservse.date}"
                 tools:text="31/12/2024 - 9:00 مساءً"
                 android:textColor="@color/darkblue"/>
         </LinearLayout>

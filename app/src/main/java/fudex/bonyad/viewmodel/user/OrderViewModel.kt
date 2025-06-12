@@ -37,6 +37,7 @@ class OrderViewModel : BaseObservable() {
         } catch (e: IOException) {
             // Handle any errors that occur during the geocoding process
         }
+        catModel.date = catModel.date_of_reservation + " " + catModel.start_time
         onservse.set(catModel)
         this.catModel = catModel
         this.context = context
@@ -51,7 +52,7 @@ class OrderViewModel : BaseObservable() {
     }
     fun reject() {
         (context as UserappointmentFragment).ordersListViewModel.appointmentId = onservse.get()!!.id!!
-        (context as UserappointmentFragment).ordersListViewModel.makereject()
+        (context as UserappointmentFragment).ordersListViewModel.cancelorder()
     }
 
 

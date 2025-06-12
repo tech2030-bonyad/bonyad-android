@@ -2,7 +2,6 @@ package fudex.bonyad.viewmodel.user
 
 import android.content.Intent
 import android.location.Geocoder
-import android.os.Bundle
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -15,7 +14,6 @@ import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AppointmentdetailsModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
-import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Fragment.technical.RefuseFragment
@@ -37,11 +35,11 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
     var address = ObservableField<String>("")
     init {
         this.context = catogaryFragment
-        getclubdetails()
+        getappointmentdetails()
 
     }
 
-    fun getclubdetails() {
+    fun getappointmentdetails() {
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
             ApiInterface::class.java
@@ -57,6 +55,7 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
                     img.set(data?.data?.technician?.avatar ?: "")
+                    data?.data?.date = data?.data?.date_of_reservation!! + " " + data?.data?.start_time!!
                     detailsdata.set(data!!)
                     val geocoder = Geocoder(context, Locale(context.getString(R.string.lang)))
                     var address1 = "Unknown location"
@@ -74,7 +73,7 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
                     APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
                         override fun onRefresh() {
-                            getclubdetails()
+                            getappointmentdetails()
                         }
                     })
                 }
@@ -90,28 +89,26 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
             }
         })
     }
-    fun refuseorder(notes:String) {
-        return
+    fun cancelorder() {
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
             ApiInterface::class.java
         )
-        var userdata = Userdata(notes = notes)
         val call: Call<ErrorResponse?>? =
-            apiService.refusetechnicalappointment(context.intent.getIntExtra("id", 0),userdata)
+            apiService.cancelorder(context.intent.getIntExtra("id", 0))
         call?.enqueue(object : Callback<ErrorResponse?> {
             override fun onResponse(
                 call: Call<ErrorResponse?>,
                 response: Response<ErrorResponse?>
             ) {
                 if (response.code() == 200 || response.code() == 201) {
-                    getclubdetails()
+                    getappointmentdetails()
                 }else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
                     APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
                         override fun onRefresh() {
-                            refuseorder(notes)
+                            cancelorder()
                         }
                     })
                 }
@@ -140,7 +137,7 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                 response: Response<ErrorResponse?>
             ) {
                 if (response.code() == 200 || response.code() == 201) {
-                   getclubdetails()
+                   getappointmentdetails()
                 } else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -162,21 +159,50 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
             }
         })
     }
+    fun completereservation() {
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
+            ApiInterface::class.java
+        )
+        val call: Call<ErrorResponse?>? =
+            apiService.completeappointment(context.intent.getIntExtra("id", 0))
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(
+                call: Call<ErrorResponse?>,
+                response: Response<ErrorResponse?>
+            ) {
+                if (response.code() == 200 || response.code() == 201) {
+                    getappointmentdetails()
+                }else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            completereservation()
+                        }
+                    })
+                }
+                isloading.set(false)
+                notifyChange()
+            }
 
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection), context)
+                isloading.set(false)
+
+            }
+        })
+    }
 
     fun back() {
         context.onBackPressed()
-    }
-
-    fun makereject(){
-        var fragment = RefuseFragment()
-        fragment.show(context.supportFragmentManager , "gift")
     }
 
     fun edit(){
        if (detailsdata.get()?.data?.status?.value ?: 0 == 1){
            var intent: Intent = Intent(context, DetailsspeciallistActivity::class.java)
            intent.putExtra("id",detailsdata.get()?.data?.technician?.id ?: 0)
+           intent.putExtra("reservaionid",detailsdata.get()?.data?.id ?: 0)
            context?.startActivity(intent)
        }
     }

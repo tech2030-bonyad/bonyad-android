@@ -32,6 +32,7 @@ import fudex.bonyad.ui.Fragment.user.UserprofileFragment
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.Model.StatesModel
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
 import retrofit2.Call
 import retrofit2.Callback
@@ -241,6 +242,43 @@ class TechnicalhomeViewModel(var catogaryFragment: TechnicalHomeActivity) : Base
                 Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
 
                 Utilities.enabletouch(activity)
+            }
+        })
+    }
+    fun getservices() {
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+        var call: Call<StatesModel?>? = null
+        call = apiService.getmyservices()
+        call?.enqueue(object : Callback<StatesModel?> {
+            override fun onResponse(call: Call<StatesModel?>, response: Response<StatesModel?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var data = response.body()
+                    var txt = ""
+                    var item = 0
+                    for (index in data?.data!!){
+                        if (item == data?.data?.size!! - 1) {
+                            txt = txt + index.name!!
+                        }else {
+                            txt = txt + index.name!! + " , "
+                        }
+                        item = item + 1
+                    }
+                    LoginSession.Addservice(activity,txt)
+                }else {
+//                    val errorText = response.errorBody()?.string()
+//                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+//                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+//                        override fun onRefresh() {
+//                            getservices()
+//                        }
+//                    })
+                }
+
+            }
+
+            override fun onFailure(call: Call<StatesModel?>, t: Throwable) {
+
             }
         })
     }

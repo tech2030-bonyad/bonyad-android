@@ -30,6 +30,7 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
     var context: TechnicaldetailsapointmentActivity = TechnicaldetailsapointmentActivity()
     private var mLoading = false
     var detailsdata = ObservableField<AppointmentdetailsModel>()
+    var title = ObservableField<String>("")
     var img = ObservableField<String>("")
     var address = ObservableField<String>("")
     init {
@@ -54,7 +55,9 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
                     img.set(data?.data?.user?.avatar ?: "")
+                    data?.data?.date = data?.data?.date_of_reservation!! + " " + data?.data?.start_time!!
                     detailsdata.set(data!!)
+
                     val geocoder = Geocoder(context, Locale(context.getString(R.string.lang)))
                     var address1 = "Unknown location"
                     try {
@@ -66,6 +69,17 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
                     } catch (e: IOException) {
                         // Handle any errors that occur during the geocoding process
                     }
+                    var txt = ""
+                    var item = 0
+                    for (index in data?.data?.technician?.services!!){
+                        if (item ==data?.data?.technician?.services?.size!! - 1) {
+                            txt = txt + index.name!!
+                        }else {
+                            txt = txt + index.name!! + " , "
+                        }
+                        item = item + 1
+                    }
+                    title.set(txt)
                 }else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)

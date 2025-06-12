@@ -224,7 +224,7 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(ApiInterface::class.java)
         var createorder = Craetereserve(context.intent.getIntExtra("id", 0),dayId,date1,timeId,lat,lng)
-        val call: Call<ErrorResponse?>? = apiService.createreserve(createorder)
+        val call: Call<ErrorResponse?>? = if (context.intent.hasExtra("reservaionid")){apiService.editreserve(context.intent.getIntExtra("reservaionid", 0),createorder)}else{apiService.createreserve(createorder)}
         call?.enqueue(object : Callback<ErrorResponse?> {
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response!!.code() == 200 || response!!.code() == 201) {

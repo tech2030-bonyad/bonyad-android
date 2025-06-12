@@ -38,6 +38,7 @@ import fudex.bonyad.Model.MYSubsribeModel
 import fudex.bonyad.Model.PlanModel
 import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.Model.SubsribeModel
+import fudex.bonyad.Model.TechnicalHomeModel
 import fudex.bonyad.Model.TechnicalModel
 import retrofit2.Call
 import retrofit2.http.Body
@@ -50,6 +51,7 @@ import retrofit2.http.HTTP
 import retrofit2.http.Headers
 import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Part
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -64,6 +66,9 @@ interface ApiInterface {
 
     @GET("user-home")
     fun gethome(@Query("name") name: String?): Call<HomeModel?>?
+
+    @GET("technician/analytics")
+    fun gettechnicalhome(): Call<TechnicalHomeModel?>?
 
     @GET("technicians")
     fun gettechnicals( @Query("page") page: Int? , @Query("paginate") paginate: Int?, @Query("zones[]") zones: List<Int>?, @Query("services[]") services: List<Int>?, @Query("name") name: String?): Call<TechnicalModel?>?
@@ -320,15 +325,22 @@ interface ApiInterface {
         @Path("reservationId") reservationId: Int,
     ): Call<AppointmentdetailsModel?>?
 
-    @POST("technician/reservations/{technicalId}/refuse")
+    @POST("technician/reservations/{reservationId}/refuse")
     fun refusetechnicalappointment(
-        @Path("technicalId") technicalId: Int,
+        @Path("reservationId") reservationId: Int,
         @Body data: Userdata
     ): Call<ErrorResponse?>?
 
-    @POST("technician/reservations/{technicalId}/accept")
+    @GET("reservations/{reservationId}/cancel")
+    fun cancelappointment(
+        @Path("reservationId") reservationId: Int): Call<ErrorResponse?>?
+
+    @GET("reservations/{reservationId}/complete")
+    fun completeappointment(@Path("reservationId") reservationId: Int): Call<ErrorResponse?>?
+
+    @GET("technician/reservations/{reservationId}/accept")
     fun accepttechnicalappointment(
-        @Path("technicalId") technicalId: Int
+        @Path("reservationId") reservationId: Int
     ): Call<ErrorResponse?>?
 
     @GET("services/{serviceId}")
@@ -357,4 +369,7 @@ interface ApiInterface {
 
     @POST("reservations")
     fun createreserve(@Body data: Craetereserve): Call<ErrorResponse?>?
+
+    @PUT("reservations/{reservationId}")
+    fun editreserve(@Path("reservationId") reservationId: Int,@Body data: Craetereserve): Call<ErrorResponse?>?
 }

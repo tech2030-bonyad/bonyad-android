@@ -182,4 +182,11 @@
     <string name="evaluation">Evaluation</string>
     <string name="back">Back</string>
     <string name="there_are_no_appointment_available">there are no appointment available</string>
+    <string name="accept">Accept</string>
+    <string name="it_booked_before">it booked before</string>
+    <string name="total_orders">Total orders</string>
+    <string name="pending_requests">Pending requests</string>
+    <string name="completed_requests">Completed requests</string>
+    <string name="upcoming_appointments">Upcoming appointments</string>
+    <string name="previous_appointments">Previous appointments</string>
 </resources>

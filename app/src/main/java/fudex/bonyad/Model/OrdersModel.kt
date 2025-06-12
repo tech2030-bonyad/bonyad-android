@@ -14,6 +14,8 @@ data class OrdersDatum (
     val day: Day? = null,
     val start_time: String? = null,
     val end_time: String? = null,
+    val date_of_reservation: String? = null,
+    var date: String? = null,
     val status: Day? = null,
     val notes: String? = null,
     val lat: String? = null,
@@ -23,6 +25,6 @@ data class OrdersDatum (
 )
 
 data class Day (
-    val value: Int? = null,
+    var value: Int? = null,
     val label: String? = null
 )

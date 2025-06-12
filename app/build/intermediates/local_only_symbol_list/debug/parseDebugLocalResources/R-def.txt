@@ -8,6 +8,7 @@ color darkblue
 color darkgray
 color darkgray1
 color darkwhite
+color green
 color ic_launcher_background
 color lightblue
 color lightblue1
@@ -79,9 +80,11 @@ drawable ic_lockactive
 drawable ic_mdi_eye_off_outline
 drawable ic_mdi_light_information
 drawable ic_menu
+drawable ic_neworder
 drawable ic_notification_bing
 drawable ic_oui_email
 drawable ic_password_check
+drawable ic_perviousorder
 drawable ic_point
 drawable ic_profile
 drawable ic_profile1
@@ -96,6 +99,7 @@ drawable ic_suitcase
 drawable ic_tabler_user_question
 drawable ic_toggle
 drawable ic_toggle2
+drawable ic_totalorder
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
@@ -117,6 +121,8 @@ drawable rec_strockblue1
 drawable rec_strockblue2
 drawable rec_strockdarkblue
 drawable rec_strockgray
+drawable rec_strockgreen
+drawable rec_strockgreen1
 drawable rec_strockred
 drawable rec_strockred1
 drawable rectrans
@@ -176,6 +182,7 @@ id orderList
 id packageList
 id pager
 id pass
+id perviousorderList
 id phone
 id photo
 id photos
@@ -247,6 +254,7 @@ layout item_date
 layout item_day
 layout item_image
 layout item_onboarding
+layout item_orders
 layout item_packages
 layout item_serviceimage
 layout item_services
@@ -263,6 +271,7 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string about_the_platform
+string accept
 string activation_code
 string add
 string add_a_new_address
@@ -298,6 +307,7 @@ string city
 string clear
 string com.crashlytics.android.build_id
 string completed_appointments
+string completed_requests
 string confirm
 string confirm_password
 string confirm_password_must_same_password
@@ -345,6 +355,7 @@ string home
 string i_agree_to
 string images
 string images_of_certificates_and_licenses
+string it_booked_before
 string lang
 string language
 string language_change
@@ -377,11 +388,13 @@ string orders
 string packages
 string password
 string payment_failer
+string pending_requests
 string please_activate_permission
 string please_follow_up_on_the_status_of_the_order_once_it_is_accepted
 string please_upload_an_image
 string plz_camera_gallery
 string plz_img
+string previous_appointments
 string price
 string privacy
 string products
@@ -431,7 +444,9 @@ string there_is_time_not_added_in_day
 string thursday
 string time
 string today_s_task_from_the_application
+string total_orders
 string tuesday
+string upcoming_appointments
 string user_deleted
 string wallet
 string wednesday

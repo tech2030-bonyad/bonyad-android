@@ -8,6 +8,7 @@
     <color name="darkgray">#4D4D52</color>
     <color name="darkgray1">#6B7280</color>
     <color name="darkwhite">#FCFDFF</color>
+    <color name="green">#3AC12D</color>
     <color name="ic_launcher_background">#0861AD</color>
     <color name="lightblue">#0080E0</color>
     <color name="lightblue1">#4CA8F9</color>
@@ -21,6 +22,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="about_the_platform">About the platform</string>
+    <string name="accept">Accept</string>
     <string name="activation_code">Activation code</string>
     <string name="add">Add</string>
     <string name="add_a_new_address">Add a new address</string>
@@ -56,6 +58,7 @@
     <string name="clear">Clear</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
     <string name="completed_appointments">Completed appointments</string>
+    <string name="completed_requests">Completed requests</string>
     <string name="confirm">Confirm</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="confirm_password_must_same_password">confirm password must same password</string>
@@ -103,6 +106,7 @@
     <string name="i_agree_to">must agree to</string>
     <string name="images">Images</string>
     <string name="images_of_certificates_and_licenses">Images of certificates and licenses</string>
+    <string name="it_booked_before">it booked before</string>
     <string name="lang">en</string>
     <string name="language">Language</string>
     <string name="language_change">Language change</string>
@@ -135,11 +139,13 @@
     <string name="packages">Packages</string>
     <string name="password">Password</string>
     <string name="payment_failer">payment failed</string>
+    <string name="pending_requests">Pending requests</string>
     <string name="please_activate_permission">Please Activate Permission</string>
     <string name="please_follow_up_on_the_status_of_the_order_once_it_is_accepted">Please follow up on the status of the order once it is accepted.</string>
     <string name="please_upload_an_image">Please upload an image.</string>
     <string name="plz_camera_gallery">Please Choose Camera Or Gallery</string>
     <string name="plz_img">Please Select Image</string>
+    <string name="previous_appointments">Previous appointments</string>
     <string name="price">Price</string>
     <string name="privacy">Privacy</string>
     <string name="products">Products</string>
@@ -189,7 +195,9 @@
     <string name="thursday">Thursday</string>
     <string name="time">Time</string>
     <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
+    <string name="total_orders">Total orders</string>
     <string name="tuesday">Tuesday</string>
+    <string name="upcoming_appointments">Upcoming appointments</string>
     <string name="user_deleted">User Has been Deleted By The System or bloked</string>
     <string name="wallet">Wallet</string>
     <string name="wednesday">Wednesday</string>

@@ -1559,6 +1559,7 @@ color exo_white
 color exo_white_opacity_70
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_ad_background
@@ -3139,9 +3140,11 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_neworder
 drawable ic_notification_bing
 drawable ic_oui_email
 drawable ic_password_check
+drawable ic_perviousorder
 drawable ic_point
 drawable ic_profile
 drawable ic_profile1
@@ -3158,6 +3161,7 @@ drawable ic_suitcase
 drawable ic_tabler_user_question
 drawable ic_toggle
 drawable ic_toggle2
+drawable ic_totalorder
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
@@ -3340,6 +3344,8 @@ drawable rec_strockblue1
 drawable rec_strockblue2
 drawable rec_strockdarkblue
 drawable rec_strockgray
+drawable rec_strockgreen
+drawable rec_strockgreen1
 drawable rec_strockred
 drawable rec_strockred1
 drawable rectrans
@@ -3893,6 +3899,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id perviousorderList
 id phone
 id photo
 id photos
@@ -4304,6 +4311,7 @@ layout item_date
 layout item_day
 layout item_image
 layout item_onboarding
+layout item_orders
 layout item_packages
 layout item_serviceimage
 layout item_services
@@ -4429,6 +4437,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about_the_platform
+string accept
 string activation_code
 string add
 string add_a_new_address
@@ -4503,6 +4512,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string completed_appointments
+string completed_requests
 string confirm
 string confirm_device_credential_password
 string confirm_password
@@ -4638,6 +4648,7 @@ string ic_rotate_right_24
 string icon_content_description
 string images
 string images_of_certificates_and_licenses
+string it_booked_before
 string item_view_role_description
 string lang
 string language
@@ -4763,6 +4774,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string payment_failer
+string pending_requests
 string pick_image_camera
 string pick_image_chooser_title
 string pick_image_gallery
@@ -4773,6 +4785,7 @@ string please_follow_up_on_the_status_of_the_order_once_it_is_accepted
 string please_upload_an_image
 string plz_camera_gallery
 string plz_img
+string previous_appointments
 string price
 string privacy
 string products
@@ -4825,7 +4838,9 @@ string there_is_time_not_added_in_day
 string thursday
 string time
 string today_s_task_from_the_application
+string total_orders
 string tuesday
+string upcoming_appointments
 string use_biometric_label
 string use_biometric_or_screen_lock_label
 string use_face_label

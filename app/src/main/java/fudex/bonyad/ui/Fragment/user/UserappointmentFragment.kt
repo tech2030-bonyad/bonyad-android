@@ -14,7 +14,7 @@ import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.viewmodel.user.OrdersListViewModel
 
 
-class UserappointmentFragment : Fragment(), DialogListener {
+class UserappointmentFragment : Fragment() {
     lateinit var ordersListViewModel: OrdersListViewModel
     lateinit var binding: UserordersfragmentviewModelBinding
 
@@ -51,10 +51,5 @@ class UserappointmentFragment : Fragment(), DialogListener {
         (activity as UserhomeActivity).userhomeViewModel.type.set(1)
     }
 
-    override fun onDataReceived(data: String) {
-        if(data.contains("refuse")){
-            ordersListViewModel.refuseorder(data.replace("refuse",""))
-        }
-    }
 
 }

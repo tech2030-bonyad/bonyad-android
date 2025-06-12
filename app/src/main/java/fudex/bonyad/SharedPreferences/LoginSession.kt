@@ -250,6 +250,17 @@ object LoginSession {
         initLoginSharedPreference(activity)
         return loginFile!!.getString(SELECTED_CITIES_KEY, "[-1]")!!
     }
+    fun Addservice(activity: Activity, data: String) {
+        var onboardingFile = activity.getSharedPreferences("service", Context.MODE_PRIVATE)
+        val editor = onboardingFile!!.edit()
+        editor.putString("service", data)
+        editor.apply()
+    }
+    fun getservice(activity: Activity): String {
+        var onboardingFile =
+            activity.getSharedPreferences("service", Context.MODE_PRIVATE)
+        return onboardingFile!!.getString("service","").toString()
+    }
     fun Addwelcome(activity: Activity, expired: Boolean) {
         onboardingFile = activity.getSharedPreferences("welcome", Context.MODE_PRIVATE)
         val editor = onboardingFile!!.edit()

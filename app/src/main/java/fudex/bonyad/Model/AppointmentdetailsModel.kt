@@ -9,6 +9,7 @@ data class AppointmentdetailsData (
     val user: User? = null,
     val technician: Technician? = null,
     val date_of_reservation: String? = null,
+    var date: String? = null,
     val day: Day? = null,
     val start_time: String? = null,
     val end_time: String? = null,

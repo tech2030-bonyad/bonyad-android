@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableField
+import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.Utilities
 import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
@@ -41,9 +42,13 @@ class UserAvailbiltyViewModel : BaseObservable() {
         this.context = context
     }
     fun clickitem(){
-        (context as DetailsspeciallistActivity).detailstechnicalViewModel.dayId = onservse.get()!!.day_of_week ?: 0
-        (context as DetailsspeciallistActivity).detailstechnicalViewModel.timeId = onservse.get()!!.id ?: 0
-        (context as DetailsspeciallistActivity).detailstechnicalViewModel.notifyChange()
+       if (onservse.get()!!.is_reserved == false){
+           (context as DetailsspeciallistActivity).detailstechnicalViewModel.dayId = onservse.get()!!.day_of_week ?: 0
+           (context as DetailsspeciallistActivity).detailstechnicalViewModel.timeId = onservse.get()!!.id ?: 0
+           (context as DetailsspeciallistActivity).detailstechnicalViewModel.notifyChange()
+       }else {
+           Dialogs.showToast(context!!.getString(R.string.it_booked_before),context!!)
+       }
     }
 
 

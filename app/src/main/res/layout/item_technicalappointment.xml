@@ -26,6 +26,7 @@
             android:layout_marginTop="8dp"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:text="@{model.txt}"
             android:fontFamily="@font/cairosemibold"
             tools:text="الحمد للمقالاوت والتوريدات"
             android:textColor="@color/darkblue"/>
@@ -106,7 +107,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"
-                android:text="@{model.onservse.created_at}"
+                android:text="@{model.onservse.date}"
                 tools:text="31/12/2024 - 9:00 مساءً"
                 android:textColor="@color/darkblue"/>
         </LinearLayout>
@@ -119,12 +120,27 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp">
             <TextView
+                android:onClick="@{ () -> model.accept() }"
+                android:visibility="@{model.onservse.status.value == 1 ? View.VISIBLE : View.GONE}"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/accept"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:background="@drawable/rec_strockgreen"
+                android:fontFamily="@font/cairobold"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+            <TextView
                 android:onClick="@{ () -> model.reject() }"
                 android:visibility="@{model.onservse.status.value == 1 ? View.VISIBLE : View.GONE}"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:text="@string/refused"
+                android:layout_marginStart="8dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="@color/red"

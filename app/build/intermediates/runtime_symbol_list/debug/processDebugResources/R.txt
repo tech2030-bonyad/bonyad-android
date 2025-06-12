@@ -1558,6 +1558,7 @@ int color exo_white 0x7f060079
 int color exo_white_opacity_70 0x7f06007a
 int color foreground_material_dark 0x7f06007b
 int color foreground_material_light 0x7f06007c
+int color green 0x7f060293
 int color highlighted_text_material_dark 0x7f06007d
 int color highlighted_text_material_light 0x7f06007e
 int color ic_ad_background 0x7f06007f
@@ -3138,9 +3139,11 @@ int drawable ic_mtrl_checked_circle 0x7f0801b4
 int drawable ic_mtrl_chip_checked_black 0x7f0801b5
 int drawable ic_mtrl_chip_checked_circle 0x7f0801b6
 int drawable ic_mtrl_chip_close_circle 0x7f0801b7
+int drawable ic_neworder 0x7f0802d0
 int drawable ic_notification_bing 0x7f0801b8
 int drawable ic_oui_email 0x7f0801b9
 int drawable ic_password_check 0x7f0801ba
+int drawable ic_perviousorder 0x7f0802d1
 int drawable ic_point 0x7f0801bb
 int drawable ic_profile 0x7f0801bc
 int drawable ic_profile1 0x7f0801bd
@@ -3157,6 +3160,7 @@ int drawable ic_suitcase 0x7f0801c7
 int drawable ic_tabler_user_question 0x7f0801c8
 int drawable ic_toggle 0x7f0801c9
 int drawable ic_toggle2 0x7f0801ca
+int drawable ic_totalorder 0x7f0802d2
 int drawable ic_twitter 0x7f0801cb
 int drawable ic_user 0x7f0801cc
 int drawable ic_user_remove 0x7f0801cd
@@ -3339,6 +3343,8 @@ int drawable rec_strockblue1 0x7f08027d
 int drawable rec_strockblue2 0x7f08027e
 int drawable rec_strockdarkblue 0x7f08027f
 int drawable rec_strockgray 0x7f080280
+int drawable rec_strockgreen 0x7f0802ce
+int drawable rec_strockgreen1 0x7f0802cf
 int drawable rec_strockred 0x7f080281
 int drawable rec_strockred1 0x7f080282
 int drawable rectrans 0x7f080283
@@ -3892,6 +3898,7 @@ int id path 0x7f0a01d1
 int id pathRelative 0x7f0a01d2
 int id peekHeight 0x7f0a01d3
 int id percent 0x7f0a01d4
+int id perviousorderList 0x7f0a0297
 int id phone 0x7f0a01d5
 int id photo 0x7f0a01d6
 int id photos 0x7f0a01d7
@@ -4303,6 +4310,7 @@ int layout item_date 0x7f0d0072
 int layout item_day 0x7f0d0073
 int layout item_image 0x7f0d0074
 int layout item_onboarding 0x7f0d0075
+int layout item_orders 0x7f0d00ce
 int layout item_packages 0x7f0d0076
 int layout item_serviceimage 0x7f0d0077
 int layout item_services 0x7f0d0078
@@ -4428,6 +4436,7 @@ int string abc_shareactionprovider_share_with 0x7f130018
 int string abc_shareactionprovider_share_with_application 0x7f130019
 int string abc_toolbar_collapse_description 0x7f13001a
 int string about_the_platform 0x7f13001b
+int string accept 0x7f1301bd
 int string activation_code 0x7f13001c
 int string add 0x7f13001d
 int string add_a_new_address 0x7f13001e
@@ -4502,6 +4511,7 @@ int string common_open_on_phone 0x7f130062
 int string common_signin_button_text 0x7f130063
 int string common_signin_button_text_long 0x7f130064
 int string completed_appointments 0x7f130065
+int string completed_requests 0x7f1301bf
 int string confirm 0x7f130066
 int string confirm_device_credential_password 0x7f130067
 int string confirm_password 0x7f130068
@@ -4637,6 +4647,7 @@ int string ic_rotate_right_24 0x7f1300e9
 int string icon_content_description 0x7f1300ea
 int string images 0x7f1300eb
 int string images_of_certificates_and_licenses 0x7f1300ec
+int string it_booked_before 0x7f1301be
 int string item_view_role_description 0x7f1300ed
 int string lang 0x7f1300ee
 int string language 0x7f1300ef
@@ -4762,6 +4773,7 @@ int string path_password_eye_mask_strike_through 0x7f130166
 int string path_password_eye_mask_visible 0x7f130167
 int string path_password_strike_through 0x7f130168
 int string payment_failer 0x7f130169
+int string pending_requests 0x7f1301c0
 int string pick_image_camera 0x7f13016a
 int string pick_image_chooser_title 0x7f13016b
 int string pick_image_gallery 0x7f13016c
@@ -4772,6 +4784,7 @@ int string please_follow_up_on_the_status_of_the_order_once_it_is_accepted 0x7f1
 int string please_upload_an_image 0x7f130171
 int string plz_camera_gallery 0x7f130172
 int string plz_img 0x7f130173
+int string previous_appointments 0x7f1301c1
 int string price 0x7f130174
 int string privacy 0x7f130175
 int string products 0x7f130176
@@ -4824,7 +4837,9 @@ int string there_is_time_not_added_in_day 0x7f1301a4
 int string thursday 0x7f1301a5
 int string time 0x7f1301a6
 int string today_s_task_from_the_application 0x7f1301a7
+int string total_orders 0x7f1301c2
 int string tuesday 0x7f1301a8
+int string upcoming_appointments 0x7f1301c3
 int string use_biometric_label 0x7f1301a9
 int string use_biometric_or_screen_lock_label 0x7f1301aa
 int string use_face_label 0x7f1301ab
