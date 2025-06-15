@@ -89,6 +89,7 @@
                               android:layout_marginStart="8dp"
                               android:layout_gravity="center"
                               android:textSize="10sp"
+                              android:text="@{model.details.data.average_rating}"
                               tools:text="4.7"
                               android:textColor="@color/darkblack"/>
                           <ImageView
@@ -104,6 +105,7 @@
                               android:layout_marginStart="8dp"
                               android:layout_marginEnd="8dp"
                               android:layout_gravity="center"
+                              android:text="@{'(' + model.details.data.count_rating +')'}"
                               android:textSize="10sp"
                               tools:text="(12)"
                               android:textColor="@color/darkgray"/>
