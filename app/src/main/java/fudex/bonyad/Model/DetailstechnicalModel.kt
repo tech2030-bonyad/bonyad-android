@@ -20,5 +20,7 @@ data class  DetailstechnicalData (
     val certificates: ArrayList<Certificate>? = ArrayList(),
     val services: ArrayList<StatesDatum>? = ArrayList(),
     val availabilities: ArrayList<Availability>? = ArrayList(),
+    val average_rating:String? = null,
+    val count_rating:String? = null,
     val is_subscribed: Boolean? = null
 )
