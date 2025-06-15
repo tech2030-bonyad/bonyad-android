@@ -16,6 +16,7 @@ import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Fragment.technical.RefuseFragment
+import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -181,6 +182,14 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
     fun makereject(){
         var fragment = RefuseFragment()
         fragment.show(context.supportFragmentManager , "gift")
+    }
+    fun rateuser(){
+        var fragment = RatingdialogFragment()
+        var bundle = Bundle()
+        bundle.putInt("id",detailsdata.get()?.data?.user?.id ?: 0)
+        bundle.putString("type","User")
+        fragment.arguments = bundle
+        fragment.show(context.supportFragmentManager , "rate")
     }
 
 }

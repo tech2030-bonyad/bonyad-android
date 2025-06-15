@@ -2,6 +2,7 @@ package fudex.bonyad.viewmodel.user
 
 import android.content.Intent
 import android.location.Geocoder
+import android.os.Bundle
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -17,6 +18,8 @@ import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Fragment.technical.RefuseFragment
+import fudex.bonyad.ui.Fragment.user.CalenderdialogFragment
+import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -71,6 +74,11 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                         }
                     } catch (e: IOException) {
                         // Handle any errors that occur during the geocoding process
+                    }
+                    if (data?.data?.status?.value ?:0 == 2){
+                        context.binding.title.text = context.getString(R.string.complete_reservation)
+                    }else if (data?.data?.status?.value ?:0 == 4){
+                        context.binding.title.text = context.getString(R.string.evaluation)
                     }
                 }else{
                     val errorText = response.errorBody()?.string() ?: "{}"
@@ -210,7 +218,17 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
             context?.startActivity(intent)
         } else if (detailsdata.get()?.data?.status?.value ?: 0 == 2) {
             completereservation()
+        } else if (detailsdata.get()?.data?.status?.value ?: 0 == 4) {
+            rateuser()
         }
+    }
+    fun rateuser(){
+        var fragment = RatingdialogFragment()
+        var bundle = Bundle()
+        bundle.putInt("id",detailsdata.get()?.data?.technician?.id ?: 0)
+        bundle.putString("type","User")
+        fragment.arguments = bundle
+        fragment.show(context.supportFragmentManager , "rate")
     }
 
 }

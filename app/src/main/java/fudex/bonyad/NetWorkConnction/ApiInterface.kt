@@ -3,13 +3,13 @@ package fudex.bonyad.NetWorkConnction
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
 import fudex.bonyad.Data.Editpass
+import fudex.bonyad.Data.Ratingdata
 import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.AddaressModel
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AddressesModel
 import fudex.bonyad.Model.BookserviceModel
 import fudex.bonyad.Model.BrachesModel
-import fudex.bonyad.Model.BranchsetailsModel
 import fudex.bonyad.Model.ComplainModel
 import fudex.bonyad.Model.ContactusModel
 import fudex.bonyad.Model.LoginData
@@ -21,12 +21,9 @@ import fudex.bonyad.Model.ScheduleResponse
 import fudex.bonyad.Model.ServicesdetailsModel
 import fudex.bonyad.Model.ServicestypeModel
 import fudex.bonyad.Model.SliderModel
-import fudex.bonyad.Model.SlotsModel
 import fudex.bonyad.Model.StatesModel
-import fudex.bonyad.Model.User
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.ResponseBody
 import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.AppointmentdetailsModel
@@ -42,7 +39,6 @@ import fudex.bonyad.Model.TechnicalHomeModel
 import fudex.bonyad.Model.TechnicalModel
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -55,7 +51,6 @@ import retrofit2.http.PUT
 import retrofit2.http.Part
 import retrofit2.http.Path
 import retrofit2.http.Query
-import retrofit2.http.QueryMap
 
 interface ApiInterface {
     @GET("client/serviceTypes")
@@ -285,10 +280,9 @@ interface ApiInterface {
         @FieldMap(encoded = true) services: Map<String, String>?
     ): Call<BookserviceModel?>?
 
-    @POST("client/order/{orderId}/rate")
-    fun rateorder(
-        @Path("orderId") orderId: Int,
-        @Body requestBody: RequestBody
+    @POST("reviews")
+    fun rateuser(
+        @Body data: Ratingdata
     ): Call<ErrorResponse?>?
 
     @POST("client/orders/{orderId}/cancel")

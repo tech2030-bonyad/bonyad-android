@@ -2,27 +2,19 @@ package fudex.bonyad.viewmodel.user
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.text.InputFilter
 import android.util.Log
 import android.view.Gravity
-import android.widget.PopupMenu
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.adapters.TextViewBindingAdapter
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import atiaf.redstone.NetWorkConnction.RetrofitClient
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
-import fudex.bonyad.Helper.Camera.Companion.activity
+import fudex.bonyad.Data.Ratingdata
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Helper.Utilities
-import fudex.bonyad.Model.AddressesDatum
-import fudex.bonyad.Model.ServicestypeModel
-import fudex.bonyad.Model.ServicetypeDatum
-import fudex.bonyad.Model.StatesModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
@@ -83,14 +75,9 @@ class RatingdialogViewModel(var catogaryFragment: RatingdialogFragment) : BaseOb
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java
         )
-        var requestBody: RequestBody? = null
-        requestBody = MultipartBody.Builder()
-            .setType(MultipartBody.FORM)
-            .addFormDataPart("rating", context.binding.rate.rating.toInt().toString())
-            .addFormDataPart("comment", commentObserv.get())
-            .build()
+        var ratedata = Ratingdata( context.arguments?.getInt("id").toString(), context.arguments?.getString("type"), context.binding.rate.rating.toInt().toString(),commentObserv.get())
         val call: Call<ErrorResponse?>? =
-            context.arguments?.getInt("id")?.let { apiService.rateorder(it,requestBody) }
+           apiService.rateuser(ratedata)
         call?.enqueue(object : Callback<ErrorResponse?> {
             override fun onResponse(
                 call: Call<ErrorResponse?>,

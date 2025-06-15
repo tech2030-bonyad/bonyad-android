@@ -35,3 +35,11 @@ data class Craetereserve (
     val lat: String? = null,
     val long: String? = null
 )
+
+
+data class Ratingdata (
+    val reviewable_id: String? = null,
+    val reviewable_type: String? = null,
+    val rating: String? = null,
+    val comment: String? = null,
+)

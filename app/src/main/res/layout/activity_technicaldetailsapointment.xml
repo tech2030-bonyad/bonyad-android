@@ -319,6 +319,7 @@
                 android:textStyle="bold"
                 android:textSize="14sp"/>
             <androidx.cardview.widget.CardView
+                android:onClick="@{ () -> model.rateuser() }"
                 android:visibility="@{model.detailsdata.data.status.value == 4 ? View.VISIBLE : View.GONE}"
                 android:layout_width="0dp"
                 android:layout_weight="1"
