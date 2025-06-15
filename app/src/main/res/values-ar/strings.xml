@@ -166,4 +166,7 @@
     <string name="skip">تخطي</string>
     <string name="back">رجوع</string>
     <string name="it_booked_before">تم الحجز من قبل</string>
+    <string name="subregion">المنطقة الفرعية</string>
+    <string name="select_options">اختر الخيارات</string>
+    <string name="bio">نبذة</string>
 </resources>

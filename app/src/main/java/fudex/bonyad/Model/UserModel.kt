@@ -21,6 +21,7 @@ class UserModel (
     val zone: String? = null,
     val is_from_social:Boolean? = null,
     val zone_id: Int? = null,
+    val zones: ArrayList<StatesDatum>? = ArrayList(),
     val certificates: ArrayList<Certificate>? = ArrayList(),
     val timer: Int? = null,
 )

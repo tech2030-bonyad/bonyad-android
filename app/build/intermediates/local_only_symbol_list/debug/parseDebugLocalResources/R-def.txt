@@ -271,6 +271,7 @@ string attach_a_picture
 string available_appointments
 string back
 string bank_account
+string bio
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
 string camera
 string cancel
@@ -377,6 +378,7 @@ string search
 string select
 string select_account_type
 string select_as_default_address
+string select_options
 string send
 string service_description
 string service_images
@@ -390,6 +392,7 @@ string specialists
 string specialty
 string street
 string street_name
+string subregion
 string subscribe
 string subscription_date
 string subscriptions

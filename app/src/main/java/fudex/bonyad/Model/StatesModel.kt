@@ -11,7 +11,8 @@ data class StatesDatum (
     val name: String? = null,
     val image: String? = null,
     val description: String? = null,
-    var is_technician_service: Int? = null
+    var is_technician_service: Int? = null,
+    var isselect: Boolean = false
     )
 
 data class ServicetypeDatum (

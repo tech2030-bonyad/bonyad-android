@@ -141,13 +141,14 @@ interface ApiInterface {
         @Part("email") email: RequestBody,
         @Part("address") address: RequestBody,
         @Part("experience_years") experience_years: RequestBody,
-        @Part("zone_id") zone_id: RequestBody,
+        @Part parts: List<MultipartBody.Part>,
         @Part("password") password: RequestBody,
         @Part("password_confirmation") password_confirmation: RequestBody,
         @Part("fcm_token") fcm_token: RequestBody,
         @Part("firebase_token_type") device_type: RequestBody,
-        @Part("remember_me") device_id: RequestBody
-    ): Call<LoginData?>?
+        @Part("remember_me") device_id: RequestBody,
+        @Part("description") description: RequestBody
+        ): Call<LoginData?>?
 
     @Multipart
     @POST("client/register")

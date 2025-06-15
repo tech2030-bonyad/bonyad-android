@@ -168,4 +168,7 @@
     <string name="skip">Skip</string>
     <string name="back">Back</string>
     <string name="it_booked_before">it booked before</string>
+    <string name="subregion">Subregion</string>
+    <string name="select_options">Select Options</string>
+    <string name="bio">Bio</string>
 </resources>
