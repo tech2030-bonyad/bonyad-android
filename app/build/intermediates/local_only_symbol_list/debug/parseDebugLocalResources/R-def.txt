@@ -324,6 +324,7 @@ string home
 string i_agree_to
 string images
 string images_of_certificates_and_licenses
+string it_booked_before
 string lang
 string language
 string language_change

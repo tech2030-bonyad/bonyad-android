@@ -65,7 +65,7 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
         activity.binding.appointment.layoutManager = linearlayout1
         activity.binding.appointment.adapter = avalibiltyadapter
         dayslist.add(DistanceModel(6, activity.getString(R.string.saturday)))
-        dayslist.add(DistanceModel(7, activity.getString(R.string.sunday)))
+        dayslist.add(DistanceModel(0, activity.getString(R.string.sunday)))
         dayslist.add(DistanceModel(1, activity.getString(R.string.monday)))
         dayslist.add(DistanceModel(2, activity.getString(R.string.tuesday)))
         dayslist.add(DistanceModel(3, activity.getString(R.string.wednesday)))
@@ -144,14 +144,14 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
         for (index in availabilityList){
             if (index.day_of_week == day){
                 isgood = true
-                var availability = Availability(index.availabilities?.size!! + 1,day,index.day_name,"","")
+                var availability = Availability(index.availabilities?.size!! + 1,day,index.day_name,"","",true)
                 index.availabilities?.add(availability)
                 selectdate(day)
                 break
             }
         }
         if (isgood == false){
-            var availability = Availability(1,day,dayname,"","")
+            var availability = Availability(1,day,dayname,"","",true)
             var availabilitylist : ArrayList<Availability> = ArrayList()
             availabilitylist.add(availability)
             var days = DayAvailability(day,dayname,availabilitylist)
