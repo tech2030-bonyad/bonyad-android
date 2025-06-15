@@ -65,7 +65,7 @@ class AppointmentmanageViewModel(activity: Appointmentmanagectivity) : BaseObser
         activity.binding.appointment.layoutManager = linearlayout1
         activity.binding.appointment.adapter = avalibiltyadapter
         dayslist.add(DistanceModel(6, activity.getString(R.string.saturday)))
-        dayslist.add(DistanceModel(7, activity.getString(R.string.sunday)))
+        dayslist.add(DistanceModel(0, activity.getString(R.string.sunday)))
         dayslist.add(DistanceModel(1, activity.getString(R.string.monday)))
         dayslist.add(DistanceModel(2, activity.getString(R.string.tuesday)))
         dayslist.add(DistanceModel(3, activity.getString(R.string.wednesday)))

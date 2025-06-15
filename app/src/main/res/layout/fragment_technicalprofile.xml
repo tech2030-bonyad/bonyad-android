@@ -149,7 +149,6 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:rotationY="180"
                         android:background="@drawable/ic_clipboard_tick"
                         android:layout_gravity="center"/>
                     <TextView
