@@ -320,6 +320,9 @@ interface ApiInterface {
     @GET("plans/{subsctibeId}/subscribe")
     fun subsribe(@Path("subsctibeId") subsctibeId: Int): Call<SubsribeModel?>?
 
+    @GET("plans/cancel-subscription")
+    fun cancelsubseibe(): Call<ErrorResponse?>?
+
     @GET("plans/my-plan")
     fun getmyplan(): Call<MYSubsribeModel?>?
 

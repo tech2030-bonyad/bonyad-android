@@ -12,6 +12,7 @@ data class PlanData(
     val duration: Int? = null,      // in minutes
     val price: String? = null,      // keep as String if using it for display or currency formatting
     val image: String? = null,
+    val expired_date: String? = null,
     val created_at: String? = null
 )
 data class SubsribeModel(

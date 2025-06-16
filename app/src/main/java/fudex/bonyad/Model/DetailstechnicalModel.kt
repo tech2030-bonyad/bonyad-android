@@ -11,6 +11,7 @@ data class  DetailstechnicalData (
     val phone: String? = null,
     val avatar: String? = null,
     val language: String? = null,
+    val description: String? = null,
     val lat: String? = null,
     val long: String? = null,
     val address: String? = null,

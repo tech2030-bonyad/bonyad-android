@@ -4433,6 +4433,7 @@ string appbar_scrolling_view_behavior
 string appointment_management
 string arabic
 string are_you_sure_to_log_out_of_the_app
+string are_you_sure_you_want_to_cancel_subscription
 string are_you_sure_you_want_to_delete_the_service
 string area
 string attach_a_picture
@@ -4458,6 +4459,7 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string camera
 string cancel
+string cancel_subscription
 string change_mobile_number
 string change_password
 string character_counter_content_description
@@ -4578,6 +4580,7 @@ string exo_track_surround_5_point_1
 string exo_track_surround_7_point_1
 string exo_track_unknown
 string expert_account
+string expiration_date
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4758,6 +4761,7 @@ string profile
 string r_s
 string ready_to_adopt_we_will_provide_you_with_everything_you_need
 string reliable_labor
+string renew
 string required
 string resend_verification_code
 string reservation_request

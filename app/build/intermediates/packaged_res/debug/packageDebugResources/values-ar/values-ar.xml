@@ -18,6 +18,7 @@
     <string name="appointment_management">ادارة المواعيد</string>
     <string name="arabic">العربية</string>
     <string name="are_you_sure_to_log_out_of_the_app">هل أنت متأكد من تسجيل الخروج من التطبيق؟</string>
+    <string name="are_you_sure_you_want_to_cancel_subscription">هل انت متأكد من رغبتك ف الغاء الأشتراك ؟</string>
     <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
     <string name="area">المنطقة</string>
     <string name="attach_a_picture">إرفاق صورة</string>
@@ -28,6 +29,7 @@
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
     <string name="camera">كاميرا</string>
     <string name="cancel">إلغاء</string>
+    <string name="cancel_subscription">الغاء الأشتراك</string>
     <string name="change_mobile_number">تغير رقم الجوال</string>
     <string name="change_password">تغير كلمة المرور</string>
     <string name="check_the_reviews_and_choose_the_worker_that_suits_you">اطلع على التقييمات واختر العامل المناسب لك.</string>
@@ -66,6 +68,7 @@
     <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">ادخل رمز التحقق المرسل إليك عبر رقم الجوال</string>
     <string name="expert_account">حساب متخصص</string>
+    <string name="expiration_date">تاريخ الأنتهاء</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">خطأ فى الاتصال بالخادم برجاء المحاولة مرة أخرى</string>
     <string name="field_required">مطلوب</string>
     <string name="filter">فلتر</string>
@@ -118,6 +121,7 @@
     <string name="r_s">ر.س</string>
     <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">جاهز تبني؟ إحنا نوصلك بكل اللي تحتاجه</string>
     <string name="reliable_labor">عمالة موثوقة</string>
+    <string name="renew">تجديد</string>
     <string name="required">مطلوب</string>
     <string name="resend_verification_code">إعادة ارسال رمز التحقق</string>
     <string name="reservation_request">طلب حجز</string>
