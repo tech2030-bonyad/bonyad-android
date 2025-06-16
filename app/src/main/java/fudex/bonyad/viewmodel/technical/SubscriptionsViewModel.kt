@@ -2,6 +2,7 @@ package fudex.bonyad.viewmodel.technical
 
 import android.content.Intent
 import android.os.Build
+import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
@@ -33,6 +34,7 @@ import fudex.bonyad.ui.Activity.technical.SubscriptionsActivity
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
+import fudex.bonyad.ui.Fragment.DeletetFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -165,6 +167,45 @@ class SubscriptionsViewModel(activity: SubscriptionsActivity) : BaseObservable()
             override fun onFailure(call: Call<MYSubsribeModel?>, t: Throwable) {
                 Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
                 isloading.set(false)
+            }
+        })
+    }
+    fun renew(){
+        subscribe(mydata.get()?.id ?: 0)
+    }
+    fun cancel(){
+        var fragment = DeletetFragment()
+        fragment.show(activity.supportFragmentManager , "subscribe")
+    }
+    fun cancelsubsribe() {
+        activity.binding.packageList.showShimmer()
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+        var call: Call<ErrorResponse?>? = null
+        call = apiService.cancelsubseibe()
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    mydata.set(null)
+                    notifyChange()
+                }else {
+                    val errorText = response.errorBody()?.string()
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            cancelsubsribe()
+                        }
+                    })
+                }
+                activity.binding.packageList.hideShimmer()
+                isloading.set(false)
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                isloading.set(false)
+                activity.binding.packageList.hideShimmer()
             }
         })
     }

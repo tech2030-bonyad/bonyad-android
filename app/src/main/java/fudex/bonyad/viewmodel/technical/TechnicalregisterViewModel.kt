@@ -67,6 +67,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
     var activity: TechnicalregisterActivity = TechnicalregisterActivity()
     val phoneObserv = ObservableField<String>()
     val emailObserv = ObservableField<String>()
+    val desObserv = ObservableField<String>()
     val addressObserv = ObservableField<String>()
     val passwordObserv = ObservableField<String>()
     val confirmpasswordObserv = ObservableField<String>()
@@ -76,6 +77,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
     val phone = ObservableField<String>()
     val code = ObservableField<String>()
     val zonename = ObservableField<String>("")
+    val subzonename = ObservableField<String>("")
     var zoneId = 0
     var maxlenght = 0
     var image = ""
@@ -104,6 +106,12 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
     fun onaddressChanged(): TextViewBindingAdapter.OnTextChanged {
         return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
             addressObserv.set(s.toString())
+        }
+    }
+    @SuppressLint("RestrictedApi")
+    fun ondesChanged(): TextViewBindingAdapter.OnTextChanged {
+        return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
+            desObserv.set(s.toString())
         }
     }
     @SuppressLint("RestrictedApi")
@@ -141,6 +149,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
             activity.binding.phone.gravity = Gravity.RIGHT
             activity.binding.pass.gravity = Gravity.RIGHT
             activity.binding.address.gravity = Gravity.RIGHT
+            activity.binding.des.gravity = Gravity.RIGHT
             activity.binding.confirmpass.gravity = Gravity.RIGHT
         }
         Camera.activity = activity
@@ -198,6 +207,10 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
         if (addressObserv.get() == null || addressObserv.get()!!.isEmpty()) {
             error = true
             activity.binding.address.setError(activity.getString(R.string.required))
+        }
+        if (desObserv.get() == null || desObserv.get()!!.isEmpty()) {
+            error = true
+            activity.binding.des.setError(activity.getString(R.string.required))
         }
         if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
             error = true
@@ -286,20 +299,32 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
         }else if (LoginSession.gettype(activity) == 3){
             type = "technician"
         }
+        var zonesIs:ArrayList<Int> = ArrayList()
+        zonesIs.add(zoneId)
+        for (item in zoneList){
+            if (item.isselect == true && item.id != zoneId){
+                zonesIs.add(item.id ?: 0)
+            }
+        }
+        val parts = zonesIs.map {
+            MultipartBody.Part.createFormData("zones[]", it.toString())
+        }
+
         val imageParts = createPartFromFileList("certificates[]", images)
         val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
         val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
         val phone = RequestBody.create(MediaType.parse("text/plain"), phoneObserv.get())
         val address = RequestBody.create(MediaType.parse("text/plain"), addressObserv.get())
         val password = RequestBody.create(MediaType.parse("text/plain"), passwordObserv.get())
-        val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
+//        val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
         val typeRequest = RequestBody.create(MediaType.parse("text/plain"), type)
         val token = RequestBody.create(MediaType.parse("text/plain"), "ddd")
         val tokentype = RequestBody.create(MediaType.parse("text/plain"), "android")
         val remeber = RequestBody.create(MediaType.parse("text/plain"), "1")
         val expereinece = RequestBody.create(MediaType.parse("text/plain"), expertname.get())
+        val des = RequestBody.create(MediaType.parse("text/plain"), desObserv.get())
 
-        val call: Call<LoginData?>? = apiService.technicalregister(imageParts,typeRequest,name,phone,email,address,expereinece,zone,password,password,token,tokentype,remeber)
+        val call: Call<LoginData?>? = apiService.technicalregister(imageParts,typeRequest,name,phone,email,address,expereinece,parts,password,password,token,tokentype,remeber,des)
         call?.enqueue(object : Callback<LoginData?> {
             override fun onResponse(call: Call<LoginData?>, response: Response<LoginData?>) {
                 if (response.code() == 200 || response.code() == 201) {
@@ -600,5 +625,22 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
             activity!!.getString(R.string.cancel)
         ) { dialog, which -> dialog.cancel() }
         alert.show()
+    }
+    fun showMultiSelectDialog() {
+        val names = zoneList.map { it.name }.toTypedArray()
+        val checkedItems = zoneList.map { it.isselect }.toBooleanArray()
+
+        AlertDialog.Builder(activity)
+            .setTitle(activity.getString(R.string.select_options))
+            .setMultiChoiceItems(names, checkedItems) { _, which, isChecked ->
+                zoneList[which].isselect = isChecked
+            }
+            .setPositiveButton(activity.getString(R.string.yes)) { _, _ ->
+                val selected = zoneList.filter { it.isselect }
+                val selectedNames = selected.joinToString { it.name ?: ""}
+                subzonename.set(selectedNames)
+            }
+            .setNegativeButton(activity.getString(R.string.cancel), null)
+            .show()
     }
 }

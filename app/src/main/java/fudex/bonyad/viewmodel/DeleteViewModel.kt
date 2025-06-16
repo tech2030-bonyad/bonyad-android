@@ -40,6 +40,10 @@ class DeleteViewModel(var catogaryFragment: DeletetFragment) : BaseObservable() 
             context.binding.title.text = context.getString(R.string.delete_the_service)
             context.binding.body.text =
                 context.getString(R.string.are_you_sure_you_want_to_delete_the_service)
+        }else if (tag == "subscribe") {
+            context.binding.title.text = context.getString(R.string.subscriptions)
+            context.binding.body.text =
+                context.getString(R.string.are_you_sure_you_want_to_cancel_subscription)
         }
 
 
@@ -48,6 +52,10 @@ class DeleteViewModel(var catogaryFragment: DeletetFragment) : BaseObservable() 
         val tag = context.tag  // or getTag() in older versions
         if (tag == "deleteservice") {
             context.dialogListener?.onDataReceived("deleteservice")
+            context.dismiss()
+            return
+        }else if (tag == "subscribe") {
+            context.dialogListener?.onDataReceived("subscribe")
             context.dismiss()
             return
         }

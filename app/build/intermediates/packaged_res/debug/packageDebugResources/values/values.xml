@@ -40,6 +40,7 @@
     <string name="appointment_management">Appointment Management</string>
     <string name="arabic">Arabic</string>
     <string name="are_you_sure_to_log_out_of_the_app">Are you sure to log out of the app?</string>
+    <string name="are_you_sure_you_want_to_cancel_subscription">Are you sure you want to cancel subscription?</string>
     <string name="are_you_sure_you_want_to_delete_the_service">Are you sure you want to delete the service?</string>
     <string name="area">Area</string>
     <string name="attach_a_picture">Attach a picture</string>
@@ -47,9 +48,11 @@
     <string name="back">Back</string>
     <string name="bank_account">Bank account</string>
     <string name="booking_date_and_time">Booking date and time:</string>
+    <string name="bio">Bio</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">Browse thousands of products, from cement and tools to paints and decor, and choose what suits your project with the click of a button!</string>
     <string name="camera">Camera</string>
     <string name="cancel">Cancel</string>
+    <string name="cancel_subscription">Cancel subscription</string>
     <string name="change_mobile_number">Change mobile number</string>
     <string name="change_password">Change Password</string>
     <string name="check_the_reviews_and_choose_the_worker_that_suits_you">Check the reviews and choose the worker that suits you.</string>
@@ -96,6 +99,7 @@
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">Enter the verification code sent to you via mobile number</string>
     <string name="evaluation">Evaluation</string>
     <string name="expert_account">Expert Account</string>
+    <string name="expiration_date">Expiration date</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">failed to connect to server please repeat your request</string>
     <string name="field_required">required</string>
     <string name="filter">Filter</string>
@@ -158,6 +162,7 @@
     <string name="refused">Refused</string>
     <string name="rejected_appointments">Rejected appointments</string>
     <string name="reliable_labor">Reliable labor</string>
+    <string name="renew">Renew</string>
     <string name="required">required</string>
     <string name="resend_verification_code">Resend verification code</string>
     <string name="reservation_request">Reservation request</string>
@@ -169,6 +174,7 @@
     <string name="select">select</string>
     <string name="select_account_type">Select Account Type</string>
     <string name="select_as_default_address">Set as default address</string>
+    <string name="select_options">Select Options</string>
     <string name="send">Send</string>
     <string name="service_description">Service description</string>
     <string name="service_images">Service Images</string>
@@ -182,6 +188,7 @@
     <string name="specialty">Specialty</string>
     <string name="street">Street</string>
     <string name="street_name">Street name</string>
+    <string name="subregion">Subregion</string>
     <string name="subscribe">Subscribe</string>
     <string name="subscription_date">Subscription date</string>
     <string name="subscriptions">Subscriptions</string>
