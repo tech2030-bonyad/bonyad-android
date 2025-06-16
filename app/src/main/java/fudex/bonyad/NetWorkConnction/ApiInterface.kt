@@ -211,7 +211,8 @@ interface ApiInterface {
         @Part("email") email: RequestBody,
         @Part("address") address: RequestBody,
         @Part("experience_years") experience_years: RequestBody,
-        @Part("zone_id") zone_id: RequestBody,
+        @Part parts: List<MultipartBody.Part>,
+        @Part("description") description: RequestBody
     ): Call<ProfileModel?>?
 
     @Multipart

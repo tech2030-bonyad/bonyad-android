@@ -17,6 +17,7 @@ class UserModel (
     var photo: String? = null,
     var avatar: String? = null,
     val address: String? = null,
+    val description: String? = null,
     val experience_years: String? = null,
     val zone: String? = null,
     val is_from_social:Boolean? = null,

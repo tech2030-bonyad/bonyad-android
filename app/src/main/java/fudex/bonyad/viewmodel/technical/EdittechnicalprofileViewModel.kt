@@ -77,6 +77,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
     val nameObserv = ObservableField<String>()
     val emailObserv = ObservableField<String>()
     val addressObserv = ObservableField<String>()
+    val desObserv = ObservableField<String>()
     var img = ObservableField<String>("")
     val locname = ObservableField<String>("")
     var isloading: ObservableBoolean = ObservableBoolean(false)
@@ -84,6 +85,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
     val phone = ObservableField<String>()
     val code = ObservableField<String>()
     val zonename = ObservableField<String>("")
+    val subzonename = ObservableField<String>("")
     var zoneId = 0
     var image = ""
     private var month = "-1"
@@ -120,18 +122,25 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
             addressObserv.set(s.toString())
         }
     }
+    @SuppressLint("RestrictedApi")
+    fun ondesChanged(): TextViewBindingAdapter.OnTextChanged {
+        return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
+            desObserv.set(s.toString())
+        }
+    }
     init {
         this.activity = activity
         if (activity.getString(R.string.lang) == "ar"){
             activity.binding.name.gravity = Gravity.RIGHT
             activity.binding.email.gravity = Gravity.RIGHT
             activity.binding.address.gravity = Gravity.RIGHT
+            activity.binding.des.gravity = Gravity.RIGHT
         }
         var linearlayout = LinearLayoutManager(activity)
         linearlayout!!.orientation = LinearLayoutManager.HORIZONTAL
         activity.binding.photos.layoutManager = linearlayout
         activity.binding.photos.adapter = imagessadapter
-        getuserinfo()
+      //  getuserinfo()
         Camera.activity = activity
         val builder = StrictMode.VmPolicy.Builder()
         StrictMode.setVmPolicy(builder.build())
@@ -189,6 +198,10 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
         if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
             error = true
             activity.binding.email.setError(activity.getString(R.string.required))
+        }
+        if (desObserv.get() == null || desObserv.get()!!.isEmpty()) {
+            error = true
+            activity.binding.des.setError(activity.getString(R.string.required))
         }
         if (emailObserv.get() != null && emailObserv.get()!!.isNotEmpty()  && !Validations.isValidEmail(emailObserv.get().toString().trim())) {
             error = true
@@ -267,13 +280,22 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                 imageBody =
                     MultipartBody.Part.createFormData("avatar", imageFile!!.name, requestFile)
             }
+            var zonesIs:ArrayList<Int> = ArrayList()
+            zonesIs.add(zoneId)
+            for (item in zoneList){
+                if (item.isselect == true && item.id != zoneId){
+                    zonesIs.add(item.id ?: 0)
+                }
+            }
+            val parts = zonesIs.map {
+                MultipartBody.Part.createFormData("zones[]", it.toString())
+            }
             val imageParts = createPartFromFileList(activity,"certificates[]", images)
             val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
             val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
             val address = RequestBody.create(MediaType.parse("text/plain"), addressObserv.get())
-            val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
             val expereinece = RequestBody.create(MediaType.parse("text/plain"), expertname.get())
-
+            val des = RequestBody.create(MediaType.parse("text/plain"), desObserv.get())
             val call: Call<ProfileModel?>? = apiService.edittechnicalprofilewithimage(
                 if (image == "") {
                     null
@@ -283,7 +305,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                     null
                 } else {
                     imageParts
-                }, name, email, address, expereinece, zone
+                }, name, email, address, expereinece, parts,des
             )
             call?.enqueue(object : Callback<ProfileModel?> {
                 override fun onResponse(
@@ -403,9 +425,24 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                     nameObserv.set(data?.data?.name!!)
                     emailObserv.set(data?.data?.email!!)
                     addressObserv.set(data?.data?.address!!)
-                    zoneId = data?.data?.zone_id!!
-                    zonename.set(data?.data?.zone!!)
+                    addressObserv.set(data?.data?.description!!)
+                   if (data?.data?.zones?.size!! > 0){
+                       zoneId = data?.data?.zones?.get(0)?.id ?: 0
+                       zonename.set(data?.data?.zones?.get(0)?.name ?: "")
+                       var index1 = 0
+                       for (item in data?.data?.zones!!){
+                               for (index in zoneList) {
+                                   if (index.id == item.id && index1 > 0) {
+                                       index.isselect = true
+                                   }
+                               }
+                           index1 = index1 + 1
+                       }
+                   }
                     expertname.set(data?.data?.experience_years!!)
+                    val selected = zoneList.filter { it.isselect }
+                    val selectedNames = selected.joinToString { it.name ?: ""}
+                    subzonename.set(selectedNames)
                     images.clear()
                     images.addAll(data?.data?.certificates!!)
                     notifyChange()
@@ -441,6 +478,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                     var data = response.body()
                     zoneList.clear()
                     zoneList.addAll(data?.data!!)
+                    getuserinfo()
                 }else {
                     val errorText = response.errorBody()?.string()
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -660,5 +698,22 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
             false
         }
         secPopUp.show()
+    }
+    fun showMultiSelectDialog() {
+        val names = zoneList.map { it.name }.toTypedArray()
+        val checkedItems = zoneList.map { it.isselect }.toBooleanArray()
+
+        AlertDialog.Builder(activity)
+            .setTitle(activity.getString(R.string.select_options))
+            .setMultiChoiceItems(names, checkedItems) { _, which, isChecked ->
+                zoneList[which].isselect = isChecked
+            }
+            .setPositiveButton(activity.getString(R.string.yes)) { _, _ ->
+                val selected = zoneList.filter { it.isselect }
+                val selectedNames = selected.joinToString { it.name ?: ""}
+                subzonename.set(selectedNames)
+            }
+            .setNegativeButton(activity.getString(R.string.cancel), null)
+            .show()
     }
 }
