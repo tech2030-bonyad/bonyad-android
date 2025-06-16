@@ -188,4 +188,11 @@
     <string name="upcoming_appointments">المواعيد القادمة</string>
     <string name="previous_appointments">المواعيد السابقة</string>
     <string name="complete_reservation">إتمام الحجز</string>
+    <string name="subregion">المنطقة الفرعية</string>
+    <string name="select_options">اختر الخيارات</string>
+    <string name="bio">نبذة</string>
+    <string name="expiration_date">تاريخ الأنتهاء</string>
+    <string name="cancel_subscription">الغاء الأشتراك</string>
+    <string name="renew">تجديد</string>
+    <string name="are_you_sure_you_want_to_cancel_subscription">هل انت متأكد من رغبتك ف الغاء الأشتراك ؟</string>
 </resources>

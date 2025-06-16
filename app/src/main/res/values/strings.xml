@@ -190,4 +190,11 @@
     <string name="upcoming_appointments">Upcoming appointments</string>
     <string name="previous_appointments">Previous appointments</string>
     <string name="complete_reservation">Complete reservation</string>
+    <string name="subregion">Subregion</string>
+    <string name="select_options">Select Options</string>
+    <string name="bio">Bio</string>
+    <string name="expiration_date">Expiration date</string>
+    <string name="cancel_subscription">Cancel subscription</string>
+    <string name="renew">Renew</string>
+    <string name="are_you_sure_you_want_to_cancel_subscription">Are you sure you want to cancel subscription?</string>
 </resources>

@@ -289,16 +289,19 @@ string app_name
 string appointment_management
 string arabic
 string are_you_sure_to_log_out_of_the_app
+string are_you_sure_you_want_to_cancel_subscription
 string are_you_sure_you_want_to_delete_the_service
 string area
 string attach_a_picture
 string available_appointments
 string back
 string bank_account
+string bio
 string booking_date_and_time
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
 string camera
 string cancel
+string cancel_subscription
 string change_mobile_number
 string change_password
 string check_the_reviews_and_choose_the_worker_that_suits_you
@@ -345,6 +348,7 @@ string enter_the_new_password
 string enter_the_verification_code_sent_to_you_via_mobile_number
 string evaluation
 string expert_account
+string expiration_date
 string failed_to_connect_to_server_please_repeat_your_requesr
 string field_required
 string filter
@@ -407,6 +411,7 @@ string reason_for_rejection
 string refused
 string rejected_appointments
 string reliable_labor
+string renew
 string required
 string resend_verification_code
 string reservation_request
@@ -418,6 +423,7 @@ string search
 string select
 string select_account_type
 string select_as_default_address
+string select_options
 string send
 string service_description
 string service_images
@@ -431,6 +437,7 @@ string specialists
 string specialty
 string street
 string street_name
+string subregion
 string subscribe
 string subscription_date
 string subscriptions

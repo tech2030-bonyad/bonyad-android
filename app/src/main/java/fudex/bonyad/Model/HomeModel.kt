@@ -20,6 +20,7 @@ data class Technician (
     val services: ArrayList<StatesDatum>? = ArrayList(),
     val average_rating:String? = null,
     val count_rating:String? = null,
+    val description:String? = null,
     val type_label: String? = null
 )
 
