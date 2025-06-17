@@ -64,7 +64,7 @@
     <string name="content_of_the_message">content of the message</string>
     <string name="copied">copied</string>
     <string name="create_an_account">Create an account</string>
-    <string name="customer_account">Customer account</string>
+    <string name="customer_account">User account</string>
     <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
     <string name="default_address">default address</string>
     <string name="delete">Delete</string>
@@ -88,7 +88,7 @@
     <string name="enter_the_new_mobile_number">Enter the new mobile number</string>
     <string name="enter_the_new_password">Enter the new password</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">Enter the verification code sent to you via mobile number</string>
-    <string name="expert_account">Expert Account</string>
+    <string name="expert_account">Service provider account</string>
     <string name="expiration_date">Expiration date</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">failed to connect to server please repeat your request</string>
     <string name="field_required">required</string>

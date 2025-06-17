@@ -43,7 +43,7 @@
     <string name="content_of_the_message">مضمون الرسالة</string>
     <string name="copied">copied</string>
     <string name="create_an_account">إنشاء حساب</string>
-    <string name="customer_account">حساب عميل</string>
+    <string name="customer_account">حساب مستخدم</string>
     <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
     <string name="default_address">العنوان الافتراضي</string>
     <string name="delete">حذف</string>
@@ -67,7 +67,7 @@
     <string name="enter_the_new_mobile_number">ادخل رقم الجوال الجديد</string>
     <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">ادخل رمز التحقق المرسل إليك عبر رقم الجوال</string>
-    <string name="expert_account">حساب متخصص</string>
+    <string name="expert_account">حساب مقدم خدمه</string>
     <string name="expiration_date">تاريخ الأنتهاء</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">خطأ فى الاتصال بالخادم برجاء المحاولة مرة أخرى</string>
     <string name="field_required">مطلوب</string>
