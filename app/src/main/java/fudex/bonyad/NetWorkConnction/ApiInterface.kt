@@ -147,7 +147,8 @@ interface ApiInterface {
         @Part("fcm_token") fcm_token: RequestBody,
         @Part("firebase_token_type") device_type: RequestBody,
         @Part("remember_me") device_id: RequestBody,
-        @Part("description") description: RequestBody
+        @Part("description") description: RequestBody,
+        @Part("zone_id") zone_id: RequestBody,
         ): Call<LoginData?>?
 
     @Multipart
@@ -212,8 +213,9 @@ interface ApiInterface {
         @Part("address") address: RequestBody,
         @Part("experience_years") experience_years: RequestBody,
         @Part parts: List<MultipartBody.Part>,
-        @Part("description") description: RequestBody
-    ): Call<ProfileModel?>?
+        @Part("description") description: RequestBody,
+        @Part("zone_id") zone_id: RequestBody,
+        ): Call<ProfileModel?>?
 
     @Multipart
     @POST("services/create")

@@ -18,9 +18,9 @@
     <string name="copied">copied</string>
     <string name="eng">AR</string>
     <string name="select_account_type">Select Account Type</string>
-    <string name="customer_account">Customer account</string>
+    <string name="customer_account">User account</string>
     <string name="merchant_account">Merchant Account</string>
-    <string name="expert_account">Expert Account</string>
+    <string name="expert_account">Service provider account</string>
     <string name="language_change">Language change</string>
     <string name="arabic">Arabic</string>
     <string name="english">English</string>
