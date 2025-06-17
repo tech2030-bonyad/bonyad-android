@@ -12,6 +12,7 @@ import android.os.Build
 import android.os.Environment
 import android.os.StrictMode
 import android.provider.Settings
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.Gravity
 import android.widget.PopupMenu
@@ -136,6 +137,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
             activity.binding.address.gravity = Gravity.RIGHT
             activity.binding.des.gravity = Gravity.RIGHT
         }
+        activity.binding.des.movementMethod = ScrollingMovementMethod()
         var linearlayout = LinearLayoutManager(activity)
         linearlayout!!.orientation = LinearLayoutManager.HORIZONTAL
         activity.binding.photos.layoutManager = linearlayout
@@ -281,7 +283,6 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                     MultipartBody.Part.createFormData("avatar", imageFile!!.name, requestFile)
             }
             var zonesIs:ArrayList<Int> = ArrayList()
-            zonesIs.add(zoneId)
             for (item in zoneList){
                 if (item.isselect == true && item.id != zoneId){
                     zonesIs.add(item.id ?: 0)
@@ -296,6 +297,8 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
             val address = RequestBody.create(MediaType.parse("text/plain"), addressObserv.get())
             val expereinece = RequestBody.create(MediaType.parse("text/plain"), expertname.get())
             val des = RequestBody.create(MediaType.parse("text/plain"), desObserv.get())
+            val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
+
             val call: Call<ProfileModel?>? = apiService.edittechnicalprofilewithimage(
                 if (image == "") {
                     null
@@ -305,7 +308,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                     null
                 } else {
                     imageParts
-                }, name, email, address, expereinece, parts,des
+                }, name, email, address, expereinece, parts,des,zone
             )
             call?.enqueue(object : Callback<ProfileModel?> {
                 override fun onResponse(
@@ -426,17 +429,15 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
                     emailObserv.set(data?.data?.email!!)
                     addressObserv.set(data?.data?.address!!)
                     addressObserv.set(data?.data?.description!!)
-                   if (data?.data?.zones?.size!! > 0){
-                       zoneId = data?.data?.zones?.get(0)?.id ?: 0
-                       zonename.set(data?.data?.zones?.get(0)?.name ?: "")
-                       var index1 = 0
+                    zoneId = data?.data?.zone_id ?: 0
+                    zonename.set(data?.data?.zone ?: "")
+                    if (data?.data?.zones?.size!! > 0){
                        for (item in data?.data?.zones!!){
                                for (index in zoneList) {
-                                   if (index.id == item.id && index1 > 0) {
+                                   if (index.id == item.id) {
                                        index.isselect = true
                                    }
                                }
-                           index1 = index1 + 1
                        }
                    }
                     expertname.set(data?.data?.experience_years!!)

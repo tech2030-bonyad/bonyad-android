@@ -18,9 +18,9 @@
     <string name="copied">copied</string>
     <string name="eng">ENG</string>
     <string name="select_account_type">اختر نوع الحساب</string>
-    <string name="customer_account">حساب عميل</string>
+    <string name="customer_account">حساب مستخدم</string>
     <string name="merchant_account">حساب تاجر</string>
-    <string name="expert_account">حساب متخصص</string>
+    <string name="expert_account">حساب مقدم خدمه</string>
     <string name="language_change">تغير اللغة</string>
     <string name="arabic">العربية</string>
     <string name="english">الإنجليزية</string>

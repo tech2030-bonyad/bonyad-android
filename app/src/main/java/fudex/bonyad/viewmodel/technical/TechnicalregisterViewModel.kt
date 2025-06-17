@@ -12,6 +12,7 @@ import android.os.StrictMode
 import android.provider.Settings
 import android.text.InputFilter
 import android.text.InputType
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.Gravity
 import android.widget.PopupMenu
@@ -152,6 +153,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
             activity.binding.des.gravity = Gravity.RIGHT
             activity.binding.confirmpass.gravity = Gravity.RIGHT
         }
+        activity.binding.des.movementMethod = ScrollingMovementMethod()
         Camera.activity = activity
         maxlenght = 9
         code.set("+966")
@@ -300,7 +302,6 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
             type = "technician"
         }
         var zonesIs:ArrayList<Int> = ArrayList()
-        zonesIs.add(zoneId)
         for (item in zoneList){
             if (item.isselect == true && item.id != zoneId){
                 zonesIs.add(item.id ?: 0)
@@ -316,7 +317,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
         val phone = RequestBody.create(MediaType.parse("text/plain"), phoneObserv.get())
         val address = RequestBody.create(MediaType.parse("text/plain"), addressObserv.get())
         val password = RequestBody.create(MediaType.parse("text/plain"), passwordObserv.get())
-//        val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
+        val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
         val typeRequest = RequestBody.create(MediaType.parse("text/plain"), type)
         val token = RequestBody.create(MediaType.parse("text/plain"), "ddd")
         val tokentype = RequestBody.create(MediaType.parse("text/plain"), "android")
@@ -324,7 +325,7 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
         val expereinece = RequestBody.create(MediaType.parse("text/plain"), expertname.get())
         val des = RequestBody.create(MediaType.parse("text/plain"), desObserv.get())
 
-        val call: Call<LoginData?>? = apiService.technicalregister(imageParts,typeRequest,name,phone,email,address,expereinece,parts,password,password,token,tokentype,remeber,des)
+        val call: Call<LoginData?>? = apiService.technicalregister(imageParts,typeRequest,name,phone,email,address,expereinece,parts,password,password,token,tokentype,remeber,des,zone)
         call?.enqueue(object : Callback<LoginData?> {
             override fun onResponse(call: Call<LoginData?>, response: Response<LoginData?>) {
                 if (response.code() == 200 || response.code() == 201) {
