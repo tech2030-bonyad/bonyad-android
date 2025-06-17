@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
+import androidx.recyclerview.widget.LinearLayoutManager
 import atiaf.redstone.NetWorkConnction.RetrofitClient
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
@@ -13,10 +14,12 @@ import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AppointmentdetailsModel
+import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
+import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
 import fudex.bonyad.ui.Fragment.technical.RefuseFragment
 import fudex.bonyad.ui.Fragment.user.CalenderdialogFragment
 import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
@@ -36,8 +39,15 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
     var detailsdata = ObservableField<AppointmentdetailsModel>()
     var img = ObservableField<String>("")
     var address = ObservableField<String>("")
+    val services: ArrayList<StatesDatum> = ArrayList()
+    private val servicesdetailsadapter = Servicesdetailsadapter()
+
     init {
         this.context = catogaryFragment
+        var linearlayout1 = LinearLayoutManager(context)
+        linearlayout1!!.orientation = LinearLayoutManager.HORIZONTAL
+        context.binding.serviceList.layoutManager = linearlayout1
+        context.binding.serviceList.adapter = servicesdetailsadapter
         getappointmentdetails()
 
     }
@@ -60,6 +70,8 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                     img.set(data?.data?.technician?.avatar ?: "")
                     data?.data?.date = data?.data?.date_of_reservation!! + " " + data?.data?.start_time!!
                     detailsdata.set(data!!)
+                    services.clear()
+                    services.addAll(data?.data?.technician?.services!!)
                     if (data?.data?.status?.value ?: 0 == 2){
                         context.binding.title.text =
                             context.getString(R.string.complete_reservation)

@@ -197,4 +197,5 @@
     <string name="cancel_subscription">Cancel subscription</string>
     <string name="renew">Renew</string>
     <string name="are_you_sure_you_want_to_cancel_subscription">Are you sure you want to cancel subscription?</string>
+    <string name="date">Date</string>
 </resources>

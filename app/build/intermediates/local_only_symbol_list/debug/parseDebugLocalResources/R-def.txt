@@ -4,6 +4,7 @@ color black
 color blue
 color darkblack
 color darkblack1
+color darkblack2
 color darkblue
 color darkgray
 color darkgray1
@@ -119,6 +120,7 @@ drawable rec_lightblue1
 drawable rec_strockblue
 drawable rec_strockblue1
 drawable rec_strockblue2
+drawable rec_strockblue3
 drawable rec_strockdarkblue
 drawable rec_strockgray
 drawable rec_strockgreen
@@ -321,6 +323,7 @@ string copied
 string create_an_account
 string current_appointments
 string customer_account
+string date
 string date_and_time
 string date_and_time_of_receipt
 string default_address

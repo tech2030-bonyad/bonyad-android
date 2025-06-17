@@ -64,21 +64,34 @@
                             android:layout_height="48dp"
                             bind:imageUrl="@{model.img}"
                             />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="6dp">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/cairosemibold"
-                            android:layout_marginStart="6dp"
-                            android:layout_gravity="center"
+                            android:layout_marginTop="9dp"
                             android:textSize="16sp"
                             android:text="@{model.detailsdata.data.technician.name}"
                             tools:text="علي بن محمد"
                             android:textColor="@color/darkblack"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/serviceList"
+                            android:layout_width="match_parent"
+                            android:layout_height="26dp"
+                            android:layout_marginTop="5dp"
+                            bind:servicedetails="@{model.services}"
+                            bind:fragment="@{model.context}"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rec_strockblue3">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -100,25 +113,21 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/cairoregular"
                             android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
                             android:layout_gravity="center"
                             android:textSize="10sp"
                             android:text="(12)"
                             tools:text="(12)"
                             android:textColor="@color/darkgray"/>
                     </LinearLayout>
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/serviceList"
-                        android:layout_width="match_parent"
-                        android:layout_height="26dp"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginEnd="26dp"
-                        android:layout_marginTop="12dp" />
+                    </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cairosemibold"
                         android:layout_marginStart="26dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/description1"
                         android:textSize="16sp"
                         android:textColor="@color/darkblack"/>
@@ -166,39 +175,66 @@
                                 android:layout_gravity="start|center"
                                 android:layout_marginEnd="8dp"/>
                         </FrameLayout>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/blue"
-                            android:fontFamily="@font/cairosemibold"
-                            android:textSize="16sp"
-                            tools:text="الأربعاء 07 ديسمبر"
-                            android:layout_marginTop="20dp"
-                            android:textStyle="bold"
-                            android:layout_marginStart="26dp"
-                            android:layout_gravity="start"
-                            android:layout_marginEnd="26dp"/>
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/dateList"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="9dp"
-                            android:layout_marginStart="23dp"
-                            android:layout_marginEnd="23dp"
                             android:orientation="horizontal"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/blue"
-                            android:fontFamily="@font/cairosemibold"
-                            android:textSize="16sp"
-                            android:text="@string/time"
-                            android:layout_marginTop="15dp"
-                            android:textStyle="bold"
+                            android:layout_marginTop="16dp"
                             android:layout_marginStart="26dp"
                             android:layout_gravity="start"
-                            android:layout_marginEnd="26dp"/>
+                            android:layout_marginEnd="26dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/cairosemibold"
+                                android:textSize="16sp"
+                                android:text="@string/date"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/darkblack2"
+                                android:fontFamily="@font/cairobold"
+                                android:textSize="14sp"
+                                android:text="@{model.detailsdata.data.date_of_reservation}"
+                                android:textStyle="bold"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="26dp"
+                            android:layout_gravity="start"
+                            android:layout_marginEnd="26dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/cairosemibold"
+                                android:textSize="16sp"
+                                android:text="@string/time"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/darkblack2"
+                                android:fontFamily="@font/cairobold"
+                                android:textSize="14sp"
+                                android:text="@{model.detailsdata.data.start_time + ' ' + ':' + ' ' + model.detailsdata.data.end_time}"
+                                android:textStyle="bold"
+                                />
+                        </LinearLayout>
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/timeList"
                             android:layout_width="match_parent"

@@ -1500,6 +1500,7 @@ int color common_google_signin_btn_text_light_pressed 0x7f06003f
 int color common_google_signin_btn_tint 0x7f060040
 int color darkblack 0x7f060041
 int color darkblack1 0x7f060042
+int color darkblack2 0x7f060294
 int color darkblue 0x7f060043
 int color darkgray 0x7f060044
 int color darkgray1 0x7f060045
@@ -3341,6 +3342,7 @@ int drawable rec_lightblue1 0x7f08027e
 int drawable rec_strockblue 0x7f08027f
 int drawable rec_strockblue1 0x7f080280
 int drawable rec_strockblue2 0x7f080281
+int drawable rec_strockblue3 0x7f0802d3
 int drawable rec_strockdarkblue 0x7f080282
 int drawable rec_strockgray 0x7f080283
 int drawable rec_strockgreen 0x7f080284
@@ -4528,6 +4530,7 @@ int string create_an_account 0x7f130074
 int string crop_image_menu_crop 0x7f130075
 int string current_appointments 0x7f130076
 int string customer_account 0x7f130077
+int string date 0x7f1301cc
 int string date_and_time 0x7f130078
 int string date_and_time_of_receipt 0x7f130079
 int string default_address 0x7f13007a
