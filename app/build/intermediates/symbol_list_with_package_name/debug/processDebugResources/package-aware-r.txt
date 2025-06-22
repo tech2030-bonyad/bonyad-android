@@ -3094,6 +3094,9 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_carbon_rule
 drawable ic_cart
+drawable ic_chat
+drawable ic_chatblue
+drawable ic_chatdarkblue
 drawable ic_check223
 drawable ic_check345
 drawable ic_clipboard_tick
@@ -3137,6 +3140,7 @@ drawable ic_m3_chip_close
 drawable ic_mdi_eye_off_outline
 drawable ic_mdi_light_information
 drawable ic_menu
+drawable ic_messages
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -3156,6 +3160,7 @@ drawable ic_rotate_left_24
 drawable ic_rotate_right_24
 drawable ic_round_star
 drawable ic_search22
+drawable ic_send333
 drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
 drawable ic_suitcase
@@ -3566,6 +3571,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chatList
 id check
 id checkbox
 id checked
@@ -4227,6 +4233,7 @@ layout activity_addresses
 layout activity_addservice
 layout activity_appointmentmanagectivity
 layout activity_changelangue
+layout activity_chat
 layout activity_contactus
 layout activity_detailsappointment
 layout activity_detailsspeciallist
@@ -4309,6 +4316,7 @@ layout item_address
 layout item_availablity
 layout item_calendar
 layout item_certificate
+layout item_chat
 layout item_date
 layout item_day
 layout item_image
@@ -4843,6 +4851,7 @@ string terms_and_conditions
 string the_code_has_not_been_received
 string there_are_no_addresses_available
 string there_are_no_appointment_available
+string there_are_no_messages_available
 string there_are_no_services_available
 string there_are_no_technicals_available
 string there_is_time_not_added_in_day
@@ -4867,6 +4876,7 @@ string welcome_back
 string with_you_every_step_of_the_way_in_your_career_journey
 string work_days
 string write_your_comment
+string write_your_message
 string years_of_experience
 string yes
 string you_can_add_and_edit_your_appointments

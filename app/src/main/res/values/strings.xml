@@ -198,4 +198,6 @@
     <string name="renew">Renew</string>
     <string name="are_you_sure_you_want_to_cancel_subscription">Are you sure you want to cancel subscription?</string>
     <string name="date">Date</string>
+    <string name="write_your_message">Write your message...</string>
+    <string name="there_are_no_messages_available">there are no messages available</string>
 </resources>

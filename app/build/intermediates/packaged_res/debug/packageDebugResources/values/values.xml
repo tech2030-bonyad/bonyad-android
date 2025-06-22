@@ -199,6 +199,7 @@
     <string name="the_code_has_not_been_received">The code has not been received?</string>
     <string name="there_are_no_addresses_available">there are no addresses available</string>
     <string name="there_are_no_appointment_available">there are no appointment available</string>
+    <string name="there_are_no_messages_available">there are no messages available</string>
     <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_are_no_technicals_available">there are no technicals available</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
@@ -216,6 +217,7 @@
     <string name="with_you_every_step_of_the_way_in_your_career_journey">With you every step of the way in your career journey.</string>
     <string name="work_days">Work days</string>
     <string name="write_your_comment">Write a comment</string>
+    <string name="write_your_message">Write your message...</string>
     <string name="years_of_experience">Years of experience</string>
     <string name="yes">yes</string>
     <string name="you_can_add_and_edit_your_appointments">You can add and edit your appointments.</string>

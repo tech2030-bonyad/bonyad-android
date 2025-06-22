@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="ChatviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.ChatViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        <FrameLayout
+            android:visibility="@{model.onservse.is_me() == true ? View.VISIBLE : View.GONE}"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_chatblue">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@{model.onservse.message}"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                tools:text = "مرحبا"/>
+        </FrameLayout>
+        <FrameLayout
+            android:visibility="@{model.onservse.is_me() == true ? View.GONE : View.VISIBLE}"
+            android:layout_gravity="end"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_chatdarkblue">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="14sp"
+                android:text="@{model.onservse.message}"
+                android:textColor="@color/white"
+                tools:text = "مرحبا"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

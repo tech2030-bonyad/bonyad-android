@@ -10,6 +10,8 @@ data class OrdersDatum (
     val user_avatar: String? = null,
     val technician_name: String? = null,
     val technician_avatar: String? = null,
+    val user: User? = null,
+    val technical: Technician? = null,
     var address: String? = null,
     val day: Day? = null,
     val start_time: String? = null,

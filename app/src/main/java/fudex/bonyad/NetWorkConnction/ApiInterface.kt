@@ -1,5 +1,6 @@
 package fudex.bonyad.NetWorkConnction
 
+import fudex.bonyad.Data.Chatdata
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
 import fudex.bonyad.Data.Editpass
@@ -27,6 +28,7 @@ import okhttp3.RequestBody
 import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.AppointmentdetailsModel
+import fudex.bonyad.Model.ChatModel
 import fudex.bonyad.Model.Dateadd
 import fudex.bonyad.Model.DetailstechnicalModel
 import fudex.bonyad.Model.FaqModel
@@ -373,4 +375,10 @@ interface ApiInterface {
 
     @PUT("reservations/{reservationId}")
     fun editreserve(@Path("reservationId") reservationId: Int,@Body data: Craetereserve): Call<ErrorResponse?>?
+
+    @POST("chat/send")
+    fun sendchat(@Body data: Chatdata): Call<ErrorResponse?>?
+
+    @GET("chat/messages-by-user/{messageId}")
+    fun getchat(@Path("messageId") messageId: Int, @Query("page") page: Int?, @Query("paginate") paginate: Int?): Call<ChatModel?>?
 }

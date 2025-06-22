@@ -175,6 +175,7 @@
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
     <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
     <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
+    <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
@@ -192,6 +193,7 @@
     <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
     <string name="work_days">أيام العمل</string>
     <string name="write_your_comment">اكتب تعليق</string>
+    <string name="write_your_message">اكتب رسالتك...</string>
     <string name="years_of_experience">سنوات الخبرة</string>
     <string name="yes">نعم</string>
     <string name="you_can_add_and_edit_your_appointments">يمكنك اضافة المواعيد الخاصة بك وتعديلها</string>

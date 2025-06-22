@@ -17,6 +17,7 @@ import fudex.bonyad.Model.AppointmentdetailsModel
 import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.ChatActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
@@ -241,6 +242,13 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
         bundle.putString("type","User")
         fragment.arguments = bundle
         fragment.show(context.supportFragmentManager , "rate")
+    }
+    fun chat(){
+        var intent: Intent = Intent(context, ChatActivity::class.java)
+        intent.putExtra("id", detailsdata.get()?.data?.technician?.id ?: 0)
+        intent.putExtra("name", detailsdata.get()?.data?.technician?.name ?: "")
+        intent.putExtra("img", detailsdata.get()?.data?.technician?.avatar ?: "")
+        context?.startActivity(intent)
     }
 
 }

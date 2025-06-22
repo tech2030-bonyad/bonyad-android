@@ -44,6 +44,9 @@ drawable ic_calendar_tick
 drawable ic_calendar_tick1
 drawable ic_carbon_rule
 drawable ic_cart
+drawable ic_chat
+drawable ic_chatblue
+drawable ic_chatdarkblue
 drawable ic_check223
 drawable ic_check345
 drawable ic_clipboard_tick
@@ -81,6 +84,7 @@ drawable ic_lockactive
 drawable ic_mdi_eye_off_outline
 drawable ic_mdi_light_information
 drawable ic_menu
+drawable ic_messages
 drawable ic_neworder
 drawable ic_notification_bing
 drawable ic_oui_email
@@ -94,6 +98,7 @@ drawable ic_rectanglehome
 drawable ic_reservedone
 drawable ic_round_star
 drawable ic_search22
+drawable ic_send333
 drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
 drawable ic_suitcase
@@ -150,6 +155,7 @@ id appointment
 id body
 id calender
 id canceltxt
+id chatList
 id check
 id cityLin
 id code1
@@ -207,6 +213,7 @@ layout activity_addresses
 layout activity_addservice
 layout activity_appointmentmanagectivity
 layout activity_changelangue
+layout activity_chat
 layout activity_contactus
 layout activity_detailsappointment
 layout activity_detailsspeciallist
@@ -252,6 +259,7 @@ layout item_address
 layout item_availablity
 layout item_calendar
 layout item_certificate
+layout item_chat
 layout item_date
 layout item_day
 layout item_image
@@ -449,6 +457,7 @@ string terms_and_conditions
 string the_code_has_not_been_received
 string there_are_no_addresses_available
 string there_are_no_appointment_available
+string there_are_no_messages_available
 string there_are_no_services_available
 string there_are_no_technicals_available
 string there_is_time_not_added_in_day
@@ -466,6 +475,7 @@ string welcome_back
 string with_you_every_step_of_the_way_in_your_career_journey
 string work_days
 string write_your_comment
+string write_your_message
 string years_of_experience
 string yes
 string you_can_add_and_edit_your_appointments

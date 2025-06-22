@@ -1,5 +1,6 @@
 package fudex.bonyad.viewmodel.technical
 
+import android.content.Intent
 import android.location.Geocoder
 import android.os.Bundle
 import androidx.databinding.BaseObservable
@@ -14,6 +15,7 @@ import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AppointmentdetailsModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.ChatActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Fragment.technical.RefuseFragment
 import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
@@ -191,5 +193,11 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
         fragment.arguments = bundle
         fragment.show(context.supportFragmentManager , "rate")
     }
-
+    fun chat(){
+        var intent: Intent = Intent(context, ChatActivity::class.java)
+        intent.putExtra("id", detailsdata.get()?.data?.user?.id ?: 0)
+        intent.putExtra("name", detailsdata.get()?.data?.user?.name ?: "")
+        intent.putExtra("img", detailsdata.get()?.data?.user?.avatar ?: "")
+        context?.startActivity(intent)
+    }
 }

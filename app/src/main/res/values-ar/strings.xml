@@ -196,4 +196,6 @@
     <string name="renew">تجديد</string>
     <string name="are_you_sure_you_want_to_cancel_subscription">هل انت متأكد من رغبتك ف الغاء الأشتراك ؟</string>
     <string name="date">التاريخ</string>
+    <string name="write_your_message">اكتب رسالتك...</string>
+    <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
 </resources>

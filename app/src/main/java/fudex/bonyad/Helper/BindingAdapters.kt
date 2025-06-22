@@ -25,6 +25,7 @@ import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DistanceModel
+import fudex.bonyad.Model.MessageItem
 import fudex.bonyad.Model.OnbaordModel
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.PlanData
@@ -37,6 +38,7 @@ import fudex.bonyad.ui.Adapter.technical.Serviceadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.Model.Technician
+import fudex.bonyad.ui.Adapter.Chatadapter
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
@@ -440,16 +442,16 @@ object BindingAdapters {
         }
     }
 //
-//    @BindingAdapter("bind:servicesorder", "bind:fragment")
-//    @JvmStatic
-//    fun setservicesorder(recyclerView: RecyclerView, movies: ArrayList<Service>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicesdetailsadapter) {
-//            (adapter as Servicesdetailsadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:chat", "bind:fragment")
+    @JvmStatic
+    fun setchat(recyclerView: RecyclerView, movies: ArrayList<MessageItem>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Chatadapter) {
+            (adapter as Chatadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //    @BindingAdapter("bind:servicesbook", "bind:fragment")
 //    @JvmStatic
 //    fun setservicesbook(recyclerView: RecyclerView, movies: ArrayList<Service>, fragment: Activity) {

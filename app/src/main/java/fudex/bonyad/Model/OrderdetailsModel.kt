@@ -49,5 +49,7 @@ data class User (
     val id: Int? = null,
     val name: String? = null,
     val avatar: String? = null,
+    val average_rating:String? = null,
+    val count_rating:String? = null,
     val avatar_url: String? = null
 )
