@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "209487131531",
+    "project_id": "bonyad-79a85",
+    "storage_bucket": "bonyad-79a85.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209487131531:android:f3b7b9873dc9f6e66db58e",
+        "android_client_info": {
+          "package_name": "fudex.bonyad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
