@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="NotviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.NotViewModel" />
+    </data>
+    <LinearLayout
+        android:onClick="@{ () -> model.clickitem() }"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rec_strockblue3">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_not"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="13dp"
+            android:orientation="vertical"
+            android:layout_marginTop="13dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="@{model.onservse.body}"
+                android:fontFamily="@font/cairoregular"
+                tools:text="تم قبول طلب M-12345"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#868686"
+                android:layout_marginTop="4dp"
+                android:textSize="10sp"
+                android:text="@{model.onservse.date}"
+                android:fontFamily="@font/cairoregular"
+                tools:text="06/06/2023 - 01:00 PM"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

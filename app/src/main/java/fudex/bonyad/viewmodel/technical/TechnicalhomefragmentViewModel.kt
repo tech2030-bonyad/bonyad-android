@@ -1,6 +1,7 @@
 package fudex.bonyad.viewmodel.technical
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Handler
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
@@ -16,6 +17,7 @@ import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.TechnicalHomeModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Adapter.technical.TechnicalhomeOrdersadapter
 import fudex.bonyad.ui.Adapter.user.Sliderhomedadapter
@@ -100,6 +102,10 @@ class TechnicalhomefragmentViewModel(context: TechnicalhomeFragment) : BaseObser
         if (activity is TechnicalHomeActivity){
             (activity as TechnicalHomeActivity).technicalhomeViewModel.orders()
         }
+    }
+    fun not(){
+        var intent: Intent = Intent(context?.requireActivity(), NotificationsActivity::class.java)
+        context?.startActivity(intent)
     }
 
 }

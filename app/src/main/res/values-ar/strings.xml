@@ -198,4 +198,6 @@
     <string name="date">التاريخ</string>
     <string name="write_your_message">اكتب رسالتك...</string>
     <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
+    <string name="notifications">الأشعارات</string>
+    <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
 </resources>

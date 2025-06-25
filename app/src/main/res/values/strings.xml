@@ -200,4 +200,6 @@
     <string name="date">Date</string>
     <string name="write_your_message">Write your message...</string>
     <string name="there_are_no_messages_available">there are no messages available</string>
+    <string name="notifications">Notifications</string>
+    <string name="there_are_no_notifications_available">there are no notifications available</string>
 </resources>

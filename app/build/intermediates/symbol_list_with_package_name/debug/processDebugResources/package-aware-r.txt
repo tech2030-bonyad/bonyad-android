@@ -2936,6 +2936,7 @@ drawable cx
 drawable cy
 drawable cz
 drawable de
+drawable delete22
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3146,6 +3147,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_neworder
+drawable ic_not
 drawable ic_notification_bing
 drawable ic_oui_email
 drawable ic_password_check
@@ -3349,6 +3351,7 @@ drawable rec_strockblue
 drawable rec_strockblue1
 drawable rec_strockblue2
 drawable rec_strockblue3
+drawable rec_strockblue4
 drawable rec_strockdarkblue
 drawable rec_strockgray
 drawable rec_strockgreen
@@ -3879,6 +3882,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notsList
 id off
 id oldeyePass
 id oldpass
@@ -4245,6 +4249,7 @@ layout activity_forgetpass
 layout activity_locationmap
 layout activity_login
 layout activity_myservices
+layout activity_notifications
 layout activity_onboarding
 layout activity_profile
 layout activity_resetpassword
@@ -4320,6 +4325,7 @@ layout item_chat
 layout item_date
 layout item_day
 layout item_image
+layout item_nots
 layout item_onboarding
 layout item_orders
 layout item_packages
@@ -4649,9 +4655,14 @@ string fingerprint_prompt_message
 string forgot_password
 string forgot_your_password
 string friday
+string gcm_defaultSenderId
 string generic_error_no_device_credential
 string generic_error_no_keyguard
 string generic_error_user_canceled
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home
@@ -4778,6 +4789,7 @@ string nearby_requests_direct_money_and_you_control_your_time
 string new_password
 string no
 string no_network
+string notifications
 string old_password
 string open1
 string or_contact_us_through_our_platforms
@@ -4806,6 +4818,7 @@ string price
 string privacy
 string products
 string profile
+string project_id
 string r_s
 string rate_your_reservation
 string ready_to_adopt_we_will_provide_you_with_everything_you_need
@@ -4852,6 +4865,7 @@ string the_code_has_not_been_received
 string there_are_no_addresses_available
 string there_are_no_appointment_available
 string there_are_no_messages_available
+string there_are_no_notifications_available
 string there_are_no_services_available
 string there_are_no_technicals_available
 string there_is_time_not_added_in_day

@@ -41,6 +41,7 @@ import fudex.bonyad.Model.TechnicalHomeModel
 import fudex.bonyad.Model.TechnicalModel
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.Field
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -297,9 +298,6 @@ interface ApiInterface {
     @GET("client/my-complaint-suggesstion")
     fun getcomplain(@Query("page") page: Int? , @Query("status") status: Int?): Call<ComplainModel?>?
 
-    @GET("client/notifications")
-    fun getnots(@Query("page") page: Int?): Call<NotsModel?>?
-
     @POST("client/notifications/delete")
     fun deletenots(): Call<ErrorResponse?>?
 
@@ -381,4 +379,10 @@ interface ApiInterface {
 
     @GET("chat/messages-by-user/{messageId}")
     fun getchat(@Path("messageId") messageId: Int, @Query("page") page: Int?, @Query("paginate") paginate: Int?): Call<ChatModel?>?
+
+    @GET("notifications")
+    fun getnots(@Query("page") page: Int?, @Query("paginate") paginate: Int?): Call<NotsModel?>?
+
+    @DELETE("notifications/{notId}")
+    fun deletenots(@Path("notId") notId: String): Call<ErrorResponse?>?
 }

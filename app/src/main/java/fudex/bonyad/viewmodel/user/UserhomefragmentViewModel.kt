@@ -26,6 +26,7 @@ import fudex.bonyad.R
 
 import fudex.bonyad.Model.Technician
 import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Activity.user.SpecialistsActivity
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
@@ -132,6 +133,10 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
     }
     fun moretechnical(){
         var intent: Intent = Intent(context?.requireActivity(), SpecialistsActivity::class.java)
+        context?.startActivity(intent)
+    }
+    fun not(){
+        var intent: Intent = Intent(context?.requireActivity(), NotificationsActivity::class.java)
         context?.startActivity(intent)
     }
     fun filter(){

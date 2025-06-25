@@ -115,6 +115,7 @@
     <string name="new_password">كلمة المرور الجديدة</string>
     <string name="no">لا</string>
     <string name="no_network">لا يوجد اتصال بالإنترنت</string>
+    <string name="notifications">الأشعارات</string>
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="open1">افتح نظام تحديد المواقع</string>
     <string name="or_contact_us_through_our_platforms">أو تواصل معنا عبر منصاتنا</string>
@@ -176,6 +177,7 @@
     <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
     <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
     <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
+    <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>

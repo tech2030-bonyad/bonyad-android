@@ -26,6 +26,7 @@ import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DistanceModel
 import fudex.bonyad.Model.MessageItem
+import fudex.bonyad.Model.NotDatum
 import fudex.bonyad.Model.OnbaordModel
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.PlanData
@@ -39,6 +40,7 @@ import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.Model.Technician
 import fudex.bonyad.ui.Adapter.Chatadapter
+import fudex.bonyad.ui.Adapter.Notsadapter
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
@@ -448,6 +450,16 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is Chatadapter) {
             (adapter as Chatadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+    @BindingAdapter("bind:nots", "bind:fragment")
+    @JvmStatic
+    fun setnots(recyclerView: RecyclerView, movies: ArrayList<NotDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Notsadapter) {
+            (adapter as Notsadapter).setdata(movies, fragment)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

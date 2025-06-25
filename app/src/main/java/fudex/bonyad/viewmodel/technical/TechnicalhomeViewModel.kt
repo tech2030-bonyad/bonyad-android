@@ -33,6 +33,7 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.Model.StatesModel
+import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
 import retrofit2.Call
 import retrofit2.Callback
@@ -281,5 +282,9 @@ class TechnicalhomeViewModel(var catogaryFragment: TechnicalHomeActivity) : Base
 
             }
         })
+    }
+    fun not(){
+        var intent: Intent = Intent(activity, NotificationsActivity::class.java)
+        activity.startActivity(intent)
     }
 }

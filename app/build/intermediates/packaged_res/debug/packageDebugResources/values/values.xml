@@ -108,6 +108,11 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="friday">Friday</string>
+    <string name="gcm_defaultSenderId" translatable="false">209487131531</string>
+    <string name="google_api_key" translatable="false">AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc</string>
+    <string name="google_app_id" translatable="false">1:209487131531:android:f3b7b9873dc9f6e66db58e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc</string>
+    <string name="google_storage_bucket" translatable="false">bonyad-79a85.firebasestorage.app</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="i_agree_to">must agree to</string>
@@ -139,6 +144,7 @@
     <string name="new_password">New Password</string>
     <string name="no">no</string>
     <string name="no_network">No internet</string>
+    <string name="notifications">Notifications</string>
     <string name="old_password">Old password</string>
     <string name="open1">open gps</string>
     <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
@@ -157,6 +163,7 @@
     <string name="privacy">Privacy</string>
     <string name="products">Products</string>
     <string name="profile">Profile</string>
+    <string name="project_id" translatable="false">bonyad-79a85</string>
     <string name="r_s">R.S</string>
     <string name="rate_your_reservation">Rate your reservation</string>
     <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">Ready to adopt? We will provide you with everything you need.</string>
@@ -200,6 +207,7 @@
     <string name="there_are_no_addresses_available">there are no addresses available</string>
     <string name="there_are_no_appointment_available">there are no appointment available</string>
     <string name="there_are_no_messages_available">there are no messages available</string>
+    <string name="there_are_no_notifications_available">there are no notifications available</string>
     <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_are_no_technicals_available">there are no technicals available</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
