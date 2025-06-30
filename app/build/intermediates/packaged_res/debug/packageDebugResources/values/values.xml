@@ -48,7 +48,7 @@
     <string name="available_appointments">Available appointments</string>
     <string name="back">Back</string>
     <string name="bank_account">Bank account</string>
-    <string name="bio">Bio</string>
+    <string name="bio">Overview of Services</string>
     <string name="booking_date_and_time">Booking date and time:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">Browse thousands of products, from cement and tools to paints and decor, and choose what suits your project with the click of a button!</string>
     <string name="camera">Camera</string>
@@ -113,7 +113,9 @@
     <string name="google_app_id" translatable="false">1:209487131531:android:f3b7b9873dc9f6e66db58e</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc</string>
     <string name="google_storage_bucket" translatable="false">bonyad-79a85.firebasestorage.app</string>
+    <string name="gregorian_date">Gregorian date</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hijri_date">Hijri date</string>
     <string name="home">Home</string>
     <string name="i_agree_to">must agree to</string>
     <string name="images">Images</string>

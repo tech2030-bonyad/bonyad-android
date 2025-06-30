@@ -190,7 +190,7 @@
     <string name="complete_reservation">إتمام الحجز</string>
     <string name="subregion">المنطقة الفرعية</string>
     <string name="select_options">اختر الخيارات</string>
-    <string name="bio">نبذة</string>
+    <string name="bio">نبذة عن الخدمات</string>
     <string name="expiration_date">تاريخ الأنتهاء</string>
     <string name="cancel_subscription">الغاء الأشتراك</string>
     <string name="renew">تجديد</string>
@@ -200,4 +200,6 @@
     <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
     <string name="notifications">الأشعارات</string>
     <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
+    <string name="gregorian_date">تاريخ ميلادي</string>
+    <string name="hijri_date">تاريخ هجري</string>
 </resources>

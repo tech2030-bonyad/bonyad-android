@@ -20,6 +20,7 @@ import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.adapters.TextViewBindingAdapter
 import atiaf.redstone.NetWorkConnction.RetrofitClient
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Data.Userdata
@@ -60,6 +61,8 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
     val code = ObservableField<String>()
     var maxlenght = 0
     var image = ""
+    var token = "hh"
+
     @SuppressLint("RestrictedApi")
     fun onnameChanged(): TextViewBindingAdapter.OnTextChanged {
         return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
@@ -106,9 +109,22 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
         activity.binding.main.setOnClickListener {
             Utilities.closeKeyboard(activity)
         }
+        gettoken()
     }
 
+    fun gettoken(){
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("FCM", "Fetching FCM registration token failed", task.exception)
+                    return@addOnCompleteListener
+                }
 
+                // Get new FCM registration token
+                token = task.result ?: "hhhh"
+            }
+
+    }
     fun validateInput() {
         var error = false
         if (nameObserv.get() == null || nameObserv.get()!!.isEmpty()) {
@@ -187,7 +203,7 @@ class UserregisterViewModel(activity: UserregisterActivity) : BaseObservable() {
         }else if (LoginSession.gettype(activity) == 3){
             type = "technician"
         }
-        var userdata = Userdata(type,phone1,passwordObserv.get(),"ddd",1,null,confirmpasswordObserv.get(), name = nameObserv.get())
+        var userdata = Userdata(type,phone1,passwordObserv.get(), token,1,"android",null,confirmpasswordObserv.get(), name = nameObserv.get())
         val call: Call<LoginData?>? = apiService.register(userdata)
         call?.enqueue(object : Callback<LoginData?> {
             override fun onResponse(call: Call<LoginData?>, response: Response<LoginData?>) {

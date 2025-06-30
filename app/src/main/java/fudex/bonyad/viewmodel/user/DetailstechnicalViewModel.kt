@@ -10,6 +10,7 @@ import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import atiaf.redstone.NetWorkConnction.RetrofitClient
+import com.github.msarhan.ummalqura.calendar.UmmalquraCalendar
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Data.Craetereserve
@@ -37,15 +38,22 @@ import org.joda.time.LocalDate
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
+import java.util.TimeZone
 
 
 class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity) : BaseObservable() {
     var isloading: ObservableBoolean = ObservableBoolean(false)
     var context: DetailsspeciallistActivity = DetailsspeciallistActivity()
     var img = ObservableField<String>("")
+    var calendertype = ObservableField<Int>(1)
     var addressname = ObservableField<String>("")
     var dateString = ObservableField<String>("")
+    var higridateString = ObservableField<String>("")
     var date1 = ""
     var times: ArrayList<Availability> = ArrayList()
     var services: ArrayList<StatesDatum> = ArrayList()
@@ -56,6 +64,7 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
     private val servicesdetailsadapter = Servicesdetailsadapter()
     var lat = ""
     var lng = ""
+    lateinit var  adapter: CalendarAdapter
     init {
         this.context = catogaryFragment
         context.binding.dateList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -126,19 +135,46 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
             )
         }
 
-        val adapter = CalendarAdapter(days) { selectedDate ->
+        adapter = CalendarAdapter(days) { selectedDate ->
             // Handle date selection
             notifyChange()
             date1 = selectedDate.toString("yyyy-MM-dd")
             dateString.set(Utilities.formatDateToArabic(selectedDate,context.getString(R.string.lang)))
+            higridateString.set(convertGregorianArabicToHijri(selectedDate))
             getslots()
 
         }
         adapter.date = today
         dateString.set(Utilities.formatDateToArabic(today,context.getString(R.string.lang)))
+        higridateString.set(convertGregorianArabicToHijri(today))
         date1 = today.toString("yyyy-MM-dd")
         getslots()
         context.binding.dateList.adapter = adapter
+    }
+    fun settype(type:Int){
+        if (type == calendertype.get()) {
+            return
+        }
+        calendertype.set(type)
+        adapter.notifyDataSetChanged()
+        notifyChange()
+    }
+
+
+    fun convertGregorianArabicToHijri(gregorianDate: LocalDate): String {
+        // Format of input: السبت 10 يونيو
+        val locale = Locale(context.getString(R.string.lang))
+
+        // Convert to Hijri
+        val hijri = UmmalquraCalendar()
+        hijri.time = gregorianDate.toDate()
+
+        val hijriDayName = SimpleDateFormat("EEEE", locale).format(gregorianDate.toDate())
+        val hijriDay = hijri.get(Calendar.DAY_OF_MONTH)
+        val hijriMonth = hijri.getDisplayName(Calendar.MONTH, Calendar.LONG, locale)
+        val hijriYear = hijri.get(Calendar.YEAR)
+
+        return "$hijriDayName $hijriDay $hijriMonth $hijriYear هـ"
     }
 
     fun back(){

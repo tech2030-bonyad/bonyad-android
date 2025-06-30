@@ -210,7 +210,7 @@
             <com.todkars.shimmer.ShimmerRecyclerView
                 android:id="@+id/specialList"
                 android:layout_width="match_parent"
-                android:layout_height="83dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 bind:technicalhome="@{model.technicallist}"

@@ -1,6 +1,7 @@
 package fudex.bonyad.ui.Fragment.technical
 
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,6 +49,15 @@ class TechnicalhomeFragment : Fragment() {
         super.onResume()
         technicalhomefragmentViewModel.gethome()
         (activity as TechnicalHomeActivity).technicalhomeViewModel.type.set(0)
+        binding.root!!.isFocusableInTouchMode = true
+        binding.root!!.requestFocus()
+        binding.root!!.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (event.action == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
+                activity?.finish()
+                return@OnKeyListener true
+            }
+            false
+        })
     }
 
 

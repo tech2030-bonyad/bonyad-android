@@ -283,6 +283,11 @@ object LoginSession {
             activity.getSharedPreferences("type", Context.MODE_PRIVATE)
         return onboardingFile!!.getInt("type", 0)
     }
+    fun gettype1(activity: Context): Int {
+        var onboardingFile =
+            activity.getSharedPreferences("type", Context.MODE_PRIVATE)
+        return onboardingFile!!.getInt("type", 0)
+    }
 
 //    fun Addclub(activity: Context, country: Club) {
 //        countryFile = activity.getSharedPreferences("club", Context.MODE_PRIVATE)

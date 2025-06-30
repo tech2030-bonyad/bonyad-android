@@ -179,13 +179,42 @@
                                android:layout_gravity="start|center"
                                android:layout_marginEnd="8dp"/>
                        </FrameLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="26dp"
+                           android:layout_marginEnd="26dp"
+                           android:layout_marginTop="12dp"
+                           android:orientation="horizontal">
+                           <RadioButton
+                               android:onClick="@{ () -> model.settype(1) }"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textSize="12sp"
+                               android:paddingStart="16dp"
+                               android:buttonTint="@{model.calendertype == 1 ? @color/blue : @color/lightgray1}"
+                               android:textColor="@{model.calendertype == 1 ? @color/darkblue : @color/darkgray}"
+                               android:text="@string/gregorian_date"
+                               android:checked="@{model.calendertype == 1 ? true : false}"/>
+                           <RadioButton
+                               android:onClick="@{ () -> model.settype(2) }"
+                               android:layout_marginStart="70dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textSize="12sp"
+                               android:paddingStart="16dp"
+                               android:buttonTint="@{model.calendertype == 2 ? @color/blue : @color/lightgray1}"
+                               android:textColor="@{model.calendertype == 2 ? @color/darkblue : @color/darkgray}"
+                               android:text="@string/hijri_date"
+                               android:checked="@{model.calendertype == 2 ? true : false}"/>
+                       </LinearLayout>
                        <TextView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:textColor="@color/blue"
                            android:fontFamily="@font/cairosemibold"
                            android:textSize="16sp"
-                           android:text="@{model.dateString}"
+                           android:text="@{model.calendertype == 1 ? model.dateString : model.higridateString}"
                            tools:text="الأربعاء 07 ديسمبر"
                            android:layout_marginTop="20dp"
                            android:textStyle="bold"

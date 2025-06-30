@@ -138,11 +138,11 @@ interface ApiInterface {
     @Multipart
     @POST("register")
     fun technicalregister(
-        @Part images: List<MultipartBody.Part>,
+        @Part images: List<MultipartBody.Part>?,
         @Part("type") type: RequestBody,
         @Part("name") name: RequestBody,
         @Part("phone") mobile: RequestBody,
-        @Part("email") email: RequestBody,
+        @Part("email") email: RequestBody?,
         @Part("address") address: RequestBody,
         @Part("experience_years") experience_years: RequestBody,
         @Part parts: List<MultipartBody.Part>,

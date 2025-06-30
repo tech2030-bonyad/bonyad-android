@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.text.InputType
+import android.util.Log
 import android.view.Gravity
 import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
@@ -12,6 +13,7 @@ import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.adapters.TextViewBindingAdapter
 import atiaf.redstone.NetWorkConnction.RetrofitClient
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
 
 import dev.b3nedikt.app_locale.AppLocale
@@ -51,6 +53,7 @@ class LoginViewModel(activity: LoginActivity) : BaseObservable() {
     var value: String? =
         null
     var type:Int? = null
+    var token = "hh"
     @SuppressLint("RestrictedApi")
     fun onpasswordChanged(): TextViewBindingAdapter.OnTextChanged {
         return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
@@ -70,6 +73,7 @@ class LoginViewModel(activity: LoginActivity) : BaseObservable() {
             (activity as LoginActivity).binding.pass.gravity = Gravity.RIGHT
             (activity as LoginActivity).binding.phone.gravity = Gravity.RIGHT
         }
+        gettoken()
 //        code.set(LoginSession.getcountry(activity).code)
 //        codelogin = LoginSession.getcountry(activity).code!!
 
@@ -96,6 +100,19 @@ class LoginViewModel(activity: LoginActivity) : BaseObservable() {
     fun back(){
         activity.onBackPressed()
     }
+    fun gettoken(){
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("FCM", "Fetching FCM registration token failed", task.exception)
+                    return@addOnCompleteListener
+                }
+
+                // Get new FCM registration token
+                token = task.result ?: "hhhh"
+            }
+
+    }
     fun regiterclick(){
         Utilities.disabletouch(activity)
         isenable.set(false)
@@ -112,7 +129,8 @@ class LoginViewModel(activity: LoginActivity) : BaseObservable() {
         }else if (LoginSession.gettype(activity) == 3){
             type = "technician"
         }
-        var userdata = Userdata(type,phone1,passwordObserv.get(),"ddd",1)
+        var userdata = Userdata(type,phone1,passwordObserv.get(),
+            token,1,"android")
         val call: Call<LoginData?>? = apiService.login(userdata)
         call?.enqueue(object : Callback<LoginData?> {
             @RequiresApi(Build.VERSION_CODES.O)

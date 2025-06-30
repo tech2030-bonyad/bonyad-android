@@ -10,9 +10,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
+import com.github.msarhan.ummalqura.calendar.UmmalquraCalendar
 import fudex.bonyad.R
 import fudex.bonyad.Model.CalendarDay
+import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import org.joda.time.LocalDate
+import java.util.Calendar
 
 class CalendarAdapter(
     private val days: List<CalendarDay>,
@@ -45,8 +48,16 @@ class CalendarAdapter(
             context.getString(
                 R.string.saturday
             ))
-
-        holder.dayNumber.text = item.date.dayOfMonth.toString()
+        if (context is DetailsspeciallistActivity){
+            if ((context as DetailsspeciallistActivity).detailstechnicalViewModel.calendertype.get() == 1){
+                holder.dayNumber.text = item.date.dayOfMonth.toString()
+            }else {
+                val hijriCalendar = UmmalquraCalendar()
+                hijriCalendar.time = item.date.toDate()
+                val day = hijriCalendar.get(Calendar.DAY_OF_MONTH)
+                holder.dayNumber.text = day.toString()
+            }
+        }
         holder.dayName.text = arabicDays[item.date.dayOfWeek % 7]
         try {
             if (item.date == date){

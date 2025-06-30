@@ -56,6 +56,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_chat.xml"
     },
     {
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsspeciallist.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsspeciallist.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/item_date.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_date.xml"
     },
@@ -86,10 +90,6 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalhome.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/fragment_technicalhome.xml"
-    },
-    {
-        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_nots.xml",
-        "source": "fudex.bonyad.app-main-70:/layout/item_nots.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/item_onboarding.xml",

@@ -6,6 +6,7 @@ data class Userdata (
     val password: String? = null,
     val fcm_token: String? = null,
     val remember_me: Int? = null,
+    val firebase_token_type:String? = null,
     val email: String? = null,
     val password_confirmation: String? = null,
     val otp: String? = null,

@@ -29,6 +29,10 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
 import fudex.bonyad.R
+import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.NotificationsActivity
+import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
+import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 
 import org.greenrobot.eventbus.EventBus
 import org.json.JSONObject
@@ -61,52 +65,70 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     @SuppressLint("InvalidWakeLockTag")
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         Log.e("hhbh", remoteMessage.getData().toString())
-        var loginFile = applicationContext.getSharedPreferences("loginFile", Context.MODE_PRIVATE)
-        var isnotifid = loginFile!!.getBoolean("notificationCountKey", true)
-        if (isnotifid == false){
-            return
-        }
-//        try {
-//            val jsonObject = JSONObject(remoteMessage.getData() as Map<*, *>?)
-//            if (jsonObject.getString("type") == "reservation") {
-//                var notificationIntent: Intent? = null
-//                notificationIntent =
-//                    Intent(getApplicationContext(), DetailsreservationActivity::class.java)
-//                notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
-//                notificationIntent.flags =
-//                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                val random = Random()
-//                val notificationID = random.nextInt(9999 - 1000) + 1000
-//                show_not(
-//                    notificationIntent!!,
-//                    jsonObject.getString("title"),
-//                    jsonObject.getString("body"),
-//                    notificationID
-//                )
-//            }else  {
-//                var notificationIntent: Intent? = null
-//                notificationIntent =
-//                    Intent(getApplicationContext(), Notificationsctivity::class.java)
-//                notificationIntent.flags =
-//                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                val random = Random()
-//                val notificationID = random.nextInt(9999 - 1000) + 1000
-//                show_not(
-//                    notificationIntent!!,
-//                    jsonObject.getString("title"),
-//                    jsonObject.getString("body"),
-//                    notificationID
-//                )
-//            }
-//            val intent = Intent("message_received")
-//            intent.putExtra("title",jsonObject.getString("title"))
-//            intent.putExtra("message", jsonObject.getString("body"))
-//            intent.putExtra("item_id", jsonObject.getInt("item_id"))
-//            intent.putExtra("type",jsonObject.getString("type"))
-//            sendBroadcast(intent)
-//        }catch (e:Exception){
-//
+//        var loginFile = applicationContext.getSharedPreferences("loginFile", Context.MODE_PRIVATE)
+//        var isnotifid = loginFile!!.getBoolean("notificationCountKey", true)
+//        if (isnotifid == false){
+//            return
 //        }
+        try {
+            val jsonObject = JSONObject(remoteMessage.getData() as Map<*, *>?)
+            if (jsonObject.getString("type") == "create_reservation" || jsonObject.getString("type") == "update_reservation" || jsonObject.getString("type") == "reservation_change_status") {
+                var notificationIntent: Intent? = null
+                if (LoginSession.gettype1(applicationContext) == 1){
+                    notificationIntent =
+                        Intent(getApplicationContext(), DetailsappointmentActivity::class.java)
+                    notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
+                    notificationIntent.flags =
+                        Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    val random = Random()
+                    val notificationID = random.nextInt(9999 - 1000) + 1000
+                    show_not(
+                        notificationIntent,
+                        jsonObject.getString("title"),
+                        jsonObject.getString("body"),
+                        notificationID
+                    )
+                }else  if (LoginSession.gettype1(applicationContext) == 3){
+                    notificationIntent =
+                        Intent(getApplicationContext(), TechnicaldetailsapointmentActivity::class.java)
+                    notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
+                    notificationIntent.flags =
+                        Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    val random = Random()
+                    val notificationID = random.nextInt(9999 - 1000) + 1000
+                    show_not(
+                        notificationIntent,
+                        jsonObject.getString("title"),
+                        jsonObject.getString("body"),
+                        notificationID
+                    )
+                }
+
+
+            }else  {
+                var notificationIntent: Intent? = null
+                notificationIntent =
+                    Intent(getApplicationContext(), NotificationsActivity::class.java)
+                notificationIntent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                val random = Random()
+                val notificationID = random.nextInt(9999 - 1000) + 1000
+                show_not(
+                    notificationIntent!!,
+                    jsonObject.getString("title"),
+                    jsonObject.getString("body"),
+                    notificationID
+                )
+            }
+            val intent = Intent("message_received")
+            intent.putExtra("title",jsonObject.getString("title"))
+            intent.putExtra("message", jsonObject.getString("body"))
+            intent.putExtra("item_id", jsonObject.getInt("item_id"))
+            intent.putExtra("type",jsonObject.getString("type"))
+            sendBroadcast(intent)
+        }catch (e:Exception){
+
+        }
 
     }
 

@@ -26,7 +26,7 @@
     <string name="available_appointments">المواعيد المتاحة</string>
     <string name="back">رجوع</string>
     <string name="bank_account">الحساب البنكي</string>
-    <string name="bio">نبذة</string>
+    <string name="bio">نبذة عن الخدمات</string>
     <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
     <string name="camera">كاميرا</string>
@@ -85,6 +85,8 @@
     <string name="forgot_password">نسيت كلمة المرور</string>
     <string name="forgot_your_password">هل نسيت كلمة المرور؟</string>
     <string name="friday">الجمعة</string>
+    <string name="gregorian_date">Gregorian date</string>
+    <string name="hijri_date">Hijri date</string>
     <string name="home">الرئيسية</string>
     <string name="i_agree_to">يجب الموافقه على</string>
     <string name="images">صور</string>

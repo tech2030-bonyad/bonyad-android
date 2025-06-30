@@ -58,7 +58,7 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
         this.context = context
         activity = context.requireActivity()
         var linearlayout = LinearLayoutManager(activity)
-        linearlayout!!.orientation = LinearLayoutManager.HORIZONTAL
+        linearlayout!!.orientation = LinearLayoutManager.VERTICAL
         context.binding.specialList.layoutManager = linearlayout
         context.binding.specialList.adapter = technicaladapter
         pagerAdapter = Sliderhomedadapter(activity!!,sliderlist)

@@ -4662,8 +4662,10 @@ int string google_api_key 0x7f1300ea
 int string google_app_id 0x7f1300eb
 int string google_crash_reporting_api_key 0x7f1300ec
 int string google_storage_bucket 0x7f1300ed
+int string gregorian_date 0x7f1301d7
 int string hello_blank_fragment 0x7f1300ee
 int string hide_bottom_view_on_scroll_behavior 0x7f1300ef
+int string hijri_date 0x7f1301d8
 int string home 0x7f1300f0
 int string i_agree_to 0x7f1300f1
 int string ic_flip_24 0x7f1300f2

@@ -28,6 +28,7 @@ import androidx.databinding.adapters.TextViewBindingAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import atiaf.redstone.NetWorkConnction.RetrofitClient
 import com.bumptech.glide.Glide
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Data.Userdata
@@ -91,6 +92,8 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
     private var photoUri: Uri? = null
     var linearlayout: LinearLayoutManager? = null
     private val imagessadapter = Imagessadapter()
+    var token = "hh"
+
     @SuppressLint("RestrictedApi")
     fun onnameChanged(): TextViewBindingAdapter.OnTextChanged {
         return TextViewBindingAdapter.OnTextChanged { s, start, before, count ->
@@ -192,9 +195,22 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
                 notifyChange()
             }
         }
+        gettoken()
     }
 
+    fun gettoken(){
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("FCM", "Fetching FCM registration token failed", task.exception)
+                    return@addOnCompleteListener
+                }
 
+                // Get new FCM registration token
+                token = task.result ?: "hhhh"
+            }
+
+    }
     fun validateInput() {
         var error = false
         if (nameObserv.get() == null || nameObserv.get()!!.isEmpty()) {
@@ -214,13 +230,17 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
             error = true
             activity.binding.des.setError(activity.getString(R.string.required))
         }
-        if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.required))
-        }
-        if (emailObserv.get() != null && emailObserv.get()!!.isNotEmpty()  && !Validations.isValidEmail(emailObserv.get().toString().trim())) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.email_foramt_is_wrong))
+//        if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
+//            error = true
+//            activity.binding.email.setError(activity.getString(R.string.required))
+//        }
+        if ((emailObserv.get() ?: "") != "") {
+            if (emailObserv.get() != null && emailObserv.get()!!
+                    .isNotEmpty() && !Validations.isValidEmail(emailObserv.get().toString().trim())
+            ) {
+                error = true
+                activity.binding.email.setError(activity.getString(R.string.email_foramt_is_wrong))
+            }
         }
         if (activity.intent.hasExtra("type") == false) {
             if (passwordObserv.get() == null || passwordObserv.get()!!.isEmpty()) {
@@ -253,10 +273,10 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
             error = true
             Dialogs.showToast(activity.getString(R.string.select) + " "  + activity.getString(R.string.years_of_experience),activity)
         }
-        if (images.size == 0){
-            error = true
-            Dialogs.showToast(activity.getString(R.string.select) + " "  + activity.getString(R.string.images_of_certificates_and_licenses),activity)
-        }
+//        if (images.size == 0){
+//            error = true
+//            Dialogs.showToast(activity.getString(R.string.select) + " "  + activity.getString(R.string.images_of_certificates_and_licenses),activity)
+//        }
         var phone1 = phoneObserv.get()
         if (phone1?.length ?: 0 > 0) {
             if (phone1.toString().substring(0,1) == "0"){
@@ -313,19 +333,19 @@ class TechnicalregisterViewModel(activity: TechnicalregisterActivity) : BaseObse
 
         val imageParts = createPartFromFileList("certificates[]", images)
         val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
-        val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
+        val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get() ?: "")
         val phone = RequestBody.create(MediaType.parse("text/plain"), phoneObserv.get())
         val address = RequestBody.create(MediaType.parse("text/plain"), addressObserv.get())
         val password = RequestBody.create(MediaType.parse("text/plain"), passwordObserv.get())
         val zone = RequestBody.create(MediaType.parse("text/plain"), zoneId.toString())
         val typeRequest = RequestBody.create(MediaType.parse("text/plain"), type)
-        val token = RequestBody.create(MediaType.parse("text/plain"), "ddd")
+        val token = RequestBody.create(MediaType.parse("text/plain"), token)
         val tokentype = RequestBody.create(MediaType.parse("text/plain"), "android")
         val remeber = RequestBody.create(MediaType.parse("text/plain"), "1")
         val expereinece = RequestBody.create(MediaType.parse("text/plain"), expertname.get())
         val des = RequestBody.create(MediaType.parse("text/plain"), desObserv.get())
 
-        val call: Call<LoginData?>? = apiService.technicalregister(imageParts,typeRequest,name,phone,email,address,expereinece,parts,password,password,token,tokentype,remeber,des,zone)
+        val call: Call<LoginData?>? = apiService.technicalregister(if (images.size == 0){null}else{imageParts},typeRequest,name,phone,email,address,expereinece,parts,password,password,token,tokentype,remeber,des,zone)
         call?.enqueue(object : Callback<LoginData?> {
             override fun onResponse(call: Call<LoginData?>, response: Response<LoginData?>) {
                 if (response.code() == 200 || response.code() == 201) {

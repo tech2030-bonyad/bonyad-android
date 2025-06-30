@@ -192,7 +192,7 @@
     <string name="complete_reservation">Complete reservation</string>
     <string name="subregion">Subregion</string>
     <string name="select_options">Select Options</string>
-    <string name="bio">Bio</string>
+    <string name="bio">Overview of Services</string>
     <string name="expiration_date">Expiration date</string>
     <string name="cancel_subscription">Cancel subscription</string>
     <string name="renew">Renew</string>
@@ -202,4 +202,6 @@
     <string name="there_are_no_messages_available">there are no messages available</string>
     <string name="notifications">Notifications</string>
     <string name="there_are_no_notifications_available">there are no notifications available</string>
+    <string name="gregorian_date">Gregorian date</string>
+    <string name="hijri_date">Hijri date</string>
 </resources>

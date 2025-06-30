@@ -197,10 +197,10 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
             error = true
             activity.binding.name.setError(activity.getString(R.string.required))
         }
-        if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
-            error = true
-            activity.binding.email.setError(activity.getString(R.string.required))
-        }
+//        if (emailObserv.get() == null || emailObserv.get()!!.isEmpty()) {
+//            error = true
+//            activity.binding.email.setError(activity.getString(R.string.required))
+//        }
         if (desObserv.get() == null || desObserv.get()!!.isEmpty()) {
             error = true
             activity.binding.des.setError(activity.getString(R.string.required))
@@ -293,7 +293,7 @@ class EdittechnicalprofileViewModel(activity: EdittechnicaldataActivity) : BaseO
             }
             val imageParts = createPartFromFileList(activity,"certificates[]", images)
             val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
-            val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
+            val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get() ?: "")
             val address = RequestBody.create(MediaType.parse("text/plain"), addressObserv.get())
             val expereinece = RequestBody.create(MediaType.parse("text/plain"), expertname.get())
             val des = RequestBody.create(MediaType.parse("text/plain"), desObserv.get())
