@@ -14,4 +14,10 @@
         <item name="lineSpacing">8dp</item>
         <item name="android:statusBarColor">@color/white</item>
     </style>
+    <style name="RatingBar" parent="Base.Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/lightgray</item>
+        <item name="colorControlActivated">#8FC3FF</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
 </resources>

@@ -15,6 +15,7 @@ color lightblue
 color lightblue1
 color lightblue2
 color lightgray
+color lightgray1
 color purple_200
 color purple_500
 color purple_700
@@ -166,6 +167,7 @@ id code2
 id code3
 id code4
 id comment
+id commentList
 id confirmPass
 id confirmpass
 id dateList
@@ -201,6 +203,7 @@ id photos
 id photosedit
 id productList
 id rate
+id scroll
 id searchTxt
 id serviceList
 id slider
@@ -232,6 +235,7 @@ layout activity_myservices
 layout activity_notifications
 layout activity_onboarding
 layout activity_profile
+layout activity_rating
 layout activity_resetpassword
 layout activity_selecttype
 layout activity_specialists
@@ -272,6 +276,7 @@ layout item_nots
 layout item_onboarding
 layout item_orders
 layout item_packages
+layout item_rateing
 layout item_serviceimage
 layout item_services
 layout item_services1
@@ -432,6 +437,7 @@ string profile
 string project_id
 string r_s
 string rate_your_reservation
+string ratings
 string ready_to_adopt_we_will_provide_you_with_everything_you_need
 string reason_for_rejection
 string refused
@@ -497,6 +503,7 @@ string yes
 string you_can_add_and_edit_your_appointments
 string your_smart_solution_for_construction_and_maintenance
 string your_work_is_ready_and_waiting_for_you
+style RatingBar
 style Theme.Bonyadandroid
 xml backup_rules
 xml data_extraction_rules

@@ -204,4 +204,5 @@
     <string name="there_are_no_notifications_available">there are no notifications available</string>
     <string name="gregorian_date">Gregorian date</string>
     <string name="hijri_date">Hijri date</string>
+    <string name="ratings">Ratings</string>
 </resources>

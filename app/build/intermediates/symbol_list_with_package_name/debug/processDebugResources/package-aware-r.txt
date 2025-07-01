@@ -1570,6 +1570,7 @@ color lightblue
 color lightblue1
 color lightblue2
 color lightgray
+color lightgray1
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -3592,6 +3593,7 @@ id code3
 id code4
 id collapseActionView
 id comment
+id commentList
 id compress
 id confirmPass
 id confirm_button
@@ -4252,6 +4254,7 @@ layout activity_myservices
 layout activity_notifications
 layout activity_onboarding
 layout activity_profile
+layout activity_rating
 layout activity_resetpassword
 layout activity_selecttype
 layout activity_specialists
@@ -4329,6 +4332,7 @@ layout item_nots
 layout item_onboarding
 layout item_orders
 layout item_packages
+layout item_rateing
 layout item_serviceimage
 layout item_services
 layout item_services1
@@ -4823,6 +4827,7 @@ string profile
 string project_id
 string r_s
 string rate_your_reservation
+string ratings
 string ready_to_adopt_we_will_provide_you_with_everything_you_need
 string reason_for_rejection
 string refused
@@ -5236,6 +5241,7 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
+style RatingBar
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
 style RtlOverlay_Widget_AppCompat_DialogTitle_Icon

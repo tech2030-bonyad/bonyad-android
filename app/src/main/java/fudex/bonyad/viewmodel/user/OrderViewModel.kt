@@ -10,6 +10,7 @@ import com.google.gson.Gson
 import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
 import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
@@ -54,6 +55,11 @@ class OrderViewModel : BaseObservable() {
         (context as UserappointmentFragment).ordersListViewModel.appointmentId = onservse.get()!!.id!!
         (context as UserappointmentFragment).ordersListViewModel.cancelorder()
     }
-
+    fun rate(){
+        var intent: Intent = Intent(context?.requireActivity(), RatingActivity::class.java)
+        intent.putExtra("id",onservse.get()!!.technical?.id ?: 0)
+        intent.putExtra("type","User")
+        context?.startActivity(intent)
+    }
 
 }

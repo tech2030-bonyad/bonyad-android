@@ -15,6 +15,7 @@
     <color name="lightblue1">#4CA8F9</color>
     <color name="lightblue2">#8FC3FF</color>
     <color name="lightgray">#8A8A8A</color>
+    <color name="lightgray1">#243445</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -168,6 +169,7 @@
     <string name="project_id" translatable="false">bonyad-79a85</string>
     <string name="r_s">R.S</string>
     <string name="rate_your_reservation">Rate your reservation</string>
+    <string name="ratings">Ratings</string>
     <string name="ready_to_adopt_we_will_provide_you_with_everything_you_need">Ready to adopt? We will provide you with everything you need.</string>
     <string name="reason_for_rejection">Reason for rejection</string>
     <string name="refused">Refused</string>
@@ -233,6 +235,12 @@
     <string name="you_can_add_and_edit_your_appointments">You can add and edit your appointments.</string>
     <string name="your_smart_solution_for_construction_and_maintenance">Your smart solution for construction and maintenance</string>
     <string name="your_work_is_ready_and_waiting_for_you">Your work is ready... and waiting for you.</string>
+    <style name="RatingBar" parent="Base.Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/lightgray</item>
+        <item name="colorControlActivated">#8FC3FF</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
     <style name="Theme.Bonyadandroid" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="fontFamily">@font/cairoregular</item>
         <item name="colorPrimary">#1D1D1D</item>

@@ -1,8 +1,12 @@
 package fudex.bonyad.viewmodel.user
 
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.location.Geocoder
+import android.os.Build
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -18,6 +22,7 @@ import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.ChatActivity
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
@@ -50,7 +55,18 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
         context.binding.serviceList.layoutManager = linearlayout1
         context.binding.serviceList.adapter = servicesdetailsadapter
         getappointmentdetails()
-
+        val filter = IntentFilter("message_received")
+        filter.addCategory(Intent.CATEGORY_DEFAULT)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.registerReceiver(context.messageReceiver, filter, null, null, Context.RECEIVER_NOT_EXPORTED)
+        }else {
+            ContextCompat.registerReceiver(
+                context,
+                context.messageReceiver,
+                IntentFilter("message_received"),
+                ContextCompat.RECEIVER_NOT_EXPORTED
+            )
+        }
     }
 
     fun getappointmentdetails() {
@@ -250,5 +266,10 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
         intent.putExtra("img", detailsdata.get()?.data?.technician?.avatar ?: "")
         context?.startActivity(intent)
     }
-
+    fun rate(){
+        var intent: Intent = Intent(context, RatingActivity::class.java)
+        intent.putExtra("id",detailsdata.get()!!.data?.technician?.id ?: 0)
+        intent.putExtra("type","User")
+        context?.startActivity(intent)
+    }
 }

@@ -157,6 +157,7 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response.code() == 200 || response.code() == 201) {
+                    Dialogs.showToast(response.body()!!.message ?: "" , activity)
                     var index = 0
                     for (item in servicesList){
                         if (item.id == id){
@@ -200,6 +201,7 @@ class TechnicalserviceViewModel(var catogaryFragment: TechnicalservicesFragment)
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response.code() == 200 || response.code() == 201) {
+                    Dialogs.showToast(response.body()!!.message ?: "" , activity)
                     var index = 0
                     for (item in servicesList){
                         if (item.id == id){

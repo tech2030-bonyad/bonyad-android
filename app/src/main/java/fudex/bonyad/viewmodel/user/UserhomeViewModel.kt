@@ -18,6 +18,7 @@ import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Helper.Utilities
+import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.UserModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
@@ -202,6 +203,7 @@ class UserhomeViewModel(var catogaryFragment: UserhomeActivity) : BaseObservable
             }
         })
     }
+
     fun changelang(){
         Utilities.disabletouch(activity)
 

@@ -18,9 +18,9 @@
     <string name="copied">copied</string>
     <string name="eng">ENG</string>
     <string name="select_account_type">اختر نوع الحساب</string>
-    <string name="customer_account">حساب مستخدم</string>
+    <string name="customer_account">حساب المستخدم</string>
     <string name="merchant_account">حساب تاجر</string>
-    <string name="expert_account">حساب مقدم خدمه</string>
+    <string name="expert_account">حساب مقدم الخدمة</string>
     <string name="language_change">تغير اللغة</string>
     <string name="arabic">العربية</string>
     <string name="english">الإنجليزية</string>
@@ -202,4 +202,5 @@
     <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
     <string name="gregorian_date">تاريخ ميلادي</string>
     <string name="hijri_date">تاريخ هجري</string>
+    <string name="ratings">التقيمات</string>
 </resources>

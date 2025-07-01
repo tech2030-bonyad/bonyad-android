@@ -30,6 +30,7 @@ import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.ChatActivity
 import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
@@ -103,6 +104,23 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                         notificationID
                     )
                 }
+
+
+            } else if (jsonObject.getString("type") == "send_message") {
+                var notificationIntent: Intent? = null
+                notificationIntent =
+                    Intent(getApplicationContext(), ChatActivity::class.java)
+                notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
+                notificationIntent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                val random = Random()
+                val notificationID = random.nextInt(9999 - 1000) + 1000
+                show_not(
+                    notificationIntent,
+                    jsonObject.getString("title"),
+                    jsonObject.getString("body"),
+                    notificationID
+                )
 
 
             }else  {

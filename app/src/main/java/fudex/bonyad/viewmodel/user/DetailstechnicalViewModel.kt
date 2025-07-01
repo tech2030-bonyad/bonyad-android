@@ -26,6 +26,7 @@ import fudex.bonyad.Model.Service
 import fudex.bonyad.Model.StatesDatum
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Activity.user.LocationmapActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
@@ -304,5 +305,11 @@ class DetailstechnicalViewModel(var catogaryFragment: DetailsspeciallistActivity
             i.putExtra("lng" , lng.toDouble())
         }
         context.startActivityForResult(i, 111)
+    }
+    fun rate(){
+        var intent: Intent = Intent(context, RatingActivity::class.java)
+        intent.putExtra("id",details.get()!!.data?.id ?: 0)
+        intent.putExtra("type","User")
+        context?.startActivity(intent)
     }
 }

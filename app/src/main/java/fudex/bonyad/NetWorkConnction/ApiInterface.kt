@@ -36,6 +36,7 @@ import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.MYSubsribeModel
 import fudex.bonyad.Model.PlanModel
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.Model.RatingsModel
 import fudex.bonyad.Model.SubsribeModel
 import fudex.bonyad.Model.TechnicalHomeModel
 import fudex.bonyad.Model.TechnicalModel
@@ -383,6 +384,15 @@ interface ApiInterface {
     @GET("notifications")
     fun getnots(@Query("page") page: Int?, @Query("paginate") paginate: Int?): Call<NotsModel?>?
 
+    @GET("unread-count")
+    fun getnotscounts(): Call<NotsModel?>?
+
+    @POST("mark-all-read")
+    fun makenotscread(): Call<ErrorResponse?>?
+
     @DELETE("notifications/{notId}")
     fun deletenots(@Path("notId") notId: String): Call<ErrorResponse?>?
+
+    @GET("reviews")
+    fun getratings(@Query("reviewable_type") reviewable_type: String?,@Query("reviewable_id") reviewable_id: Int?,@Query("page") page: Int?, @Query("paginate") paginate: Int?): Call<RatingsModel?>?
 }

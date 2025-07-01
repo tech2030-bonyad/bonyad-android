@@ -1,5 +1,8 @@
 package fudex.bonyad.ui.Activity.technical
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import fudex.bonyad.NetWorkConnction.DialogListener
@@ -18,7 +21,15 @@ class TechnicaldetailsapointmentActivity : BaseActivity(),DialogListener {
         binding.model = technicalappointmentdetailsViewModel
 
     }
-
+    val messageReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            // Update the UI with the received data
+            if (intent.getStringExtra("type")?.contains("reservation") == true && intent.getIntExtra("item_id",0) == technicalappointmentdetailsViewModel.detailsdata.get()!!.data?.id ?: 0) {
+                technicalappointmentdetailsViewModel.getappointmentsdetails()
+            }
+            // Process the data map as needed
+        }
+    }
     override fun onDataReceived(data: String) {
         if(data.contains("refuse")){
             technicalappointmentdetailsViewModel.refuseorder(data.replace("refuse",""))

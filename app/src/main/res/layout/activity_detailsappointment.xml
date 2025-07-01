@@ -97,6 +97,7 @@
                             bind:fragment="@{model.context}"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:onClick="@{ () -> model.rate() }"
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
                         android:layout_gravity="center"

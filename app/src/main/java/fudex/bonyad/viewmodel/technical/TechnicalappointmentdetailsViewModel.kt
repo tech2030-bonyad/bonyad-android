@@ -1,8 +1,12 @@
 package fudex.bonyad.viewmodel.technical
 
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.location.Geocoder
+import android.os.Build
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -16,6 +20,7 @@ import fudex.bonyad.Model.AppointmentdetailsModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.ChatActivity
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Fragment.technical.RefuseFragment
 import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
@@ -38,11 +43,22 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
     var address = ObservableField<String>("")
     init {
         this.context = catogaryFragment
-        getclubdetails()
-
+        getappointmentsdetails()
+        val filter = IntentFilter("message_received")
+        filter.addCategory(Intent.CATEGORY_DEFAULT)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.registerReceiver(context.messageReceiver, filter, null, null, Context.RECEIVER_NOT_EXPORTED)
+        }else {
+            ContextCompat.registerReceiver(
+                context,
+                context.messageReceiver,
+                IntentFilter("message_received"),
+                ContextCompat.RECEIVER_NOT_EXPORTED
+            )
+        }
     }
 
-    fun getclubdetails() {
+    fun getappointmentsdetails() {
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
             ApiInterface::class.java
@@ -88,7 +104,7 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
                     APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
                         override fun onRefresh() {
-                            getclubdetails()
+                            getappointmentsdetails()
                         }
                     })
                 }
@@ -118,7 +134,7 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
                 response: Response<ErrorResponse?>
             ) {
                 if (response.code() == 200 || response.code() == 201) {
-                    getclubdetails()
+                    getappointmentsdetails()
                 }else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -153,7 +169,7 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
                 response: Response<ErrorResponse?>
             ) {
                 if (response.code() == 200 || response.code() == 201) {
-                   getclubdetails()
+                   getappointmentsdetails()
                 } else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -198,6 +214,12 @@ class TechnicalappointmentdetailsViewModel(var catogaryFragment: Technicaldetail
         intent.putExtra("id", detailsdata.get()?.data?.user?.id ?: 0)
         intent.putExtra("name", detailsdata.get()?.data?.user?.name ?: "")
         intent.putExtra("img", detailsdata.get()?.data?.user?.avatar ?: "")
+        context?.startActivity(intent)
+    }
+    fun rate(){
+        var intent: Intent = Intent(context, RatingActivity::class.java)
+        intent.putExtra("id",detailsdata.get()!!.data?.user?.id ?: 0)
+        intent.putExtra("type","User")
         context?.startActivity(intent)
     }
 }

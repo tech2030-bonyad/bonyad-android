@@ -100,7 +100,7 @@ class TechnicalhomefragmentViewModel(context: TechnicalhomeFragment) : BaseObser
     }
     fun more(){
         if (activity is TechnicalHomeActivity){
-            (activity as TechnicalHomeActivity).technicalhomeViewModel.orders()
+            (activity as TechnicalHomeActivity).technicalhomeViewModel.appointment()
         }
     }
     fun not(){

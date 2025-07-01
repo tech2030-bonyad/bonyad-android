@@ -30,6 +30,7 @@ import fudex.bonyad.Model.NotDatum
 import fudex.bonyad.Model.OnbaordModel
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.PlanData
+import fudex.bonyad.Model.RatingDatum
 import fudex.bonyad.Model.StatesDatum
 
 import fudex.bonyad.R
@@ -42,6 +43,7 @@ import fudex.bonyad.Model.Technician
 import fudex.bonyad.ui.Adapter.Chatadapter
 import fudex.bonyad.ui.Adapter.Notsadapter
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
+import fudex.bonyad.ui.Adapter.Ratingadapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
@@ -460,6 +462,17 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is Notsadapter) {
             (adapter as Notsadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:rating", "bind:fragment")
+    @JvmStatic
+    fun setrating(recyclerView: RecyclerView, movies: ArrayList<RatingDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Ratingadapter) {
+            (adapter as Ratingadapter).setdata(movies, fragment)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

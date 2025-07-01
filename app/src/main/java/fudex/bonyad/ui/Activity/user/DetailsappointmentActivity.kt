@@ -1,5 +1,8 @@
 package fudex.bonyad.ui.Activity.user
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import fudex.bonyad.NetWorkConnction.DialogListener
@@ -17,5 +20,14 @@ class DetailsappointmentActivity : BaseActivity() {
         detailsappointmentViewModel = DetailsappointmentViewModel(this@DetailsappointmentActivity)
         binding.model = detailsappointmentViewModel
 
+    }
+    val messageReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            // Update the UI with the received data
+            if (intent.getStringExtra("type")?.contains("reservation") == true && intent.getIntExtra("item_id",0) == detailsappointmentViewModel.detailsdata.get()!!.data?.id ?: 0) {
+                detailsappointmentViewModel.getappointmentdetails()
+            }
+            // Process the data map as needed
+        }
     }
 }

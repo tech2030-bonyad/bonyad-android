@@ -11,6 +11,7 @@ import fudex.bonyad.Model.AddressesDatum
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
@@ -48,5 +49,10 @@ class OrderViewModel : BaseObservable() {
         (context as TechnicalappointmentFragment).ordersListViewModel.makereject()
     }
 
-
+    fun rate(){
+        var intent: Intent = Intent(context?.requireActivity(), RatingActivity::class.java)
+        intent.putExtra("id",onservse.get()!!.user?.id ?: 0)
+        intent.putExtra("type","User")
+        context?.startActivity(intent)
+    }
 }

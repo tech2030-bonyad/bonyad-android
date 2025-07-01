@@ -3,6 +3,7 @@ package fudex.bonyad.ui.Activity.technical
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import fudex.bonyad.R
+import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.databinding.TechnicalhomeviewModelBinding
 import fudex.bonyad.ui.Activity.BaseActivity
 import fudex.bonyad.viewmodel.technical.TechnicalhomeViewModel
@@ -20,5 +21,8 @@ class TechnicalHomeActivity : BaseActivity() {
     override fun onResume() {
         super.onResume()
         technicalhomeViewModel.getservices()
+        if (LoginSession.isLogin){
+            technicalhomeViewModel.getnotscount()
+        }
     }
 }

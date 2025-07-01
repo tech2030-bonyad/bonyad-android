@@ -52,6 +52,7 @@ class NotsListViewModel(var catogaryFragment: NotificationsActivity) : BaseObser
         scroll()
         swiptorefresh()
         swip()
+        makeread()
     }
 
     fun getnots() {
@@ -89,6 +90,39 @@ class NotsListViewModel(var catogaryFragment: NotificationsActivity) : BaseObser
             }
 
             override fun onFailure(call: Call<NotsModel?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection) , context)
+                isloading.set(false)
+                context.binding.notsList.hideShimmer()
+
+            }
+        })
+    }
+    fun makeread() {
+        context.binding.notsList.showShimmer()
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
+            ApiInterface::class.java)
+        val call: Call<ErrorResponse?>? = apiService.makenotscread()
+
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
+                if (response.code() == 200 || response.code() == 201) {
+
+                }else {
+                    val errorText = response.errorBody()?.string()
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            getnots()
+                        }
+                    })
+                }
+
+                isloading.set(false)
+                context.binding.notsList.hideShimmer()
+            }
+
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
                 Dialogs.showToast(context.getString(R.string.check_your_connection) , context)
                 isloading.set(false)
                 context.binding.notsList.hideShimmer()

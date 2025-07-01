@@ -14,6 +14,7 @@ import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.Model.Technician
 import fudex.bonyad.databinding.Technicail1viewModelBinding
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Activity.user.SpecialistsActivity
@@ -48,6 +49,10 @@ class Technicail1ViewModel : BaseObservable() {
         intent.putExtra("id",onservse.get()!!.id ?: 0)
         context?.startActivity(intent)
     }
-
-
+    fun rate(){
+        var intent: Intent = Intent(context, RatingActivity::class.java)
+        intent.putExtra("id",onservse.get()!!.id ?: 0)
+        intent.putExtra("type","User")
+        context?.startActivity(intent)
+    }
 }

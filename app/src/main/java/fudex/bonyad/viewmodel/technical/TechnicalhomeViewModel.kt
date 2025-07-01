@@ -18,6 +18,7 @@ import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Helper.Utilities
+import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.UserModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
@@ -48,6 +49,7 @@ class TechnicalhomeViewModel(var catogaryFragment: TechnicalHomeActivity) : Base
     var img = ObservableField<String>("")
     var not = ObservableField<Boolean>(true)
     var color = ObservableField<Int>(Color.parseColor("#E51D35"))
+    var count = ObservableField<Int>(0)
 
     init {
         this.activity = catogaryFragment
@@ -243,6 +245,34 @@ class TechnicalhomeViewModel(var catogaryFragment: TechnicalHomeActivity) : Base
                 Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
 
                 Utilities.enabletouch(activity)
+            }
+        })
+    }
+    fun getnotscount() {
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+
+        val call: Call<NotsModel?>? = apiService.getnotscounts()
+        call?.enqueue(object : Callback<NotsModel?> {
+            override fun onResponse(call: Call<NotsModel?>, response: Response<NotsModel?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var data = response.body()
+                    count.set(data?.count ?: 0)
+                    notifyChange()
+                }else {
+                    val errorText = response.errorBody()?.string()
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            getuserinfo()
+                        }
+                    })
+                }
+
+            }
+
+            override fun onFailure(call: Call<NotsModel?>, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
             }
         })
     }

@@ -75,6 +75,9 @@
         android:theme="@style/Theme.Bonyadandroid"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="fudex.bonyad.ui.Activity.RatingActivity"
+            android:exported="false" />
+        <activity
             android:name="fudex.bonyad.ui.Activity.NotificationsActivity"
             android:exported="false" />
         <activity

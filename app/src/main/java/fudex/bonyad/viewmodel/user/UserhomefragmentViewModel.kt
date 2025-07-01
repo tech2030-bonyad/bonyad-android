@@ -18,6 +18,7 @@ import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.DayAvailability
 import fudex.bonyad.Model.HomeModel
+import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.ScheduleResponse
 import fudex.bonyad.Model.Slider
 
@@ -53,6 +54,7 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
     private val technicaladapter = Technicaladapter()
     var handler: Handler = Handler()
     lateinit var pagerAdapter: Sliderhomedadapter
+    var count = ObservableField<Int>(0)
 
     init {
         this.context = context
@@ -90,6 +92,34 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
             }
         })
 
+    }
+    fun getnotscount() {
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java)
+
+        val call: Call<NotsModel?>? = apiService.getnotscounts()
+        call?.enqueue(object : Callback<NotsModel?> {
+            override fun onResponse(call: Call<NotsModel?>, response: Response<NotsModel?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var data = response.body()
+                    count.set(data?.count ?: 0)
+                    notifyChange()
+                }else {
+                    val errorText = response.errorBody()?.string()
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            getnotscount()
+                        }
+                    })
+                }
+
+            }
+
+            override fun onFailure(call: Call<NotsModel?>, t: Throwable) {
+                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+            }
+        })
     }
     fun back(){
         activity.onBackPressed()
