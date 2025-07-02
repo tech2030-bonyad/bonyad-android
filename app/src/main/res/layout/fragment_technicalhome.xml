@@ -25,7 +25,7 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -65,10 +65,34 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
-                            android:text="@{model.homedata.data.total_reservations}"
+                            android:text="@{model.homedata.data.total_reservations.total_count}"
                             tools:text="236"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="12dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:background="@{model.homedata.data.total_reservations.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cairoregular"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                android:textColor="@{model.homedata.data.total_reservations.trend.length() == 1 ? @color/red1 : @color/green}"
+                                android:text="@{model.homedata.data.total_reservations.ratio + '%'}"/>
+                        </LinearLayout>
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
@@ -106,17 +130,40 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
-                            android:text="@{model.homedata.data.new_reservations}"
+                            android:text="@{model.homedata.data.new_reservations.total_count}"
                             tools:text="236"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginTop="2dp"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="12dp">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:background="@{model.homedata.data.new_reservations.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cairoregular"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                android:textColor="@{model.homedata.data.new_reservations.trend.length() == 1 ? @color/red1 : @color/green}"
+                                android:text="@{model.homedata.data.new_reservations.ratio + '%'}"/>
+                        </LinearLayout>
                     </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="8dp"
@@ -151,10 +198,33 @@
                         android:layout_marginEnd="12dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/cairosemibold"
-                        android:text="@{model.homedata.data.completed_reservations}"
+                        android:text="@{model.homedata.data.completed_reservations.total_count}"
                         tools:text="236"
                         android:textColor="@color/darkblack"
                         android:textSize="24sp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@{model.homedata.data.completed_reservations.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/cairoregular"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center"
+                            android:textColor="@{model.homedata.data.completed_reservations.trend.length() == 1 ? @color/red1 : @color/green}"
+                            android:text="@{model.homedata.data.completed_reservations.ratio + '%'}"/>
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:visibility="@{model.newList.size() == 0 ? View.GONE : View.VISIBLE}"

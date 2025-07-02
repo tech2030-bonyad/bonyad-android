@@ -52,7 +52,7 @@
     <string name="customer_account">حساب المستخدم</string>
     <string name="date">التاريخ</string>
     <string name="date_and_time">تاريخ ووقت</string>
-    <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
+    <string name="date_and_time_of_receipt">تاريخ ووقت الحجز</string>
     <string name="default_address">العنوان الافتراضي</string>
     <string name="delete">حذف</string>
     <string name="delete_account">حذف الحساب</string>

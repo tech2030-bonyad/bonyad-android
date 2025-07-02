@@ -20,6 +20,7 @@ color purple_200
 color purple_500
 color purple_700
 color red
+color red1
 color teal_200
 color teal_700
 color white
@@ -38,6 +39,8 @@ drawable ic_archive_book1
 drawable ic_arrow_up
 drawable ic_arrow_up1
 drawable ic_arrowdown
+drawable ic_arrowdpwn
+drawable ic_arrowup
 drawable ic_back
 drawable ic_bank
 drawable ic_bookmark

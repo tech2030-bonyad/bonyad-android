@@ -69,6 +69,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
+                                android:text="@{model.star5.toString() + '%'}"
                                 tools:text="67%"
                                 android:textColor="@color/darkgray"/>
                             <ProgressBar
@@ -76,7 +77,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:progress="67"
+                                android:progress="@{model.star5}"
                                 android:max="100"
                                 android:progressTint="@color/lightblue" />
                             <ImageView
@@ -103,6 +104,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
+                                android:text="@{model.star4.toString() + '%'}"
                                 tools:text="20%"
                                 android:textColor="@color/darkgray"/>
                             <ProgressBar
@@ -110,7 +112,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:progress="20"
+                                android:progress="@{model.star4}"
                                 android:max="100"
                                 android:progressTint="@color/lightblue" />
                             <ImageView
@@ -138,13 +140,14 @@
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
                                 tools:text="7%"
+                                android:text="@{model.star3.toString() + '%'}"
                                 android:textColor="@color/darkgray"/>
                             <ProgressBar
                                 style="?android:attr/progressBarStyleHorizontal"
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:progress="7"
+                                android:progress="@{model.star3}"
                                 android:max="100"
                                 android:progressTint="@color/lightblue" />
                             <ImageView
@@ -171,6 +174,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
+                                android:text="@{model.star2.toString() + '%'}"
                                 tools:text="0%"
                                 android:textColor="@color/darkgray"/>
                             <ProgressBar
@@ -178,7 +182,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:progress="0"
+                                android:progress="@{model.star2}"
                                 android:max="100"
                                 android:progressTint="@color/lightblue" />
                             <ImageView
@@ -205,6 +209,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
+                                android:text="@{model.star1.toString() + '%'}"
                                 tools:text="2%"
                                 android:textColor="@color/darkgray"/>
                             <ProgressBar
@@ -212,7 +217,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:progress="2"
+                                android:progress="@{model.star1}"
                                 android:max="100"
                                 android:progressTint="@color/lightblue" />
                             <ImageView
@@ -259,6 +264,7 @@
                                 android:layout_marginStart="5dp"
                                 android:fontFamily="@font/cairosemibold"
                                 tools:text="4.7"
+                                android:text="@{model.rate.toString()}"
                                 android:textColor="@color/darkblue"/>
                         </LinearLayout>
                         <TextView
@@ -266,6 +272,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="14sp"
                             android:fontFamily="@font/cairoregular"
+                            android:text="@{'(' + model.count.toString() + ' ' + @string/evaluation + ')'}"
                             tools:text="(120 تقيم)"
                             android:textColor="@color/darkgray"/>
                     </LinearLayout>

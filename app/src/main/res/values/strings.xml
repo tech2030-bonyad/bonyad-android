@@ -101,7 +101,7 @@
     <string name="more">More</string>
     <string name="products">Products</string>
     <string name="description1">Description</string>
-    <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
+    <string name="date_and_time_of_receipt">Booking date and time</string>
     <string name="time">Time</string>
     <string name="reservation_request">Reservation request</string>
     <string name="reservation_request_has_been_sent_successfully">Reservation request has been sent successfully.</string>

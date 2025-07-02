@@ -99,7 +99,7 @@
     <string name="more">المزيد</string>
     <string name="products">المنتجات</string>
     <string name="description1">وصف</string>
-    <string name="date_and_time_of_receipt">تاريخ ووقت الأستلام</string>
+    <string name="date_and_time_of_receipt">تاريخ ووقت الحجز</string>
     <string name="time">الوقت</string>
     <string name="reservation_request">طلب حجز</string>
     <string name="reservation_request_has_been_sent_successfully">تم ارسال طلب الحجز بنجاح</string>

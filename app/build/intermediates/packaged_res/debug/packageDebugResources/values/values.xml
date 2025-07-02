@@ -20,6 +20,7 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="red">#FF6665</color>
+    <color name="red1">#EC2D30</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
@@ -76,7 +77,7 @@
     <string name="customer_account">User account</string>
     <string name="date">Date</string>
     <string name="date_and_time">Date and time</string>
-    <string name="date_and_time_of_receipt">Date and Time of Receipt</string>
+    <string name="date_and_time_of_receipt">Booking date and time</string>
     <string name="default_address">default address</string>
     <string name="delete">Delete</string>
     <string name="delete_account">Delete Account</string>

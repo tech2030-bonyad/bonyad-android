@@ -9,6 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,6 +39,14 @@ class RatingsListViewModel(var catogaryFragment: RatingActivity) : BaseObservabl
     var ratingList: ArrayList<RatingDatum> = ArrayList()
     var context: RatingActivity = RatingActivity()
     var linearlayout: LinearLayoutManager? = null
+    var star5 = ObservableField<Int>(0)
+    var star4 = ObservableField<Int>(0)
+    var star3 = ObservableField<Int>(0)
+    var star2 = ObservableField<Int>(0)
+    var star1 = ObservableField<Int>(0)
+    var count = ObservableField<Int>(0)
+    var rate = ObservableField<String>("")
+
     private val ratingadapter = Ratingadapter()
     var page = 1
     private var mLoading = false
@@ -66,6 +75,13 @@ class RatingsListViewModel(var catogaryFragment: RatingActivity) : BaseObservabl
                     var data = response.body()
                     if (page == 1) {
                         ratingList.clear()
+                        star5.set(data?.star_ratings?.star5?.ratio ?: 0)
+                        star4.set(data?.star_ratings?.star4?.ratio ?: 0)
+                        star3.set(data?.star_ratings?.star3?.ratio ?: 0)
+                        star2.set(data?.star_ratings?.star2?.ratio ?: 0)
+                        star1.set(data?.star_ratings?.star1?.ratio ?: 0)
+                        count.set(data?.total_count ?: 0)
+                        rate.set(data?.average_rating ?: "")
                     }
                     ratingList.addAll(data?.data!!)
                     if (response.body()!!.data!!.size > 0) {

@@ -84,6 +84,7 @@ class RatingdialogViewModel(var catogaryFragment: RatingdialogFragment) : BaseOb
                 response: Response<ErrorResponse?>
             ) {
                 if (response.code() == 200 || response.code() == 201) {
+                    Dialogs.showToast(response.body()?.message ?: "" , activity)
                     context.dialogListener?.onDataReceived("rate")
                     context.dismiss()
 //                    Utilities.showSuccessDialog(activity, response.body()!!.message ?: "" ,"" ){

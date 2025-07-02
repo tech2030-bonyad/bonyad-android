@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/attach_a_picture"
-                android:textSize="8sp"
+                android:textSize="7sp"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/darkblue"
                 android:fontFamily="@font/cairoregular"/>

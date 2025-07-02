@@ -70,6 +70,15 @@ class TechnicalhomefragmentViewModel(context: TechnicalhomeFragment) : BaseObser
             override fun onResponse(call: Call<TechnicalHomeModel?>, response: Response<TechnicalHomeModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
+                    if ((data?.data?.new_reservations?.trend ?: "") == "low"){
+                        data?.data?.new_reservations?.trend = "l"
+                    }
+                    if ((data?.data?.total_reservations?.trend ?: "") == "low"){
+                        data?.data?.total_reservations?.trend = "l"
+                    }
+                    if ((data?.data?.completed_reservations?.trend ?: "") == "low"){
+                        data?.data?.completed_reservations?.trend = "l"
+                    }
                     homedata.set(data)
                     perviousList.clear()
                     newList.clear()

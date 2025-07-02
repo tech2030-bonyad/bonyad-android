@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
+import fudex.bonyad.Helper.Utilities
 import fudex.bonyad.NetWorkConnction.DialogListener
 import fudex.bonyad.R
 import fudex.bonyad.databinding.RatingViewModelBinding
@@ -32,9 +33,14 @@ class RatingdialogFragment : DialogFragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_ratingdialog, container, false)
         ratingdialogViewModel = RatingdialogViewModel(this@RatingdialogFragment)
         binding.model = ratingdialogViewModel
+        binding.main.setOnClickListener {
+            it.hideKeyboard()
+        }
         return binding.root
     }
-
+    fun View.hideKeyboard() {
+        Utilities.closeKeyboard(ratingdialogViewModel.activity)
+    }
     override fun onStart() {
         super.onStart()
         dialog?.let { dialog ->

@@ -1,8 +1,13 @@
 package fudex.bonyad.viewmodel
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.Build
 import android.util.Log
 import android.view.Gravity
+import androidx.core.content.ContextCompat
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -62,6 +67,18 @@ class ChatListViewModel(var catogaryFragment: ChatActivity) : BaseObservable() {
        scroll()
         if (activity.getString(R.string.lang) == "ar") {
             activity.binding.message.gravity = Gravity.RIGHT
+        }
+        val filter = IntentFilter("message_received")
+        filter.addCategory(Intent.CATEGORY_DEFAULT)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            activity.registerReceiver(activity.messageReceiver, filter, null, null, Context.RECEIVER_NOT_EXPORTED)
+        }else {
+            ContextCompat.registerReceiver(
+                activity,
+                activity.messageReceiver,
+                IntentFilter("message_received"),
+                ContextCompat.RECEIVER_NOT_EXPORTED
+            )
         }
        // swiptorefresh()
     }

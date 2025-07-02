@@ -151,50 +151,97 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         activity.onBackPressed()
     }
     fun editparofile(){
-        Utilities.disabletouch(activity)
-        isenable.set(false)
-        isloading.set(true)
-        val apiService: ApiInterface = RetrofitClient.getClient1(activity)!!.create(
-            ApiInterface::class.java)
-        var requestBody: RequestBody? = null
-        requestBody =  MultipartBody.Builder()
-            .setType(MultipartBody.FORM)
-            .addFormDataPart("name", nameObserv.get().toString())
-            .addFormDataPart("email", if (emailObserv.get() ?: "" == ""){null}else{emailObserv.get().toString()})
-            .build()
-        Log.e("name",nameObserv.get().toString())
-        val call: Call<ProfileModel?>? = apiService.editprofile(requestBody)
-        call?.enqueue(object : Callback<ProfileModel?> {
-            override fun onResponse(call: Call<ProfileModel?>, response: Response<ProfileModel?>) {
-                if (response.code() == 200 || response.code() == 201) {
-                    var data = LoginSession.getUserData1(activity)
-                    data.user == response.body()!!.data
-                    LoginSession.setUserData(activity, data)
-                    LoginSession.setdata(activity)
-                    back()
-                }else {
-                    val errorText = response.errorBody()?.string()
-                    Log.e("data",errorText!!)
-                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
-                    APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
-                        override fun onRefresh() {
-                            editparofile()
-                        }
-                    })
+        if (emailObserv.get() ?: "" == "") {
+            Utilities.disabletouch(activity)
+            isenable.set(false)
+            isloading.set(true)
+            val apiService: ApiInterface = RetrofitClient.getClient1(activity)!!.create(
+                ApiInterface::class.java)
+            var requestBody: RequestBody? = null
+            requestBody =  MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("name", nameObserv.get().toString())
+                .build()
+            Log.e("name",nameObserv.get().toString())
+            val call: Call<ProfileModel?>? = apiService.editprofile(requestBody)
+            call?.enqueue(object : Callback<ProfileModel?> {
+                override fun onResponse(call: Call<ProfileModel?>, response: Response<ProfileModel?>) {
+                    if (response.code() == 200 || response.code() == 201) {
+                        var data = LoginSession.getUserData1(activity)
+                        data.user == response.body()!!.data
+                        LoginSession.setUserData(activity, data)
+                        LoginSession.setdata(activity)
+                        back()
+                    }else {
+                        val errorText = response.errorBody()?.string()
+                        Log.e("data",errorText!!)
+                        val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                        APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                            override fun onRefresh() {
+                                editparofile()
+                            }
+                        })
+                    }
+                    isloading.set(false)
+                    isenable.set(true)
+                    Utilities.enabletouch(activity)
+
                 }
-                isloading.set(false)
-                isenable.set(true)
-                Utilities.enabletouch(activity)
 
-            }
+                override fun onFailure(call: Call<ProfileModel?>, t: Throwable) {
+                    Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                    isloading.set(false)
+                    isenable.set(true)
+                    Utilities.enabletouch(activity)
+                }
+            })
+        }else {
+            Utilities.disabletouch(activity)
+            isenable.set(false)
+            isloading.set(true)
+            val apiService: ApiInterface = RetrofitClient.getClient1(activity)!!.create(
+                ApiInterface::class.java)
+            var requestBody: RequestBody? = null
+            requestBody =  MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("name", nameObserv.get().toString())
+                .addFormDataPart("email", emailObserv.get().toString())
+                .build()
+            Log.e("name",nameObserv.get().toString())
+            val call: Call<ProfileModel?>? = apiService.editprofile(requestBody)
+            call?.enqueue(object : Callback<ProfileModel?> {
+                override fun onResponse(call: Call<ProfileModel?>, response: Response<ProfileModel?>) {
+                    if (response.code() == 200 || response.code() == 201) {
+                        var data = LoginSession.getUserData1(activity)
+                        data.user == response.body()!!.data
+                        LoginSession.setUserData(activity, data)
+                        LoginSession.setdata(activity)
+                        back()
+                    }else {
+                        val errorText = response.errorBody()?.string()
+                        Log.e("data",errorText!!)
+                        val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                        APIModel.handleFailure1(activity, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                            override fun onRefresh() {
+                                editparofile()
+                            }
+                        })
+                    }
+                    isloading.set(false)
+                    isenable.set(true)
+                    Utilities.enabletouch(activity)
 
-            override fun onFailure(call: Call<ProfileModel?>, t: Throwable) {
-                Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
-                isloading.set(false)
-                isenable.set(true)
-                Utilities.enabletouch(activity)
-            }
-        })
+                }
+
+                override fun onFailure(call: Call<ProfileModel?>, t: Throwable) {
+                    Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
+                    isloading.set(false)
+                    isenable.set(true)
+                    Utilities.enabletouch(activity)
+                }
+            })
+        }
+
     }
     fun editprofilewithimage(){
         Utilities.disabletouch(activity)

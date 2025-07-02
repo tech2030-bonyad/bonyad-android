@@ -24,6 +24,7 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 import fudex.bonyad.R;
 import fudex.bonyad.SharedPreferences.LoginSession;
+import fudex.bonyad.ui.Activity.ChatActivity;
 import fudex.bonyad.ui.Activity.NotificationsActivity;
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity;
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity;
