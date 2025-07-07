@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import fudex.bonyad.NetWorkConnction.DialogListener
 import fudex.bonyad.R
+import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.databinding.TechnicalappointmentdetailsviewModelBinding
 import fudex.bonyad.ui.Activity.BaseActivity
 import fudex.bonyad.viewmodel.technical.TechnicalappointmentdetailsViewModel
@@ -24,6 +25,9 @@ class TechnicaldetailsapointmentActivity : BaseActivity(),DialogListener {
     val messageReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             // Update the UI with the received data
+            if (LoginSession.gettype(this@TechnicaldetailsapointmentActivity) == 1){
+                return
+            }
             if (intent.getStringExtra("type")?.contains("reservation") == true && intent.getIntExtra("item_id",0) == technicalappointmentdetailsViewModel.detailsdata.get()!!.data?.id ?: 0) {
                 technicalappointmentdetailsViewModel.getappointmentsdetails()
             }

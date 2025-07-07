@@ -12,6 +12,8 @@ import fudex.bonyad.Model.NotDatum
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.ChatActivity
+import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
@@ -39,10 +41,18 @@ class NotViewModel : BaseObservable() {
                 var intent: Intent = Intent(context, DetailsappointmentActivity::class.java)
                 intent.putExtra("id",onservse.get()!!.item_id ?: 0)
                 context?.startActivity(intent)
+            }else if (onservse.get()!!.type == "send_message"){
+                var intent: Intent = Intent(context, ChatActivity::class.java)
+                intent.putExtra("id",onservse.get()!!.item_id ?: 0)
+                context?.startActivity(intent)
             }
         }else if (LoginSession.gettype(context!!) == 3) {
             if (onservse.get()!!.type?.contains("reservation") == true){
                 var intent: Intent = Intent(context, TechnicaldetailsapointmentActivity::class.java)
+                intent.putExtra("id",onservse.get()!!.item_id ?: 0)
+                context?.startActivity(intent)
+            }else if (onservse.get()!!.type == "send_message"){
+                var intent: Intent = Intent(context, ChatActivity::class.java)
                 intent.putExtra("id",onservse.get()!!.item_id ?: 0)
                 context?.startActivity(intent)
             }

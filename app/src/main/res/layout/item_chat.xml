@@ -16,7 +16,7 @@
         android:layout_marginBottom="16dp">
         <FrameLayout
             android:visibility="@{model.onservse.is_me() == true ? View.VISIBLE : View.GONE}"
-            android:layout_width="140dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_chatblue">
             <TextView
@@ -34,7 +34,7 @@
         <FrameLayout
             android:visibility="@{model.onservse.is_me() == true ? View.GONE : View.VISIBLE}"
             android:layout_gravity="end"
-            android:layout_width="140dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_chatdarkblue">
             <TextView

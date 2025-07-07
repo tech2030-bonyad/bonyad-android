@@ -199,7 +199,7 @@
                                 android:textColor="@color/blue"
                                 android:fontFamily="@font/cairosemibold"
                                 android:textSize="16sp"
-                                android:text="@string/date"
+                                android:text="@string/gregorian_date"
                                 />
                             <TextView
                                 android:layout_width="0dp"
@@ -212,6 +212,36 @@
                                 android:fontFamily="@font/cairobold"
                                 android:textSize="14sp"
                                 android:text="@{model.detailsdata.data.date_of_reservation}"
+                                android:textStyle="bold"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="26dp"
+                            android:layout_gravity="start"
+                            android:layout_marginEnd="26dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/cairosemibold"
+                                android:textSize="16sp"
+                                android:text="@string/hijri_date"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/darkblack2"
+                                android:fontFamily="@font/cairobold"
+                                android:textSize="14sp"
+                                android:text="@{model.higridate}"
                                 android:textStyle="bold"
                                 />
                         </LinearLayout>

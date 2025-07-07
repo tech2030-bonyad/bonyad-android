@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:text="@{model.onservse.body}"
+                android:text="@{model.onservse.title}"
                 android:fontFamily="@font/cairoregular"
                 tools:text="تم قبول طلب M-12345"/>
             <TextView

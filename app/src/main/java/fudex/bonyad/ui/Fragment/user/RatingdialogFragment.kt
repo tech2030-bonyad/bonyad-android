@@ -33,9 +33,6 @@ class RatingdialogFragment : DialogFragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_ratingdialog, container, false)
         ratingdialogViewModel = RatingdialogViewModel(this@RatingdialogFragment)
         binding.model = ratingdialogViewModel
-        binding.main.setOnClickListener {
-            it.hideKeyboard()
-        }
         return binding.root
     }
     fun View.hideKeyboard() {

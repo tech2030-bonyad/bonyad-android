@@ -62,8 +62,10 @@ class ChatListViewModel(var catogaryFragment: ChatActivity) : BaseObservable() {
         activity.binding.chatList.layoutManager = linearlayout
         activity.binding.chatList.adapter = chatadapter
         userId = activity.intent.getIntExtra("id",0)
-        img.set(activity.intent.getStringExtra("img"))
-        name.set(activity.intent.getStringExtra("name"))
+        if (activity.intent.hasExtra("img") == true) {
+            img.set(activity.intent.getStringExtra("img"))
+            name.set(activity.intent.getStringExtra("name"))
+        }
        scroll()
         if (activity.getString(R.string.lang) == "ar") {
             activity.binding.message.gravity = Gravity.RIGHT

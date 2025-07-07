@@ -12,9 +12,9 @@ import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.LinearLayoutManager
 import atiaf.redstone.NetWorkConnction.RetrofitClient
+import com.github.msarhan.ummalqura.calendar.UmmalquraCalendar
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
-import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AppointmentdetailsModel
@@ -26,13 +26,14 @@ import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
-import fudex.bonyad.ui.Fragment.technical.RefuseFragment
-import fudex.bonyad.ui.Fragment.user.CalenderdialogFragment
 import fudex.bonyad.ui.Fragment.user.RatingdialogFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
 import java.util.Locale
 
 
@@ -44,6 +45,7 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
     private var mLoading = false
     var detailsdata = ObservableField<AppointmentdetailsModel>()
     var img = ObservableField<String>("")
+    var higridate = ObservableField<String>("")
     var address = ObservableField<String>("")
     val services: ArrayList<StatesDatum> = ArrayList()
     private val servicesdetailsadapter = Servicesdetailsadapter()
@@ -85,10 +87,11 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
                     img.set(data?.data?.technician?.avatar ?: "")
-                    data?.data?.date = data?.data?.date_of_reservation!! + " " + data?.data?.start_time!!
+                    data?.data?.date1 = data?.data?.date_of_reservation!! + " " + data?.data?.start_time!!
                     detailsdata.set(data!!)
                     services.clear()
                     services.addAll(data?.data?.technician?.services!!)
+                    higridate.set(convertGregorianArabicToHijri(stringToDate(data?.data?.date ?: "")))
                     if (data?.data?.status?.value ?: 0 == 2){
                         context.binding.title.text =
                             context.getString(R.string.complete_reservation)
@@ -165,41 +168,7 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
             }
         })
     }
-    fun accept() {
-        isloading.set(true)
-        val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
-            ApiInterface::class.java
-        )
-        val call: Call<ErrorResponse?>? =
-            apiService.accepttechnicalappointment(context.intent.getIntExtra("id", 0))
-        call?.enqueue(object : Callback<ErrorResponse?> {
-            override fun onResponse(
-                call: Call<ErrorResponse?>,
-                response: Response<ErrorResponse?>
-            ) {
-                if (response.code() == 200 || response.code() == 201) {
-                   getappointmentdetails()
-                } else{
-                    val errorText = response.errorBody()?.string() ?: "{}"
-                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
-                    APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
-                        override fun onRefresh() {
-                            accept()
-                        }
-                    })
-                }
-                isvisble.set(true)
-                isloading.set(false)
-                notifyChange()
-            }
 
-            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
-                Dialogs.showToast(context.getString(R.string.check_your_connection), context)
-                isloading.set(false)
-
-            }
-        })
-    }
     fun completereservation() {
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
@@ -213,7 +182,9 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
                 response: Response<ErrorResponse?>
             ) {
                 if (response.code() == 200 || response.code() == 201) {
-                    getappointmentdetails()
+                    detailsdata.get()!!.data?.status?.value = 4
+                    notifyChange()
+                   // getappointmentdetails()
                 }else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -272,4 +243,24 @@ class DetailsappointmentViewModel(var catogaryFragment: DetailsappointmentActivi
         intent.putExtra("type","User")
         context?.startActivity(intent)
     }
+    fun convertGregorianArabicToHijri(gregorianDate: Date?): String {
+        // Format of input: السبت 10 يونيو
+        val locale = Locale(context.getString(R.string.lang))
+
+        // Convert to Hijri
+        val hijri = UmmalquraCalendar()
+        hijri.time = gregorianDate
+
+        val hijriDayName = SimpleDateFormat("EEEE", locale).format(gregorianDate)
+        val hijriDay = hijri.get(Calendar.DAY_OF_MONTH)
+        val hijriMonth = hijri.getDisplayName(Calendar.MONTH, Calendar.LONG, locale)
+        val hijriYear = hijri.get(Calendar.YEAR)
+
+        return "$hijriDayName $hijriDay $hijriMonth $hijriYear"
+    }
+    fun stringToDate(dateString: String): Date? {
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+        return sdf.parse(dateString)
+    }
+
 }

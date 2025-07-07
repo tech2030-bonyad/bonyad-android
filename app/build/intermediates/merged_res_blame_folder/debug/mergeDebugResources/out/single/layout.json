@@ -8,10 +8,6 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_locationmap.xml"
     },
     {
-        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalhome.xml",
-        "source": "fudex.bonyad.app-main-70:/layout/fragment_technicalhome.xml"
-    },
-    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/item_userappointment.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_userappointment.xml"
     },
@@ -24,12 +20,12 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_activeuser.xml"
     },
     {
-        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/activity_notifications.xml",
-        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_notifications.xml"
-    },
-    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/activity_addservice.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_addservice.xml"
+    },
+    {
+        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/activity_notifications.xml",
+        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_notifications.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/activity_technicaldetailsapointment.xml",
@@ -72,6 +68,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_forgetpass.xml"
     },
     {
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_rateing.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_rateing.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/activity_appointmentmanagectivity.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_appointmentmanagectivity.xml"
     },
@@ -90,6 +90,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalhome.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/fragment_technicalhome.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_nots.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_nots.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/item_onboarding.xml",
@@ -240,6 +244,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_editphone.xml"
     },
     {
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_technicaldetailsapointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_technicaldetailsapointment.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/item_special1.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_special1.xml"
     },
@@ -258,6 +266,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/item_address.xml",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_address.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_chat.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_chat.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_userappointment.xml",
