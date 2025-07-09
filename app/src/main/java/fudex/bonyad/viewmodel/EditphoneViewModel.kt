@@ -109,6 +109,8 @@ class EditphoneViewModel(activity: EditphoneActivity) : BaseObservable() {
         var type = ""
         if (LoginSession.gettype(activity) == 1){
             type = "user"
+        }else if (LoginSession.gettype(activity) == 2){
+            type = "merchant"
         }else if (LoginSession.gettype(activity) == 3){
             type = "technician"
         }

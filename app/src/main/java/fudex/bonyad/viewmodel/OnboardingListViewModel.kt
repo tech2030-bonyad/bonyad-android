@@ -39,6 +39,19 @@ class OnboardingListViewModel(var catogaryFragment: OnboardingActivity) : BaseOb
                 R.drawable.useronboard3 ,
                 activity.getString(R.string.ready_to_adopt_we_will_provide_you_with_everything_you_need) ,
                 activity.getString(R.string.browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button)))
+        }else if (LoginSession.gettype(activity) == 2) {
+            items.add(OnbaordModel(
+                R.drawable.useronboard1 ,
+                activity.getString(R.string.all_construction_needs_are_in_your_hands),
+                activity.getString(R.string.browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button)))
+            items.add(OnbaordModel(
+                R.drawable.useronboard2 ,
+                activity.getString(R.string.all_construction_needs_are_in_your_hands) ,
+                activity.getString(R.string.browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button)))
+            items.add(OnbaordModel(
+                R.drawable.useronboard3 ,
+                activity.getString(R.string.ready_to_adopt_we_will_provide_you_with_everything_you_need) ,
+                activity.getString(R.string.browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button)))
         }else if (LoginSession.gettype(activity) == 3) {
             items.add(OnbaordModel(
                 R.drawable.technicalonboard1 ,
