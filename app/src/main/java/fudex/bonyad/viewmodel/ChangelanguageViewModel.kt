@@ -18,6 +18,7 @@ import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.ChangelangueActivity
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import retrofit2.Call
@@ -54,6 +55,12 @@ class ChangelanguageViewModel(var catogaryFragment: ChangelangueActivity) : Base
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.finish()
             context.startActivity(intent)
+           }else if (LoginSession.gettype(context) == 2){
+               val intent = Intent(context, MerchanthomeActivity::class.java)
+                   .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                   .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+               context.finish()
+               context.startActivity(intent)
            }else if (LoginSession.gettype(context) == 3){
             val intent = Intent(context, TechnicalHomeActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
@@ -71,6 +78,12 @@ class ChangelanguageViewModel(var catogaryFragment: ChangelangueActivity) : Base
         AppLocale.desiredLocale = Locale("ar")
         if (LoginSession.gettype(context) == 1){
             val intent = Intent(context, UserhomeActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.finish()
+            context.startActivity(intent)
+        }else if (LoginSession.gettype(context) == 2){
+            val intent = Intent(context, MerchanthomeActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.finish()

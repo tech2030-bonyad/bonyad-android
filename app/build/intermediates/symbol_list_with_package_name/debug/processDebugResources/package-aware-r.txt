@@ -3150,6 +3150,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_myproduct
 drawable ic_neworder
 drawable ic_not
 drawable ic_notification_bing
@@ -3169,15 +3170,19 @@ drawable ic_search22
 drawable ic_send333
 drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
+drawable ic_statistics
+drawable ic_store
 drawable ic_suitcase
 drawable ic_tabler_user_question
 drawable ic_toggle
 drawable ic_toggle2
 drawable ic_totalorder
+drawable ic_tradename
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
 drawable ic_wadget
+drawable ic_wallet223
 drawable ic_whats
 drawable ic_widget
 drawable ic_widget2
@@ -4069,6 +4074,8 @@ id top
 id topPanel
 id top_to_bottom
 id touch_outside
+id tradedes
+id tradename
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
@@ -4249,10 +4256,13 @@ layout activity_detailsspeciallist
 layout activity_editpass
 layout activity_editphone
 layout activity_edittechnicaldata
+layout activity_edittrade
 layout activity_edituserdata
 layout activity_forgetpass
 layout activity_locationmap
 layout activity_login
+layout activity_merchanthome
+layout activity_merchantregister
 layout activity_myservices
 layout activity_notifications
 layout activity_onboarding
@@ -4310,6 +4320,9 @@ layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
+layout fragment_merchanthome
+layout fragment_merchantorders
+layout fragment_merchantprofile
 layout fragment_ratingdialog
 layout fragment_refuse
 layout fragment_refuse1
@@ -4498,6 +4511,8 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
+string business_activity_logo
+string business_description
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -4519,6 +4534,7 @@ string city
 string clear
 string clear_text_end_icon_content_description
 string com_crashlytics_android_build_id
+string commercial_name
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -4791,6 +4807,8 @@ string mtrl_timepicker_confirm
 string must_male_rate
 string my_appointments
 string my_data
+string my_personal_data
+string my_products
 string my_services
 string my_subscriptions
 string name
@@ -4862,7 +4880,9 @@ string show_on_map
 string skip
 string specialists
 string specialty
+string statistics
 string status_bar_notification_info_overflow
+string store_settings
 string street
 string street_name
 string subregion

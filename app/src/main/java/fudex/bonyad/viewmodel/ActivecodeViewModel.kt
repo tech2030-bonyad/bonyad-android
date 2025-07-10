@@ -30,6 +30,7 @@ import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
 
 import retrofit2.Call
 import retrofit2.Callback
@@ -224,6 +225,15 @@ class ActivecodeViewModel(activity: ActiveuserActivity) : BaseObservable() {
                                 LoginSession.setUserData(activity, data)
                                 LoginSession.setdata(activity)
                                 var intent: Intent = Intent(activity, UserhomeActivity::class.java)
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                                activity.startActivity(intent)
+                                activity.finish()
+                            }else if (LoginSession.gettype(activity) == 2){
+                                var data = LoginSession.getUserData1(activity)
+                                data.user == response.body()!!.data
+                                LoginSession.setUserData(activity, data)
+                                LoginSession.setdata(activity)
+                                var intent: Intent = Intent(activity, MerchanthomeActivity::class.java)
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                 activity.startActivity(intent)
                                 activity.finish()

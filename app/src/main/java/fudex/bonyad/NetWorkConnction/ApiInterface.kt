@@ -157,6 +157,24 @@ interface ApiInterface {
         ): Call<LoginData?>?
 
     @Multipart
+    @POST("register")
+    fun merchantregister(
+        @Part imageFile: MultipartBody.Part,
+        @Part("type") type: RequestBody,
+        @Part("name") name: RequestBody,
+        @Part("phone") mobile: RequestBody,
+        @Part("email") email: RequestBody?,
+        @Part("address") address: RequestBody,
+        @Part("trade_name") trade_name: RequestBody,
+        @Part("password") password: RequestBody,
+        @Part("password_confirmation") password_confirmation: RequestBody,
+        @Part("fcm_token") fcm_token: RequestBody,
+        @Part("firebase_token_type") device_type: RequestBody,
+        @Part("remember_me") device_id: RequestBody,
+        @Part("description_of_business_activity") description: RequestBody,
+    ): Call<LoginData?>?
+
+    @Multipart
     @POST("client/register")
     fun registersocail(
         @Part("name") name: RequestBody,
@@ -195,7 +213,7 @@ interface ApiInterface {
 
     @Headers("Accept: application/json")
     @POST("edit-user")
-    fun editprofile(@Body requestBody: RequestBody): Call<ProfileModel?>?
+    fun editprofile(@Body requestBody: RequestBody?): Call<ProfileModel?>?
 
     @POST("verify-new-phone")
     fun editphone1(@Body requestBody: Userdata): Call<ProfileModel?>?
@@ -205,7 +223,10 @@ interface ApiInterface {
     fun editprofilewithimage(
         @Part imageFile: MultipartBody.Part,
         @Part("name") name: RequestBody,
-        @Part("email") email: RequestBody?
+        @Part("email") email: RequestBody?,
+        @Part("address") address: RequestBody?,
+        @Part("trade_name") tradename: RequestBody?,
+        @Part("description_of_business_activity") des: RequestBody?
     ): Call<ProfileModel?>?
 
     @Multipart

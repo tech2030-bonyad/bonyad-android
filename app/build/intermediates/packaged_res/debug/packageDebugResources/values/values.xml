@@ -53,6 +53,8 @@
     <string name="bio">Overview of Services</string>
     <string name="booking_date_and_time">Booking date and time:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">Browse thousands of products, from cement and tools to paints and decor, and choose what suits your project with the click of a button!</string>
+    <string name="business_activity_logo">Business Activity Logo</string>
+    <string name="business_description">Business Description</string>
     <string name="camera">Camera</string>
     <string name="cancel">Cancel</string>
     <string name="cancel_subscription">Cancel subscription</string>
@@ -63,6 +65,7 @@
     <string name="city">City</string>
     <string name="clear">Clear</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="commercial_name">Commercial name</string>
     <string name="complete_reservation">Complete reservation</string>
     <string name="completed_appointments">Completed appointments</string>
     <string name="completed_requests">Completed requests</string>
@@ -141,6 +144,8 @@
     <string name="must_male_rate">must make rate</string>
     <string name="my_appointments">Appointments</string>
     <string name="my_data">My data</string>
+    <string name="my_personal_data">My personal data</string>
+    <string name="my_products">My products</string>
     <string name="my_services">My services</string>
     <string name="my_subscriptions">My subscriptions</string>
     <string name="name">Name</string>
@@ -200,6 +205,8 @@
     <string name="skip">Skip</string>
     <string name="specialists">Specialists</string>
     <string name="specialty">Specialty</string>
+    <string name="statistics">Statistics</string>
+    <string name="store_settings">Store Settings</string>
     <string name="street">Street</string>
     <string name="street_name">Street name</string>
     <string name="subregion">Subregion</string>

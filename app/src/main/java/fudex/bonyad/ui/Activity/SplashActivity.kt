@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 
@@ -24,6 +25,10 @@ class SplashActivity : BaseActivity() {
                     if (LoginSession.isLogin){
                         if (LoginSession.gettype(this@SplashActivity) == 1){
                             var intent: Intent = Intent(this@SplashActivity, UserhomeActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }else  if (LoginSession.gettype(this@SplashActivity) == 2){
+                            var intent: Intent = Intent(this@SplashActivity, MerchanthomeActivity::class.java)
                             startActivity(intent)
                             finish()
                         }else if (LoginSession.gettype(this@SplashActivity) == 3){

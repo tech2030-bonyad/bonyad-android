@@ -152,6 +152,9 @@ class ProfileViewModel(var catogaryFragment: ProfileActivity) : BaseObservable()
         if (LoginSession.gettype(context) == 1){
             var intent: Intent = Intent(context, EdituserdataActivity::class.java)
             context.startActivity(intent)
+        }else if (LoginSession.gettype(context) == 2){
+            var intent: Intent = Intent(context, EdituserdataActivity::class.java)
+            context.startActivity(intent)
         }else if (LoginSession.gettype(context) == 3){
             var intent: Intent = Intent(context, EdittechnicaldataActivity::class.java)
             context.startActivity(intent)

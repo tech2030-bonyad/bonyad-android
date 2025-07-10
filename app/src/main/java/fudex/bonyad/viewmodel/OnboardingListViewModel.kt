@@ -10,6 +10,7 @@ import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.LoginActivity
 import fudex.bonyad.ui.Activity.OnboardingActivity
 import fudex.bonyad.ui.Activity.SplashActivity
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
@@ -85,6 +86,10 @@ class OnboardingListViewModel(var catogaryFragment: OnboardingActivity) : BaseOb
                     var intent: Intent = Intent(activity, UserhomeActivity::class.java)
                     activity.startActivity(intent)
                     activity.finish()
+                }else if (LoginSession.gettype(activity) == 2){
+                    var intent: Intent = Intent(activity, MerchanthomeActivity::class.java)
+                    activity.startActivity(intent)
+                    activity.finish()
                 }else if (LoginSession.gettype(activity) == 3){
                     var intent: Intent = Intent(activity, TechnicalHomeActivity::class.java)
                     activity.startActivity(intent)
@@ -105,6 +110,10 @@ class OnboardingListViewModel(var catogaryFragment: OnboardingActivity) : BaseOb
         if (LoginSession.isLogin){
             if (LoginSession.gettype(activity) == 1){
                 var intent: Intent = Intent(activity, UserhomeActivity::class.java)
+                activity.startActivity(intent)
+                activity.finish()
+            }else if (LoginSession.gettype(activity) == 2){
+                var intent: Intent = Intent(activity, MerchanthomeActivity::class.java)
                 activity.startActivity(intent)
                 activity.finish()
             }else if (LoginSession.gettype(activity) == 3){

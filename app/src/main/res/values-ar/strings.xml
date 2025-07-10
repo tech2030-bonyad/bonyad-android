@@ -203,4 +203,11 @@
     <string name="gregorian_date">تاريخ ميلادي</string>
     <string name="hijri_date">تاريخ هجري</string>
     <string name="ratings">التقيمات</string>
+    <string name="commercial_name">الاسم التجاري</string>
+    <string name="business_description">وصف النشاط التجاري</string>
+    <string name="business_activity_logo">شعار النشاط التجاري</string>
+    <string name="my_products">منتجاتي</string>
+    <string name="my_personal_data">بياناتي الشخصية</string>
+    <string name="store_settings">إعدادات المتجر</string>
+    <string name="statistics">الاحصائيات</string>
 </resources>

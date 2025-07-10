@@ -205,4 +205,11 @@
     <string name="gregorian_date">Gregorian date</string>
     <string name="hijri_date">Hijri date</string>
     <string name="ratings">Ratings</string>
+    <string name="commercial_name">Commercial name</string>
+    <string name="business_description">Business Description</string>
+    <string name="business_activity_logo">Business Activity Logo</string>
+    <string name="my_products">My products</string>
+    <string name="my_personal_data">My personal data</string>
+    <string name="store_settings">Store Settings</string>
+    <string name="statistics">Statistics</string>
 </resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.Activity.user.UserhomeActivity">
+    <data class="MerchanthomeviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.merchant.MerchanthomeViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background1">
+        <FrameLayout
+            android:id="@+id/fram"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="horizontal"
+            android:background="@drawable/ic_rectanglehome"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+                <FrameLayout
+                    android:onClick="@{ () -> model.home() }"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@{model.type == 0 ? @drawable/ic_home : @drawable/ic_home1}"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home"
+                            android:layout_marginTop="4dp"
+                            android:textSize="12sp"
+                            android:textColor="@{model.type == 0 ? @color/lightblue1 : @color/lightblue}"
+                            android:fontFamily="@font/cairobold"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <FrameLayout
+                    android:onClick="@{ () -> model.orders() }"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@{model.type == 2 ? @drawable/ic_archive_book : @drawable/ic_archive_book1}" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/orders"
+                            android:layout_marginTop="4dp"
+                            android:textSize="12sp"
+                            android:textColor="@{model.type == 2 ? @color/lightblue1 : @color/lightblue}"
+                            android:fontFamily="@font/cairobold"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <FrameLayout
+                    android:onClick="@{ () -> model.proofile() }"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@{model.type == 1 ? @drawable/ic_calendar_tick : @drawable/ic_calendar_tick1}" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile"
+                            android:layout_marginTop="4dp"
+                            android:textSize="12sp"
+                            android:textColor="@{model.type == 1 ? @color/lightblue1 : @color/lightblue}"
+                            android:fontFamily="@font/cairobold"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:onClick="@{ () -> model.proofile() }"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@{model.type == 3 ? @drawable/ic_profile : @drawable/ic_profile1}" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile"
+                            android:layout_marginTop="4dp"
+                            android:textSize="12sp"
+                            android:textColor="@{model.type == 3 ? @color/lightblue1 : @color/lightblue}"
+                            android:fontFamily="@font/cairobold"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

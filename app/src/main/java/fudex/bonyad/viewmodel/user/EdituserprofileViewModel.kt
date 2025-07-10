@@ -158,10 +158,20 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
             val apiService: ApiInterface = RetrofitClient.getClient1(activity)!!.create(
                 ApiInterface::class.java)
             var requestBody: RequestBody? = null
-            requestBody =  MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart("name", nameObserv.get().toString())
-                .build()
+            if (LoginSession.gettype(activity) == 1){
+                requestBody =  MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("name", nameObserv.get().toString())
+                    .build()
+            }else if (LoginSession.gettype(activity) == 2){
+                requestBody =  MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("name", nameObserv.get().toString())
+                    .addFormDataPart("address", userdata.get()?.data?.address ?: "")
+                    .addFormDataPart("trade_name", userdata.get()?.data?.trade_name ?: "")
+                    .addFormDataPart("description_of_business_activity", userdata.get()?.data?.description_of_business_activity ?: "")
+                    .build()
+            }
             Log.e("name",nameObserv.get().toString())
             val call: Call<ProfileModel?>? = apiService.editprofile(requestBody)
             call?.enqueue(object : Callback<ProfileModel?> {
@@ -202,11 +212,22 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
             val apiService: ApiInterface = RetrofitClient.getClient1(activity)!!.create(
                 ApiInterface::class.java)
             var requestBody: RequestBody? = null
-            requestBody =  MultipartBody.Builder()
-                .setType(MultipartBody.FORM)
-                .addFormDataPart("name", nameObserv.get().toString())
-                .addFormDataPart("email", emailObserv.get().toString())
-                .build()
+            if (LoginSession.gettype(activity) == 1){
+                requestBody =  MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("name", nameObserv.get().toString())
+                    .addFormDataPart("email", emailObserv.get().toString())
+                    .build()
+            }else if (LoginSession.gettype(activity) == 2){
+                requestBody =  MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("name", nameObserv.get().toString())
+                    .addFormDataPart("address", userdata.get()?.data?.address ?: "")
+                    .addFormDataPart("trade_name", userdata.get()?.data?.trade_name ?: "")
+                    .addFormDataPart("email", emailObserv.get().toString())
+                    .addFormDataPart("description_of_business_activity", userdata.get()?.data?.description_of_business_activity ?: "")
+                    .build()
+            }
             Log.e("name",nameObserv.get().toString())
             val call: Call<ProfileModel?>? = apiService.editprofile(requestBody)
             call?.enqueue(object : Callback<ProfileModel?> {
@@ -263,8 +284,11 @@ class EdituserprofileViewModel(activity: EdituserdataActivity) : BaseObservable(
         val imageBody = MultipartBody.Part.createFormData("avatar", imageFile!!.name, requestFile)
         val name = RequestBody.create(MediaType.parse("text/plain"), nameObserv.get())
         val email = RequestBody.create(MediaType.parse("text/plain"), emailObserv.get())
+        val adress = RequestBody.create(MediaType.parse("text/plain"), userdata.get()?.data?.address ?: "")
+        val tradename = RequestBody.create(MediaType.parse("text/plain"), userdata.get()?.data?.trade_name ?: "")
+        val des = RequestBody.create(MediaType.parse("text/plain"), userdata.get()?.data?.description_of_business_activity ?: "")
 
-        val call: Call<ProfileModel?>? = apiService.editprofilewithimage(imageBody,name,if (emailObserv.get() ?: "" == ""){null}else{email})
+        val call: Call<ProfileModel?>? = apiService.editprofilewithimage(imageBody,name,if (emailObserv.get() ?: "" == ""){null}else{email}, if (LoginSession.gettype(activity) == 1){null}else{adress}, if (LoginSession.gettype(activity) == 1){null}else{tradename}, if (LoginSession.gettype(activity) == 1){null}else{des})
         call?.enqueue(object : Callback<ProfileModel?> {
             override fun onResponse(call: Call<ProfileModel?>, response: Response<ProfileModel?>) {
                 if (response.code() == 200 || response.code() == 201) {

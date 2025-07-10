@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.WindowManager;
 import fudex.bonyad.R;
 import fudex.bonyad.SharedPreferences.LoginSession;
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity;
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity;
 import fudex.bonyad.ui.Activity.user.UserhomeActivity;
 

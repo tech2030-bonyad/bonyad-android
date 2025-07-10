@@ -30,6 +30,8 @@ import fudex.bonyad.ui.Activity.ActiveuserActivity
 import fudex.bonyad.ui.Activity.ForgetpassActivity
 import fudex.bonyad.ui.Activity.LoginActivity
 import fudex.bonyad.ui.Activity.SplashActivity
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
+import fudex.bonyad.ui.Activity.merchant.MerchantregisterActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
@@ -145,6 +147,11 @@ class LoginViewModel(activity: LoginActivity) : BaseObservable() {
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         activity.startActivity(intent)
                         activity.finish()
+                    }else if (LoginSession.gettype(activity) == 2) {
+                        var intent: Intent = Intent(activity, MerchanthomeActivity::class.java)
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        activity.startActivity(intent)
+                        activity.finish()
                     }else if (LoginSession.gettype(activity) == 3) {
                         var intent: Intent = Intent(activity, TechnicalHomeActivity::class.java)
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
@@ -190,6 +197,9 @@ class LoginViewModel(activity: LoginActivity) : BaseObservable() {
     fun registerpass(){
         if (LoginSession.gettype(activity) == 1){
             var intent: Intent = Intent(activity, UserregisterActivity::class.java)
+            activity.startActivity(intent)
+        }else if (LoginSession.gettype(activity) == 2){
+            var intent: Intent = Intent(activity, MerchantregisterActivity::class.java)
             activity.startActivity(intent)
         }else  if (LoginSession.gettype(activity) == 3){
             var intent: Intent = Intent(activity, TechnicalregisterActivity::class.java)

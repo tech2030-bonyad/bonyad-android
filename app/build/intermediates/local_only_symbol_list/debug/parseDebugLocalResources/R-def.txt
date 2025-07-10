@@ -90,6 +90,7 @@ drawable ic_mdi_eye_off_outline
 drawable ic_mdi_light_information
 drawable ic_menu
 drawable ic_messages
+drawable ic_myproduct
 drawable ic_neworder
 drawable ic_not
 drawable ic_notification_bing
@@ -107,15 +108,19 @@ drawable ic_search22
 drawable ic_send333
 drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
+drawable ic_statistics
+drawable ic_store
 drawable ic_suitcase
 drawable ic_tabler_user_question
 drawable ic_toggle
 drawable ic_toggle2
 drawable ic_totalorder
+drawable ic_tradename
 drawable ic_twitter
 drawable ic_user
 drawable ic_user_remove
 drawable ic_wadget
+drawable ic_wallet223
 drawable ic_whats
 drawable ic_widget
 drawable ic_widget2
@@ -214,6 +219,8 @@ id specialList
 id swip
 id timeList
 id title
+id tradedes
+id tradename
 id webView
 id workerMap
 id zoneLin
@@ -230,10 +237,13 @@ layout activity_detailsspeciallist
 layout activity_editpass
 layout activity_editphone
 layout activity_edittechnicaldata
+layout activity_edittrade
 layout activity_edituserdata
 layout activity_forgetpass
 layout activity_locationmap
 layout activity_login
+layout activity_merchanthome
+layout activity_merchantregister
 layout activity_myservices
 layout activity_notifications
 layout activity_onboarding
@@ -256,6 +266,9 @@ layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterspecial
+layout fragment_merchanthome
+layout fragment_merchantorders
+layout fragment_merchantprofile
 layout fragment_ratingdialog
 layout fragment_refuse
 layout fragment_refuse1
@@ -323,6 +336,8 @@ string bank_account
 string bio
 string booking_date_and_time
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
+string business_activity_logo
+string business_description
 string camera
 string cancel
 string cancel_subscription
@@ -333,6 +348,7 @@ string check_your_connection
 string city
 string clear
 string com.crashlytics.android.build_id
+string commercial_name
 string complete_reservation
 string completed_appointments
 string completed_requests
@@ -411,6 +427,8 @@ string more
 string must_male_rate
 string my_appointments
 string my_data
+string my_personal_data
+string my_products
 string my_services
 string my_subscriptions
 string name
@@ -470,6 +488,8 @@ string show_on_map
 string skip
 string specialists
 string specialty
+string statistics
+string store_settings
 string street
 string street_name
 string subregion

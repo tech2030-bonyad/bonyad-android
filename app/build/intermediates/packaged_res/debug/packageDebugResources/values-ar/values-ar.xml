@@ -29,6 +29,8 @@
     <string name="bio">نبذة عن الخدمات</string>
     <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
+    <string name="business_activity_logo">شعار النشاط التجاري</string>
+    <string name="business_description">وصف النشاط التجاري</string>
     <string name="camera">كاميرا</string>
     <string name="cancel">إلغاء</string>
     <string name="cancel_subscription">الغاء الأشتراك</string>
@@ -38,6 +40,7 @@
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
     <string name="city">المدينة</string>
     <string name="clear">مسح</string>
+    <string name="commercial_name">الاسم التجاري</string>
     <string name="complete_reservation">إتمام الحجز</string>
     <string name="completed_appointments">المواعيد المكتمله</string>
     <string name="completed_requests">الطلبات المكتمله</string>
@@ -110,6 +113,8 @@
     <string name="must_male_rate">لا بد من اضافه تقييم</string>
     <string name="my_appointments">مواعيدي</string>
     <string name="my_data">بياناتى</string>
+    <string name="my_personal_data">بياناتي الشخصية</string>
+    <string name="my_products">منتجاتي</string>
     <string name="my_services">خدماتي</string>
     <string name="my_subscriptions">اشتراكاتي</string>
     <string name="name">الاسم</string>
@@ -168,6 +173,8 @@
     <string name="skip">تخطي</string>
     <string name="specialists">المتخصصين</string>
     <string name="specialty">التخصص</string>
+    <string name="statistics">الاحصائيات</string>
+    <string name="store_settings">إعدادات المتجر</string>
     <string name="street">الشارع</string>
     <string name="street_name">اسم الشارع</string>
     <string name="subregion">المنطقة الفرعية</string>
