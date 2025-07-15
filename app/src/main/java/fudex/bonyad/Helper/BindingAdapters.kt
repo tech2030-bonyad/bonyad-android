@@ -30,6 +30,7 @@ import fudex.bonyad.Model.NotDatum
 import fudex.bonyad.Model.OnbaordModel
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.PlanData
+import fudex.bonyad.Model.ProductsDatum
 import fudex.bonyad.Model.RatingDatum
 import fudex.bonyad.Model.StatesDatum
 
@@ -44,6 +45,8 @@ import fudex.bonyad.ui.Adapter.Chatadapter
 import fudex.bonyad.ui.Adapter.Notsadapter
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
 import fudex.bonyad.ui.Adapter.Ratingadapter
+import fudex.bonyad.ui.Adapter.merchant.Imagesadapter
+import fudex.bonyad.ui.Adapter.merchant.Myproductsadapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
@@ -477,26 +480,26 @@ object BindingAdapters {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }
     }
-//    @BindingAdapter("bind:servicesbook", "bind:fragment")
-//    @JvmStatic
-//    fun setservicesbook(recyclerView: RecyclerView, movies: ArrayList<Service>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicesbookingadapter) {
-//            (adapter as Servicesbookingadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
-//    @BindingAdapter("bind:servicesslots", "bind:fragment")
-//    @JvmStatic
-//    fun setservicesslots(recyclerView: RecyclerView, movies: ArrayList<SlotsDatum>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Servicesslotsadapter) {
-//            (adapter as Servicesslotsadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:myproducts", "bind:fragment")
+    @JvmStatic
+    fun setmyproducts(recyclerView: RecyclerView, movies: ArrayList<ProductsDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Myproductsadapter) {
+            (adapter as Myproductsadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+    @BindingAdapter("bind:imagesmerchant", "bind:fragment")
+    @JvmStatic
+    fun setimagesmerchant(recyclerView: RecyclerView, movies: ArrayList<Certificate>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Imagesadapter) {
+            (adapter as Imagesadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //    @BindingAdapter("bind:slots", "bind:fragment" , "bind:bind")
 //    @JvmStatic
 //    fun setlots(recyclerView: RecyclerView, movies: ArrayList<Slot>, fragment: Activity , bind : ServicesslotsViewModelBinding) {

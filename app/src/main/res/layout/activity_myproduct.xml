@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/tools"
+    tools:context=".ui.Activity.merchant.MyproductActivity">
+    <data class="MyproductlistviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.merchant.MyproductsViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:onClick="@{ () -> model.back() }"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:rotationY="180"
+                android:layout_marginStart="26dp"
+                android:layout_gravity="center|start"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/my_products"
+                android:fontFamily="@font/cairobold"
+                android:textColor="@color/darkblue"/>
+            <ImageView
+                android:onClick="@{ () -> model.addproduct() }"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_addcircle2"
+                android:rotationY="180"
+                android:layout_marginEnd="26dp"
+                android:layout_gravity="center|end"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rec_lightblue1">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_search22"
+                android:layout_gravity="center"
+                android:rotationY="180"
+                android:layout_marginStart="12dp"/>
+            <EditText
+                android:id="@+id/searchTxt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/search_for_a_product"
+                android:textSize="14sp"
+                android:textColor="@color/darkblue"
+                android:textColorHint="@color/darkblue"
+                android:paddingBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="start|center"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/cairoregular"
+                android:backgroundTint="@android:color/transparent"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_filter"
+                android:layout_marginEnd="15dp"
+                android:rotationY="180"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1">
+           <com.todkars.shimmer.ShimmerRecyclerView
+               android:id="@+id/productList"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginEnd="4dp"
+               android:layout_marginTop="16dp"
+               bind:shimmer_recycler_layout="@layout/item_product"
+               bind:shimmer_recycler_item_count="5"
+               bind:myproducts="@{model.productsList}"
+               bind:fragment="@{model.context}"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               tools:listitem="@layout/item_product"
+               />
+           <ProgressBar
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:indeterminateTintMode="src_atop"
+               android:indeterminateTint="@color/lightblue"
+               android:visibility="@{model.isloading &amp;&amp; model.productsList.size() > 0 ? View.VISIBLE : View.GONE}"
+               android:layout_gravity="center"/>
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="wrap_content"
+               android:layout_gravity="center"
+               android:visibility="@{model.isloading || model.productsList.size() > 0 ? View.GONE : View.VISIBLE}"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:background="@drawable/bonyad_logo_08_1"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/darkblack"
+                   android:textSize="16sp"
+                   android:text="@string/there_are_no_products_available"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="15dp"
+                   tools:text = "No result"/>
+           </LinearLayout>
+       </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,80 @@
+package fudex.bonyad.ui.Activity.merchant
+
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Bundle
+import android.os.StrictMode
+import android.provider.Settings
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
+import fudex.bonyad.Helper.Camera
+import fudex.bonyad.R
+import fudex.bonyad.databinding.AddproductviewModelBinding
+import fudex.bonyad.ui.Activity.BaseActivity
+import fudex.bonyad.ui.Activity.merchant.EdittradeActivity
+import fudex.bonyad.ui.Activity.technical.EdittechnicaldataActivity
+import fudex.bonyad.viewmodel.merchant.AddproductViewModel
+
+class AddproductActivity : BaseActivity() {
+    lateinit var addproductViewModel: AddproductViewModel
+    lateinit var binding : AddproductviewModelBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_addproduct)
+        addproductViewModel = AddproductViewModel(this@AddproductActivity)
+        binding.model = addproductViewModel
+        binding.main.setOnClickListener {
+            it.hideKeyboard()
+        }
+        val builder = StrictMode.VmPolicy.Builder()
+        StrictMode.setVmPolicy(builder.build())
+    }
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(
+                        this@AddproductActivity,
+                        Manifest.permission.CAMERA
+                    )
+                ) {
+                    val intent = Intent()
+                    intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                    val uri: Uri = Uri.fromParts(
+                        "package", getPackageName(),
+                        null
+                    )
+                    intent.data = uri
+                    startActivity(intent)
+                }else {
+                    val permissionCheck = ContextCompat.checkSelfPermission(
+                        this,
+                        Manifest.permission.CAMERA
+                    )
+                    if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+                        addproductViewModel.cameraOperation()
+                    } else {
+                        ActivityCompat.requestPermissions(
+                            this,
+                            arrayOf(Manifest.permission.CAMERA),
+                            2
+                        )
+                    }
+                }
+            } else {
+            }
+        }else if (requestCode == 2) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Camera.cameraOperation()
+            } else {
+            }
+        }
+    }
+}

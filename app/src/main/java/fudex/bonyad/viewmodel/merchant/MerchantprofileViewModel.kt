@@ -35,7 +35,9 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.EdittradeActivity
+import fudex.bonyad.ui.Activity.merchant.MyproductActivity
 import fudex.bonyad.ui.Activity.technical.Appointmentmanagectivity
 import fudex.bonyad.ui.Activity.technical.MyservicesActivity
 import fudex.bonyad.ui.Activity.technical.SubscriptionsActivity
@@ -58,16 +60,8 @@ class MerchantprofileViewModel(var catogaryFragment: MerchantprofileFragment) : 
         activity = context.requireActivity()
         islogin.set(LoginSession.isLogin)
     }
-    fun myservice(){
-        var intent: Intent = Intent(activity, MyservicesActivity::class.java)
-        activity.startActivity(intent)
-    }
-    fun subsribe(){
-        var intent: Intent = Intent(activity, SubscriptionsActivity::class.java)
-        activity.startActivity(intent)
-    }
-    fun appointmentmanage(){
-        var intent: Intent = Intent(activity, Appointmentmanagectivity::class.java)
+    fun products(){
+        var intent: Intent = Intent(activity, MyproductActivity::class.java)
         activity.startActivity(intent)
     }
     fun about(){

@@ -6,6 +6,7 @@
     <string name="add">اضافة</string>
     <string name="add_a_new_address">اضافة عنوان جديد</string>
     <string name="add_a_new_appointment">إضافة موعد جديد</string>
+    <string name="add_a_new_product">إضافة منتج جديد</string>
     <string name="add_a_service">اضافة خدمة</string>
     <string name="add_address">اضافه عنوان</string>
     <string name="added_before">تاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
@@ -20,6 +21,7 @@
     <string name="arabic">العربية</string>
     <string name="are_you_sure_to_log_out_of_the_app">هل أنت متأكد من تسجيل الخروج من التطبيق؟</string>
     <string name="are_you_sure_you_want_to_cancel_subscription">هل انت متأكد من رغبتك ف الغاء الأشتراك ؟</string>
+    <string name="are_you_sure_you_want_to_delete_product">هل أنت متأكد من حذف المنتج؟</string>
     <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
     <string name="area">المنطقة</string>
     <string name="attach_a_picture">إرفاق صورة</string>
@@ -59,7 +61,9 @@
     <string name="default_address">العنوان الافتراضي</string>
     <string name="delete">حذف</string>
     <string name="delete_account">حذف الحساب</string>
+    <string name="delete_product">حذف منتج</string>
     <string name="delete_the_service">حذف الخدمة</string>
+    <string name="department">القسم</string>
     <string name="departments">الاقسام</string>
     <string name="description">الوصف</string>
     <string name="description1">وصف</string>
@@ -67,6 +71,8 @@
     <string name="details1">تفاصيل</string>
     <string name="don_t_have_an_account">ليس لديك حساب؟</string>
     <string name="done">تم</string>
+    <string name="edit">تعديل</string>
+    <string name="edit_product">تعديل منتج</string>
     <string name="edit_profile_data">تعديل بيانات الملف الشخصي</string>
     <string name="edit_service">تعديل الخدمة</string>
     <string name="email">البريد الإلكترونى</string>
@@ -132,6 +138,7 @@
     <string name="payment_failer">فشل الدفع</string>
     <string name="pending_requests">الطلبات المعلقة</string>
     <string name="please_activate_permission">الرجاء تفعيل الإذن</string>
+    <string name="please_add_at_least_one_image">قم باضافه على الاقل صوره واحده</string>
     <string name="please_follow_up_on_the_status_of_the_order_once_it_is_accepted">يرجى متابعة حالة الطلب حال قبولة</string>
     <string name="please_upload_an_image">قم برفع صورة</string>
     <string name="plz_camera_gallery">اختر الكاميرا أو الصور</string>
@@ -139,8 +146,16 @@
     <string name="previous_appointments">المواعيد السابقة</string>
     <string name="price">السعر</string>
     <string name="privacy">الخصوصية</string>
+    <string name="product_description">وصف المنتج</string>
+    <string name="product_image">صورة المنتج</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="product_price">سعر المنتج</string>
+    <string name="product_quantity">كميه المنتج</string>
+    <string name="product_section">قسم المنتج</string>
+    <string name="product_unit">وحدة المنتج</string>
     <string name="products">المنتجات</string>
     <string name="profile">الملف الشخصى</string>
+    <string name="quantity">الكميه</string>
     <string name="r_s">ر.س</string>
     <string name="rate_your_reservation">اعطي تقيم لحجزك</string>
     <string name="ratings">التقيمات</string>
@@ -158,6 +173,7 @@
     <string name="saturday">السبت</string>
     <string name="save">حفظ</string>
     <string name="search">البحث</string>
+    <string name="search_for_a_product">ابحث عن منتج</string>
     <string name="select">اختر</string>
     <string name="select_account_type">اختر نوع الحساب</string>
     <string name="select_as_default_address">تعيين كعنوان افتراضي</string>
@@ -188,6 +204,7 @@
     <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
     <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
     <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
+    <string name="there_are_no_products_available">لا يوجد منتجات متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>

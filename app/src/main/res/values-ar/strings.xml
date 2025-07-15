@@ -210,4 +210,21 @@
     <string name="my_personal_data">بياناتي الشخصية</string>
     <string name="store_settings">إعدادات المتجر</string>
     <string name="statistics">الاحصائيات</string>
+    <string name="search_for_a_product">ابحث عن منتج</string>
+    <string name="add_a_new_product">إضافة منتج جديد</string>
+    <string name="product_image">صورة المنتج</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="department">القسم</string>
+    <string name="product_section">قسم المنتج</string>
+    <string name="product_description">وصف المنتج</string>
+    <string name="product_price">سعر المنتج</string>
+    <string name="edit">تعديل</string>
+    <string name="product_unit">وحدة المنتج</string>
+    <string name="quantity">الكميه</string>
+    <string name="product_quantity">كميه المنتج</string>
+    <string name="please_add_at_least_one_image">قم باضافه على الاقل صوره واحده</string>
+    <string name="there_are_no_products_available">لا يوجد منتجات متاحه</string>
+    <string name="delete_product">حذف منتج</string>
+    <string name="are_you_sure_you_want_to_delete_product">هل أنت متأكد من حذف المنتج؟</string>
+    <string name="edit_product">تعديل منتج</string>
 </resources>

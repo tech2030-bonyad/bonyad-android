@@ -30,11 +30,13 @@ import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.AppointmentdetailsModel
 import fudex.bonyad.Model.ChatModel
 import fudex.bonyad.Model.Dateadd
+import fudex.bonyad.Model.DetailsProductsModel
 import fudex.bonyad.Model.DetailstechnicalModel
 import fudex.bonyad.Model.FaqModel
 import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.MYSubsribeModel
 import fudex.bonyad.Model.PlanModel
+import fudex.bonyad.Model.ProductsModel
 import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.Model.RatingsModel
 import fudex.bonyad.Model.SubsribeModel
@@ -62,6 +64,13 @@ interface ApiInterface {
 
     @GET("zones")
     fun getzones(): Call<StatesModel?>?
+
+    @GET("categories")
+    fun getdeps(): Call<StatesModel?>?
+
+    @GET("units")
+    fun getunits(): Call<StatesModel?>?
+
 
     @GET("user-home")
     fun gethome(@Query("name") name: String?): Call<HomeModel?>?
@@ -416,4 +425,40 @@ interface ApiInterface {
 
     @GET("reviews")
     fun getratings(@Query("reviewable_type") reviewable_type: String?,@Query("reviewable_id") reviewable_id: Int?,@Query("page") page: Int?, @Query("paginate") paginate: Int?): Call<RatingsModel?>?
+
+    @Multipart
+    @POST("merchant/products")
+    fun addproduct(
+        @Part images: List<MultipartBody.Part>?,
+        @Part("name") name: RequestBody,
+        @Part("category_id") category_id: RequestBody,
+        @Part("description") description: RequestBody,
+        @Part("price") price: RequestBody,
+        @Part("quantity") quantity: RequestBody,
+        @Part("unit_id") unit_id: RequestBody,
+    ): Call<ErrorResponse?>?
+
+    @Multipart
+    @POST("merchant/products/{productId}?_method=put")
+    fun editproduct(
+        @Path("productId") productId: String,
+        @Part images: List<MultipartBody.Part>?,
+        @Part("name") name: RequestBody,
+        @Part("category_id") category_id: RequestBody,
+        @Part("description") description: RequestBody,
+        @Part("price") price: RequestBody,
+        @Part("quantity") quantity: RequestBody,
+        @Part("unit_id") unit_id: RequestBody,
+    ): Call<ErrorResponse?>?
+
+    @GET("merchant/products")
+    fun getmyproducts(@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
+
+    @HTTP(method = "DELETE", path = "merchant/products/{productId}", hasBody = true)
+    fun deleteproduct(@Path("productId") productId: String): Call<ErrorResponse?>?
+
+    @GET("merchant/products/{productId}")
+    fun getproductdetails(
+        @Path("productId") productId: Int,
+    ): Call<DetailsProductsModel?>?
 }

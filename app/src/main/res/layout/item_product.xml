@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data class="MyproductviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.merchant.ProductsViewModel" />
+    </data>
+    <LinearLayout
+        android:onClick="@{ () -> model.clickitem() }"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        android:background="@drawable/rec_strockblue2">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center|bottom"
+                android:scaleType="fitXY"
+                bind:imageUrl="@{model.onservse.image}"
+                android:layout_marginTop="8dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/rec_strockblue3">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    android:text="@{model.onservse.average_rating}"
+                    tools:text="4.7"
+                    android:textColor="@color/darkblue"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_round_star"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"/>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairoregular"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="16sp"
+            android:text="@{model.onservse.name}"
+            tools:text="طوب احمر "
+            android:textColor="@color/darkblue"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairosemibold"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="@{model.onservse.price + ' ' + @string/r_s}"
+                tools:text="95.33 ر.س"
+                android:textColor="@color/darkblue"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <ImageView
+                android:onClick="@{ () -> model.edit() }"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_edit2231"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:rotationY="180"/>
+            <ImageView
+                android:onClick="@{ () -> model.delete() }"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete22"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:rotationY="180"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

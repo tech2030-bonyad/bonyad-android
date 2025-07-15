@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data class="ImagesmerchantviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.merchant.ImagesViewModel" />
+    </data>
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:background="@{model.issletct ? @drawable/rec_strockblue3 : @drawable/rec_strockgray}">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:imageUrl="@{model.onservse.url}"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>

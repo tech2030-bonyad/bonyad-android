@@ -9,6 +9,7 @@ import fudex.bonyad.Model.Certificate
 import fudex.bonyad.ui.Activity.technical.EdittechnicaldataActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 import fudex.bonyad.Model.RegisterimageModel
+import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 
 
 /**
@@ -29,13 +30,21 @@ class CertificatViewModel : BaseObservable() {
     }
     @RequiresApi(Build.VERSION_CODES.R)
     fun clickitem(){
-        (context as EdittechnicaldataActivity).edittechnicalprofileViewModel.checkpermission(2)
+        if (context is EdittechnicaldataActivity) {
+            (context as EdittechnicaldataActivity).edittechnicalprofileViewModel.checkpermission(2)
+        }else if (context is AddproductActivity) {
+            (context as AddproductActivity).addproductViewModel.checkpermission(2)
+        }
     }
 
     fun delete() {
+        if (context is EdittechnicaldataActivity) {
             (context as EdittechnicaldataActivity).edittechnicalprofileViewModel.images.remove(onservse.get())
             (context as EdittechnicaldataActivity).edittechnicalprofileViewModel.notifyChange()
-//
+        }else if (context is AddproductActivity) {
+            (context as AddproductActivity).addproductViewModel.images.remove(onservse.get())
+            (context as AddproductActivity).addproductViewModel.notifyChange()
+        }
     }
 
 

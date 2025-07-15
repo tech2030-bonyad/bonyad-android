@@ -23,4 +23,5 @@
     <color name="darkblack2">#333333</color>
     <color name="lightgray1">#243445</color>
     <color name="red1">#EC2D30</color>
+    <color name="hintcolor">#666666</color>
 </resources>
