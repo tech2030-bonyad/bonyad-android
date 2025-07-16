@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="195dp"
         android:layout_marginEnd="12dp"
+        android:layout_marginBottom="15dp"
         android:orientation="vertical"
         android:background="@drawable/rec_strockblue2">
         <FrameLayout
@@ -61,6 +62,8 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:textSize="16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:text="@{model.onservse.name}"
             tools:text="طوب احمر "
             android:textColor="@color/darkblue"/>
@@ -97,7 +100,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/delete22"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="4dp"
                 android:layout_gravity="center"
                 android:rotationY="180"/>
         </LinearLayout>

@@ -3176,6 +3176,7 @@ drawable ic_solar_logout_outline
 drawable ic_solar_wallet_linear
 drawable ic_statistics
 drawable ic_store
+drawable ic_success234
 drawable ic_suitcase
 drawable ic_tabler_user_question
 drawable ic_toggle
@@ -3598,6 +3599,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id clockwise
+id close
 id closest
 id code1
 id code2
@@ -4317,6 +4319,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_success_messag
 layout exo_list_divider
 layout exo_player_control_view
 layout exo_player_view
@@ -4956,6 +4959,7 @@ string write_your_message
 string years_of_experience
 string yes
 string you_can_add_and_edit_your_appointments
+string you_can_follow_the_product_details
 string your_smart_solution_for_construction_and_maintenance
 string your_work_is_ready_and_waiting_for_you
 style AlertDialog_AppCompat

@@ -231,8 +231,10 @@ class AddproductViewModel(activity: AddproductActivity) : BaseObservable() {
                     response: Response<ErrorResponse?>
                 ) {
                     if (response.code() == 200 || response.code() == 201) {
-                        Dialogs.showToast(response.body()!!.message!!, activity)
-                        back()
+                        Utilities.showSuccessDialog(activity, response.body()!!.message ?: "" ,
+                            activity.getString(R.string.you_can_follow_the_product_details) ){
+                            back()
+                        }
                     } else {
                         val errorText = response.errorBody()?.string()
                         Log.e("data", errorText!!)

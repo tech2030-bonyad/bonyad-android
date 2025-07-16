@@ -227,4 +227,5 @@
     <string name="delete_product">حذف منتج</string>
     <string name="are_you_sure_you_want_to_delete_product">هل أنت متأكد من حذف المنتج؟</string>
     <string name="edit_product">تعديل منتج</string>
+    <string name="you_can_follow_the_product_details">يمكنك متابعة تفاصيل المنتج</string>
 </resources>

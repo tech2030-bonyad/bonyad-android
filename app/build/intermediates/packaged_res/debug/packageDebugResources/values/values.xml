@@ -259,6 +259,7 @@
     <string name="years_of_experience">Years of experience</string>
     <string name="yes">yes</string>
     <string name="you_can_add_and_edit_your_appointments">You can add and edit your appointments.</string>
+    <string name="you_can_follow_the_product_details">You can follow the product details.</string>
     <string name="your_smart_solution_for_construction_and_maintenance">Your smart solution for construction and maintenance</string>
     <string name="your_work_is_ready_and_waiting_for_you">Your work is ready... and waiting for you.</string>
     <style name="RatingBar" parent="Base.Widget.AppCompat.RatingBar.Small">

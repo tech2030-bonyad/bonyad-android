@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import atiaf.redstone.NetWorkConnction.RetrofitClient
 import com.google.gson.Gson
@@ -49,8 +50,7 @@ class MyproductsViewModel(var catogaryFragment: MyproductActivity) : BaseObserva
     var productId = 0
     init {
         this.context = catogaryFragment
-        linearlayout = LinearLayoutManager(context)
-        linearlayout!!.orientation = LinearLayoutManager.VERTICAL
+        linearlayout = GridLayoutManager(context,2)
         context.binding.productList.layoutManager = linearlayout
         context.binding.productList.adapter = myproductsadapter
         if (context.getString(R.string.lang) == "ar"){

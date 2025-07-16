@@ -83,8 +83,8 @@ class DetailsproductmerchantViewModel(var catogaryFragment: Detailsproductmercha
                     if (data?.data?.images?.size ?: 0 > 0 ){
                         sliderimg.set(data?.data?.images?.get(0)?.url ?: "")
                     }
-                    img.set(LoginSession.getUserData(context).user.avatar ?: "")
-                    name.set(LoginSession.getUserData(context).user.name ?: "")
+                    img.set(LoginSession.getUserData(context).user.business_logo ?: "")
+                    name.set(LoginSession.getUserData(context).user.trade_name ?: "")
                     images.clear()
                     images.addAll(data?.data?.images!!)
                     notifyChange()

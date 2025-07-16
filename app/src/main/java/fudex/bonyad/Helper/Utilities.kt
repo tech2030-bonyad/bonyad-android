@@ -24,6 +24,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
@@ -341,27 +342,31 @@ object Utilities {
         val shifted = (char.toInt() - start.toInt() + shift) % range
         return (start.toInt() + if (shifted >= 0) shifted else shifted + range).toChar()
     }
-//    @SuppressLint("CutPasteId")
-//    fun showSuccessDialog(context: Activity, title : String, body: String, onDismissAction: () -> Unit) {
-//        val dialog = Dialog(context)
-//        dialog.setContentView(R.layout.dialog_success_messag)
-//        dialog.setCancelable(false)
-//        dialog.window?.setGravity(Gravity.BOTTOM)
-//        dialog.window?.setBackgroundDrawable(Color.TRANSPARENT.toDrawable())
-//        val width = ViewGroup.LayoutParams.MATCH_PARENT
-//        val height = ViewGroup.LayoutParams.WRAP_CONTENT
-//        dialog.window?.setLayout(width, height)
-//        dialog.findViewById<TextView>(R.id.title).text = title
-//        dialog.findViewById<TextView>(R.id.body).text = body
-//        if (body == "") {
-//            dialog.findViewById<TextView>(R.id.body).visibility = View.GONE
-//        }
-//        dialog.show()
-//        Handler(Looper.getMainLooper()).postDelayed({
-//            dialog.dismiss()
-//            onDismissAction()
-//        }, 3000)
-//    }
+    @SuppressLint("CutPasteId")
+    fun showSuccessDialog(context: Activity, title : String, body: String, onDismissAction: () -> Unit) {
+        val dialog = Dialog(context)
+        dialog.setContentView(R.layout.dialog_success_messag)
+        dialog.setCancelable(false)
+        dialog.window?.setGravity(Gravity.BOTTOM)
+        dialog.window?.setBackgroundDrawable(Color.TRANSPARENT.toDrawable())
+        val width = ViewGroup.LayoutParams.MATCH_PARENT
+        val height = ViewGroup.LayoutParams.WRAP_CONTENT
+        dialog.window?.setLayout(width, height)
+        dialog.findViewById<TextView>(R.id.title).text = title
+        dialog.findViewById<TextView>(R.id.body).text = body
+        dialog.findViewById<ImageView>(R.id.close).setOnClickListener {
+            dialog.dismiss()
+            onDismissAction()
+        }
+        if (body == "") {
+            dialog.findViewById<TextView>(R.id.body).visibility = View.GONE
+        }
+        Handler(Looper.getMainLooper()).postDelayed({
+            dialog.dismiss()
+            onDismissAction()
+        }, 3000)
+        dialog.show()
+    }
     fun copyToClipboard(context: Context, text: String) {
         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText("Booking Details", text)
