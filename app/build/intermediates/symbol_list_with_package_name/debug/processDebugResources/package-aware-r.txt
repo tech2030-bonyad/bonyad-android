@@ -3954,6 +3954,7 @@ id productsList
 id progress_circular
 id progress_horizontal
 id quantity
+id quantityLin
 id radial
 id radio
 id rate
@@ -4506,6 +4507,7 @@ string add_a_new_appointment
 string add_a_new_product
 string add_a_service
 string add_address
+string add_to_cart
 string added_before
 string address
 string address_details

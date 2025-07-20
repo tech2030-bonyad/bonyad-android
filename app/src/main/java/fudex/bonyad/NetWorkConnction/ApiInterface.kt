@@ -1,5 +1,6 @@
 package fudex.bonyad.NetWorkConnction
 
+import fudex.bonyad.Data.Cartdata
 import fudex.bonyad.Data.Chatdata
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
@@ -465,4 +466,11 @@ interface ApiInterface {
     @GET("products")
     fun getproducts(@Query("categories[]") zones: List<Int>? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
 
+    @GET("products/{productId}")
+    fun getuserproductdetails(
+        @Path("productId") productId: Int,
+    ): Call<DetailsProductsModel?>?
+
+    @POST("carts")
+    fun addcart(@Body data: Cartdata): Call<ErrorResponse?>?
 }

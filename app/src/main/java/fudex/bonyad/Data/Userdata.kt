@@ -48,3 +48,8 @@ data class Chatdata (
     val receiver_id: Int? = null,
     val message: String? = null,
 )
+
+data class Cartdata (
+    val product_id: Int? = null,
+    val quantity: Int? = null,
+)

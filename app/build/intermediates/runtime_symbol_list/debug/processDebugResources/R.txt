@@ -3953,6 +3953,7 @@ int id productsList 0x7f0a02a4
 int id progress_circular 0x7f0a01ef
 int id progress_horizontal 0x7f0a01f0
 int id quantity 0x7f0a01f1
+int id quantityLin 0x7f0a02a5
 int id radial 0x7f0a01f2
 int id radio 0x7f0a01f3
 int id rate 0x7f0a01f4
@@ -4505,6 +4506,7 @@ int string add_a_new_appointment 0x7f130020
 int string add_a_new_product 0x7f130021
 int string add_a_service 0x7f130022
 int string add_address 0x7f130023
+int string add_to_cart 0x7f1301f3
 int string added_before 0x7f130024
 int string address 0x7f130025
 int string address_details 0x7f130026

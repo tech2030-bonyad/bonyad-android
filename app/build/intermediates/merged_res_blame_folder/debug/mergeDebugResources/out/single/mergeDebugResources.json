@@ -176,6 +176,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_date.xml"
     },
     {
+        "merged": "fudex.bonyad.app-debug-68:/layout_activity_detailsproducts.xml.flat",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsproducts.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_not.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/ic_not.xml"
     },
@@ -410,10 +414,6 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/layout_activity_merchantregister.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_merchantregister.xml"
-    },
-    {
-        "merged": "fudex.bonyad.app-debug-68:/layout_item_homeproduct1.xml.flat",
-        "source": "fudex.bonyad.app-main-70:/layout/item_homeproduct1.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/mipmap-xxxhdpi_ic_launcher.webp.flat",

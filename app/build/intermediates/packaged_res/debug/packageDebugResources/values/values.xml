@@ -34,6 +34,7 @@
     <string name="add_a_new_product">Add a new product</string>
     <string name="add_a_service">Add a service</string>
     <string name="add_address">add address</string>
+    <string name="add_to_cart">Add to cart</string>
     <string name="added_before">Make sure you did not add it before or the time is not suitable.</string>
     <string name="address">Address</string>
     <string name="address_details">Address details</string>

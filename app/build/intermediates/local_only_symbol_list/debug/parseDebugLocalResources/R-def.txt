@@ -223,6 +223,7 @@ id productImg
 id productList
 id productsList
 id quantity
+id quantityLin
 id rate
 id scroll
 id searchTxt
@@ -341,6 +342,7 @@ string add_a_new_appointment
 string add_a_new_product
 string add_a_service
 string add_address
+string add_to_cart
 string added_before
 string address
 string address_details

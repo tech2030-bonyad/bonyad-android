@@ -9,6 +9,7 @@
     <string name="add_a_new_product">إضافة منتج جديد</string>
     <string name="add_a_service">اضافة خدمة</string>
     <string name="add_address">اضافه عنوان</string>
+    <string name="add_to_cart">اضافة للسلة</string>
     <string name="added_before">تاكد انك لم تقم باضافه من قبل او الوقت غير مناسب</string>
     <string name="address">العنوان</string>
     <string name="address_details">العنوان بالتفصيل</string>

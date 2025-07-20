@@ -11,6 +11,7 @@ import fudex.bonyad.ui.Activity.technical.TechnicalregisterActivity
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity
+import fudex.bonyad.ui.Activity.user.DetailsproductsActivity
 
 
 /**
@@ -29,6 +30,12 @@ class ImagesViewModel : BaseObservable() {
            }else {
                issletct = false
            }
+        }else if (context is DetailsproductsActivity){
+            if ((context as DetailsproductsActivity).detailsproductViewModel.sliderimg.get() ?: "" == catModel.url ?: ""){
+                issletct = true
+            }else {
+                issletct = false
+            }
         }
         onservse.set(catModel)
         notifyChange()
@@ -40,6 +47,9 @@ class ImagesViewModel : BaseObservable() {
        if (context is DetailsproductmerchantActivity){
            (context as DetailsproductmerchantActivity).detailsproductmerchantViewModel.sliderimg.set(onservse.get()!!.url ?: "")
            (context as DetailsproductmerchantActivity).detailsproductmerchantViewModel.notifyChange()
+       }else  if (context is DetailsproductsActivity){
+           (context as DetailsproductsActivity).detailsproductViewModel.sliderimg.set(onservse.get()!!.url ?: "")
+           (context as DetailsproductsActivity).detailsproductViewModel.notifyChange()
        }
     }
 
