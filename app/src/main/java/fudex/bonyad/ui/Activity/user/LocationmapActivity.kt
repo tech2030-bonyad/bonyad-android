@@ -3,7 +3,6 @@ package fudex.bonyad.ui.Activity.user
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.drawable.toBitmap
 import androidx.databinding.DataBindingUtil
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -13,9 +12,10 @@ import com.google.android.gms.maps.model.MarkerOptions
 import fudex.bonyad.Helper.GPSTracker
 import fudex.bonyad.R
 import fudex.bonyad.databinding.LocateonmapviewModelBinding
+import fudex.bonyad.ui.Activity.BaseActivity
 import fudex.bonyad.viewmodel.user.AddplacemapViewModel
 
-class LocationmapActivity : AppCompatActivity() {
+class LocationmapActivity : BaseActivity() {
     lateinit var addplacemapViewModel: AddplacemapViewModel
     lateinit var binding : LocateonmapviewModelBinding
     override fun onCreate(savedInstanceState: Bundle?) {

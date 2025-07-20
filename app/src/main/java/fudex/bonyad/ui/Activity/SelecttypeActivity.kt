@@ -1,7 +1,6 @@
 package fudex.bonyad.ui.Activity
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import fudex.bonyad.R
 import fudex.bonyad.databinding.SelecttypeviewModelBinding

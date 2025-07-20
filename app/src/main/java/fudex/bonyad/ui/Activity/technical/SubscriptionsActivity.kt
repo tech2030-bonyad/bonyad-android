@@ -1,10 +1,6 @@
 package fudex.bonyad.ui.Activity.technical
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import fudex.bonyad.NetWorkConnction.DialogListener
 import fudex.bonyad.R
