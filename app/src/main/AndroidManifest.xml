@@ -41,6 +41,12 @@
         tools:replace="android:supportsRtl"
         tools:targetApi="31">
         <activity
+            android:name=".ui.Activity.user.ProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity.user.DetailsproductsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Activity.merchant.DetailsproductmerchantActivity"
             android:exported="false" />
         <activity

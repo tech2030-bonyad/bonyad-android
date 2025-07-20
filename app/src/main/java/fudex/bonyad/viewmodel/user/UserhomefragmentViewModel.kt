@@ -19,8 +19,10 @@ import fudex.bonyad.Model.Availability
 import fudex.bonyad.Model.DayAvailability
 import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.NotsModel
+import fudex.bonyad.Model.ProductsDatum
 import fudex.bonyad.Model.ScheduleResponse
 import fudex.bonyad.Model.Slider
+import fudex.bonyad.Model.StatesDatum
 
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
@@ -29,9 +31,12 @@ import fudex.bonyad.Model.Technician
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
+import fudex.bonyad.ui.Activity.user.ProductsActivity
 import fudex.bonyad.ui.Activity.user.SpecialistsActivity
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
+import fudex.bonyad.ui.Adapter.user.Depadapter
+import fudex.bonyad.ui.Adapter.user.Homeproductadapter
 import fudex.bonyad.ui.Adapter.user.Sliderhomedadapter
 import fudex.bonyad.ui.Adapter.user.Technicaladapter
 import fudex.bonyad.ui.Fragment.user.UserhomeFragment
@@ -50,8 +55,12 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
     var username = ObservableField<String>("")
     var technicallist : ArrayList<Technician> = ArrayList()
     var sliderlist : ArrayList<Slider> = ArrayList()
+    var deplist : ArrayList<StatesDatum> = ArrayList()
+    var productlist : ArrayList<ProductsDatum> = ArrayList()
     var day = 6
     private val technicaladapter = Technicaladapter()
+    private val depadapter = Depadapter()
+    private val homeproductadapter = Homeproductadapter()
     var handler: Handler = Handler()
     lateinit var pagerAdapter: Sliderhomedadapter
     var count = ObservableField<Int>(0)
@@ -63,6 +72,14 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
         linearlayout!!.orientation = LinearLayoutManager.VERTICAL
         context.binding.specialList.layoutManager = linearlayout
         context.binding.specialList.adapter = technicaladapter
+        var linearlayout1 = LinearLayoutManager(activity)
+        linearlayout1!!.orientation = LinearLayoutManager.HORIZONTAL
+        context.binding.depList.layoutManager = linearlayout1
+        context.binding.depList.adapter = depadapter
+        var linearlayout2 = LinearLayoutManager(activity)
+        linearlayout2!!.orientation = LinearLayoutManager.HORIZONTAL
+        context.binding.productList.layoutManager = linearlayout2
+        context.binding.productList.adapter = homeproductadapter
         pagerAdapter = Sliderhomedadapter(activity!!,sliderlist)
         context.binding.slider.setAdapter(pagerAdapter)
         context.binding.indicator.setViewPager(context.binding.slider)
@@ -126,6 +143,8 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
     }
     fun gethome() {
         context.binding.specialList.showShimmer()
+        context.binding.depList.showShimmer()
+        context.binding.productList.showShimmer()
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java)
@@ -137,8 +156,12 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
                     var data = response.body()
                     sliderlist.clear()
                     technicallist.clear()
+                    deplist.clear()
+                    productlist.clear()
                     technicallist.addAll(data?.data!!.technicians!!)
                     sliderlist.addAll(data?.data!!.sliders!!)
+                    deplist.addAll(data?.data!!.categories!!)
+                    productlist.addAll(data?.data!!.products!!)
                     pagerAdapter.notifyDataSetChanged()
                     notifyChange()
                 }else {
@@ -151,6 +174,8 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
                     })
                 }
                 context.binding.specialList.hideShimmer()
+                context.binding.depList.hideShimmer()
+                context.binding.productList.hideShimmer()
                 isloading.set(false)
             }
 
@@ -158,11 +183,17 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
                 Dialogs.showToast(activity.getString(R.string.check_your_connection) , activity)
                 isloading.set(false)
                 context.binding.specialList.hideShimmer()
+                context.binding.depList.hideShimmer()
+                context.binding.productList.hideShimmer()
             }
         })
     }
     fun moretechnical(){
         var intent: Intent = Intent(context?.requireActivity(), SpecialistsActivity::class.java)
+        context?.startActivity(intent)
+    }
+    fun moreproducts(){
+        var intent: Intent = Intent(context?.requireActivity(), ProductsActivity::class.java)
         context?.startActivity(intent)
     }
     fun not(){

@@ -71,8 +71,15 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.Bonyadandroid"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="fudex.bonyad.ui.Activity.user.ProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.user.DetailsproductsActivity"
+            android:exported="false" />
         <activity
             android:name="fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity"
             android:exported="false" />

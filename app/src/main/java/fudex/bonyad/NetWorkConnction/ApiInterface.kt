@@ -461,4 +461,8 @@ interface ApiInterface {
     fun getproductdetails(
         @Path("productId") productId: Int,
     ): Call<DetailsProductsModel?>?
+
+    @GET("products")
+    fun getproducts(@Query("categories[]") zones: List<Int>? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
+
 }

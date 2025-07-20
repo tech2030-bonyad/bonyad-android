@@ -6,9 +6,9 @@ data class HomeModel (
 
 data class HomeMData (
     val sliders: ArrayList<Slider>? = ArrayList(),
-    val categories: List<Any?>? = null,
+    val categories: ArrayList<StatesDatum>? = ArrayList(),
     val technicians: ArrayList<Technician>? = ArrayList(),
-    val products: List<Any?>? = null
+    val products: ArrayList<ProductsDatum>? = ArrayList()
 )
 
 data class Technician (

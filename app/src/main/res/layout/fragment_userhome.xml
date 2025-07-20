@@ -163,7 +163,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="26dp"
-                android:visibility="gone"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="21dp">
                 <TextView
@@ -180,9 +179,47 @@
                 android:id="@+id/depList"
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
-                android:visibility="gone"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                bind:dep="@{model.deplist}"
+                bind:fragment="@{model.context}"
+                app:shimmer_recycler_layout="@layout/item_dep"
+                app:shimmer_recycler_item_count="5"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkblue"
+                    android:text="@string/products"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cairosemibold" />
+                <TextView
+                    android:onClick="@{ () -> model.moreproducts() }"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lightblue"
+                    android:text="@string/more"
+                    android:layout_gravity="end|center"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/cairoregular" />
+            </FrameLayout>
+            <com.todkars.shimmer.ShimmerRecyclerView
+                android:id="@+id/productList"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                bind:homeproduct="@{model.productlist}"
+                bind:fragment="@{model.context}"
+                app:shimmer_recycler_layout="@layout/item_homeproduct"
+                app:shimmer_recycler_item_count="5"
                 />
             <FrameLayout
                 android:layout_width="match_parent"
@@ -220,38 +257,7 @@
                 bind:shimmer_recycler_layout="@layout/item_special"
                 bind:shimmer_recycler_item_count="5"
                 />
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="20dp"
-                android:visibility="gone"
-                android:layout_marginTop="24dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/darkblue"
-                    android:text="@string/products"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/cairosemibold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/lightblue"
-                    android:text="@string/more"
-                    android:layout_gravity="end|center"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/cairoregular" />
-            </FrameLayout>
-            <com.todkars.shimmer.ShimmerRecyclerView
-                android:id="@+id/productList"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:visibility="gone"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

@@ -221,6 +221,7 @@ id photosedit
 id price
 id productImg
 id productList
+id productsList
 id quantity
 id rate
 id scroll
@@ -247,6 +248,7 @@ layout activity_changelangue
 layout activity_chat
 layout activity_contactus
 layout activity_detailsappointment
+layout activity_detailsproducts
 layout activity_detailsproducttechnical
 layout activity_detailsspeciallist
 layout activity_editpass
@@ -263,6 +265,7 @@ layout activity_myproduct
 layout activity_myservices
 layout activity_notifications
 layout activity_onboarding
+layout activity_products
 layout activity_profile
 layout activity_rating
 layout activity_resetpassword
@@ -304,6 +307,9 @@ layout item_certificate
 layout item_chat
 layout item_date
 layout item_day
+layout item_dep
+layout item_homeproduct
+layout item_homeproduct1
 layout item_image
 layout item_images
 layout item_nots

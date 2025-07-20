@@ -16,7 +16,7 @@ data class ProductsDatum (
     val description: String? = null,
     val category: String? = null,
     val image: String? = null,
-    val average_rating: String? = null,
+    val average_rating: Float? = null,
     val review_count: String? = null,
     var images: ArrayList<Certificate> = ArrayList()
 )

@@ -43,7 +43,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_gravity="center"
                     android:textSize="10sp"
-                    android:text="@{model.onservse.average_rating}"
+                    android:text="@{model.onservse.average_rating.toString()}"
                     tools:text="4.7"
                     android:textColor="@color/darkblue"/>
                 <ImageView
