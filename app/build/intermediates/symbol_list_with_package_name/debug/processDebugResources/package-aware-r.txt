@@ -3112,6 +3112,7 @@ drawable ic_clock_black_24dp
 drawable ic_close
 drawable ic_delete22
 drawable ic_delete3
+drawable ic_delete_03
 drawable ic_deleteimage
 drawable ic_document_text
 drawable ic_document_text1

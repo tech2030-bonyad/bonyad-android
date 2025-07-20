@@ -59,8 +59,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/cairoregular"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:textSize="16sp"
             android:maxLines="1"
             android:ellipsize="end"
@@ -71,14 +71,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="8dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cairosemibold"
-                android:textSize="14sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 android:text="@{model.onservse.price + ' ' + @string/r_s}"
                 tools:text="95.33 ر.س"
@@ -99,9 +99,9 @@
                 android:onClick="@{ () -> model.delete() }"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/delete22"
-                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_delete_03"
                 android:layout_gravity="center"
+                android:padding="4dp"
                 android:rotationY="180"/>
         </LinearLayout>
     </LinearLayout>
