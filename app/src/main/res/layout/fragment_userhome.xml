@@ -23,7 +23,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:layout_marginTop="23dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="16dp">
                 <TextView
@@ -48,6 +48,7 @@
                     android:orientation="horizontal"
                     android:layout_gravity="end">
                     <FrameLayout
+                        android:onClick="@{ () -> model.cart() }"
                         android:layout_width="28dp"
                         android:layout_height="29dp"
                         android:layout_gravity="center">
@@ -58,6 +59,7 @@
                             android:background="@drawable/ic_cart"
                             android:rotationY="180"/>
                         <androidx.cardview.widget.CardView
+                            android:visibility="@{model.cartnum == 0 ? View.GONE : View.VISIBLE}"
                             android:layout_width="14dp"
                             android:layout_height="14dp"
                             android:layout_gravity="top|start"
@@ -67,6 +69,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="10sp"
+                                android:text="@{model.cartnum.toString()}"
                                 tools:text="1"
                                 android:layout_gravity="center"
                                 android:textColor="@color/white"

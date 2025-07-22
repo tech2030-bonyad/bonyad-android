@@ -44,6 +44,10 @@ class DeleteViewModel(var catogaryFragment: DeletetFragment) : BaseObservable() 
             context.binding.title.text = context.getString(R.string.delete_product)
             context.binding.body.text =
                 context.getString(R.string.are_you_sure_you_want_to_delete_product)
+        }else if (tag == "deletecart") {
+            context.binding.title.text = context.getString(R.string.delete_product_from_cart)
+            context.binding.body.text =
+                context.getString(R.string.are_you_sure_you_want_to_delete_product_from_cart)
         }else if (tag == "subscribe") {
             context.binding.title.text = context.getString(R.string.subscriptions)
             context.binding.body.text =
@@ -60,6 +64,10 @@ class DeleteViewModel(var catogaryFragment: DeletetFragment) : BaseObservable() 
             return
         }else if (tag == "deleteproduct") {
             context.dialogListener?.onDataReceived("deleteproduct")
+            context.dismiss()
+            return
+        }else if (tag == "deletecart") {
+            context.dialogListener?.onDataReceived("deletecart")
             context.dismiss()
             return
         }else if (tag == "subscribe") {

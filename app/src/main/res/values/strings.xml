@@ -231,4 +231,15 @@
     <string name="edit_product">Edit product</string>
     <string name="you_can_follow_the_product_details">You can follow the product details.</string>
     <string name="add_to_cart">Add to cart</string>
+    <string name="cart">Cart</string>
+    <string name="address1">Address :</string>
+    <string name="summary">Summary</string>
+    <string name="products1">Products</string>
+    <string name="tax">Tax</string>
+    <string name="total">Total</string>
+    <string name="pay">Pay</string>
+    <string name="qty">:QTY</string>
+    <string name="delete_product_from_cart">Delete product from cart</string>
+    <string name="are_you_sure_you_want_to_delete_product_from_cart">Are you sure you want to delete product from cart?</string>
+    <string name="use_wallet_your_balance_is">use wallet your balance is</string>
 </resources>

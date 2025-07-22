@@ -48,6 +48,7 @@ class UserhomeFragment : Fragment() {
         super.onResume()
         userhomefragmentViewModel.gethome()
         if (LoginSession.isLogin) {
+            userhomefragmentViewModel.getcarts()
             userhomefragmentViewModel.getnotscount()
             if (LoginSession.getUserData(activity).user.name!!.contains( " ") == true) {
                 userhomefragmentViewModel.username.set(

@@ -53,3 +53,11 @@ data class Cartdata (
     val product_id: Int? = null,
     val quantity: Int? = null,
 )
+
+data class Orderdata (
+    val payment_method: String? = null,
+    val lat: String? = null,
+    val long: String? = null,
+    val shipping_address: String? = null,
+    val wallet_amount: String? = null,
+    )

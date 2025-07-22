@@ -21,6 +21,7 @@ import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Helper.Utilities
 import fudex.bonyad.Model.CalendarDay
+import fudex.bonyad.Model.CartModel
 import fudex.bonyad.Model.Certificate
 import fudex.bonyad.Model.DetailsProductsModel
 import fudex.bonyad.Model.DetailstechnicalModel
@@ -37,6 +38,7 @@ import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity
 import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
+import fudex.bonyad.ui.Activity.user.CartActivity
 import fudex.bonyad.ui.Activity.user.DetailsproductsActivity
 import fudex.bonyad.ui.Activity.user.LocationmapActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
@@ -67,6 +69,7 @@ class DetailsproductViewModel(var catogaryFragment: DetailsproductsActivity) : B
     var images: ArrayList<Certificate> = ArrayList()
     var quantites: ArrayList<DistanceModel> = ArrayList()
     private val imagesadapter = Imagesadapter()
+    var cartnum = ObservableField<Int>(0)
 
     init {
         this.context = catogaryFragment
@@ -85,6 +88,9 @@ class DetailsproductViewModel(var catogaryFragment: DetailsproductsActivity) : B
         quantites.add(DistanceModel(8, "8"))
         quantites.add(DistanceModel(9, "9"))
         quantites.add(DistanceModel(10, "10"))
+        if (context.intent.hasExtra("quantity")){
+            quantity.set(context.intent.getIntExtra("quantity",0).toString())
+        }
     }
     fun getproductdetails() {
         isloading.set(true)
@@ -105,8 +111,8 @@ class DetailsproductViewModel(var catogaryFragment: DetailsproductsActivity) : B
                     if (data?.data?.images?.size ?: 0 > 0 ){
                         sliderimg.set(data?.data?.images?.get(0)?.url ?: "")
                     }
-                    img.set(LoginSession.getUserData(context).user.business_logo ?: "")
-                    name.set(LoginSession.getUserData(context).user.trade_name ?: "")
+                    img.set(data?.data?.provider?.business_logo ?: "")
+                    name.set(data?.data?.provider?.trade_name ?: "")
                     images.clear()
                     images.addAll(data?.data?.images!!)
                     notifyChange()
@@ -164,7 +170,7 @@ class DetailsproductViewModel(var catogaryFragment: DetailsproductsActivity) : B
             ApiInterface::class.java)
 
         var userdata = Cartdata(context.intent.getIntExtra("id", 0),quantity.get()?.toInt())
-        val call: Call<ErrorResponse?>? = apiService.addcart(userdata)
+        val call: Call<ErrorResponse?>? = if (context.intent.hasExtra("quantity")){apiService.editcart(context.intent.getIntExtra("cartid",0),userdata)}else{apiService.addcart(userdata)}
         call?.enqueue(object : Callback<ErrorResponse?> {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
@@ -190,5 +196,52 @@ class DetailsproductViewModel(var catogaryFragment: DetailsproductsActivity) : B
                 Utilities.enabletouch(context)
             }
         })
+    }
+    fun getcarts() {
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
+            ApiInterface::class.java
+        )
+
+        val call: Call<CartModel?>? =
+            apiService.getcarts()
+        call?.enqueue(object : Callback<CartModel?> {
+            override fun onResponse(
+                call: Call<CartModel?>,
+                response: Response<CartModel?>
+            ) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var data = response.body()
+                    cartnum.set(data?.data?.products?.size ?: 0)
+                    notifyChange()
+                } else {
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(
+                        context,
+                        response.code(),
+                        errorResponse,
+                        object : APIModel.RefreshTokenListener {
+                            override fun onRefresh() {
+                                getcarts()
+                            }
+                        })
+                }
+                isloading.set(false)
+            }
+
+            override fun onFailure(call: Call<CartModel?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection), context)
+                isloading.set(false)
+
+            }
+        })
+    }
+    fun cart(){
+        if (cartnum.get() == 0 ){
+            return
+        }
+        var intent: Intent = Intent(context, CartActivity::class.java)
+        context?.startActivity(intent)
     }
 }

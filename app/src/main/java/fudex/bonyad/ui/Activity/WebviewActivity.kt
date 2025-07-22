@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
+import fudex.bonyad.ui.Activity.user.UserhomeActivity
 
 
 class WebviewActivity : BaseActivity() {
@@ -42,10 +43,17 @@ class WebviewActivity : BaseActivity() {
                 Log.e("url", url)
                 if (url.contains("?status=true")){
                     webview?.visibility = View.GONE
-                    var intent: Intent = Intent(this@WebviewActivity, TechnicalHomeActivity::class.java)
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    startActivity(intent)
-                    finish()
+                   if (intent.hasExtra("order")){
+                       var intent: Intent = Intent(this@WebviewActivity, UserhomeActivity::class.java)
+                       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                       startActivity(intent)
+                       finish()
+                   }else {
+                       var intent: Intent = Intent(this@WebviewActivity, TechnicalHomeActivity::class.java)
+                       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                       startActivity(intent)
+                       finish()
+                   }
                 }else  if (url.contains("?status=false")){
                     Dialogs.showToast(getString(R.string.payment_failer),this@WebviewActivity)
                     onBackPressed()

@@ -56,6 +56,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
+        "merged": "fudex.bonyad.app-debug-68:/layout_item_cart.xml.flat",
+        "source": "fudex.bonyad.app-main-70:/layout/item_cart.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_edit333.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/ic_edit333.xml"
     },
@@ -176,10 +180,6 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_date.xml"
     },
     {
-        "merged": "fudex.bonyad.app-debug-68:/layout_activity_detailsproducts.xml.flat",
-        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsproducts.xml"
-    },
-    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_not.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/ic_not.xml"
     },
@@ -244,16 +244,16 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/background1.png"
     },
     {
-        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_rec_strockgray.xml.flat",
-        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/rec_strockgray.xml"
+        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/font_cairoextralight.ttf.flat",
+        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/font/cairoextralight.ttf"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_onboardselect1.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/onboardselect1.xml"
     },
     {
-        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/font_cairoextralight.ttf.flat",
-        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/font/cairoextralight.ttf"
+        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_rec_strockgray.xml.flat",
+        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/rec_strockgray.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_suitcase.xml.flat",
@@ -270,6 +270,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_deleteimage.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/ic_deleteimage.xml"
+    },
+    {
+        "merged": "fudex.bonyad.app-debug-68:/layout_activity_cart.xml.flat",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_cart.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_loc.xml.flat",
@@ -512,6 +516,10 @@
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/ic_delete3.xml"
     },
     {
+        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/layout_activity_cart.xml.flat",
+        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/activity_cart.xml"
+    },
+    {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/layout_fragment_technicalhome.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/fragment_technicalhome.xml"
     },
@@ -562,6 +570,10 @@
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/drawable_ic_location3.xml.flat",
         "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/drawable/ic_location3.xml"
+    },
+    {
+        "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/layout_item_cart.xml.flat",
+        "source": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-main-70:/layout/item_cart.xml"
     },
     {
         "merged": "/Users/mahmoudezzat/.gradle/daemon/8.9/fudex.bonyad.app-debug-68:/layout_activity_subscriptions.xml.flat",

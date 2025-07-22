@@ -17,6 +17,9 @@ data class PlanData(
 )
 data class SubsribeModel(
     val data: SubsribeData? = null,
+    )
+data class CreateorderModel(
+    val global: GlobalData? = null,
 )
 
 data class SubsribeData(
@@ -26,4 +29,9 @@ data class SubsribeData(
 
 data class MYSubsribeModel(
     val data: PlanData? = null,
+)
+
+data class GlobalData(
+    val invoice_id: Int? = null,
+    val url: String? = null,
 )

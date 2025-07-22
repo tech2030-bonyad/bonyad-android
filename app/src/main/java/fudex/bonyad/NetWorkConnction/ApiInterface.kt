@@ -5,6 +5,7 @@ import fudex.bonyad.Data.Chatdata
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
 import fudex.bonyad.Data.Editpass
+import fudex.bonyad.Data.Orderdata
 import fudex.bonyad.Data.Ratingdata
 import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.AddaressModel
@@ -29,7 +30,9 @@ import okhttp3.RequestBody
 import fudex.bonyad.Model.AboutModel
 import fudex.bonyad.Model.AddserviceModel
 import fudex.bonyad.Model.AppointmentdetailsModel
+import fudex.bonyad.Model.CartModel
 import fudex.bonyad.Model.ChatModel
+import fudex.bonyad.Model.CreateorderModel
 import fudex.bonyad.Model.Dateadd
 import fudex.bonyad.Model.DetailsProductsModel
 import fudex.bonyad.Model.DetailstechnicalModel
@@ -473,4 +476,20 @@ interface ApiInterface {
 
     @POST("carts")
     fun addcart(@Body data: Cartdata): Call<ErrorResponse?>?
+
+    @POST("carts/{productId}")
+    fun editcart(@Path("productId") productId: Int,@Body data: Cartdata): Call<ErrorResponse?>?
+
+    @HTTP(method = "DELETE", path = "delete-item/{productId}", hasBody = true)
+    fun deleteitemcart(@Path("productId") productId: Int?): Call<ErrorResponse?>?
+
+
+    @GET("carts")
+    fun getcarts(): Call<CartModel?>?
+
+    @GET("wallet/balance")
+    fun getwalletbalance(): Call<NotsModel?>?
+
+    @POST("orders")
+    fun createorder(@Body data: Orderdata): Call<CreateorderModel?>?
 }

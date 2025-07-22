@@ -30,6 +30,7 @@ import fudex.bonyad.Model.NotDatum
 import fudex.bonyad.Model.OnbaordModel
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.PlanData
+import fudex.bonyad.Model.ProductElement
 import fudex.bonyad.Model.ProductsDatum
 import fudex.bonyad.Model.RatingDatum
 import fudex.bonyad.Model.StatesDatum
@@ -52,6 +53,7 @@ import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
 import fudex.bonyad.ui.Adapter.technical.Service1adapter
 import fudex.bonyad.ui.Adapter.user.Addressesadapter
+import fudex.bonyad.ui.Adapter.user.Cartproductadapter
 import fudex.bonyad.ui.Adapter.user.Depadapter
 import fudex.bonyad.ui.Adapter.user.Homeproductadapter
 import fudex.bonyad.ui.Adapter.user.Ordersadapter
@@ -536,16 +538,16 @@ object BindingAdapters {
         }
     }
 //
-//    @BindingAdapter("bind:rating1", "bind:fragment")
-//    @JvmStatic
-//    fun setrating1(recyclerView: RecyclerView, movies: ArrayList<Rating>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Rateing1adapter) {
-//            (adapter as Rateing1adapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:cart", "bind:fragment")
+    @JvmStatic
+    fun setcart(recyclerView: RecyclerView, movies: ArrayList<ProductElement>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Cartproductadapter) {
+            (adapter as Cartproductadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //    @BindingAdapter("bind:complain", "bind:fragment")
 //    @JvmStatic
 //    fun setcomplain(recyclerView: RecyclerView, movies: ArrayList<ComplainDatum>, fragment: Activity) {

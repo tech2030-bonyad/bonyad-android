@@ -37,6 +37,7 @@
     <string name="add_to_cart">Add to cart</string>
     <string name="added_before">Make sure you did not add it before or the time is not suitable.</string>
     <string name="address">Address</string>
+    <string name="address1">Address :</string>
     <string name="address_details">Address details</string>
     <string name="addresses">Addresses</string>
     <string name="agree_to">Agree to</string>
@@ -48,6 +49,7 @@
     <string name="are_you_sure_to_log_out_of_the_app">Are you sure to log out of the app?</string>
     <string name="are_you_sure_you_want_to_cancel_subscription">Are you sure you want to cancel subscription?</string>
     <string name="are_you_sure_you_want_to_delete_product">Are you sure you want to delete product?</string>
+    <string name="are_you_sure_you_want_to_delete_product_from_cart">Are you sure you want to delete product from cart?</string>
     <string name="are_you_sure_you_want_to_delete_the_service">Are you sure you want to delete the service?</string>
     <string name="area">Area</string>
     <string name="attach_a_picture">Attach a picture</string>
@@ -62,6 +64,7 @@
     <string name="camera">Camera</string>
     <string name="cancel">Cancel</string>
     <string name="cancel_subscription">Cancel subscription</string>
+    <string name="cart">Cart</string>
     <string name="change_mobile_number">Change mobile number</string>
     <string name="change_password">Change Password</string>
     <string name="check_the_reviews_and_choose_the_worker_that_suits_you">Check the reviews and choose the worker that suits you.</string>
@@ -89,6 +92,7 @@
     <string name="delete">Delete</string>
     <string name="delete_account">Delete Account</string>
     <string name="delete_product">Delete product</string>
+    <string name="delete_product_from_cart">Delete product from cart</string>
     <string name="delete_the_service">Delete the service</string>
     <string name="department">Department</string>
     <string name="departments">Departments</string>
@@ -168,6 +172,7 @@
     <string name="orders">Orders</string>
     <string name="packages">Packages</string>
     <string name="password">Password</string>
+    <string name="pay">Pay</string>
     <string name="payment_failer">payment failed</string>
     <string name="pending_requests">Pending requests</string>
     <string name="please_activate_permission">Please Activate Permission</string>
@@ -187,8 +192,10 @@
     <string name="product_section">Product section</string>
     <string name="product_unit">Product Unit</string>
     <string name="products">Products</string>
+    <string name="products1">Products</string>
     <string name="profile">Profile</string>
     <string name="project_id" translatable="false">bonyad-79a85</string>
+    <string name="qty">:QTY</string>
     <string name="quantity">Quantity</string>
     <string name="r_s">R.S</string>
     <string name="rate_your_reservation">Rate your reservation</string>
@@ -231,7 +238,9 @@
     <string name="subscribe">Subscribe</string>
     <string name="subscription_date">Subscription date</string>
     <string name="subscriptions">Subscriptions</string>
+    <string name="summary">Summary</string>
     <string name="sunday">Sunday</string>
+    <string name="tax">Tax</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="the_code_has_not_been_received">The code has not been received?</string>
     <string name="there_are_no_addresses_available">there are no addresses available</string>
@@ -245,6 +254,7 @@
     <string name="thursday">Thursday</string>
     <string name="time">Time</string>
     <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
+    <string name="total">Total</string>
     <string name="total_orders">Total orders</string>
     <string name="tuesday">Tuesday</string>
     <string name="upcoming_appointments">Upcoming appointments</string>

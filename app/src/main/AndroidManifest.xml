@@ -41,6 +41,9 @@
         tools:replace="android:supportsRtl"
         tools:targetApi="31">
         <activity
+            android:name=".ui.Activity.user.CartActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Activity.user.ProductsActivity"
             android:exported="false" />
         <activity

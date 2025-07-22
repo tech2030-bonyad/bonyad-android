@@ -229,4 +229,15 @@
     <string name="edit_product">تعديل منتج</string>
     <string name="you_can_follow_the_product_details">يمكنك متابعة تفاصيل المنتج</string>
     <string name="add_to_cart">اضافة للسلة</string>
+    <string name="cart">السلة</string>
+    <string name="address1">العنوان:</string>
+    <string name="summary">ملخص</string>
+    <string name="products1">المنتجات</string>
+    <string name="tax">الضريبة</string>
+    <string name="total">الأجمالي</string>
+    <string name="pay">دفع</string>
+    <string name="qty">:QTY</string>
+    <string name="delete_product_from_cart">حذف منتج من السله</string>
+    <string name="are_you_sure_you_want_to_delete_product_from_cart">هل أنت متأكد من حذف المنتج من السله؟</string>
+    <string name="use_wallet_your_balance_is">use wallet your balance is</string>
 </resources>

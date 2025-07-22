@@ -18,6 +18,7 @@ data class ProductsDatum (
     val image: String? = null,
     val average_rating: Float? = null,
     val review_count: String? = null,
+    val provider: UserModel? = null,
     var images: ArrayList<Certificate> = ArrayList()
 )
 

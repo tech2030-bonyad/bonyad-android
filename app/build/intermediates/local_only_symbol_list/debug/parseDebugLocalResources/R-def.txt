@@ -245,6 +245,7 @@ layout activity_addproduct
 layout activity_addresses
 layout activity_addservice
 layout activity_appointmentmanagectivity
+layout activity_cart
 layout activity_changelangue
 layout activity_chat
 layout activity_contactus
@@ -304,6 +305,7 @@ layout fragment_userprofile
 layout item_address
 layout item_availablity
 layout item_calendar
+layout item_cart
 layout item_certificate
 layout item_chat
 layout item_date
@@ -345,6 +347,7 @@ string add_address
 string add_to_cart
 string added_before
 string address
+string address1
 string address_details
 string addresses
 string agree_to
@@ -356,6 +359,7 @@ string arabic
 string are_you_sure_to_log_out_of_the_app
 string are_you_sure_you_want_to_cancel_subscription
 string are_you_sure_you_want_to_delete_product
+string are_you_sure_you_want_to_delete_product_from_cart
 string are_you_sure_you_want_to_delete_the_service
 string area
 string attach_a_picture
@@ -370,6 +374,7 @@ string business_description
 string camera
 string cancel
 string cancel_subscription
+string cart
 string change_mobile_number
 string change_password
 string check_the_reviews_and_choose_the_worker_that_suits_you
@@ -397,6 +402,7 @@ string default_address
 string delete
 string delete_account
 string delete_product
+string delete_product_from_cart
 string delete_the_service
 string department
 string departments
@@ -476,6 +482,7 @@ string or_contact_us_through_our_platforms
 string orders
 string packages
 string password
+string pay
 string payment_failer
 string pending_requests
 string please_activate_permission
@@ -495,8 +502,10 @@ string product_quantity
 string product_section
 string product_unit
 string products
+string products1
 string profile
 string project_id
+string qty
 string quantity
 string r_s
 string rate_your_reservation
@@ -539,7 +548,9 @@ string subregion
 string subscribe
 string subscription_date
 string subscriptions
+string summary
 string sunday
+string tax
 string terms_and_conditions
 string the_code_has_not_been_received
 string there_are_no_addresses_available
@@ -553,6 +564,7 @@ string there_is_time_not_added_in_day
 string thursday
 string time
 string today_s_task_from_the_application
+string total
 string total_orders
 string tuesday
 string upcoming_appointments

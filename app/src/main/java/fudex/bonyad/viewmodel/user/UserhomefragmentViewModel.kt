@@ -16,6 +16,7 @@ import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.Availability
+import fudex.bonyad.Model.CartModel
 import fudex.bonyad.Model.DayAvailability
 import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.NotsModel
@@ -30,6 +31,7 @@ import fudex.bonyad.R
 import fudex.bonyad.Model.Technician
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.NotificationsActivity
+import fudex.bonyad.ui.Activity.user.CartActivity
 import fudex.bonyad.ui.Activity.user.DetailsspeciallistActivity
 import fudex.bonyad.ui.Activity.user.ProductsActivity
 import fudex.bonyad.ui.Activity.user.SpecialistsActivity
@@ -64,6 +66,7 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
     var handler: Handler = Handler()
     lateinit var pagerAdapter: Sliderhomedadapter
     var count = ObservableField<Int>(0)
+    var cartnum = ObservableField<Int>(0)
 
     init {
         this.context = context
@@ -188,6 +191,46 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
             }
         })
     }
+    fun getcarts() {
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
+            ApiInterface::class.java
+        )
+
+        val call: Call<CartModel?>? =
+            apiService.getcarts()
+        call?.enqueue(object : Callback<CartModel?> {
+            override fun onResponse(
+                call: Call<CartModel?>,
+                response: Response<CartModel?>
+            ) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var data = response.body()
+                    cartnum.set(data?.data?.products?.size ?: 0)
+                    notifyChange()
+                } else {
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(
+                        activity,
+                        response.code(),
+                        errorResponse,
+                        object : APIModel.RefreshTokenListener {
+                            override fun onRefresh() {
+                                getcarts()
+                            }
+                        })
+                }
+                isloading.set(false)
+            }
+
+            override fun onFailure(call: Call<CartModel?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection), activity)
+                isloading.set(false)
+
+            }
+        })
+    }
     fun moretechnical(){
         var intent: Intent = Intent(context?.requireActivity(), SpecialistsActivity::class.java)
         context?.startActivity(intent)
@@ -198,6 +241,13 @@ class UserhomefragmentViewModel(context: UserhomeFragment) : BaseObservable() {
     }
     fun not(){
         var intent: Intent = Intent(context?.requireActivity(), NotificationsActivity::class.java)
+        context?.startActivity(intent)
+    }
+    fun cart(){
+        if (cartnum.get() == 0 ){
+            return
+        }
+        var intent: Intent = Intent(context?.requireActivity(), CartActivity::class.java)
         context?.startActivity(intent)
     }
     fun filter(){

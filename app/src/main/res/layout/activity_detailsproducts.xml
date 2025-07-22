@@ -40,6 +40,7 @@
                 android:fontFamily="@font/cairobold"
                 android:textColor="@color/darkblue"/>
             <FrameLayout
+                android:onClick="@{ () -> model.cart() }"
                 android:layout_width="28dp"
                 android:layout_height="29dp"
                 android:layout_marginEnd="26dp"
@@ -51,6 +52,7 @@
                     android:background="@drawable/ic_cart"
                     android:rotationY="180"/>
                 <androidx.cardview.widget.CardView
+                    android:visibility="@{model.cartnum == 0 ? View.GONE : View.VISIBLE}"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
                     android:layout_gravity="top|start"
@@ -61,6 +63,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         tools:text="1"
+                        android:text="@{model.cartnum.toString()}"
                         android:layout_gravity="center"
                         android:textColor="@color/white"
                         android:fontFamily="@font/cairoregular"/>

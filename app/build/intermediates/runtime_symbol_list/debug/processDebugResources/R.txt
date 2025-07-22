@@ -4263,6 +4263,7 @@ int layout activity_addproduct 0x7f0d001e
 int layout activity_addresses 0x7f0d001f
 int layout activity_addservice 0x7f0d0020
 int layout activity_appointmentmanagectivity 0x7f0d0021
+int layout activity_cart 0x7f0d00e6
 int layout activity_changelangue 0x7f0d0022
 int layout activity_chat 0x7f0d0023
 int layout activity_contactus 0x7f0d0024
@@ -4359,6 +4360,7 @@ int layout ime_secondary_split_test_activity 0x7f0d007c
 int layout item_address 0x7f0d007d
 int layout item_availablity 0x7f0d007e
 int layout item_calendar 0x7f0d007f
+int layout item_cart 0x7f0d00e7
 int layout item_certificate 0x7f0d0080
 int layout item_chat 0x7f0d0081
 int layout item_date 0x7f0d0082
@@ -4509,6 +4511,7 @@ int string add_address 0x7f130023
 int string add_to_cart 0x7f1301f3
 int string added_before 0x7f130024
 int string address 0x7f130025
+int string address1 0x7f1301f4
 int string address_details 0x7f130026
 int string addresses 0x7f130027
 int string agree_to 0x7f130028
@@ -4522,6 +4525,7 @@ int string arabic 0x7f13002f
 int string are_you_sure_to_log_out_of_the_app 0x7f130030
 int string are_you_sure_you_want_to_cancel_subscription 0x7f130031
 int string are_you_sure_you_want_to_delete_product 0x7f130032
+int string are_you_sure_you_want_to_delete_product_from_cart 0x7f1301fc
 int string are_you_sure_you_want_to_delete_the_service 0x7f130033
 int string area 0x7f130034
 int string attach_a_picture 0x7f130035
@@ -4551,6 +4555,7 @@ int string call_notification_screening_text 0x7f13004c
 int string camera 0x7f13004d
 int string cancel 0x7f13004e
 int string cancel_subscription 0x7f13004f
+int string cart 0x7f1301f5
 int string change_mobile_number 0x7f130050
 int string change_password 0x7f130051
 int string character_counter_content_description 0x7f130052
@@ -4604,6 +4609,7 @@ int string default_error_msg 0x7f130081
 int string delete 0x7f130082
 int string delete_account 0x7f130083
 int string delete_product 0x7f130084
+int string delete_product_from_cart 0x7f1301fd
 int string delete_the_service 0x7f130085
 int string department 0x7f130086
 int string departments 0x7f130087
@@ -4860,6 +4866,7 @@ int string path_password_eye 0x7f130181
 int string path_password_eye_mask_strike_through 0x7f130182
 int string path_password_eye_mask_visible 0x7f130183
 int string path_password_strike_through 0x7f130184
+int string pay 0x7f1301f6
 int string payment_failer 0x7f130185
 int string pending_requests 0x7f130186
 int string pick_image_camera 0x7f130187
@@ -4884,8 +4891,10 @@ int string product_quantity 0x7f130199
 int string product_section 0x7f13019a
 int string product_unit 0x7f13019b
 int string products 0x7f13019c
+int string products1 0x7f1301f7
 int string profile 0x7f13019d
 int string project_id 0x7f13019e
+int string qty 0x7f1301f8
 int string quantity 0x7f13019f
 int string r_s 0x7f1301a0
 int string rate_your_reservation 0x7f1301a1
@@ -4931,7 +4940,9 @@ int string subregion 0x7f1301c8
 int string subscribe 0x7f1301c9
 int string subscription_date 0x7f1301ca
 int string subscriptions 0x7f1301cb
+int string summary 0x7f1301f9
 int string sunday 0x7f1301cc
+int string tax 0x7f1301fa
 int string terms_and_conditions 0x7f1301cd
 int string the_code_has_not_been_received 0x7f1301ce
 int string there_are_no_addresses_available 0x7f1301cf
@@ -4945,6 +4956,7 @@ int string there_is_time_not_added_in_day 0x7f1301d6
 int string thursday 0x7f1301d7
 int string time 0x7f1301d8
 int string today_s_task_from_the_application 0x7f1301d9
+int string total 0x7f1301fb
 int string total_orders 0x7f1301da
 int string tuesday 0x7f1301db
 int string upcoming_appointments 0x7f1301dc

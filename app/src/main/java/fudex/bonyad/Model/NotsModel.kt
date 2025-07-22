@@ -2,6 +2,7 @@ package fudex.bonyad.Model
 
 data class NotsModel (
     var count: Int? = null ,
+    var balance: Double? = null ,
     val data: ArrayList<NotDatum>? = ArrayList()
 )
 
