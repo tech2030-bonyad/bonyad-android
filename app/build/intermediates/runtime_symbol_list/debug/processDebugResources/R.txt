@@ -3164,6 +3164,7 @@ int drawable ic_perviousorder 0x7f0801c9
 int drawable ic_point 0x7f0801ca
 int drawable ic_profile 0x7f0801cb
 int drawable ic_profile1 0x7f0801cc
+int drawable ic_profit 0x7f0802e8
 int drawable ic_quill_phone 0x7f0801cd
 int drawable ic_rectanglehome 0x7f0801ce
 int drawable ic_reservedone 0x7f0801cf
@@ -4103,6 +4104,7 @@ int id unitLin 0x7f0a0283
 int id unlabeled 0x7f0a0284
 int id up 0x7f0a0285
 int id useLogo 0x7f0a0286
+int id usewallet 0x7f0a02a6
 int id vertical 0x7f0a0287
 int id vertical_only 0x7f0a0288
 int id video_decoder_gl_surface_view 0x7f0a0289
@@ -4370,6 +4372,8 @@ int layout item_homeproduct 0x7f0d0085
 int layout item_homeproduct1 0x7f0d00e5
 int layout item_image 0x7f0d0086
 int layout item_images 0x7f0d0087
+int layout item_merchantorders 0x7f0d00e8
+int layout item_mostproduct 0x7f0d00e9
 int layout item_nots 0x7f0d0088
 int layout item_onboarding 0x7f0d0089
 int layout item_orders 0x7f0d008a
@@ -4532,6 +4536,7 @@ int string attach_a_picture 0x7f130035
 int string available_appointments 0x7f130036
 int string back 0x7f130037
 int string bank_account 0x7f130038
+int string best_selling_products 0x7f1301fe
 int string bio 0x7f130039
 int string biometric_or_screen_lock_prompt_message 0x7f13003a
 int string biometric_prompt_message 0x7f13003b
@@ -4588,6 +4593,7 @@ int string common_signin_button_text 0x7f13006c
 int string common_signin_button_text_long 0x7f13006d
 int string complete_reservation 0x7f13006e
 int string completed_appointments 0x7f13006f
+int string completed_orders 0x7f130204
 int string completed_requests 0x7f130070
 int string confirm 0x7f130071
 int string confirm_device_credential_password 0x7f130072
@@ -4600,6 +4606,7 @@ int string copy_toast_msg 0x7f130078
 int string create_an_account 0x7f130079
 int string crop_image_menu_crop 0x7f13007a
 int string current_appointments 0x7f13007b
+int string current_orders 0x7f130205
 int string customer_account 0x7f13007c
 int string date 0x7f13007d
 int string date_and_time 0x7f13007e
@@ -4743,6 +4750,7 @@ int string item_view_role_description 0x7f130106
 int string lang 0x7f130107
 int string language 0x7f130108
 int string language_change 0x7f130109
+int string latest_orders 0x7f1301ff
 int string length_must_be 0x7f13010a
 int string load_more 0x7f13010b
 int string location 0x7f13010c
@@ -4858,6 +4866,7 @@ int string notifications 0x7f130179
 int string old_password 0x7f13017a
 int string open1 0x7f13017b
 int string or_contact_us_through_our_platforms 0x7f13017c
+int string order_number 0x7f130200
 int string orders 0x7f13017d
 int string packages 0x7f13017e
 int string password 0x7f13017f
@@ -4949,6 +4958,7 @@ int string there_are_no_addresses_available 0x7f1301cf
 int string there_are_no_appointment_available 0x7f1301d0
 int string there_are_no_messages_available 0x7f1301d1
 int string there_are_no_notifications_available 0x7f1301d2
+int string there_are_no_orders_available 0x7f130206
 int string there_are_no_products_available 0x7f1301d3
 int string there_are_no_services_available 0x7f1301d4
 int string there_are_no_technicals_available 0x7f1301d5
@@ -4958,6 +4968,8 @@ int string time 0x7f1301d8
 int string today_s_task_from_the_application 0x7f1301d9
 int string total 0x7f1301fb
 int string total_orders 0x7f1301da
+int string total_profits 0x7f130201
+int string total_sales 0x7f130202
 int string tuesday 0x7f1301db
 int string upcoming_appointments 0x7f1301dc
 int string use_biometric_label 0x7f1301dd
@@ -4967,6 +4979,7 @@ int string use_face_or_screen_lock_label 0x7f1301e0
 int string use_fingerprint_label 0x7f1301e1
 int string use_fingerprint_or_screen_lock_label 0x7f1301e2
 int string use_screen_lock_label 0x7f1301e3
+int string use_wallet_your_balance_is 0x7f130203
 int string user_deleted 0x7f1301e4
 int string wallet 0x7f1301e5
 int string wednesday 0x7f1301e6

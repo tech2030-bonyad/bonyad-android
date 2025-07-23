@@ -377,6 +377,16 @@
           <theme>@style/Theme.Bonyadandroid</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_merchantorders.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_mostproduct.xml">
+        <config>
+          <theme>@style/Theme.Bonyadandroid</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_nots.xml">
         <config>
           <theme>@style/Theme.Bonyadandroid</theme>
@@ -464,13 +474,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ba91a24-0be8-4d0e-8311-09f93afe2e56" name="Changes" comment="first commmit">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/CartModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user/CartActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/user/Cartproductadapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/CartListViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/CartproductViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_cart.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/MerchantHomeModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/MerchantorderdetailsModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/merchant/Mostproductsadapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Adapter/merchant/Ordersadapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/merchant/MerchanthomefragmentViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/merchant/OrdersListViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/merchant/OrdersViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_profit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_merchantorders.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_mostproduct.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.bin" afterDir="false" />
@@ -484,19 +497,13 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/DataBinderMapperImpl$InnerLayoutIdLookup.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/DataBinderMapperImpl$InnerLayoutIdLookup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/DataBinderMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/DataBinderMapperImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/Helper/BindingAdapters.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/Helper/BindingAdapters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/Model/NotsModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/Model/NotsModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/NetWorkConnction/ApiInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/NetWorkConnction/ApiInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/ui/Activity/BaseActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/dirs/fudex/bonyad/ui/Activity/BaseActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/jars/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/jacocoDebug/jars/0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_artifact/debug/kaptDebugKotlin/fudex.bonyad-br.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_artifact/debug/kaptDebugKotlin/fudex.bonyad-br.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_artifact/debug/kaptDebugKotlin/fudex.bonyad-setter_store.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_artifact/debug/kaptDebugKotlin/fudex.bonyad-setter_store.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_base_class_log_artifact/debug/dataBindingGenBaseClassesDebug/out/fudex.bonyad-binding_classes.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_base_class_log_artifact/debug/dataBindingGenBaseClassesDebug/out/fudex.bonyad-binding_classes.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex" afterDir="false" />
@@ -515,9 +522,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/fudex/bonyad/DataBinderMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/fudex/bonyad/DataBinderMapperImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ar_values-ar.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ar_values-ar.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json" afterDir="false" />
@@ -525,18 +529,13 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/layout.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/layout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/mergeDebugResources.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/mergeDebugResources.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/packageDebugResources/values-ar/values-ar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/packageDebugResources/values-ar/values-ar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/DataBinderMapperImpl$InnerBrLookup.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/DataBinderMapperImpl$InnerBrLookup.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/DataBinderMapperImpl$InnerLayoutIdLookup.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/DataBinderMapperImpl$InnerLayoutIdLookup.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/DataBinderMapperImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/DataBinderMapperImpl.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/Helper/BindingAdapters.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/Helper/BindingAdapters.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/Model/NotsModel.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/Model/NotsModel.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/NetWorkConnction/ApiInterface.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/NetWorkConnction/ApiInterface.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/ui/Activity/BaseActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/fudex/bonyad/ui/Activity/BaseActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/processDebugResources/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/processDebugResources/package-aware-r.txt" afterDir="false" />
@@ -692,45 +691,32 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable/last-build.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/apt-cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/apt-cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-structure.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-structure.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/java-cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/java-cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/fudex/bonyad/Helper/BindingAdapters.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/fudex/bonyad/Helper/BindingAdapters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/fudex/bonyad/Model/NotsModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/fudex/bonyad/Model/NotsModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/fudex/bonyad/NetWorkConnction/ApiInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/fudex/bonyad/NetWorkConnction/ApiInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Helper/BindingAdapters.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Helper/BindingAdapters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Helper/BindingAdapters.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Helper/BindingAdapters.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Model/NotsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Model/NotsModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Model/NotsModel.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/Model/NotsModel.kapt_metadata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/NetWorkConnction/ApiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/NetWorkConnction/ApiInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/NetWorkConnction/ApiInterface.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/NetWorkConnction/ApiInterface.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/ui/Activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/ui/Activity/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/ui/Activity/BaseActivity.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/fudex/bonyad/ui/Activity/BaseActivity.kapt_metadata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/Helper/BindingAdapters.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/Helper/BindingAdapters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/Model/NotsModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/Model/NotsModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/NetWorkConnction/ApiInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/NetWorkConnction/ApiInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/ui/Activity/BaseActivity$appCompatDelegate$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/ui/Activity/BaseActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/fudex/bonyad/ui/Activity/BaseActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Data/Userdata.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Data/Userdata.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Helper/BindingAdapters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Helper/BindingAdapters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/NotsModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/NotsModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/PlanModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/PlanModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ProductsModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/ProductsModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/CartModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/CartModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/OrdersModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/Model/OrdersModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/WebviewActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/WebviewActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/merchant/DetailsproductmerchantActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/merchant/DetailsproductmerchantActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user/DetailsproductsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Activity/user/DetailsproductsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/user/UserhomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/user/UserhomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/DeleteViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/DeleteViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/DetailsproductViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/DetailsproductViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserhomefragmentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/user/UserhomefragmentViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsproducts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsproducts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/merchant/MerchanthomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/merchant/MerchanthomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/merchant/MerchantordersFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/ui/Fragment/merchant/MerchantordersFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/merchant/ProductsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/fudex/bonyad/viewmodel/merchant/ProductsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cart.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_merchanthome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_merchanthome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_merchantorders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_merchantorders.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_userhome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_userhome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_product.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
@@ -833,10 +819,10 @@
       <recent name="fudex.bonyad.ui.Activity.technical" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="fudex.bonyad.viewmodel.merchant" />
+      <recent name="fudex.bonyad.ui.Adapter.merchant" />
       <recent name="fudex.bonyad.viewmodel.user" />
       <recent name="fudex.bonyad.ui.Adapter.user" />
-      <recent name="fudex.bonyad.ui.Adapter.merchant" />
-      <recent name="fudex.bonyad.viewmodel.merchant" />
       <recent name="fudex.bonyad.viewmodel" />
     </key>
     <key name="android.template.-1910296638">
@@ -1102,7 +1088,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt</url>
-          <line>104</line>
+          <line>108</line>
           <properties class="fudex.bonyad.NetWorkConnction.ApiInterface">
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -1110,7 +1096,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/app/src/main/java/fudex/bonyad/NetWorkConnction/ApiInterface.kt</url>
-          <line>336</line>
+          <line>340</line>
           <properties class="fudex.bonyad.NetWorkConnction.ApiInterface" method="deletenots">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -1125,12 +1111,12 @@
       <map>
         <entry key="fudex.bonyad">
           <value>
-            <CheckInfo lastCheckTimestamp="1753083240284" />
+            <CheckInfo lastCheckTimestamp="1753257883403" />
           </value>
         </entry>
         <entry key="fudex.bonyad.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1753083240286" />
+            <CheckInfo lastCheckTimestamp="1753257883404" />
           </value>
         </entry>
         <entry key="fudex.raha">

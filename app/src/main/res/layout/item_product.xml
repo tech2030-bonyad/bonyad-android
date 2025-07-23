@@ -31,6 +31,7 @@
                 bind:imageUrl="@{model.onservse.image}"
                 android:layout_marginTop="8dp"/>
             <LinearLayout
+                android:onClick="@{ () -> model.rate() }"
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:layout_gravity="end"

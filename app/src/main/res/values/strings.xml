@@ -242,4 +242,12 @@
     <string name="delete_product_from_cart">Delete product from cart</string>
     <string name="are_you_sure_you_want_to_delete_product_from_cart">Are you sure you want to delete product from cart?</string>
     <string name="use_wallet_your_balance_is">use wallet your balance is</string>
+    <string name="total_sales">Total sales</string>
+    <string name="total_profits">Total profits</string>
+    <string name="latest_orders">Latest orders</string>
+    <string name="best_selling_products">Best-selling products</string>
+    <string name="order_number">Order number:</string>
+    <string name="current_orders">Current orders</string>
+    <string name="completed_orders">Completed orders</string>
+    <string name="there_are_no_orders_available">there are no orders available</string>
 </resources>

@@ -33,6 +33,7 @@ import fudex.bonyad.Model.PlanData
 import fudex.bonyad.Model.ProductElement
 import fudex.bonyad.Model.ProductsDatum
 import fudex.bonyad.Model.RatingDatum
+import fudex.bonyad.Model.RecentOrder
 import fudex.bonyad.Model.StatesDatum
 
 import fudex.bonyad.R
@@ -47,6 +48,7 @@ import fudex.bonyad.ui.Adapter.Notsadapter
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
 import fudex.bonyad.ui.Adapter.Ratingadapter
 import fudex.bonyad.ui.Adapter.merchant.Imagesadapter
+import fudex.bonyad.ui.Adapter.merchant.Mostproductsadapter
 import fudex.bonyad.ui.Adapter.merchant.Myproductsadapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
@@ -548,27 +550,27 @@ object BindingAdapters {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }
     }
-//    @BindingAdapter("bind:complain", "bind:fragment")
-//    @JvmStatic
-//    fun setcomplain(recyclerView: RecyclerView, movies: ArrayList<ComplainDatum>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Complainadapter) {
-//            (adapter as Complainadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:mostproduct", "bind:fragment")
+    @JvmStatic
+    fun setmostproduct(recyclerView: RecyclerView, movies: ArrayList<ProductsDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Mostproductsadapter) {
+            (adapter as Mostproductsadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //
-//    @BindingAdapter("bind:nots", "bind:fragment")
-//    @JvmStatic
-//    fun setnots(recyclerView: RecyclerView, movies: ArrayList<NotsDatum>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Notsadapter) {
-//            (adapter as Notsadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:merchantorders", "bind:fragment")
+    @JvmStatic
+    fun setmerchantorders(recyclerView: RecyclerView, movies: ArrayList<RecentOrder>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is fudex.bonyad.ui.Adapter.merchant.Ordersadapter) {
+            (adapter as fudex.bonyad.ui.Adapter.merchant.Ordersadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 //    @BindingAdapter("bind:notsdata", "bind:fragment")
 //    @JvmStatic
 //    fun setnotsdata(recyclerView: RecyclerView, movies: ArrayList<Notification>, fragment: Activity) {

@@ -105,6 +105,7 @@ drawable ic_perviousorder
 drawable ic_point
 drawable ic_profile
 drawable ic_profile1
+drawable ic_profit
 drawable ic_quill_phone
 drawable ic_rectanglehome
 drawable ic_reservedone
@@ -236,6 +237,7 @@ id title
 id tradedes
 id tradename
 id unitLin
+id usewallet
 id webView
 id workerMap
 id zoneLin
@@ -315,6 +317,8 @@ layout item_homeproduct
 layout item_homeproduct1
 layout item_image
 layout item_images
+layout item_merchantorders
+layout item_mostproduct
 layout item_nots
 layout item_onboarding
 layout item_orders
@@ -366,6 +370,7 @@ string attach_a_picture
 string available_appointments
 string back
 string bank_account
+string best_selling_products
 string bio
 string booking_date_and_time
 string browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button
@@ -385,6 +390,7 @@ string com.crashlytics.android.build_id
 string commercial_name
 string complete_reservation
 string completed_appointments
+string completed_orders
 string completed_requests
 string confirm
 string confirm_password
@@ -394,6 +400,7 @@ string content_of_the_message
 string copied
 string create_an_account
 string current_appointments
+string current_orders
 string customer_account
 string date
 string date_and_time
@@ -451,6 +458,7 @@ string it_booked_before
 string lang
 string language
 string language_change
+string latest_orders
 string length_must_be
 string load_more
 string location
@@ -479,6 +487,7 @@ string notifications
 string old_password
 string open1
 string or_contact_us_through_our_platforms
+string order_number
 string orders
 string packages
 string password
@@ -557,6 +566,7 @@ string there_are_no_addresses_available
 string there_are_no_appointment_available
 string there_are_no_messages_available
 string there_are_no_notifications_available
+string there_are_no_orders_available
 string there_are_no_products_available
 string there_are_no_services_available
 string there_are_no_technicals_available
@@ -566,8 +576,11 @@ string time
 string today_s_task_from_the_application
 string total
 string total_orders
+string total_profits
+string total_sales
 string tuesday
 string upcoming_appointments
+string use_wallet_your_balance_is
 string user_deleted
 string wallet
 string wednesday

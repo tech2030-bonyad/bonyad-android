@@ -9,7 +9,7 @@ data class CartData (
     val sub_total: String? = null,
     val discount: String? = null,
     val total: String? = null,
-
+    val merchant: UserModel? = null,
     val products: ArrayList<ProductElement>? = ArrayList(),
     val created_at: String? = null
 )

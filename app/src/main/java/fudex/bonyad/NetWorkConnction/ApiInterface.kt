@@ -39,6 +39,8 @@ import fudex.bonyad.Model.DetailstechnicalModel
 import fudex.bonyad.Model.FaqModel
 import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.MYSubsribeModel
+import fudex.bonyad.Model.MerchantHomeModel
+import fudex.bonyad.Model.MerchantOrdersModel
 import fudex.bonyad.Model.PlanModel
 import fudex.bonyad.Model.ProductsModel
 import fudex.bonyad.Model.ProfileModel
@@ -81,6 +83,9 @@ interface ApiInterface {
 
     @GET("technician/analytics")
     fun gettechnicalhome(): Call<TechnicalHomeModel?>?
+
+    @GET("merchant/home")
+    fun getmerchanthome(): Call<MerchantHomeModel?>?
 
     @GET("technicians")
     fun gettechnicals( @Query("page") page: Int? , @Query("paginate") paginate: Int?, @Query("zones[]") zones: List<Int>?, @Query("services[]") services: List<Int>?, @Query("name") name: String?): Call<TechnicalModel?>?
@@ -492,4 +497,8 @@ interface ApiInterface {
 
     @POST("orders")
     fun createorder(@Body data: Orderdata): Call<CreateorderModel?>?
+
+    @GET("merchant/orders")
+    fun getmerchantorders(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<MerchantOrdersModel?>?
+
 }

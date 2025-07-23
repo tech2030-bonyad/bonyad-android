@@ -31,6 +31,7 @@
     <string name="available_appointments">المواعيد المتاحة</string>
     <string name="back">رجوع</string>
     <string name="bank_account">الحساب البنكي</string>
+    <string name="best_selling_products">المنتجات الأكثر مبيعا</string>
     <string name="bio">نبذة عن الخدمات</string>
     <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">تصفح آلاف المنتجات، من الإسمنت والأدوات إلى الدهانات والديكور، واختر ما يناسب مشروعك بضغطة زر!</string>
@@ -49,6 +50,7 @@
     <string name="commercial_name">الاسم التجاري</string>
     <string name="complete_reservation">إتمام الحجز</string>
     <string name="completed_appointments">المواعيد المكتمله</string>
+    <string name="completed_orders">الطلبات المكتمله</string>
     <string name="completed_requests">الطلبات المكتمله</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_password">تأكيد كلمة المرور</string>
@@ -58,6 +60,7 @@
     <string name="copied">copied</string>
     <string name="create_an_account">إنشاء حساب</string>
     <string name="current_appointments">المواعيد الحالية</string>
+    <string name="current_orders">الطلبات الحالية</string>
     <string name="customer_account">حساب المستخدم</string>
     <string name="date">التاريخ</string>
     <string name="date_and_time">تاريخ ووقت</string>
@@ -109,6 +112,7 @@
     <string name="lang">ar</string>
     <string name="language">اللغة</string>
     <string name="language_change">تغير اللغة</string>
+    <string name="latest_orders">آخر الطلبات</string>
     <string name="length_must_be">يجب أن يكون عدد الأرقام</string>
     <string name="load_more">عرض المزيد</string>
     <string name="location">الموقع</string>
@@ -137,6 +141,7 @@
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="open1">افتح نظام تحديد المواقع</string>
     <string name="or_contact_us_through_our_platforms">أو تواصل معنا عبر منصاتنا</string>
+    <string name="order_number">رقم الطلب :</string>
     <string name="orders">الطلبات</string>
     <string name="packages">الباقات</string>
     <string name="password">كلمة المرور</string>
@@ -214,6 +219,7 @@
     <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
     <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
     <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
+    <string name="there_are_no_orders_available">لا يوجد طلبات متاحه</string>
     <string name="there_are_no_products_available">لا يوجد منتجات متاحه</string>
     <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
@@ -223,8 +229,11 @@
     <string name="today_s_task_from_the_application">شغل اليوم... من التطبيق</string>
     <string name="total">الأجمالي</string>
     <string name="total_orders">اجمالي الطلبات</string>
+    <string name="total_profits">اجمالى الارباح</string>
+    <string name="total_sales">اجمالي المبيعات</string>
     <string name="tuesday">الثلاثاء</string>
     <string name="upcoming_appointments">المواعيد القادمة</string>
+    <string name="use_wallet_your_balance_is">استخدم المحفطة رصيدك هو</string>
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>
     <string name="wallet">المحفظة</string>
     <string name="wednesday">الأربعاء</string>

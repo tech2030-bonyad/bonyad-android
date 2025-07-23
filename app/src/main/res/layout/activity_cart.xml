@@ -75,7 +75,7 @@
                     android:textColor="@color/darkblue"
                     android:visibility="@{model.wallet == 0 ? View.GONE : View.VISIBLE}"
                     android:layout_marginBottom="15dp"
-                    android:text="@{@string/use_wallet_your_balance_is + ' ' + '(' + model.wallet + ' ' + + @string/r_s + ')'}"/>
+                    android:text="@{@string/use_wallet_your_balance_is + ' ' + model.wallet.toString() + ' '  + @string/r_s}"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -30,3 +30,7 @@ data class Day (
     var value: Int? = null,
     val label: String? = null
 )
+
+data class MerchantOrdersModel (
+    val data: ArrayList<RecentOrder>? = ArrayList()
+)

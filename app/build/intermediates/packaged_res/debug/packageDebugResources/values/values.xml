@@ -56,6 +56,7 @@
     <string name="available_appointments">Available appointments</string>
     <string name="back">Back</string>
     <string name="bank_account">Bank account</string>
+    <string name="best_selling_products">Best-selling products</string>
     <string name="bio">Overview of Services</string>
     <string name="booking_date_and_time">Booking date and time:</string>
     <string name="browse_thousands_of_products_from_cement_and_tools_to_paints_and_decor_and_choose_what_suits_your_project_with_the_click_of_a_button">Browse thousands of products, from cement and tools to paints and decor, and choose what suits your project with the click of a button!</string>
@@ -75,6 +76,7 @@
     <string name="commercial_name">Commercial name</string>
     <string name="complete_reservation">Complete reservation</string>
     <string name="completed_appointments">Completed appointments</string>
+    <string name="completed_orders">Completed orders</string>
     <string name="completed_requests">Completed requests</string>
     <string name="confirm">Confirm</string>
     <string name="confirm_password">Confirm Password</string>
@@ -84,6 +86,7 @@
     <string name="copied">copied</string>
     <string name="create_an_account">Create an account</string>
     <string name="current_appointments">Current appointments</string>
+    <string name="current_orders">Current orders</string>
     <string name="customer_account">User account</string>
     <string name="date">Date</string>
     <string name="date_and_time">Date and time</string>
@@ -141,6 +144,7 @@
     <string name="lang">en</string>
     <string name="language">Language</string>
     <string name="language_change">Language change</string>
+    <string name="latest_orders">Latest orders</string>
     <string name="length_must_be">lenght must be</string>
     <string name="load_more">Load More</string>
     <string name="location">Location</string>
@@ -169,6 +173,7 @@
     <string name="old_password">Old password</string>
     <string name="open1">open gps</string>
     <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
+    <string name="order_number">Order number:</string>
     <string name="orders">Orders</string>
     <string name="packages">Packages</string>
     <string name="password">Password</string>
@@ -247,6 +252,7 @@
     <string name="there_are_no_appointment_available">there are no appointment available</string>
     <string name="there_are_no_messages_available">there are no messages available</string>
     <string name="there_are_no_notifications_available">there are no notifications available</string>
+    <string name="there_are_no_orders_available">there are no orders available</string>
     <string name="there_are_no_products_available">there are no products available</string>
     <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_are_no_technicals_available">there are no technicals available</string>
@@ -256,8 +262,11 @@
     <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
     <string name="total">Total</string>
     <string name="total_orders">Total orders</string>
+    <string name="total_profits">Total profits</string>
+    <string name="total_sales">Total sales</string>
     <string name="tuesday">Tuesday</string>
     <string name="upcoming_appointments">Upcoming appointments</string>
+    <string name="use_wallet_your_balance_is">use wallet your balance is</string>
     <string name="user_deleted">User Has been Deleted By The System or bloked</string>
     <string name="wallet">Wallet</string>
     <string name="wednesday">Wednesday</string>

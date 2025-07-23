@@ -6,6 +6,7 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableField
 import com.google.gson.Gson
 import fudex.bonyad.Model.ProductsDatum
+import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity
 import fudex.bonyad.ui.Activity.merchant.MyproductActivity
@@ -37,5 +38,11 @@ class ProductsViewModel : BaseObservable() {
     fun delete(){
         (context as MyproductActivity).myproductsViewModel.productId = onservse.get()!!.id!!
         (context as MyproductActivity).myproductsViewModel.delete()
+    }
+    fun rate(){
+        var intent: Intent = Intent(context, RatingActivity::class.java)
+        intent.putExtra("id",onservse.get()?.id ?: 0)
+        intent.putExtra("type","Product")
+        context?.startActivity(intent)
     }
 }
