@@ -22,6 +22,8 @@ class UserModel (
     val zone: String? = null,
     val is_from_social:Boolean? = null,
     val zone_id: Int? = null,
+    val average_rating: String? = null,
+    val count_rating: String? = null,
     val trade_name: String? = null,
     val description_of_business_activity: String? = null,
     val business_logo: String? = null,

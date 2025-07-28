@@ -30,6 +30,7 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import fudex.bonyad.Model.ProfileModel
 import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
+import fudex.bonyad.ui.Fragment.user.UserordersFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -105,8 +106,8 @@ class UserhomeViewModel(var catogaryFragment: UserhomeActivity) : BaseObservable
     fun orders() {
         if (type.get()!= 2){
            if (LoginSession.isLogin){
-//               var fragment = ReservationFragment()
-//               replaceFragment(fragment)
+               var fragment = UserordersFragment()
+               replaceFragment(fragment)
                type.set(2)
            }else {
                var intent: Intent = Intent(activity, LoginActivity::class.java)

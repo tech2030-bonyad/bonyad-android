@@ -75,6 +75,12 @@
         android:theme="@style/Theme.Bonyadandroid"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="fudex.bonyad.ui.Activity.user.DetailsuserorderActivity"
+            android:exported="false" />
+        <activity
+            android:name="fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity"
+            android:exported="false" />
+        <activity
             android:name="fudex.bonyad.ui.Activity.user.CartActivity"
             android:exported="false" />
         <activity

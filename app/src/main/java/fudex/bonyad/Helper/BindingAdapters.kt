@@ -50,6 +50,7 @@ import fudex.bonyad.ui.Adapter.Ratingadapter
 import fudex.bonyad.ui.Adapter.merchant.Imagesadapter
 import fudex.bonyad.ui.Adapter.merchant.Mostproductsadapter
 import fudex.bonyad.ui.Adapter.merchant.Myproductsadapter
+import fudex.bonyad.ui.Adapter.merchant.Productsorderadapter
 import fudex.bonyad.ui.Adapter.technical.Avalibiltyadapter
 import fudex.bonyad.ui.Adapter.technical.Daysadapter
 import fudex.bonyad.ui.Adapter.technical.Planadapter
@@ -65,6 +66,7 @@ import fudex.bonyad.ui.Adapter.user.Technicafilterladapter
 import fudex.bonyad.ui.Adapter.user.Technical1adapter
 import fudex.bonyad.ui.Adapter.user.Technicaladapter
 import fudex.bonyad.ui.Adapter.user.Timesadapter
+import fudex.bonyad.ui.Adapter.user.Userordersadapter
 
 
 /**
@@ -571,14 +573,24 @@ object BindingAdapters {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }
     }
-//    @BindingAdapter("bind:notsdata", "bind:fragment")
-//    @JvmStatic
-//    fun setnotsdata(recyclerView: RecyclerView, movies: ArrayList<Notification>, fragment: Activity) {
-//        val adapter = recyclerView.adapter
-//        if (adapter != null && adapter is Notsdataadapter) {
-//            (adapter as Notsdataadapter).setdata(movies, fragment)
-//        }else {
-////            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
-//        }
-//    }
+    @BindingAdapter("bind:productorder", "bind:fragment")
+    @JvmStatic
+    fun setproductorder(recyclerView: RecyclerView, movies: ArrayList<ProductElement>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Productsorderadapter) {
+            (adapter as Productsorderadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+    @BindingAdapter("bind:userorders", "bind:fragment")
+    @JvmStatic
+    fun setuserorders(recyclerView: RecyclerView, movies: ArrayList<RecentOrder>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Userordersadapter) {
+            (adapter as Userordersadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
 }

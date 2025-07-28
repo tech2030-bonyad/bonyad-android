@@ -5,7 +5,8 @@ data class MerchantorderdetailsModel (
 )
 
 data class MerchantorderdetailsData (
-    val id: Int? = null,
+    var id: Int? = null,
+    val code: Int? = null,
     val uuid: String? = null,
     val user_id: Int? = null,
     val user: UserModel? = null,
@@ -21,5 +22,5 @@ data class MerchantorderdetailsData (
     val merchant_total: String? = null,
     val created_at: String? = null,
     val updated_at: String? = null,
-    val items: ArrayList<CartData>? = ArrayList(),
+    val items: ArrayList<ProductElement>? = ArrayList(),
 )

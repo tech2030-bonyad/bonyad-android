@@ -9,6 +9,7 @@ import com.google.gson.Gson
 import fudex.bonyad.Model.RecentOrder
 import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.merchant.AddproductActivity
+import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity
 import fudex.bonyad.ui.Activity.merchant.MyproductActivity
 
@@ -34,8 +35,8 @@ class OrdersViewModel : BaseObservable() {
             color.set(Color.parseColor("#10F76834"))
             textcolor.set(Color.parseColor("#F76834"))
         }else if (catModel.status == 4){
-            color.set(Color.parseColor("#106FC94E"))
-            textcolor.set(Color.parseColor("#6FC94E"))
+            color.set(Color.parseColor("#102D8034"))
+            textcolor.set(Color.parseColor("#2D8034"))
         }
         if (catModel.id ?: 0 == 0){
             catModel.id = catModel.code
@@ -45,8 +46,8 @@ class OrdersViewModel : BaseObservable() {
         this.context = context
     }
     fun clickitem(){
-        var intent: Intent = Intent(context, DetailsproductmerchantActivity::class.java)
-        intent.putExtra("id",onservse.get()?.code ?: 0)
+        var intent: Intent = Intent(context, DetailsordermerchantActivity::class.java)
+        intent.putExtra("id",onservse.get()?.id ?: 0)
         context?.startActivity(intent)
     }
 

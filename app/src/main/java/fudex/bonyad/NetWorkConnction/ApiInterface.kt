@@ -41,6 +41,7 @@ import fudex.bonyad.Model.HomeModel
 import fudex.bonyad.Model.MYSubsribeModel
 import fudex.bonyad.Model.MerchantHomeModel
 import fudex.bonyad.Model.MerchantOrdersModel
+import fudex.bonyad.Model.MerchantorderdetailsModel
 import fudex.bonyad.Model.PlanModel
 import fudex.bonyad.Model.ProductsModel
 import fudex.bonyad.Model.ProfileModel
@@ -501,4 +502,16 @@ interface ApiInterface {
     @GET("merchant/orders")
     fun getmerchantorders(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<MerchantOrdersModel?>?
 
+    @GET("merchant/orders/{orderId}")
+    fun getmerchantorderdetails(
+        @Path("orderId") orderId: Int,
+    ): Call<MerchantorderdetailsModel?>?
+
+    @GET("orders")
+    fun getuserorders(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<MerchantOrdersModel?>?
+
+    @GET("orders/{orderId}")
+    fun getuserorderdetails(
+        @Path("orderId") orderId: Int,
+    ): Call<MerchantorderdetailsModel?>?
 }

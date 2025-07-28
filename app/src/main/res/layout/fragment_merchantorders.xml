@@ -114,7 +114,7 @@
                 android:layout_marginTop="12dp"
                 bind:merchantorders="@{model.orderList}"
                 bind:fragment="@{model.activity}"
-                bind:shimmer_recycler_layout="@layout/item_userappointment"
+                bind:shimmer_recycler_layout="@layout/item_merchantorders"
                 bind:shimmer_recycler_item_count="5"
                 />
             <LinearLayout

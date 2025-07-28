@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="ProductorderviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.merchant.ProductorderViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rec_strockblue2"
+        android:layout_marginBottom="15dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="86dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                bind:imageUrl="@{model.onservse.product.image}"/>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairoregular"
+                android:layout_marginTop="6dp"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@{model.onservse.product.name}"
+                tools:text="طوب احمر "
+                android:textColor="@color/darkblue"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    bind:imageUrl="@{model.img}"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:text="@{model.name}"
+                    tools:text="علي بن محمد"
+                    android:textColor="@color/darkgray"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+                <LinearLayout
+                    android:onClick="@{ () -> model.rate() }"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cairoregular"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:textSize="10sp"
+                        android:text="@{model.onservse.product.average_rating.toString()}"
+                        tools:text="4.7"
+                        android:textColor="@color/darkblue"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_round_star"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cairoregular"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:textSize="10sp"
+                        android:text="@{'(' + model.onservse.product.review_count +')'}"
+                        tools:text="(12)"
+                        android:textColor="@color/darkgray"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:text="@string/price"
+                    android:textColor="#70101010"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairosemibold"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:layout_marginStart="5dp"
+                    android:text="/"
+                    android:textColor="#70101010"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:layout_marginStart="3dp"
+                    android:text="@{model.onservse.product.unit}"
+                    android:textColor="#70101010"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairosemibold"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:layout_marginStart="5dp"
+                    android:text="@{model.onservse.product.price + ' ' + @string/r_s}"
+                    tools:text="95.33 ر.س"
+                    android:textColor="@color/darkblue"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:text="@string/quantity"
+                    android:textColor="#70101010"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:text=":"
+                    android:layout_marginStart="4dp"
+                    android:textColor="#70101010"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairosemibold"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:layout_marginStart="5dp"
+                    android:text="@{model.onservse.quantity }"
+                    tools:text="95.33 ر.س"
+                    android:textColor="@color/darkblue"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

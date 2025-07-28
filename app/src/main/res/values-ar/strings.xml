@@ -248,4 +248,5 @@
     <string name="current_orders">الطلبات الحالية</string>
     <string name="completed_orders">الطلبات المكتمله</string>
     <string name="there_are_no_orders_available">لا يوجد طلبات متاحه</string>
+    <string name="total_price">Total price</string>
 </resources>

@@ -6,8 +6,10 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableField
 import com.google.gson.Gson
 import fudex.bonyad.Model.ProductsDatum
+import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.merchant.AddproductActivity
+import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity
 import fudex.bonyad.ui.Activity.merchant.MyproductActivity
 
@@ -20,7 +22,13 @@ class ProductsViewModel : BaseObservable() {
     var onservse = ObservableField<ProductsDatum>()
     var catModel : ProductsDatum? = null
     var context : Activity? = null
+    var img = ObservableField<String>("")
+    var name = ObservableField<String>("")
     fun setdata(catModel: ProductsDatum , context : Activity) {
+        if (context is DetailsordermerchantActivity){
+            img.set(LoginSession.getUserData(context).user.business_logo ?: "")
+            name.set(LoginSession.getUserData(context).user.trade_name ?: "")
+        }
         onservse.set(catModel)
         this.catModel = catModel
         this.context = context

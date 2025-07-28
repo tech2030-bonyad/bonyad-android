@@ -86,6 +86,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_linkedin
 drawable ic_loc
+drawable ic_loc2222
 drawable ic_loc3452
 drawable ic_location2
 drawable ic_location3
@@ -252,9 +253,11 @@ layout activity_changelangue
 layout activity_chat
 layout activity_contactus
 layout activity_detailsappointment
+layout activity_detailsordermerchant
 layout activity_detailsproducts
 layout activity_detailsproducttechnical
 layout activity_detailsspeciallist
+layout activity_detailsuserorder
 layout activity_editpass
 layout activity_editphone
 layout activity_edittechnicaldata
@@ -303,6 +306,7 @@ layout fragment_technicalprofile
 layout fragment_technicalservices
 layout fragment_userappointment
 layout fragment_userhome
+layout fragment_userorders
 layout fragment_userprofile
 layout item_address
 layout item_availablity
@@ -324,6 +328,7 @@ layout item_onboarding
 layout item_orders
 layout item_packages
 layout item_product
+layout item_productorder
 layout item_rateing
 layout item_serviceimage
 layout item_services
@@ -336,6 +341,7 @@ layout item_technicalappointment
 layout item_technicalservice
 layout item_time
 layout item_userappointment
+layout item_userorder
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
@@ -576,6 +582,7 @@ string time
 string today_s_task_from_the_application
 string total
 string total_orders
+string total_price
 string total_profits
 string total_sales
 string tuesday

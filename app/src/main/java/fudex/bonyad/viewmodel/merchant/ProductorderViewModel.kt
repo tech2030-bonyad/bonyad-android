@@ -1,0 +1,61 @@
+package fudex.bonyad.viewmodel.merchant
+
+import android.app.Activity
+import android.content.Intent
+import androidx.databinding.BaseObservable
+import androidx.databinding.ObservableField
+import com.google.gson.Gson
+import fudex.bonyad.Model.ProductElement
+import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.RatingActivity
+import fudex.bonyad.ui.Activity.merchant.AddproductActivity
+import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
+import fudex.bonyad.ui.Activity.merchant.DetailsproductmerchantActivity
+import fudex.bonyad.ui.Activity.merchant.MyproductActivity
+import fudex.bonyad.ui.Activity.user.DetailsuserorderActivity
+
+
+/**
+ * Created by BEST BUY on 5/8/2018.
+ */
+
+class ProductorderViewModel : BaseObservable() {
+    var onservse = ObservableField<ProductElement>()
+    var catModel : ProductElement? = null
+    var context : Activity? = null
+    var img = ObservableField<String>("")
+    var name = ObservableField<String>("")
+    fun setdata(catModel: ProductElement , context : Activity) {
+        if (context is DetailsordermerchantActivity){
+            img.set(LoginSession.getUserData(context).user.business_logo ?: "")
+            name.set(LoginSession.getUserData(context).user.trade_name ?: "")
+        }else if (context is DetailsuserorderActivity){
+            img.set((context as DetailsuserorderActivity).detailsorderuserViewModel.img.get())
+            name.set((context as DetailsuserorderActivity).detailsorderuserViewModel.orderdata.get()?.data?.items?.get(0)?.merchant?.trade_name ?: "")
+        }
+        onservse.set(catModel)
+        this.catModel = catModel
+        this.context = context
+        notifyChange()
+    }
+    fun clickitem(){
+        var intent: Intent = Intent(context, DetailsproductmerchantActivity::class.java)
+        intent.putExtra("id",onservse.get()?.id ?: 0)
+        context?.startActivity(intent)
+    }
+    fun edit(){
+        var intent: Intent = Intent(context, AddproductActivity::class.java)
+        intent.putExtra("data",Gson().toJson(onservse.get()!!))
+        context?.startActivity(intent)
+    }
+    fun delete(){
+        (context as MyproductActivity).myproductsViewModel.productId = onservse.get()!!.id!!
+        (context as MyproductActivity).myproductsViewModel.delete()
+    }
+    fun rate(){
+        var intent: Intent = Intent(context, RatingActivity::class.java)
+        intent.putExtra("id",onservse.get()?.id ?: 0)
+        intent.putExtra("type","Product")
+        context?.startActivity(intent)
+    }
+}

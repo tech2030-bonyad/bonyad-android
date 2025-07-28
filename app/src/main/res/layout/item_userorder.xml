@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="UserorderitemviewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.user.UserordersViewModel" />
+    </data>
+    <LinearLayout
+        android:onClick="@{ () -> model.clickitem() }"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/rec_strockblue1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairoregular"
+                android:text="@{@string/order_number + ' ' + model.onservse.id.toString()}"
+                tools:text="أحمد محمد"
+                android:layout_gravity="center"
+                android:textColor="@color/darkblue"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="@color/white">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/cairosemibold"
+                    android:text="@{model.onservse.status_label}"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:gravity="center"
+                    android:background="@{model.color}"
+                    tools:text="أحمد محمد"
+                    android:layout_gravity="center"
+                    android:textColor="@{model.textcolor}"
+                    android:textSize="12sp"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairoregular"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                tools:text="علي بن محمد"
+                android:textColor="@color/darkgray"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    tools:text="4.7"
+                    android:textColor="@color/darkblue"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_round_star"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    tools:text="(12)"
+                    android:textColor="@color/darkgray"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_loc3452"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="11dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairoregular"
+                    android:layout_gravity="center"
+                    android:text="@{model.onservse.shipping_address}"
+                    tools:text="أحمد محمد"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/darkgray"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairoregular"
+                android:text="@{@string/products + ' ' + model.onservse.code.toString()}"
+                tools:text="أحمد محمد"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center"
+                android:textColor="@color/darkblue"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <TextView
+            android:onClick="@{ () -> model.clickitem() }"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rec_strockblue"
+            android:text="@string/details1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/cairobold"
+            android:textStyle="bold"
+            android:textColor="@color/lightblue"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+</layout>

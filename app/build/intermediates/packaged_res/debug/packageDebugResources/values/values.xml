@@ -262,6 +262,7 @@
     <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
     <string name="total">Total</string>
     <string name="total_orders">Total orders</string>
+    <string name="total_price">Total price</string>
     <string name="total_profits">Total profits</string>
     <string name="total_sales">Total sales</string>
     <string name="tuesday">Tuesday</string>
