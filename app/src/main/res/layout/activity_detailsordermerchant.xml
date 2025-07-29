@@ -132,7 +132,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/cairosemibold"
-                                android:text="@{model.orderdata.data.merchant_total + ' ' + @string/r_s}"
+                                android:text="@{model.orderdata.data.total + ' ' + @string/r_s}"
                                 tools:text="36 طن"
                                 android:textColor="@color/darkgray"
                                 android:textSize="16sp"/>
@@ -192,13 +192,14 @@
                 android:layout_gravity="center"/>
         </FrameLayout>
         <LinearLayout
-            android:visibility="@{model.productList.size() > 0 ? View.VISIBLE : View.GONE}"
+            android:visibility="@{model.ishiden == false ? View.VISIBLE : View.GONE}"
             android:layout_width="match_parent"
             android:layout_height="48sp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:onClick="@{ () -> model.changestatus() }"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="48dp"
@@ -211,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/cairobold"
-                    android:text="@string/modify_the_request"
+                    android:text="@{model.statustitle}"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />

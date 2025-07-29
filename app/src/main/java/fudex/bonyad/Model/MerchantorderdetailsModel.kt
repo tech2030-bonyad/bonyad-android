@@ -20,6 +20,7 @@ data class MerchantorderdetailsData (
     val merchant_subtotal: String? = null,
     val merchant_discount: String? = null,
     val merchant_total: String? = null,
+    val total: String? = null ,
     val created_at: String? = null,
     val updated_at: String? = null,
     val items: ArrayList<ProductElement>? = ArrayList(),

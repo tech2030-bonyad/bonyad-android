@@ -1,6 +1,7 @@
 package fudex.bonyad.NetWorkConnction
 
 import fudex.bonyad.Data.Cartdata
+import fudex.bonyad.Data.Changestatus
 import fudex.bonyad.Data.Chatdata
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
@@ -464,6 +465,9 @@ interface ApiInterface {
     @GET("merchant/products")
     fun getmyproducts(@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
 
+    @GET("merchant/most-sold-products")
+    fun getmostproducts( @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
+
     @HTTP(method = "DELETE", path = "merchant/products/{productId}", hasBody = true)
     fun deleteproduct(@Path("productId") productId: String): Call<ErrorResponse?>?
 
@@ -500,7 +504,7 @@ interface ApiInterface {
     fun createorder(@Body data: Orderdata): Call<CreateorderModel?>?
 
     @GET("merchant/orders")
-    fun getmerchantorders(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<MerchantOrdersModel?>?
+    fun getmerchantorders(@Query("status[]") status: List<Int>?,@Query("page") page: Int? , @Query("paginate") paginate: Int?, @Query("date_from") date_from: String?, @Query("date_to") date_to: String?): Call<MerchantOrdersModel?>?
 
     @GET("merchant/orders/{orderId}")
     fun getmerchantorderdetails(
@@ -514,4 +518,12 @@ interface ApiInterface {
     fun getuserorderdetails(
         @Path("orderId") orderId: Int,
     ): Call<MerchantorderdetailsModel?>?
+
+    @PUT("merchant/orders/{orderId}/status")
+    fun changestatus(
+        @Path("orderId") orderId: Int,@Body data: Changestatus
+    ): Call<ErrorResponse?>?
+
+    @POST("orders/{orderId}/cancel")
+    fun canceluserorder(@Path("orderId") orderId: Int): Call<ErrorResponse?>?
 }

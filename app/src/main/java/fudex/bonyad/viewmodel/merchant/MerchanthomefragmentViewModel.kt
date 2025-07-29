@@ -22,6 +22,7 @@ import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Activity.NotificationsActivity
 import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
+import fudex.bonyad.ui.Activity.merchant.MostproductsActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Adapter.merchant.Mostproductsadapter
 import fudex.bonyad.ui.Adapter.merchant.Ordersadapter
@@ -118,8 +119,8 @@ class MerchanthomefragmentViewModel(context: MerchanthomeFragment) : BaseObserva
         }
     }
     fun moreproducts(){
-//        var intent: Intent = Intent(context?.requireActivity(), NotificationsActivity::class.java)
-//        context?.startActivity(intent)
+        var intent: Intent = Intent(context?.requireActivity(), MostproductsActivity::class.java)
+        context?.startActivity(intent)
     }
     fun not(){
         var intent: Intent = Intent(context?.requireActivity(), NotificationsActivity::class.java)

@@ -82,10 +82,13 @@ class DetailsorderuserViewModel(var catogaryFragment: DetailsuserorderActivity) 
                     if (data?.data?.status == 1){
                         color.set(Color.parseColor("#10009EFF"))
                         textcolor.set(Color.parseColor("#009EFF"))
-                    }else if (data?.data?.status == 2){
+                    }else if (data?.data?.status == 6){
+                        color.set(Color.parseColor("#10009EFF"))
+                        textcolor.set(Color.parseColor("#009EFF"))
+                    }else if (data?.data?.status == 7){
                         color.set(Color.parseColor("#106FC94E"))
                         textcolor.set(Color.parseColor("#6FC94E"))
-                    }else if (data?.data?.status == 3){
+                    }else if (data?.data?.status == 8){
                         color.set(Color.parseColor("#10F76834"))
                         textcolor.set(Color.parseColor("#F76834"))
                     }else if (data?.data?.status == 4){
@@ -127,5 +130,38 @@ class DetailsorderuserViewModel(var catogaryFragment: DetailsuserorderActivity) 
         context.onBackPressed()
     }
 
+    fun cancelorder() {
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
+            ApiInterface::class.java
+        )
+        val call: Call<ErrorResponse?>? =
+            apiService.canceluserorder(context.intent.getIntExtra("id", 0))
+        call?.enqueue(object : Callback<ErrorResponse?> {
+            override fun onResponse(
+                call: Call<ErrorResponse?>,
+                response: Response<ErrorResponse?>
+            ) {
+                if (response.code() == 200 || response.code() == 201) {
+                    getorderdetails()
+                }else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            cancelorder()
+                        }
+                    })
+                }
+                isloading.set(false)
+                notifyChange()
+            }
 
+            override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection), context)
+                isloading.set(false)
+
+            }
+        })
+    }
 }

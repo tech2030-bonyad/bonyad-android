@@ -248,5 +248,14 @@
     <string name="current_orders">الطلبات الحالية</string>
     <string name="completed_orders">الطلبات المكتمله</string>
     <string name="there_are_no_orders_available">لا يوجد طلبات متاحه</string>
-    <string name="total_price">Total price</string>
+    <string name="total_price">اجمالي السعر</string>
+    <string name="in_progress">جاري التنفيذ</string>
+    <string name="in_shipping">قيد الشحن</string>
+    <string name="complete_order">طلب مكتمل</string>
+    <string name="on_hold">قيد الانتظار</string>
+    <string name="from">من</string>
+    <string name="to">الى</string>
+    <string name="order_status">حالة الطلب</string>
+    <string name="all_orders">كل الطلبات</string>
+    <string name="new_order">طلب جديد</string>
 </resources>

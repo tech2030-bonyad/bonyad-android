@@ -46,6 +46,7 @@ drawable ic_arrowup
 drawable ic_back
 drawable ic_bank
 drawable ic_bookmark
+drawable ic_calendar2
 drawable ic_calendar_remove
 drawable ic_calendar_tick
 drawable ic_calendar_tick1
@@ -268,6 +269,7 @@ layout activity_locationmap
 layout activity_login
 layout activity_merchanthome
 layout activity_merchantregister
+layout activity_mostproducts
 layout activity_myproduct
 layout activity_myservices
 layout activity_notifications
@@ -292,6 +294,7 @@ layout dialog_success_messag
 layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
+layout fragment_filterorders
 layout fragment_filterspecial
 layout fragment_merchanthome
 layout fragment_merchantorders
@@ -363,6 +366,7 @@ string addresses
 string agree_to
 string agree_to_the_terms_and_conditions
 string all_construction_needs_are_in_your_hands
+string all_orders
 string app_name
 string appointment_management
 string arabic
@@ -394,6 +398,7 @@ string city
 string clear
 string com.crashlytics.android.build_id
 string commercial_name
+string complete_order
 string complete_reservation
 string completed_appointments
 string completed_orders
@@ -448,6 +453,7 @@ string filter
 string forgot_password
 string forgot_your_password
 string friday
+string from
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
@@ -460,6 +466,8 @@ string home
 string i_agree_to
 string images
 string images_of_certificates_and_licenses
+string in_progress
+string in_shipping
 string it_booked_before
 string lang
 string language
@@ -486,14 +494,17 @@ string my_services
 string my_subscriptions
 string name
 string nearby_requests_direct_money_and_you_control_your_time
+string new_order
 string new_password
 string no
 string no_network
 string notifications
 string old_password
+string on_hold
 string open1
 string or_contact_us_through_our_platforms
 string order_number
+string order_status
 string orders
 string packages
 string password
@@ -579,6 +590,7 @@ string there_are_no_technicals_available
 string there_is_time_not_added_in_day
 string thursday
 string time
+string to
 string today_s_task_from_the_application
 string total
 string total_orders

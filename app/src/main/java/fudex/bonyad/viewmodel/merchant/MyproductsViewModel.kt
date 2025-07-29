@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.Gravity
 import androidx.annotation.RequiresApi
 import androidx.databinding.BaseObservable
@@ -13,6 +14,7 @@ import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import atiaf.redstone.NetWorkConnction.RetrofitClient
 import com.google.gson.Gson
 import fudex.bonyad.Apimodel.APIModel
@@ -77,6 +79,7 @@ class MyproductsViewModel(var catogaryFragment: MyproductActivity) : BaseObserva
                 }, 1000)
             }
         })
+        scroll()
     }
     fun back(){
         context.onBackPressed()
@@ -174,5 +177,27 @@ class MyproductsViewModel(var catogaryFragment: MyproductActivity) : BaseObserva
     fun addproduct(){
         var intent: Intent = Intent(context, AddproductActivity::class.java)
         context?.startActivity(intent)
+    }
+    fun scroll() {
+        context.binding.productList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val totalItemCount: Int = linearlayout!!.getItemCount()
+                val visibleItemCount: Int = linearlayout!!.findLastVisibleItemPosition()
+                Log.e("pos", visibleItemCount.toString())
+                if (!mLoading && visibleItemCount >= totalItemCount - 3 && page > 1) {
+                    mLoading = true
+                    getmyproducts()
+                }
+
+                super.onScrolled(recyclerView, dx, dy)
+            }
+
+
+        })
+
     }
 }

@@ -61,3 +61,7 @@ data class Orderdata (
     val shipping_address: String? = null,
     val wallet_amount: String? = null,
     )
+
+data class Changestatus (
+    var status: Int? = null,
+)

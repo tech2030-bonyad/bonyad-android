@@ -251,4 +251,13 @@
     <string name="completed_orders">Completed orders</string>
     <string name="there_are_no_orders_available">there are no orders available</string>
     <string name="total_price">Total price</string>
+    <string name="in_progress">In progress</string>
+    <string name="in_shipping">In shipping</string>
+    <string name="complete_order">Complete order</string>
+    <string name="on_hold">On hold</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="order_status">Order status</string>
+    <string name="all_orders">All orders</string>
+    <string name="new_order">New order</string>
 </resources>

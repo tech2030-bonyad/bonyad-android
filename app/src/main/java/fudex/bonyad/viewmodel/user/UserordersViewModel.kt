@@ -29,10 +29,13 @@ class UserordersViewModel : BaseObservable() {
         if (catModel.status == 1){
             color.set(Color.parseColor("#10009EFF"))
             textcolor.set(Color.parseColor("#009EFF"))
-        }else if (catModel.status == 2){
+        }else if (catModel.status == 6){
+            color.set(Color.parseColor("#10009EFF"))
+            textcolor.set(Color.parseColor("#009EFF"))
+        }else if (catModel.status == 7){
             color.set(Color.parseColor("#106FC94E"))
             textcolor.set(Color.parseColor("#6FC94E"))
-        }else if (catModel.status == 3){
+        }else if (catModel.status == 8){
             color.set(Color.parseColor("#10F76834"))
             textcolor.set(Color.parseColor("#F76834"))
         }else if (catModel.status == 4){

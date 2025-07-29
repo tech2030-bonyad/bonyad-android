@@ -1,6 +1,7 @@
 package fudex.bonyad.viewmodel.merchant
 
 import android.app.Activity
+import android.os.Bundle
 import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
@@ -13,14 +14,17 @@ import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Data.Userdata
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
+import fudex.bonyad.Model.FilterorderModel
 import fudex.bonyad.Model.MerchantOrdersModel
 import fudex.bonyad.Model.OrdersDatum
 import fudex.bonyad.Model.RecentOrder
 import fudex.bonyad.NetWorkConnction.ApiInterface
 import fudex.bonyad.R
 import fudex.bonyad.ui.Adapter.merchant.Ordersadapter
+import fudex.bonyad.ui.Fragment.merchant.FilterordersFragment
 import fudex.bonyad.ui.Fragment.merchant.MerchantordersFragment
 import fudex.bonyad.ui.Fragment.technical.Refuse1Fragment
+import fudex.bonyad.ui.Fragment.user.FilterspecialFragment
 import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,6 +43,10 @@ class OrdersListViewModel(var catogaryFragment: MerchantordersFragment) : BaseOb
     private var mLoading = false
     var addressId = 0
     var appointmentId = 0
+    var from = ""
+    var to = ""
+    var status1 = 0
+    var statuses: ArrayList<Int>  = ArrayList()
 
     init {
         this.context = catogaryFragment
@@ -56,15 +64,8 @@ class OrdersListViewModel(var catogaryFragment: MerchantordersFragment) : BaseOb
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(activity)!!.create(
             ApiInterface::class.java)
-        var statuses: ArrayList<Int>  = ArrayList()
-        if (status.get() ==1) {
-            statuses.add(1)
-            statuses.add(2)
-            statuses.add(3)
-        }else if (status.get() == 3) {
-            statuses.add(4)
-        }
-        val call: Call<MerchantOrdersModel?>? = apiService.getmerchantorders(statuses,page,10)
+
+        val call: Call<MerchantOrdersModel?>? = apiService.getmerchantorders(statuses,page,10,if (from == ""){null}else{from},if (to == ""){null}else{to})
 
         call?.enqueue(object : Callback<MerchantOrdersModel?> {
             override fun onResponse(call: Call<MerchantOrdersModel?>, response: Response<MerchantOrdersModel?>) {
@@ -128,10 +129,32 @@ class OrdersListViewModel(var catogaryFragment: MerchantordersFragment) : BaseOb
         if (this.status.get() == status){
             return
         }
+        statuses.clear()
+        if (status ==1) {
+            statuses.add(1)
+            statuses.add(6)
+            statuses.add(7)
+            statuses.add(8)
+        }else if (status == 3) {
+            statuses.add(4)
+        }
+        from = ""
+        to = ""
+        status1 = 0
         this.status.set(status)
         page = 1
         getorders()
     }
+    fun filter(){
+        var fragment = FilterordersFragment()
+        var bundle = Bundle()
+        bundle.putString("filter",Gson().toJson(FilterorderModel(status1,from,to)))
+        bundle.putInt("status",status.get() ?: 1)
+        fragment.arguments = bundle
+        fragment.setTargetFragment(context, 1)
+        fragment.show(context.parentFragmentManager , "filter")
+    }
+
 //    fun swiptorefresh() {
 //        context.binding.swip.setOnRefreshListener {
 //            Handler().postDelayed(Runnable {

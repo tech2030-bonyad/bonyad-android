@@ -115,6 +115,7 @@
                             android:layout_marginEnd="12dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
+                            android:text="@{model.homedata.data.total_orders.total_count}"
                             tools:text="236"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
@@ -129,7 +130,8 @@
                             <ImageView
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
-                                android:layout_gravity="center"/>
+                                android:layout_gravity="center"
+                                android:background="@{model.homedata.data.total_orders.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -137,7 +139,8 @@
                                 android:fontFamily="@font/cairoregular"
                                 android:layout_marginStart="8dp"
                                 android:layout_gravity="center"
-                               />
+                                android:textColor="@{model.homedata.data.total_orders.trend.length() == 1 ? @color/red1 : @color/green}"
+                                android:text="@{model.homedata.data.total_orders.ratio + '%'}"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -178,6 +181,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
                             tools:text="236"
+                            android:text="@{model.homedata.data.new_orders.total_count}"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
                         <LinearLayout
@@ -192,14 +196,16 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:layout_gravity="center"
-                                />
+                                android:background="@{model.homedata.data.new_orders.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
                                 android:layout_marginStart="8dp"
-                                android:layout_gravity="center" />
+                                android:layout_gravity="center"
+                                android:textColor="@{model.homedata.data.new_orders.trend.length() == 1 ? @color/red1 : @color/green}"
+                                android:text="@{model.homedata.data.new_orders.ratio + '%'}"/>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -247,6 +253,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
                             tools:text="236"
+                            android:text="@{model.homedata.data.completed_orders.total_count}"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
                         <LinearLayout
@@ -261,14 +268,16 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:layout_gravity="center"
-                               />
+                                android:background="@{model.homedata.data.completed_orders.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
                                 android:layout_marginStart="8dp"
-                                android:layout_gravity="center" />
+                                android:layout_gravity="center"
+                                android:textColor="@{model.homedata.data.completed_orders.trend.length() == 1 ? @color/red1 : @color/green}"
+                                android:text="@{model.homedata.data.completed_orders.ratio + '%'}"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -309,6 +318,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
                             tools:text="236"
+                            android:text="@{model.homedata.data.profit.total_count}"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
                         <LinearLayout
@@ -323,14 +333,16 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:layout_gravity="center"
-                                />
+                                android:background="@{model.homedata.data.profit.trend.length() == 1  ? @drawable/ic_arrowdpwn : @drawable/ic_arrowup}"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="12sp"
                                 android:fontFamily="@font/cairoregular"
                                 android:layout_marginStart="8dp"
-                                android:layout_gravity="center" />
+                                android:layout_gravity="center"
+                                android:textColor="@{model.homedata.data.profit.trend.length() == 1 ? @color/red1 : @color/green}"
+                                android:text="@{model.homedata.data.profit.ratio + '%'}"/>
                         </LinearLayout>
                     </LinearLayout>
 

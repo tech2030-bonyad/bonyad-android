@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Fragment.user.FilterspecialFragment">
+    <data class="FilterordersViewModelBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="fudex.bonyad.viewmodel.merchant.FilterorderViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <View
+                android:layout_width="60dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="#E1E1E1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/darkblue"
+                android:text="@string/filter"
+                android:fontFamily="@font/cairobold"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/cairosemibold"
+                android:layout_marginStart="24dp"
+                android:textColor="@color/darkblue"
+                android:text="@string/date"
+                android:layout_marginTop="24dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:onClick="@{ () -> model.clickfromdate() }"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rec_strockblue2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:textSize="12sp"
+                        android:text= "@{model.from.length() == 0 ? @string/from : model.from}"
+                        android:textColor="@{model.from.length() == 0 ? @color/darkgray : @color/darkblue}"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_calendar2"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="16dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:onClick="@{ () -> model.clicktodate() }"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/rec_strockblue2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:textSize="12sp"
+                        android:text= "@{model.to.length() == 0 ? @string/to : model.to}"
+                        android:textColor="@{model.to.length() == 0 ? @color/darkgray : @color/darkblue}"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_calendar2"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="16dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:visibility="@{model.ishiden ? View.GONE : View.VISIBLE}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/cairosemibold"
+                android:layout_marginStart="24dp"
+                android:textColor="@color/darkblue"
+                android:text="@string/order_status"
+                android:layout_marginTop="24dp"/>
+            <LinearLayout
+                android:visibility="@{model.ishiden ? View.GONE : View.VISIBLE}"
+                android:onClick="@{ () -> model.statusclick() }"
+                android:id="@+id/cityLin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rec_strockblue"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="@string/city"
+                    android:text="@{model.statusname}"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/darkblue"
+                    android:fontFamily="@font/cairosemibold"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_arrowdown"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp">
+                <androidx.cardview.widget.CardView
+                    android:onClick="@{ () -> model.clearall() }"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#eeeeee"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/cairobold"
+                        android:text="@string/clear"
+                        android:textColor="@color/darkblue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:onClick="@{ () -> model.save() }"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    app:cardBackgroundColor="@color/lightblue"
+                    app:cardCornerRadius="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/cairobold"
+                        android:text="@string/search"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

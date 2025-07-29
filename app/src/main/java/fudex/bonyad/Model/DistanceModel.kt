@@ -31,3 +31,10 @@ data class GiftModel(
     val loc: String? = null,
     val gender: String? = null,
 )
+
+data class FilterorderModel(
+    val status: Int? = null,
+    val from: String? = null,
+    val to: String? = null,
+
+    )

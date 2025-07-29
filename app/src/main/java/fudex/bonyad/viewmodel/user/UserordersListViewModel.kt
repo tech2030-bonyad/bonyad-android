@@ -61,8 +61,9 @@ class UserordersListViewModel(var catogaryFragment: UserordersFragment) : BaseOb
         var statuses: ArrayList<Int>  = ArrayList()
         if (status.get() ==1) {
             statuses.add(1)
-            statuses.add(2)
-            statuses.add(3)
+            statuses.add(6)
+            statuses.add(7)
+            statuses.add(8)
         }else if (status.get() == 3) {
             statuses.add(4)
         }

@@ -53,30 +53,36 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="2dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    bind:imageUrl="@{model.img}"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/cairoregular"
-                    android:layout_marginStart="10dp"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:text="@{model.name}"
-                    tools:text="علي بن محمد"
-                    android:textColor="@color/darkgray"/>
-                <TextView
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        bind:imageUrl="@{model.img}"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cairoregular"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="@{model.name}"
+                        tools:text="علي بن محمد"
+                        android:textColor="@color/darkgray"/>
+                </LinearLayout>
+
                 <LinearLayout
                     android:onClick="@{ () -> model.rate() }"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
@@ -113,52 +119,58 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="3dp">
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:orientation="horizontal"
+                   android:layout_gravity="center">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/cairoregular"
+                       android:layout_gravity="center"
+                       android:textSize="14sp"
+                       android:text="@string/price"
+                       android:textColor="#70101010"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/cairosemibold"
+                       android:layout_gravity="center"
+                       android:textSize="16sp"
+                       android:layout_marginStart="5dp"
+                       android:text="/"
+                       android:textColor="#70101010"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/cairoregular"
+                       android:layout_gravity="center"
+                       android:textSize="14sp"
+                       android:layout_marginStart="3dp"
+                       android:text="@{model.onservse.product.unit + ':'}"
+                       android:textColor="#70101010"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/cairosemibold"
+                       android:layout_gravity="center"
+                       android:textSize="13sp"
+                       android:layout_marginStart="5dp"
+                       android:maxLines="1"
+                       android:ellipsize="end"
+                       android:text="@{model.onservse.product.price + ' ' + @string/r_s}"
+                       tools:text="95.33 ر.س"
+                       android:textColor="@color/darkblue"/>
+               </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/cairoregular"
                     android:layout_gravity="center"
                     android:textSize="14sp"
-                    android:text="@string/price"
-                    android:textColor="#70101010"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/cairosemibold"
-                    android:layout_gravity="center"
-                    android:textSize="16sp"
-                    android:layout_marginStart="5dp"
-                    android:text="/"
-                    android:textColor="#70101010"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/cairoregular"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
-                    android:layout_marginStart="3dp"
-                    android:text="@{model.onservse.product.unit}"
-                    android:textColor="#70101010"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/cairosemibold"
-                    android:layout_gravity="center"
-                    android:textSize="13sp"
-                    android:layout_marginStart="5dp"
-                    android:text="@{model.onservse.product.price + ' ' + @string/r_s}"
-                    tools:text="95.33 ر.س"
-                    android:textColor="@color/darkblue"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/cairoregular"
-                    android:layout_gravity="center"
-                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
                     android:text="@string/quantity"
                     android:textColor="#70101010"/>
                 <TextView

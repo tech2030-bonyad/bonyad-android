@@ -43,6 +43,7 @@
     <string name="agree_to">Agree to</string>
     <string name="agree_to_the_terms_and_conditions">Agree to the Terms and Conditions</string>
     <string name="all_construction_needs_are_in_your_hands">All construction needs... are in your hands!</string>
+    <string name="all_orders">All orders</string>
     <string name="app_name">Bonyad</string>
     <string name="appointment_management">Appointment Management</string>
     <string name="arabic">Arabic</string>
@@ -74,6 +75,7 @@
     <string name="clear">Clear</string>
     <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
     <string name="commercial_name">Commercial name</string>
+    <string name="complete_order">Complete order</string>
     <string name="complete_reservation">Complete reservation</string>
     <string name="completed_appointments">Completed appointments</string>
     <string name="completed_orders">Completed orders</string>
@@ -128,6 +130,7 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="forgot_your_password">Forgot your password?</string>
     <string name="friday">Friday</string>
+    <string name="from">From</string>
     <string name="gcm_defaultSenderId" translatable="false">209487131531</string>
     <string name="google_api_key" translatable="false">AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc</string>
     <string name="google_app_id" translatable="false">1:209487131531:android:f3b7b9873dc9f6e66db58e</string>
@@ -140,6 +143,8 @@
     <string name="i_agree_to">must agree to</string>
     <string name="images">Images</string>
     <string name="images_of_certificates_and_licenses">Images of certificates and licenses</string>
+    <string name="in_progress">In progress</string>
+    <string name="in_shipping">In shipping</string>
     <string name="it_booked_before">it booked before</string>
     <string name="lang">en</string>
     <string name="language">Language</string>
@@ -166,14 +171,17 @@
     <string name="my_subscriptions">My subscriptions</string>
     <string name="name">Name</string>
     <string name="nearby_requests_direct_money_and_you_control_your_time">Nearby requests, direct money, and you control your time.</string>
+    <string name="new_order">New order</string>
     <string name="new_password">New Password</string>
     <string name="no">no</string>
     <string name="no_network">No internet</string>
     <string name="notifications">Notifications</string>
     <string name="old_password">Old password</string>
+    <string name="on_hold">On hold</string>
     <string name="open1">open gps</string>
     <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
     <string name="order_number">Order number:</string>
+    <string name="order_status">Order status</string>
     <string name="orders">Orders</string>
     <string name="packages">Packages</string>
     <string name="password">Password</string>
@@ -259,6 +267,7 @@
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
     <string name="thursday">Thursday</string>
     <string name="time">Time</string>
+    <string name="to">To</string>
     <string name="today_s_task_from_the_application">Today\'s task... from the application</string>
     <string name="total">Total</string>
     <string name="total_orders">Total orders</string>
