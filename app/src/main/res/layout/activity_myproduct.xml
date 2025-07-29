@@ -78,6 +78,7 @@
                 android:fontFamily="@font/cairoregular"
                 android:backgroundTint="@android:color/transparent"/>
             <ImageView
+                android:onClick="@{ () -> model.filter() }"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_filter"

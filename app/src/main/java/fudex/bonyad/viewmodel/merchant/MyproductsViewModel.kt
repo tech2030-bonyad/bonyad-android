@@ -21,6 +21,7 @@ import fudex.bonyad.Apimodel.APIModel
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Helper.Utilities
+import fudex.bonyad.Model.FilterModel
 import fudex.bonyad.Model.ProductsDatum
 import fudex.bonyad.Model.ProductsModel
 import fudex.bonyad.Model.UserModel
@@ -31,6 +32,8 @@ import fudex.bonyad.ui.Activity.merchant.MyproductActivity
 import fudex.bonyad.ui.Adapter.merchant.Myproductsadapter
 
 import fudex.bonyad.ui.Fragment.DeletetFragment
+import fudex.bonyad.ui.Fragment.merchant.FilterproductsFragment
+import fudex.bonyad.ui.Fragment.user.FilterspecialFragment
 
 import retrofit2.Call
 import retrofit2.Callback
@@ -50,6 +53,7 @@ class MyproductsViewModel(var catogaryFragment: MyproductActivity) : BaseObserva
     var page = 1
     private var mLoading = false
     var productId = 0
+    var depId = 0
     init {
         this.context = catogaryFragment
         linearlayout = GridLayoutManager(context,2)
@@ -92,7 +96,11 @@ class MyproductsViewModel(var catogaryFragment: MyproductActivity) : BaseObserva
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
             ApiInterface::class.java)
         var call: Call<ProductsModel?>? = null
-        call = apiService.getmyproducts(if (context.binding.searchTxt.text.toString() == ""){null}else{context.binding.searchTxt.text.toString()},page,10)
+        var catogaries: ArrayList<Int>  = ArrayList()
+        if (depId != 0 ){
+            catogaries.add( depId)
+        }
+        call = apiService.getmyproducts(catogaries,if (context.binding.searchTxt.text.toString() == ""){null}else{context.binding.searchTxt.text.toString()},page,10)
         call?.enqueue(object : Callback<ProductsModel?> {
             override fun onResponse(call: Call<ProductsModel?>, response: Response<ProductsModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
@@ -199,5 +207,12 @@ class MyproductsViewModel(var catogaryFragment: MyproductActivity) : BaseObserva
 
         })
 
+    }
+    fun filter(){
+        var fragment = FilterproductsFragment()
+        var bundle = Bundle()
+        bundle.putString("filter",Gson().toJson(FilterModel(depId,0)))
+        fragment.arguments = bundle
+        fragment.show(context.supportFragmentManager , "filter")
     }
 }

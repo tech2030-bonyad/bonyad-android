@@ -295,6 +295,7 @@ layout fragment_calenderdialog
 layout fragment_delete
 layout fragment_filterhome
 layout fragment_filterorders
+layout fragment_filterproducts
 layout fragment_filterspecial
 layout fragment_merchanthome
 layout fragment_merchantorders

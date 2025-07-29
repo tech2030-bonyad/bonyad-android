@@ -463,7 +463,7 @@ interface ApiInterface {
     ): Call<ErrorResponse?>?
 
     @GET("merchant/products")
-    fun getmyproducts(@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
+    fun getmyproducts(@Query("categories[]") zones: List<Int>? ,@Query("name") name: String? , @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
 
     @GET("merchant/most-sold-products")
     fun getmostproducts( @Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<ProductsModel?>?
