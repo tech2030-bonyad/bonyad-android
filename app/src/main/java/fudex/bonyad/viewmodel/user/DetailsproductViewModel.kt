@@ -176,6 +176,13 @@ class DetailsproductViewModel(var catogaryFragment: DetailsproductsActivity) : B
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     Dialogs.showToast(response.body()?.message ?: "" , context)
+                    if (context.intent.hasExtra("quantity")){
+                        back()
+                    }else {
+                        if (LoginSession.isLogin){
+                            getcarts()
+                        }
+                    }
                 } else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)

@@ -20,6 +20,7 @@ data class SubsribeModel(
     )
 data class CreateorderModel(
     val global: GlobalData? = null,
+    val message: String? = null
 )
 
 data class SubsribeData(

@@ -235,6 +235,7 @@
                         android:textColor="@color/darkgray"
                         android:textSize="12sp"
                         android:layout_gravity="center"
+                        android:text="@{model.cartdata.tax + ' ' + @string/r_s}"
                         android:fontFamily="@font/cairoregular"
                         tools:text="150  ر.س"/>
                 </LinearLayout>

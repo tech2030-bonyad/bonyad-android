@@ -30,6 +30,7 @@ import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.WebviewActivity
 import fudex.bonyad.ui.Activity.user.CartActivity
 import fudex.bonyad.ui.Activity.user.LocationmapActivity
+import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Adapter.user.Cartproductadapter
 import fudex.bonyad.ui.Fragment.DeletetFragment
 import retrofit2.Call
@@ -240,12 +241,20 @@ class CartListViewModel(var catogaryFragment: CartActivity) : BaseObservable() {
             override fun onResponse(call: Call<CreateorderModel?>, response: Response<CreateorderModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
-                    var intent: Intent = Intent(context, WebviewActivity::class.java)
-                    intent.putExtra("url",response.body()!!.global?.url ?: "")
-                    intent.putExtra("order","")
+                    if (data?.global?.url ?: "" != ""){
+                        var intent: Intent = Intent(context, WebviewActivity::class.java)
+                        intent.putExtra("url",response.body()!!.global?.url ?: "")
+                        intent.putExtra("order","")
 //                    intent.putExtra("success",response.body()!!.data?.success_url ?: "")
 //                    intent.putExtra("fail",response.body()!!.data?.fail_url ?: "")
-                    context.startActivity(intent)
+                        context.startActivity(intent)
+                    }else {
+                        Dialogs.showToast(response.body()?.message ?: "" , context)
+                        var intent: Intent = Intent(context, UserhomeActivity::class.java)
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        context.startActivity(intent)
+                        context.finish()
+                    }
                 }else {
                     val errorText = response.errorBody()?.string()
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
