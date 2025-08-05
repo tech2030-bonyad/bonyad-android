@@ -602,6 +602,7 @@ string terms_and_conditions
 string the_code_has_not_been_received
 string there_are_no_addresses_available
 string there_are_no_appointment_available
+string there_are_no_cart_available
 string there_are_no_messages_available
 string there_are_no_notifications_available
 string there_are_no_orders_available

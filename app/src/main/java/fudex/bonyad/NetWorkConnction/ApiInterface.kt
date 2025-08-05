@@ -491,7 +491,7 @@ interface ApiInterface {
     @POST("carts")
     fun addcart(@Body data: Cartdata): Call<ErrorResponse?>?
 
-    @POST("carts/{productId}")
+    @PUT("carts/{productId}")
     fun editcart(@Path("productId") productId: Int,@Body data: Cartdata): Call<ErrorResponse?>?
 
     @HTTP(method = "DELETE", path = "delete-item/{productId}", hasBody = true)

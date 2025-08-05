@@ -33,8 +33,8 @@ class CartproductViewModel : BaseObservable() {
     fun edit(){
         var intent: Intent = Intent(context, DetailsproductsActivity::class.java)
         intent.putExtra("id",onservse.get()?.product?.id ?: 0)
-        intent.putExtra("quantity",onservse.get()?.quantity ?: 0)
-        intent.putExtra("cartid",onservse.get()?.id ?: 0)
+        intent.putExtra("quantity",onservse.get()?.quantity?.toInt() ?: 0)
+        intent.putExtra("cartid",(context as CartActivity).cartListViewModel.cartdata.get()?.id ?: 0)
         context?.startActivity(intent)
     }
     fun delete(){

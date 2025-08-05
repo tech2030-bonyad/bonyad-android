@@ -268,4 +268,5 @@
     <string name="transaction_history">تاريخ التعاملات</string>
     <string name="export_pdf">تصدير PDF</string>
     <string name="excel_export">تصدير Excel</string>
+    <string name="there_are_no_cart_available">لا يوجد سله متاحه</string>
 </resources>
