@@ -58,6 +58,7 @@
 
                 </FrameLayout>
                 <FrameLayout
+                    android:onClick="@{ () -> model.wallet() }"
                     android:layout_width="134dp"
                     android:layout_height="134dp"
                     android:layout_marginStart="18dp"
@@ -178,6 +179,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.accountbank() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"
@@ -221,6 +223,7 @@
                     android:background="#208FC3FF"/>
             </FrameLayout>
             <FrameLayout
+                android:onClick="@{ () -> model.statistics() }"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="21dp"

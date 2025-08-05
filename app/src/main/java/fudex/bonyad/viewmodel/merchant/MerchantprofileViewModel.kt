@@ -35,9 +35,12 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.ui.Activity.AddaccountbankActivity
+import fudex.bonyad.ui.Activity.WalletActivity
 import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.EdittradeActivity
 import fudex.bonyad.ui.Activity.merchant.MyproductActivity
+import fudex.bonyad.ui.Activity.merchant.StatisticsActivity
 import fudex.bonyad.ui.Activity.technical.Appointmentmanagectivity
 import fudex.bonyad.ui.Activity.technical.MyservicesActivity
 import fudex.bonyad.ui.Activity.technical.SubscriptionsActivity
@@ -59,6 +62,33 @@ class MerchantprofileViewModel(var catogaryFragment: MerchantprofileFragment) : 
         this.context = catogaryFragment
         activity = context.requireActivity()
         islogin.set(LoginSession.isLogin)
+    }
+    fun accountbank(){
+        if (LoginSession.isLogin) {
+            var intent: Intent = Intent(activity, AddaccountbankActivity::class.java)
+            activity.startActivity(intent)
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            activity.startActivity(intent)
+        }
+    }
+    fun wallet(){
+        if (LoginSession.isLogin) {
+            var intent: Intent = Intent(activity, WalletActivity::class.java)
+            activity.startActivity(intent)
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            activity.startActivity(intent)
+        }
+    }
+    fun statistics(){
+        if (LoginSession.isLogin) {
+            var intent: Intent = Intent(activity, StatisticsActivity::class.java)
+            activity.startActivity(intent)
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            activity.startActivity(intent)
+        }
     }
     fun products(){
         var intent: Intent = Intent(activity, MyproductActivity::class.java)

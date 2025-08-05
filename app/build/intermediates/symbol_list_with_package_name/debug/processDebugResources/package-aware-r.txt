@@ -3192,6 +3192,8 @@ drawable ic_user
 drawable ic_user_remove
 drawable ic_wadget
 drawable ic_wallet223
+drawable ic_wallet_01
+drawable ic_walletlogo
 drawable ic_whats
 drawable ic_widget
 drawable ic_widget2
@@ -3264,6 +3266,8 @@ drawable ml
 drawable mm
 drawable mn
 drawable mo
+drawable money_recive
+drawable money_send
 drawable mp
 drawable mq
 drawable mr
@@ -3509,6 +3513,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accountnum
 id action0
 id actionDown
 id actionDownUp
@@ -3558,6 +3563,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
+id bankame
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3779,12 +3785,14 @@ id hardware
 id header_title
 id hide_ime_id
 id hideable
+id holdname
 id home
 id homeAsUp
 id honorRequest
 id horizontal
 id horizontal_only
 id hybrid
+id iban
 id ic_flip_24
 id ic_flip_24_horizontally
 id ic_flip_24_vertically
@@ -4120,6 +4128,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id walletList
 id webView
 id webview
 id west
@@ -4263,6 +4272,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_activeuser
+layout activity_addaccountbank
 layout activity_addadress
 layout activity_addproduct
 layout activity_addresses
@@ -4301,6 +4311,7 @@ layout activity_selecttype
 layout activity_specialists
 layout activity_splash
 layout activity_staticpage
+layout activity_statistics
 layout activity_subscriptions
 layout activity_technical_home
 layout activity_technicaldetailsapointment
@@ -4308,6 +4319,7 @@ layout activity_technicalregister
 layout activity_technicalservicedetails
 layout activity_userhome
 layout activity_userregister
+layout activity_wallet
 layout activity_webview
 layout amu_info_window
 layout amu_text_bubble
@@ -4402,6 +4414,7 @@ layout item_technicalservice
 layout item_time
 layout item_userappointment
 layout item_userorder
+layout item_wallet
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4516,6 +4529,8 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about_the_platform
 string accept
+string account_holder_s_name
+string account_number
 string activation_code
 string add
 string add_a_new_address
@@ -4548,6 +4563,7 @@ string attach_a_picture
 string available_appointments
 string back
 string bank_account
+string bank_name
 string best_selling_products
 string bio
 string biometric_or_screen_lock_prompt_message
@@ -4619,6 +4635,7 @@ string copy_toast_msg
 string create_an_account
 string crop_image_menu_crop
 string current_appointments
+string current_balance
 string current_orders
 string customer_account
 string date
@@ -4656,6 +4673,7 @@ string enter_the_verification_code_sent_to_you_via_mobile_number
 string error_a11y_label
 string error_icon_content_description
 string evaluation
+string excel_export
 string exo_controls_cc_disabled_description
 string exo_controls_cc_enabled_description
 string exo_controls_custom_playback_speed
@@ -4711,6 +4729,7 @@ string exo_track_surround_7_point_1
 string exo_track_unknown
 string expert_account
 string expiration_date
+string export_pdf
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -4751,6 +4770,7 @@ string hide_bottom_view_on_scroll_behavior
 string hijri_date
 string home
 string i_agree_to
+string iban_number
 string ic_flip_24
 string ic_flip_24_horizontally
 string ic_flip_24_vertically
@@ -4991,6 +5011,7 @@ string total_orders
 string total_price
 string total_profits
 string total_sales
+string transaction_history
 string tuesday
 string upcoming_appointments
 string use_biometric_label
@@ -5003,10 +5024,12 @@ string use_screen_lock_label
 string use_wallet_your_balance_is
 string user_deleted
 string wallet
+string wallet_charge
 string wednesday
 string welcome
 string welcome_back
 string with_you_every_step_of_the_way_in_your_career_journey
+string withdraw_balance
 string work_days
 string write_your_comment
 string write_your_message

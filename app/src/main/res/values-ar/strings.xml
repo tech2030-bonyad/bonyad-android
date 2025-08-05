@@ -258,4 +258,14 @@
     <string name="order_status">حالة الطلب</string>
     <string name="all_orders">كل الطلبات</string>
     <string name="new_order">طلب جديد</string>
+    <string name="account_holder_s_name">اسم صاحب الحساب</string>
+    <string name="bank_name">اسم البنك</string>
+    <string name="iban_number">رقم الايبان</string>
+    <string name="account_number">رقم الحساب</string>
+    <string name="current_balance">الرصيد الحالي</string>
+    <string name="wallet_charge">شحن المحفظة</string>
+    <string name="withdraw_balance">سحب الرصيد</string>
+    <string name="transaction_history">تاريخ التعاملات</string>
+    <string name="export_pdf">تصدير PDF</string>
+    <string name="excel_export">تصدير Excel</string>
 </resources>

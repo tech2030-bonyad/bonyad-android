@@ -41,6 +41,15 @@
         tools:replace="android:supportsRtl"
         tools:targetApi="31">
         <activity
+            android:name=".ui.Activity.merchant.StatisticsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity.WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activity.AddaccountbankActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Activity.merchant.MostproductsActivity"
             android:exported="false" />
         <activity

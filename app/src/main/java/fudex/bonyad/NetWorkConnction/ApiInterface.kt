@@ -9,6 +9,7 @@ import fudex.bonyad.Data.Editpass
 import fudex.bonyad.Data.Orderdata
 import fudex.bonyad.Data.Ratingdata
 import fudex.bonyad.Data.Userdata
+import fudex.bonyad.Data.Visadata
 import fudex.bonyad.Helper.AddaressModel
 import fudex.bonyad.Helper.ErrorResponse
 import fudex.bonyad.Model.AddressesModel
@@ -234,6 +235,9 @@ interface ApiInterface {
     @Headers("Accept: application/json")
     @POST("edit-user")
     fun editprofile(@Body requestBody: RequestBody?): Call<ProfileModel?>?
+
+    @POST("visa-details")
+    fun editvisa(@Body data: Visadata): Call<ProfileModel?>?
 
     @POST("verify-new-phone")
     fun editphone1(@Body requestBody: Userdata): Call<ProfileModel?>?

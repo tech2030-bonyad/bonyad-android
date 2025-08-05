@@ -2,6 +2,8 @@
 <resources>
     <string name="about_the_platform">عن المنصة</string>
     <string name="accept">قبول</string>
+    <string name="account_holder_s_name">اسم صاحب الحساب</string>
+    <string name="account_number">رقم الحساب</string>
     <string name="activation_code">رمز التفعيل</string>
     <string name="add">اضافة</string>
     <string name="add_a_new_address">اضافة عنوان جديد</string>
@@ -32,6 +34,7 @@
     <string name="available_appointments">المواعيد المتاحة</string>
     <string name="back">رجوع</string>
     <string name="bank_account">الحساب البنكي</string>
+    <string name="bank_name">اسم البنك</string>
     <string name="best_selling_products">المنتجات الأكثر مبيعا</string>
     <string name="bio">نبذة عن الخدمات</string>
     <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
@@ -62,6 +65,7 @@
     <string name="copied">copied</string>
     <string name="create_an_account">إنشاء حساب</string>
     <string name="current_appointments">المواعيد الحالية</string>
+    <string name="current_balance">الرصيد الحالي</string>
     <string name="current_orders">الطلبات الحالية</string>
     <string name="customer_account">حساب المستخدم</string>
     <string name="date">التاريخ</string>
@@ -96,8 +100,10 @@
     <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">ادخل رمز التحقق المرسل إليك عبر رقم الجوال</string>
     <string name="evaluation">تقيم</string>
+    <string name="excel_export">تصدير Excel</string>
     <string name="expert_account">حساب مقدم الخدمة</string>
     <string name="expiration_date">تاريخ الأنتهاء</string>
+    <string name="export_pdf">تصدير PDF</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">خطأ فى الاتصال بالخادم برجاء المحاولة مرة أخرى</string>
     <string name="field_required">مطلوب</string>
     <string name="filter">فلتر</string>
@@ -109,6 +115,7 @@
     <string name="hijri_date">تاريخ هجري</string>
     <string name="home">الرئيسية</string>
     <string name="i_agree_to">يجب الموافقه على</string>
+    <string name="iban_number">رقم الايبان</string>
     <string name="images">صور</string>
     <string name="images_of_certificates_and_licenses">صور الشهادات والترخيص</string>
     <string name="in_progress">جاري التنفيذ</string>
@@ -241,15 +248,18 @@
     <string name="total_price">اجمالي السعر</string>
     <string name="total_profits">اجمالى الارباح</string>
     <string name="total_sales">اجمالي المبيعات</string>
+    <string name="transaction_history">تاريخ التعاملات</string>
     <string name="tuesday">الثلاثاء</string>
     <string name="upcoming_appointments">المواعيد القادمة</string>
     <string name="use_wallet_your_balance_is">استخدم المحفطة رصيدك هو</string>
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>
     <string name="wallet">المحفظة</string>
+    <string name="wallet_charge">شحن المحفظة</string>
     <string name="wednesday">الأربعاء</string>
     <string name="welcome">مرحبا</string>
     <string name="welcome_back">مرحباً بعودتك</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
+    <string name="withdraw_balance">سحب الرصيد</string>
     <string name="work_days">أيام العمل</string>
     <string name="write_your_comment">اكتب تعليق</string>
     <string name="write_your_message">اكتب رسالتك...</string>

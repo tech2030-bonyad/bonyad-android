@@ -65,3 +65,10 @@ data class Orderdata (
 data class Changestatus (
     var status: Int? = null,
 )
+
+data class Visadata (
+    var account_name: String? = null,
+    var bank_name: String? = null,
+    var iban: String? = null,
+    var account_number: String? = null
+    )

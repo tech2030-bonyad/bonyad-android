@@ -27,6 +27,8 @@
     <color name="white">#FFFFFFFF</color>
     <string name="about_the_platform">About the platform</string>
     <string name="accept">Accept</string>
+    <string name="account_holder_s_name">Account holder\'s name</string>
+    <string name="account_number">Account number</string>
     <string name="activation_code">Activation code</string>
     <string name="add">Add</string>
     <string name="add_a_new_address">Add a new address</string>
@@ -57,6 +59,7 @@
     <string name="available_appointments">Available appointments</string>
     <string name="back">Back</string>
     <string name="bank_account">Bank account</string>
+    <string name="bank_name">Bank name</string>
     <string name="best_selling_products">Best-selling products</string>
     <string name="bio">Overview of Services</string>
     <string name="booking_date_and_time">Booking date and time:</string>
@@ -88,6 +91,7 @@
     <string name="copied">copied</string>
     <string name="create_an_account">Create an account</string>
     <string name="current_appointments">Current appointments</string>
+    <string name="current_balance">Current balance</string>
     <string name="current_orders">Current orders</string>
     <string name="customer_account">User account</string>
     <string name="date">Date</string>
@@ -122,8 +126,10 @@
     <string name="enter_the_new_password">Enter the new password</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">Enter the verification code sent to you via mobile number</string>
     <string name="evaluation">Evaluation</string>
+    <string name="excel_export">Excel Export</string>
     <string name="expert_account">Service provider account</string>
     <string name="expiration_date">Expiration date</string>
+    <string name="export_pdf">Export PDF</string>
     <string name="failed_to_connect_to_server_please_repeat_your_requesr">failed to connect to server please repeat your request</string>
     <string name="field_required">required</string>
     <string name="filter">Filter</string>
@@ -141,6 +147,7 @@
     <string name="hijri_date">Hijri date</string>
     <string name="home">Home</string>
     <string name="i_agree_to">must agree to</string>
+    <string name="iban_number">IBAN number</string>
     <string name="images">Images</string>
     <string name="images_of_certificates_and_licenses">Images of certificates and licenses</string>
     <string name="in_progress">In progress</string>
@@ -274,15 +281,18 @@
     <string name="total_price">Total price</string>
     <string name="total_profits">Total profits</string>
     <string name="total_sales">Total sales</string>
+    <string name="transaction_history">Transaction history</string>
     <string name="tuesday">Tuesday</string>
     <string name="upcoming_appointments">Upcoming appointments</string>
     <string name="use_wallet_your_balance_is">use wallet your balance is</string>
     <string name="user_deleted">User Has been Deleted By The System or bloked</string>
     <string name="wallet">Wallet</string>
+    <string name="wallet_charge">Wallet charge</string>
     <string name="wednesday">Wednesday</string>
     <string name="welcome">Welcome</string>
     <string name="welcome_back">Welcome back</string>
     <string name="with_you_every_step_of_the_way_in_your_career_journey">With you every step of the way in your career journey.</string>
+    <string name="withdraw_balance">Withdraw balance</string>
     <string name="work_days">Work days</string>
     <string name="write_your_comment">Write a comment</string>
     <string name="write_your_message">Write your message...</string>

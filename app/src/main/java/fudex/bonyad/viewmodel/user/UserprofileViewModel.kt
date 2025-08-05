@@ -34,6 +34,8 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
 import fudex.bonyad.Model.ProfileModel
+import fudex.bonyad.ui.Activity.AddaccountbankActivity
+import fudex.bonyad.ui.Activity.WalletActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -56,6 +58,15 @@ class UserprofileViewModel(var catogaryFragment: UserprofileFragment) : BaseObse
         var intent: Intent = Intent(activity, StaticpageActivity::class.java)
         intent.putExtra("type",1)
         activity.startActivity(intent)
+    }
+    fun wallet(){
+        if (LoginSession.isLogin) {
+            var intent: Intent = Intent(activity, WalletActivity::class.java)
+            activity.startActivity(intent)
+        }else {
+            var intent: Intent = Intent(activity, LoginActivity::class.java)
+            activity.startActivity(intent)
+        }
     }
     fun terms(){
         var intent: Intent = Intent(activity, StaticpageActivity::class.java)
@@ -91,7 +102,8 @@ class UserprofileViewModel(var catogaryFragment: UserprofileFragment) : BaseObse
     }
     fun accountbank(){
         if (LoginSession.isLogin) {
-
+            var intent: Intent = Intent(activity, AddaccountbankActivity::class.java)
+            activity.startActivity(intent)
         }else {
             var intent: Intent = Intent(activity, LoginActivity::class.java)
             activity.startActivity(intent)
