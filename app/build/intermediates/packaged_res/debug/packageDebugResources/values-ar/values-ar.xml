@@ -225,6 +225,7 @@
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
     <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
     <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
+    <string name="there_are_no_cart_available">لا يوجد سله متاحه</string>
     <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
     <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
     <string name="there_are_no_orders_available">لا يوجد طلبات متاحه</string>

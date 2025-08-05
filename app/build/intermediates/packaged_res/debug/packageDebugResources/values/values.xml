@@ -258,6 +258,7 @@
     <string name="the_code_has_not_been_received">The code has not been received?</string>
     <string name="there_are_no_addresses_available">there are no addresses available</string>
     <string name="there_are_no_appointment_available">there are no appointment available</string>
+    <string name="there_are_no_cart_available">there are no cart available</string>
     <string name="there_are_no_messages_available">there are no messages available</string>
     <string name="there_are_no_notifications_available">there are no notifications available</string>
     <string name="there_are_no_orders_available">there are no orders available</string>

@@ -800,7 +800,7 @@ public abstract interface ApiInterface {
     @org.jetbrains.annotations.NotNull()
     fudex.bonyad.Data.Cartdata data);
     
-    @retrofit2.http.POST(value = "carts/{productId}")
+    @retrofit2.http.PUT(value = "carts/{productId}")
     @org.jetbrains.annotations.Nullable()
     public abstract retrofit2.Call<fudex.bonyad.Helper.ErrorResponse> editcart(@retrofit2.http.Path(value = "productId")
     int productId, @retrofit2.http.Body()

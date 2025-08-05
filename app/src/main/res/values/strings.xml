@@ -260,4 +260,5 @@
     <string name="order_status">Order status</string>
     <string name="all_orders">All orders</string>
     <string name="new_order">New order</string>
+    <string name="there_are_no_cart_available">there are no cart available</string>
 </resources>

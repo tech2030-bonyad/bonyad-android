@@ -115,13 +115,7 @@ class CartListViewModel(var catogaryFragment: CartActivity) : BaseObservable() {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response.code() == 200 || response.code() == 201) {
-                   for (item in productList){
-                       if (item.id == cartId){
-                           productList.remove(item)
-                           notifyChange()
-                           break
-                       }
-                   }
+                   getcarts()
                 } else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
