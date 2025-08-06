@@ -46,8 +46,8 @@
                 android:layout_marginEnd="26dp"
                 android:layout_gravity="center|end">
                 <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="13dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_gravity="center"
                     android:background="@drawable/ic_cart"
                     android:rotationY="180"/>

@@ -239,7 +239,7 @@
     <string name="qty">:QTY</string>
     <string name="delete_product_from_cart">حذف منتج من السله</string>
     <string name="are_you_sure_you_want_to_delete_product_from_cart">هل أنت متأكد من حذف المنتج من السله؟</string>
-    <string name="use_wallet_your_balance_is">استخدم المحفطة رصيدك هو</string>
+    <string name="use_wallet_your_balance_is">استخدم المحفظة رصيدك هو</string>
     <string name="total_sales">اجمالي المبيعات</string>
     <string name="total_profits">اجمالى الارباح</string>
     <string name="latest_orders">آخر الطلبات</string>
