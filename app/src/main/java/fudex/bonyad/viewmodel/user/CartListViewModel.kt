@@ -223,13 +223,13 @@ class CartListViewModel(var catogaryFragment: CartActivity) : BaseObservable() {
                 method = "wallet"
                 amount = cartdata.get()?.total?.toDouble() ?: 0.0
             }else {
-                method = "card"
+                method = "combined"
                 amount = wallet.get()!!
             }
         }else {
             method = "card"
         }
-        var userdata = Orderdata("card",lat,lng,addressname.get(),if (amount > 0){amount.toString()}else{null})
+        var userdata = Orderdata(method,lat,lng,addressname.get(),if (amount > 0){amount.toString()}else{null})
         call = apiService.createorder(userdata)
         call?.enqueue(object : Callback<CreateorderModel?> {
             override fun onResponse(call: Call<CreateorderModel?>, response: Response<CreateorderModel?>) {

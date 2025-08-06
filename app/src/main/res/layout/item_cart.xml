@@ -106,24 +106,31 @@
                         android:textColor="@color/darkgray"/>
                 </LinearLayout>
             </LinearLayout>
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:fontFamily="@font/cairosemibold"
-                    android:textColor="@color/darkblue"
-                    android:maxLines="1"
-                    android:text="@{model.onservse.product.price + ' ' + @string/r_s}"
-                    android:ellipsize="end"
-                    tools:text="95.33 ر.س"/>
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/cairosemibold"
+                        android:textColor="@color/darkblue"
+                        android:maxLines="1"
+                        android:text="@{model.onservse.product.price + ' ' + @string/r_s}"
+                        android:ellipsize="end"
+                        tools:text="95.33 ر.س"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
                     <TextView
@@ -143,10 +150,15 @@
                         android:text="@{model.onservse.quantity + ' ' + model.onservse.product.unit}"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_gravity="end">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
                     <TextView
                         android:onClick="@{ () -> model.edit() }"
                         android:layout_width="wrap_content"
@@ -159,7 +171,7 @@
                         android:background="@drawable/ic_delete_03"
                         android:layout_marginStart="14dp"/>
                 </LinearLayout>
-            </FrameLayout>
+            </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="8dp"/>
