@@ -25,6 +25,8 @@ data class ProductElement (
     val business_logo: String? = null,
     val discount: String? = null,
     val total: String? = null,
+    var rate: String? = "0",
+    var comment: String? = "",
     val merchant: UserModel? = null,
     val product: ProductsDatum? = null
 )

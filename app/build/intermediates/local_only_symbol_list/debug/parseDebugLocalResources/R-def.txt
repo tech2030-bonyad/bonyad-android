@@ -362,6 +362,7 @@ layout item_wallet
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+string a_request_has_been_made_to_withdraw_an_amount
 string about_the_platform
 string accept
 string account_holder_s_name
@@ -626,6 +627,7 @@ string use_wallet_your_balance_is
 string user_deleted
 string wallet
 string wallet_charge
+string wallet_has_been_loaded_with_an_amount_of
 string wednesday
 string welcome
 string welcome_back

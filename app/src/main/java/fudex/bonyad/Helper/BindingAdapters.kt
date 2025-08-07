@@ -43,10 +43,12 @@ import fudex.bonyad.ui.Adapter.technical.Serviceadapter
 import fudex.bonyad.ui.Adapter.technical.Serviceimageadapter
 import fudex.bonyad.Model.RegisterimageModel
 import fudex.bonyad.Model.Technician
+import fudex.bonyad.Model.TransactionsDatum
 import fudex.bonyad.ui.Adapter.Chatadapter
 import fudex.bonyad.ui.Adapter.Notsadapter
 import fudex.bonyad.ui.Adapter.OnboardPagerAdapter
 import fudex.bonyad.ui.Adapter.Ratingadapter
+import fudex.bonyad.ui.Adapter.Transactionsadapter
 import fudex.bonyad.ui.Adapter.merchant.Imagesadapter
 import fudex.bonyad.ui.Adapter.merchant.Mostproductsadapter
 import fudex.bonyad.ui.Adapter.merchant.Myproductsadapter
@@ -61,6 +63,7 @@ import fudex.bonyad.ui.Adapter.user.Depadapter
 import fudex.bonyad.ui.Adapter.user.Homeproductadapter
 import fudex.bonyad.ui.Adapter.user.Ordersadapter
 import fudex.bonyad.ui.Adapter.user.Productitemadapter
+import fudex.bonyad.ui.Adapter.user.Productrateadapter
 import fudex.bonyad.ui.Adapter.user.Servicesdetailsadapter
 import fudex.bonyad.ui.Adapter.user.Technicafilterladapter
 import fudex.bonyad.ui.Adapter.user.Technical1adapter
@@ -589,6 +592,28 @@ object BindingAdapters {
         val adapter = recyclerView.adapter
         if (adapter != null && adapter is Userordersadapter) {
             (adapter as Userordersadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:transactions", "bind:fragment")
+    @JvmStatic
+    fun settransactions(recyclerView: RecyclerView, movies: ArrayList<TransactionsDatum>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Transactionsadapter) {
+            (adapter as Transactionsadapter).setdata(movies, fragment)
+        }else {
+//            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
+        }
+    }
+
+    @BindingAdapter("bind:productrate", "bind:fragment")
+    @JvmStatic
+    fun setproductrate(recyclerView: RecyclerView, movies: ArrayList<ProductElement>, fragment: Activity) {
+        val adapter = recyclerView.adapter
+        if (adapter != null && adapter is Productrateadapter) {
+            (adapter as Productrateadapter).setdata(movies, fragment)
         }else {
 //            throw IllegalStateException("RecyclerView either has no adapter set or the " + "adapter isn't of type MovieAdapter")
         }

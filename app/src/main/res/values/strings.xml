@@ -271,4 +271,8 @@
     <string name="export_pdf">Export PDF</string>
     <string name="excel_export">Excel Export</string>
     <string name="there_are_no_cart_available">there are no cart available</string>
+    <string name="wallet_has_been_loaded_with_an_amount_of">Wallet has been loaded with an amount of</string>
+    <string name="a_request_has_been_made_to_withdraw_an_amount">A request has been made to withdraw an amount</string>
+    <string name="order_evaluation">Order evaluation</string>
+    <string name="give_a_rating_for_the_product">Give a rating for the product</string>
 </resources>

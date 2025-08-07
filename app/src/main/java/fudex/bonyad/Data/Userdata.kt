@@ -72,3 +72,7 @@ data class Visadata (
     var iban: String? = null,
     var account_number: String? = null
     )
+
+data class Chargestatus (
+    var amount: String? = null,
+)

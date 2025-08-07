@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="a_request_has_been_made_to_withdraw_an_amount">تم ارسال طلب بسحب مبلغ</string>
     <string name="about_the_platform">عن المنصة</string>
     <string name="accept">قبول</string>
     <string name="account_holder_s_name">اسم صاحب الحساب</string>
@@ -256,6 +257,7 @@
     <string name="user_deleted">تم مسح المستخدم أو حظره</string>
     <string name="wallet">المحفظة</string>
     <string name="wallet_charge">شحن المحفظة</string>
+    <string name="wallet_has_been_loaded_with_an_amount_of">تم شحن المحفظه بمبلغ</string>
     <string name="wednesday">الأربعاء</string>
     <string name="welcome">مرحبا</string>
     <string name="welcome_back">مرحباً بعودتك</string>

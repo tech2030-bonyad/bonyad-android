@@ -4500,6 +4500,7 @@ raw com_blongho_country_data_countries
 raw com_blongho_country_data_currencies
 raw firebase_common_keep
 raw keep
+string a_request_has_been_made_to_withdraw_an_amount
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -5026,6 +5027,7 @@ string use_wallet_your_balance_is
 string user_deleted
 string wallet
 string wallet_charge
+string wallet_has_been_loaded_with_an_amount_of
 string wednesday
 string welcome
 string welcome_back

@@ -269,4 +269,8 @@
     <string name="export_pdf">تصدير PDF</string>
     <string name="excel_export">تصدير Excel</string>
     <string name="there_are_no_cart_available">لا يوجد سله متاحه</string>
+    <string name="wallet_has_been_loaded_with_an_amount_of">تم شحن المحفظه بمبلغ</string>
+    <string name="a_request_has_been_made_to_withdraw_an_amount">تم ارسال طلب بسحب مبلغ</string>
+    <string name="order_evaluation">تقييم الطلب</string>
+    <string name="give_a_rating_for_the_product">اعطي تقييم للمنتج</string>
 </resources>

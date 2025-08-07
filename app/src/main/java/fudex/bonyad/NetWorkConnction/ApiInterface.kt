@@ -2,6 +2,7 @@ package fudex.bonyad.NetWorkConnction
 
 import fudex.bonyad.Data.Cartdata
 import fudex.bonyad.Data.Changestatus
+import fudex.bonyad.Data.Chargestatus
 import fudex.bonyad.Data.Chatdata
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
@@ -51,6 +52,7 @@ import fudex.bonyad.Model.RatingsModel
 import fudex.bonyad.Model.SubsribeModel
 import fudex.bonyad.Model.TechnicalHomeModel
 import fudex.bonyad.Model.TechnicalModel
+import fudex.bonyad.Model.TransactionsModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
@@ -530,4 +532,14 @@ interface ApiInterface {
 
     @POST("orders/{orderId}/cancel")
     fun canceluserorder(@Path("orderId") orderId: Int): Call<ErrorResponse?>?
+
+    @POST("wallet/charge")
+    fun chargewallet(@Body data: Chargestatus): Call<SubsribeModel?>?
+
+    @POST("wallet/withdraw")
+    fun withdrawewallet(@Body data: Chargestatus): Call<ErrorResponse?>?
+
+    @GET("wallet/transactions")
+    fun gettransactions(@Query("page") page: Int? , @Query("paginate") paginate: Int?): Call<TransactionsModel?>?
+
 }

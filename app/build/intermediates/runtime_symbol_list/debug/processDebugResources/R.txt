@@ -4499,6 +4499,7 @@ int raw com_blongho_country_data_countries 0x7f120000
 int raw com_blongho_country_data_currencies 0x7f120001
 int raw firebase_common_keep 0x7f120002
 int raw keep 0x7f120003
+int string a_request_has_been_made_to_withdraw_an_amount 0x7f13021d
 int string abc_action_bar_home_description 0x7f130000
 int string abc_action_bar_up_description 0x7f130001
 int string abc_action_menu_overflow_description 0x7f130002
@@ -5025,6 +5026,7 @@ int string use_wallet_your_balance_is 0x7f13020a
 int string user_deleted 0x7f13020b
 int string wallet 0x7f13020c
 int string wallet_charge 0x7f13020d
+int string wallet_has_been_loaded_with_an_amount_of 0x7f13021c
 int string wednesday 0x7f13020e
 int string welcome 0x7f13020f
 int string welcome_back 0x7f130210
