@@ -22,7 +22,7 @@
     <string name="merchant_account">Merchant Account</string>
     <string name="expert_account">Service provider account</string>
     <string name="language_change">Language change</string>
-    <string name="arabic">Arabic</string>
+    <string name="arabic">العربية</string>
     <string name="english">English</string>
     <string name="welcome_back">Welcome back</string>
     <string name="log_in_to_your_account">Log in to your account</string>
@@ -275,4 +275,15 @@
     <string name="a_request_has_been_made_to_withdraw_an_amount">A request has been made to withdraw an amount</string>
     <string name="order_evaluation">Order evaluation</string>
     <string name="give_a_rating_for_the_product">Give a rating for the product</string>
+    <string name="make_rate_to_product_that_his_name_is">make rate to product that his name is</string>
+    <string name="make_comment_to_product_that_his_name_is">make comment to product that his name is</string>
+    <string name="enter_the_required_shipping_amount">Enter the required shipping amount</string>
+    <string name="shipping_cost">Shipping cost</string>
+    <string name="riyal">Riyal</string>
+    <string name="charge">Charge</string>
+    <string name="are_you_sure_you_want_to_proceed_with_the_withdrawal">Are you sure you want to proceed with the withdrawal?</string>
+    <string name="once_confirmed_the_operation_cannot_be_reversed">Once confirmed, the operation cannot be reversed.</string>
+    <string name="your_request_has_been_successfully">Your request has been successfully submitted</string>
+    <string name="and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved">and is now under review. You will be contacted after the request is approved.</string>
+    <string name="there_is_no_times_available">there is no times available</string>
 </resources>

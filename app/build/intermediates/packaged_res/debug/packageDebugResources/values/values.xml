@@ -47,14 +47,16 @@
     <string name="agree_to_the_terms_and_conditions">Agree to the Terms and Conditions</string>
     <string name="all_construction_needs_are_in_your_hands">All construction needs... are in your hands!</string>
     <string name="all_orders">All orders</string>
+    <string name="and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved">and is now under review. You will be contacted after the request is approved.</string>
     <string name="app_name">Bonyad</string>
     <string name="appointment_management">Appointment Management</string>
-    <string name="arabic">Arabic</string>
+    <string name="arabic">العربية</string>
     <string name="are_you_sure_to_log_out_of_the_app">Are you sure to log out of the app?</string>
     <string name="are_you_sure_you_want_to_cancel_subscription">Are you sure you want to cancel subscription?</string>
     <string name="are_you_sure_you_want_to_delete_product">Are you sure you want to delete product?</string>
     <string name="are_you_sure_you_want_to_delete_product_from_cart">Are you sure you want to delete product from cart?</string>
     <string name="are_you_sure_you_want_to_delete_the_service">Are you sure you want to delete the service?</string>
+    <string name="are_you_sure_you_want_to_proceed_with_the_withdrawal">Are you sure you want to proceed with the withdrawal?</string>
     <string name="area">Area</string>
     <string name="attach_a_picture">Attach a picture</string>
     <string name="available_appointments">Available appointments</string>
@@ -73,6 +75,7 @@
     <string name="cart">Cart</string>
     <string name="change_mobile_number">Change mobile number</string>
     <string name="change_password">Change Password</string>
+    <string name="charge">Charge</string>
     <string name="check_the_reviews_and_choose_the_worker_that_suits_you">Check the reviews and choose the worker that suits you.</string>
     <string name="check_your_connection">Check your connection</string>
     <string name="city">City</string>
@@ -125,6 +128,7 @@
     <string name="enter_the_mobile_number_to_send_the_activation_code">Enter the mobile number to send the activation code</string>
     <string name="enter_the_new_mobile_number">Enter the new mobile number</string>
     <string name="enter_the_new_password">Enter the new password</string>
+    <string name="enter_the_required_shipping_amount">Enter the required shipping amount</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">Enter the verification code sent to you via mobile number</string>
     <string name="evaluation">Evaluation</string>
     <string name="excel_export">Excel Export</string>
@@ -139,6 +143,7 @@
     <string name="friday">Friday</string>
     <string name="from">From</string>
     <string name="gcm_defaultSenderId" translatable="false">209487131531</string>
+    <string name="give_a_rating_for_the_product">Give a rating for the product</string>
     <string name="google_api_key" translatable="false">AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc</string>
     <string name="google_app_id" translatable="false">1:209487131531:android:f3b7b9873dc9f6e66db58e</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAKFOCrLAExCLzD6Qn3j_EsdzLgkpvwHuc</string>
@@ -165,6 +170,8 @@
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="main_sections">Main Sections</string>
+    <string name="make_comment_to_product_that_his_name_is">make comment to product that his name is</string>
+    <string name="make_rate_to_product_that_his_name_is">make rate to product that his name is</string>
     <string name="merchant_account">Merchant Account</string>
     <string name="mobile_number">mobile number</string>
     <string name="modify_the_request">Modify the request</string>
@@ -186,8 +193,10 @@
     <string name="notifications">Notifications</string>
     <string name="old_password">Old password</string>
     <string name="on_hold">On hold</string>
+    <string name="once_confirmed_the_operation_cannot_be_reversed">Once confirmed, the operation cannot be reversed.</string>
     <string name="open1">open gps</string>
     <string name="or_contact_us_through_our_platforms">Or contact us through our platforms.</string>
+    <string name="order_evaluation">Order evaluation</string>
     <string name="order_number">Order number:</string>
     <string name="order_status">Order status</string>
     <string name="orders">Orders</string>
@@ -232,6 +241,7 @@
     <string name="reservation_request">Reservation request</string>
     <string name="reservation_request_has_been_sent_successfully">Reservation request has been sent successfully.</string>
     <string name="reset_a_new_password">Reset a new password</string>
+    <string name="riyal">Riyal</string>
     <string name="saturday">Saturday</string>
     <string name="save">Save</string>
     <string name="search">Search</string>
@@ -246,6 +256,7 @@
     <string name="service_name">Service name</string>
     <string name="services">Services</string>
     <string name="services1">Services</string>
+    <string name="shipping_cost">Shipping cost</string>
     <string name="show_less">Show Less</string>
     <string name="show_on_map">Show on map</string>
     <string name="skip">Skip</string>
@@ -273,6 +284,7 @@
     <string name="there_are_no_products_available">there are no products available</string>
     <string name="there_are_no_services_available">there are no services available</string>
     <string name="there_are_no_technicals_available">there are no technicals available</string>
+    <string name="there_is_no_times_available">there is no times available</string>
     <string name="there_is_time_not_added_in_day">there is time not added in day</string>
     <string name="thursday">Thursday</string>
     <string name="time">Time</string>
@@ -303,6 +315,7 @@
     <string name="yes">yes</string>
     <string name="you_can_add_and_edit_your_appointments">You can add and edit your appointments.</string>
     <string name="you_can_follow_the_product_details">You can follow the product details.</string>
+    <string name="your_request_has_been_successfully">Your request has been successfully submitted</string>
     <string name="your_smart_solution_for_construction_and_maintenance">Your smart solution for construction and maintenance</string>
     <string name="your_work_is_ready_and_waiting_for_you">Your work is ready... and waiting for you.</string>
     <style name="RatingBar" parent="Base.Widget.AppCompat.RatingBar.Small">

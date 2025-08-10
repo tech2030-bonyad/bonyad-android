@@ -27,6 +27,8 @@ import fudex.bonyad.ui.Activity.RatingActivity
 import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
 import fudex.bonyad.ui.Activity.user.DetailsuserorderActivity
+import fudex.bonyad.ui.Activity.user.RatingproductActivity
+import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Adapter.merchant.Imagesadapter
 import fudex.bonyad.ui.Adapter.merchant.Productsorderadapter
 import fudex.bonyad.ui.Fragment.DeletetFragment
@@ -128,6 +130,11 @@ class DetailsorderuserViewModel(var catogaryFragment: DetailsuserorderActivity) 
 
     fun back(){
         context.onBackPressed()
+    }
+    fun rate(){
+        var intent: Intent = Intent(context, RatingproductActivity::class.java)
+        intent.putExtra("data",Gson().toJson(orderdata.get()))
+        context.startActivity(intent)
     }
 
     fun cancelorder() {

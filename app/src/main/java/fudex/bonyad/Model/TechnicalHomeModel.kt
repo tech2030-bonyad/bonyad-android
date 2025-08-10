@@ -13,6 +13,7 @@ data class TechnicalHomeMData (
 )
 data class Reservations (
     val total_count: String? = null,
+    val total: String? = null,
     val current_month: String? = null,
     val previous_month: String? = null,
     val ratio: String? = null,

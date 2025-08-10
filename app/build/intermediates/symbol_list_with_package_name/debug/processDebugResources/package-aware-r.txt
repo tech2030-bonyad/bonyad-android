@@ -3267,6 +3267,7 @@ drawable mm
 drawable mn
 drawable mo
 drawable money_recive
+drawable money_recive1
 drawable money_send
 drawable mp
 drawable mq
@@ -3589,6 +3590,7 @@ id callMeasure
 id cancel_action
 id cancel_button
 id canceltxt
+id card
 id carryVelocity
 id center
 id centerCrop
@@ -3598,6 +3600,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id charge
 id chatList
 id check
 id checkbox
@@ -3862,6 +3865,7 @@ id media_controller_compat_view_tag
 id message
 id middle
 id mini
+id money
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -4306,6 +4310,7 @@ layout activity_onboarding
 layout activity_products
 layout activity_profile
 layout activity_rating
+layout activity_ratingproduct
 layout activity_resetpassword
 layout activity_selecttype
 layout activity_specialists
@@ -4378,6 +4383,7 @@ layout fragment_userappointment
 layout fragment_userhome
 layout fragment_userorders
 layout fragment_userprofile
+layout fragment_walletcharge
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_address
@@ -4401,6 +4407,7 @@ layout item_orders
 layout item_packages
 layout item_product
 layout item_productorder
+layout item_productrate
 layout item_rateing
 layout item_serviceimage
 layout item_services
@@ -4549,6 +4556,7 @@ string agree_to
 string agree_to_the_terms_and_conditions
 string all_construction_needs_are_in_your_hands
 string all_orders
+string and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -4559,6 +4567,7 @@ string are_you_sure_you_want_to_cancel_subscription
 string are_you_sure_you_want_to_delete_product
 string are_you_sure_you_want_to_delete_product_from_cart
 string are_you_sure_you_want_to_delete_the_service
+string are_you_sure_you_want_to_proceed_with_the_withdrawal
 string area
 string attach_a_picture
 string available_appointments
@@ -4595,6 +4604,7 @@ string change_password
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string charge
 string check_the_reviews_and_choose_the_worker_that_suits_you
 string check_your_connection
 string city
@@ -4670,6 +4680,7 @@ string enter_the_information_below
 string enter_the_mobile_number_to_send_the_activation_code
 string enter_the_new_mobile_number
 string enter_the_new_password
+string enter_the_required_shipping_amount
 string enter_the_verification_code_sent_to_you_via_mobile_number
 string error_a11y_label
 string error_icon_content_description
@@ -4761,6 +4772,7 @@ string gcm_defaultSenderId
 string generic_error_no_device_credential
 string generic_error_no_keyguard
 string generic_error_user_canceled
+string give_a_rating_for_the_product
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
@@ -4806,6 +4818,8 @@ string m3_sys_motion_easing_standard
 string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
 string main_sections
+string make_comment_to_product_that_his_name_is
+string make_rate_to_product_that_his_name_is
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -4903,8 +4917,10 @@ string no_network
 string notifications
 string old_password
 string on_hold
+string once_confirmed_the_operation_cannot_be_reversed
 string open1
 string or_contact_us_through_our_platforms
+string order_evaluation
 string order_number
 string order_status
 string orders
@@ -4959,6 +4975,7 @@ string resend_verification_code
 string reservation_request
 string reservation_request_has_been_sent_successfully
 string reset_a_new_password
+string riyal
 string saturday
 string save
 string screen_lock_prompt_message
@@ -4975,6 +4992,7 @@ string service_images
 string service_name
 string services
 string services1
+string shipping_cost
 string show_less
 string show_on_map
 string skip
@@ -5003,6 +5021,7 @@ string there_are_no_orders_available
 string there_are_no_products_available
 string there_are_no_services_available
 string there_are_no_technicals_available
+string there_is_no_times_available
 string there_is_time_not_added_in_day
 string thursday
 string time
@@ -5040,6 +5059,7 @@ string years_of_experience
 string yes
 string you_can_add_and_edit_your_appointments
 string you_can_follow_the_product_details
+string your_request_has_been_successfully
 string your_smart_solution_for_construction_and_maintenance
 string your_work_is_ready_and_waiting_for_you
 style AlertDialog_AppCompat

@@ -318,7 +318,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/cairosemibold"
                             tools:text="236"
-                            android:text="@{model.homedata.data.profit.total_count}"
+                            android:text="@{model.homedata.data.profit.total}"
                             android:textColor="@color/darkblack"
                             android:textSize="24sp"/>
                         <LinearLayout

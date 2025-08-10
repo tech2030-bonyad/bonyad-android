@@ -44,6 +44,9 @@ data class Ratingdata (
     val rating: String? = null,
     val comment: String? = null,
 )
+data class Makeratingdata (
+    val reviews: ArrayList<Ratingdata>? = ArrayList(),
+)
 data class Chatdata (
     val receiver_id: Int? = null,
     val message: String? = null,

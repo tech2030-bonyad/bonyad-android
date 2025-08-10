@@ -17,6 +17,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.R
+import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 
@@ -43,11 +44,24 @@ class WebviewActivity : BaseActivity() {
                 Log.e("url", url)
                 if (url.contains("?status=true")){
                     webview?.visibility = View.GONE
-                   if (intent.hasExtra("order")){
+                   if (intent.hasExtra("order") ){
                        var intent: Intent = Intent(this@WebviewActivity, UserhomeActivity::class.java)
                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                        startActivity(intent)
                        finish()
+                   }else  if (intent.hasExtra("wallet")){
+                       if (LoginSession.gettype(this@WebviewActivity) == 1){
+                           var intent: Intent = Intent(this@WebviewActivity, UserhomeActivity::class.java)
+                           intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                           startActivity(intent)
+                           finish()
+                       }else if (LoginSession.gettype(this@WebviewActivity) == 2){
+                           var intent: Intent = Intent(this@WebviewActivity, TechnicalHomeActivity::class.java)
+                           intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                           startActivity(intent)
+                           finish()
+                       }
+
                    }else {
                        var intent: Intent = Intent(this@WebviewActivity, TechnicalHomeActivity::class.java)
                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)

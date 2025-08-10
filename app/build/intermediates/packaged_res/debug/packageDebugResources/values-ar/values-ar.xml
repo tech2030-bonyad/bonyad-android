@@ -22,6 +22,7 @@
     <string name="agree_to_the_terms_and_conditions">الموافقة علي الشروط والاحكام</string>
     <string name="all_construction_needs_are_in_your_hands">كل احتياجات البناء... بين يديك!</string>
     <string name="all_orders">كل الطلبات</string>
+    <string name="and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved">وهو الآن قيد المراجعة. سيتم التواصل معك بعد اعتماد الطلب.</string>
     <string name="app_name">بنياد</string>
     <string name="appointment_management">ادارة المواعيد</string>
     <string name="arabic">العربية</string>
@@ -30,6 +31,7 @@
     <string name="are_you_sure_you_want_to_delete_product">هل أنت متأكد من حذف المنتج؟</string>
     <string name="are_you_sure_you_want_to_delete_product_from_cart">هل أنت متأكد من حذف المنتج من السله؟</string>
     <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
+    <string name="are_you_sure_you_want_to_proceed_with_the_withdrawal">هل أنت متأكد أنك تريد تنفيذ عملية السحب؟</string>
     <string name="area">المنطقة</string>
     <string name="attach_a_picture">إرفاق صورة</string>
     <string name="available_appointments">المواعيد المتاحة</string>
@@ -48,6 +50,7 @@
     <string name="cart">السلة</string>
     <string name="change_mobile_number">تغير رقم الجوال</string>
     <string name="change_password">تغير كلمة المرور</string>
+    <string name="charge">شحن</string>
     <string name="check_the_reviews_and_choose_the_worker_that_suits_you">اطلع على التقييمات واختر العامل المناسب لك.</string>
     <string name="check_your_connection">تأكد من الاتصال بالإنترنت</string>
     <string name="city">المدينة</string>
@@ -55,9 +58,9 @@
     <string name="commercial_name">الاسم التجاري</string>
     <string name="complete_order">طلب مكتمل</string>
     <string name="complete_reservation">إتمام الحجز</string>
-    <string name="completed_appointments">المواعيد المكتمله</string>
-    <string name="completed_orders">الطلبات المكتمله</string>
-    <string name="completed_requests">الطلبات المكتمله</string>
+    <string name="completed_appointments">المواعيد المكتملة</string>
+    <string name="completed_orders">الطلبات المكتملة</string>
+    <string name="completed_requests">الطلبات المكتملة</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_password">تأكيد كلمة المرور</string>
     <string name="confirm_password_must_same_password">تأكيد كلمة المرور يجب أن يكون نفس كلمة المرور</string>
@@ -93,12 +96,13 @@
     <string name="email">البريد الإلكترونى</string>
     <string name="email_foramt_is_wrong">صيغه البريد الالكترونى خاطئه</string>
     <string name="eng">ENG</string>
-    <string name="english">الإنجليزية</string>
+    <string name="english">English</string>
     <string name="enter_the_address">ادخل العنوان</string>
     <string name="enter_the_information_below">أدخل المعلومات أدناه</string>
     <string name="enter_the_mobile_number_to_send_the_activation_code">ادخل رقم الجوال لارسال رمز التفعيل</string>
     <string name="enter_the_new_mobile_number">ادخل رقم الجوال الجديد</string>
     <string name="enter_the_new_password">ادخل كلمة المرور الجديدة</string>
+    <string name="enter_the_required_shipping_amount">ادخل مبلغ الشحن المطلوب</string>
     <string name="enter_the_verification_code_sent_to_you_via_mobile_number">ادخل رمز التحقق المرسل إليك عبر رقم الجوال</string>
     <string name="evaluation">تقيم</string>
     <string name="excel_export">تصدير Excel</string>
@@ -112,6 +116,7 @@
     <string name="forgot_your_password">هل نسيت كلمة المرور؟</string>
     <string name="friday">الجمعة</string>
     <string name="from">من</string>
+    <string name="give_a_rating_for_the_product">اعطي تقييم للمنتج</string>
     <string name="gregorian_date">تاريخ ميلادي</string>
     <string name="hijri_date">تاريخ هجري</string>
     <string name="home">الرئيسية</string>
@@ -133,6 +138,8 @@
     <string name="login">تسجيل الدخول</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="main_sections">الاقسام الرئيسية</string>
+    <string name="make_comment_to_product_that_his_name_is">قم باضافه تعليق  للمنتج الذى اسمه</string>
+    <string name="make_rate_to_product_that_his_name_is">قم باضافه تقييم للمنتج الذى اسمه</string>
     <string name="merchant_account">حساب تاجر</string>
     <string name="mobile_number">رقم الجوال</string>
     <string name="modify_the_request">تعديل الطلب</string>
@@ -154,8 +161,10 @@
     <string name="notifications">الأشعارات</string>
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="on_hold">قيد الانتظار</string>
+    <string name="once_confirmed_the_operation_cannot_be_reversed"> بمجرد التأكيد، لا يمكن التراجع عن العملية.</string>
     <string name="open1">افتح نظام تحديد المواقع</string>
     <string name="or_contact_us_through_our_platforms">أو تواصل معنا عبر منصاتنا</string>
+    <string name="order_evaluation">تقييم الطلب</string>
     <string name="order_number">رقم الطلب :</string>
     <string name="order_status">حالة الطلب</string>
     <string name="orders">الطلبات</string>
@@ -199,6 +208,7 @@
     <string name="reservation_request">طلب حجز</string>
     <string name="reservation_request_has_been_sent_successfully">تم ارسال طلب الحجز بنجاح</string>
     <string name="reset_a_new_password">إعادة تعيين كلمة مرور جديدة</string>
+    <string name="riyal">الريال</string>
     <string name="saturday">السبت</string>
     <string name="save">حفظ</string>
     <string name="search">البحث</string>
@@ -213,6 +223,7 @@
     <string name="service_name">اسم الخدمة</string>
     <string name="services">خدمات</string>
     <string name="services1">الخدمات</string>
+    <string name="shipping_cost">قيمة الشحن</string>
     <string name="show_less">عرض أقل</string>
     <string name="show_on_map">عرض على الخريطه</string>
     <string name="skip">تخطي</string>
@@ -231,15 +242,16 @@
     <string name="tax">الضريبة</string>
     <string name="terms_and_conditions">الشروط والاحكام</string>
     <string name="the_code_has_not_been_received">لم يتم إستلام الرمز ؟</string>
-    <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
-    <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
-    <string name="there_are_no_cart_available">لا يوجد سله متاحه</string>
-    <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
-    <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
-    <string name="there_are_no_orders_available">لا يوجد طلبات متاحه</string>
-    <string name="there_are_no_products_available">لا يوجد منتجات متاحه</string>
-    <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
+    <string name="there_are_no_addresses_available">لا يوجد عناويين متاحة</string>
+    <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحة</string>
+    <string name="there_are_no_cart_available">لا يوجد سله متاحة</string>
+    <string name="there_are_no_messages_available">لا يوجد رسائل متاحة</string>
+    <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحة</string>
+    <string name="there_are_no_orders_available">لا يوجد طلبات متاحة</string>
+    <string name="there_are_no_products_available">لا يوجد منتجات متاحة</string>
+    <string name="there_are_no_services_available">لا يوجد خدمات متاحة</string>
     <string name="there_are_no_technicals_available">لا يوجد فنيين متاحين</string>
+    <string name="there_is_no_times_available">لا يوجد اوقات متاحة</string>
     <string name="there_is_time_not_added_in_day">لم يتم اضافه وقت ليوم</string>
     <string name="thursday">الخميس</string>
     <string name="time">الوقت</string>
@@ -270,6 +282,7 @@
     <string name="yes">نعم</string>
     <string name="you_can_add_and_edit_your_appointments">يمكنك اضافة المواعيد الخاصة بك وتعديلها</string>
     <string name="you_can_follow_the_product_details">يمكنك متابعة تفاصيل المنتج</string>
+    <string name="your_request_has_been_successfully">تم إرسال طلبك بنجاح</string>
     <string name="your_smart_solution_for_construction_and_maintenance">حلّك الذكي للبناء والصيانة</string>
     <string name="your_work_is_ready_and_waiting_for_you">شغلك جاهز... ومستنيك</string>
 </resources>

@@ -23,7 +23,7 @@
     <string name="expert_account">حساب مقدم الخدمة</string>
     <string name="language_change">تغير اللغة</string>
     <string name="arabic">العربية</string>
-    <string name="english">الإنجليزية</string>
+    <string name="english">English</string>
     <string name="welcome_back">مرحباً بعودتك</string>
     <string name="log_in_to_your_account">سجل الدخول لحسابك</string>
     <string name="mobile_number">رقم الجوال</string>
@@ -133,7 +133,7 @@
     <string name="payment_failer">فشل الدفع</string>
     <string name="load_more">عرض المزيد</string>
     <string name="show_less">عرض أقل</string>
-    <string name="there_are_no_services_available">لا يوجد خدمات متاحه</string>
+    <string name="there_are_no_services_available">لا يوجد خدمات متاحة</string>
     <string name="are_you_sure_to_log_out_of_the_app">هل أنت متأكد من تسجيل الخروج من التطبيق؟</string>
     <string name="delete_the_service">حذف الخدمة</string>
     <string name="are_you_sure_you_want_to_delete_the_service">هل انت متأكد من رغبتك ف حذف الخدمة؟</string>
@@ -142,7 +142,7 @@
     <string name="bank_account">الحساب البنكي</string>
     <string name="default_address">العنوان الافتراضي</string>
     <string name="add_a_new_address">اضافة عنوان جديد</string>
-    <string name="there_are_no_addresses_available">لا يوجد عناويين متاحه</string>
+    <string name="there_are_no_addresses_available">لا يوجد عناويين متاحة</string>
     <string name="street">الشارع</string>
     <string name="street_name">اسم الشارع</string>
     <string name="address_details">العنوان بالتفصيل</string>
@@ -165,7 +165,7 @@
     <string name="with_you_every_step_of_the_way_in_your_career_journey">معاك خطوة بخطوة في مشوارك المهني</string>
     <string name="skip">تخطي</string>
     <string name="current_appointments">المواعيد الحالية</string>
-    <string name="completed_appointments">المواعيد المكتمله</string>
+    <string name="completed_appointments">المواعيد المكتملة</string>
     <string name="rejected_appointments">المواعيد المرفوضة</string>
     <string name="booking_date_and_time">تاريخ ووقت الحجز:</string>
     <string name="details1">تفاصيل</string>
@@ -179,12 +179,12 @@
     <string name="location">الموقع</string>
     <string name="evaluation">تقيم</string>
     <string name="back">رجوع</string>
-    <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحه</string>
+    <string name="there_are_no_appointment_available">لا يوجد مواعيد متاحة</string>
     <string name="accept">قبول</string>
     <string name="it_booked_before">تم الحجز من قبل</string>
     <string name="total_orders">اجمالي الطلبات</string>
     <string name="pending_requests">الطلبات المعلقة</string>
-    <string name="completed_requests">الطلبات المكتمله</string>
+    <string name="completed_requests">الطلبات المكتملة</string>
     <string name="upcoming_appointments">المواعيد القادمة</string>
     <string name="previous_appointments">المواعيد السابقة</string>
     <string name="complete_reservation">إتمام الحجز</string>
@@ -197,9 +197,9 @@
     <string name="are_you_sure_you_want_to_cancel_subscription">هل انت متأكد من رغبتك ف الغاء الأشتراك ؟</string>
     <string name="date">التاريخ</string>
     <string name="write_your_message">اكتب رسالتك...</string>
-    <string name="there_are_no_messages_available">لا يوجد رسائل متاحه</string>
+    <string name="there_are_no_messages_available">لا يوجد رسائل متاحة</string>
     <string name="notifications">الأشعارات</string>
-    <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحه</string>
+    <string name="there_are_no_notifications_available">لا يوجد أشعارات متاحة</string>
     <string name="gregorian_date">تاريخ ميلادي</string>
     <string name="hijri_date">تاريخ هجري</string>
     <string name="ratings">التقيمات</string>
@@ -223,7 +223,7 @@
     <string name="quantity">الكميه</string>
     <string name="product_quantity">كميه المنتج</string>
     <string name="please_add_at_least_one_image">قم باضافه على الاقل صوره واحده</string>
-    <string name="there_are_no_products_available">لا يوجد منتجات متاحه</string>
+    <string name="there_are_no_products_available">لا يوجد منتجات متاحة</string>
     <string name="delete_product">حذف منتج</string>
     <string name="are_you_sure_you_want_to_delete_product">هل أنت متأكد من حذف المنتج؟</string>
     <string name="edit_product">تعديل منتج</string>
@@ -246,8 +246,8 @@
     <string name="best_selling_products">المنتجات الأكثر مبيعا</string>
     <string name="order_number">رقم الطلب :</string>
     <string name="current_orders">الطلبات الحالية</string>
-    <string name="completed_orders">الطلبات المكتمله</string>
-    <string name="there_are_no_orders_available">لا يوجد طلبات متاحه</string>
+    <string name="completed_orders">الطلبات المكتملة</string>
+    <string name="there_are_no_orders_available">لا يوجد طلبات متاحة</string>
     <string name="total_price">اجمالي السعر</string>
     <string name="in_progress">جاري التنفيذ</string>
     <string name="in_shipping">قيد الشحن</string>
@@ -268,9 +268,20 @@
     <string name="transaction_history">تاريخ التعاملات</string>
     <string name="export_pdf">تصدير PDF</string>
     <string name="excel_export">تصدير Excel</string>
-    <string name="there_are_no_cart_available">لا يوجد سله متاحه</string>
+    <string name="there_are_no_cart_available">لا يوجد سله متاحة</string>
     <string name="wallet_has_been_loaded_with_an_amount_of">تم شحن المحفظه بمبلغ</string>
     <string name="a_request_has_been_made_to_withdraw_an_amount">تم ارسال طلب بسحب مبلغ</string>
     <string name="order_evaluation">تقييم الطلب</string>
     <string name="give_a_rating_for_the_product">اعطي تقييم للمنتج</string>
+    <string name="make_rate_to_product_that_his_name_is">قم باضافه تقييم للمنتج الذى اسمه</string>
+    <string name="make_comment_to_product_that_his_name_is">قم باضافه تعليق  للمنتج الذى اسمه</string>
+    <string name="enter_the_required_shipping_amount">ادخل مبلغ الشحن المطلوب</string>
+    <string name="shipping_cost">قيمة الشحن</string>
+    <string name="riyal">الريال</string>
+    <string name="charge">شحن</string>
+    <string name="are_you_sure_you_want_to_proceed_with_the_withdrawal">هل أنت متأكد أنك تريد تنفيذ عملية السحب؟</string>
+    <string name="once_confirmed_the_operation_cannot_be_reversed"> بمجرد التأكيد، لا يمكن التراجع عن العملية.</string>
+    <string name="your_request_has_been_successfully">تم إرسال طلبك بنجاح</string>
+    <string name="and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved">وهو الآن قيد المراجعة. سيتم التواصل معك بعد اعتماد الطلب.</string>
+    <string name="there_is_no_times_available">لا يوجد اوقات متاحة</string>
 </resources>

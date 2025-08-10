@@ -40,6 +40,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/logout"
                 android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:textColor="@color/darkblue"
                 android:fontFamily="@font/cairosemibold"
@@ -81,6 +84,7 @@
                     android:textStyle="bold"
                     android:textSize="16sp"/>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
                     android:layout_marginStart="8dp"
                     android:onClick="@{ () -> model.logout() }"
                     android:layout_width="0dp"

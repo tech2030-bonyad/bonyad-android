@@ -266,6 +266,7 @@
                 android:textStyle="bold"
                 android:textSize="14sp"/>
             <androidx.cardview.widget.CardView
+                android:onClick="@{ () -> model.rate() }"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:visibility="@{model.orderdata.data.status == 4 ? View.VISIBLE : View.GONE}"

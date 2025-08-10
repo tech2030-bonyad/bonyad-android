@@ -113,6 +113,7 @@
                         android:layout_marginTop="11dp"
                         android:orientation="horizontal">
                         <LinearLayout
+                            android:onClick="@{ () -> model.charge() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -139,7 +140,7 @@
                             android:layout_marginStart="22dp"
                             android:layout_marginEnd="22dp"/>
                         <LinearLayout
-                            android:onClick="@{ () -> model.withdraw() }"
+                            android:onClick="@{ () -> model.withdrawdialog() }"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -183,6 +184,13 @@
                         />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/lightblue"
+                android:visibility="@{model.isloading ? View.VISIBLE : View.GONE}"
+                android:layout_gravity="center"/>
         </FrameLayout>
     </LinearLayout>
 </layout>

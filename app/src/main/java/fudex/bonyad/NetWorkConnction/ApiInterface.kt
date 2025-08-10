@@ -7,6 +7,7 @@ import fudex.bonyad.Data.Chatdata
 import fudex.bonyad.Data.Contactdata
 import fudex.bonyad.Data.Craetereserve
 import fudex.bonyad.Data.Editpass
+import fudex.bonyad.Data.Makeratingdata
 import fudex.bonyad.Data.Orderdata
 import fudex.bonyad.Data.Ratingdata
 import fudex.bonyad.Data.Userdata
@@ -338,6 +339,11 @@ interface ApiInterface {
     @POST("reviews")
     fun rateuser(
         @Body data: Ratingdata
+    ): Call<ErrorResponse?>?
+
+    @POST("reviews/bulk")
+    fun rateproducts(
+        @Body data: Makeratingdata
     ): Call<ErrorResponse?>?
 
     @POST("client/orders/{orderId}/cancel")

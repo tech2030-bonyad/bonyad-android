@@ -30,7 +30,6 @@ import fudex.bonyad.ui.Activity.merchant.AddproductActivity
 import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
 import fudex.bonyad.ui.Adapter.merchant.Imagesadapter
 import fudex.bonyad.ui.Adapter.merchant.Productsorderadapter
-import fudex.bonyad.ui.Fragment.DeletetFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

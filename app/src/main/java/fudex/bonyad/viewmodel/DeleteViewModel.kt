@@ -52,6 +52,15 @@ class DeleteViewModel(var catogaryFragment: DeletetFragment) : BaseObservable() 
             context.binding.title.text = context.getString(R.string.subscriptions)
             context.binding.body.text =
                 context.getString(R.string.are_you_sure_you_want_to_cancel_subscription)
+        }else if (tag == "withdraw") {
+            context.binding.title.text =
+                context.getString(R.string.are_you_sure_you_want_to_proceed_with_the_withdrawal)
+            context.binding.body.text =
+                context.getString(R.string.once_confirmed_the_operation_cannot_be_reversed)
+            context.binding.img.setBackgroundResource(R.drawable.money_recive1)
+            context.binding.logoutTxt.visibility = View.GONE
+            context.binding.card.setCardBackgroundColor(Color.parseColor("#FF6665"))
+            context.binding.canceltxt.text = context.getString(R.string.send)
         }
 
 
@@ -72,6 +81,10 @@ class DeleteViewModel(var catogaryFragment: DeletetFragment) : BaseObservable() 
             return
         }else if (tag == "subscribe") {
             context.dialogListener?.onDataReceived("subscribe")
+            context.dismiss()
+            return
+        }else if (tag == "withdraw") {
+            context.dialogListener?.onDataReceived("withdraw")
             context.dismiss()
             return
         }

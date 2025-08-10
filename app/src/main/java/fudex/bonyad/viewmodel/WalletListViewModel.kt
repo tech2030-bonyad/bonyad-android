@@ -20,6 +20,7 @@ import fudex.bonyad.Helper.Utilities
 import fudex.bonyad.Model.CartModel
 import fudex.bonyad.Model.NotsModel
 import fudex.bonyad.Model.CreateorderModel
+import fudex.bonyad.Model.SubsribeModel
 import fudex.bonyad.Model.TransactionsDatum
 import fudex.bonyad.Model.TransactionsModel
 import fudex.bonyad.NetWorkConnction.ApiInterface
@@ -32,6 +33,7 @@ import fudex.bonyad.ui.Activity.user.UserhomeActivity
 import fudex.bonyad.ui.Adapter.Transactionsadapter
 import fudex.bonyad.ui.Adapter.user.Cartproductadapter
 import fudex.bonyad.ui.Fragment.DeletetFragment
+import fudex.bonyad.ui.Fragment.WalletchargeFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -121,7 +123,11 @@ class WalletListViewModel(var catogaryFragment: WalletActivity) : BaseObservable
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onResponse(call: Call<ErrorResponse?>, response: Response<ErrorResponse?>) {
                 if (response.code() == 200 || response.code() == 201) {
-                  Dialogs.showToast(response.body()?.message ?: "",context)
+                    Utilities.showWithdrwasDialog(context,
+                        context.getString(R.string.your_request_has_been_successfully) ,
+                        context.getString(R.string.and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved)){
+
+                    }
                 } else{
                     val errorText = response.errorBody()?.string() ?: "{}"
                     val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
@@ -137,6 +143,43 @@ class WalletListViewModel(var catogaryFragment: WalletActivity) : BaseObservable
             }
 
             override fun onFailure(call: Call<ErrorResponse?>, t: Throwable) {
+                Dialogs.showToast(context.getString(R.string.check_your_connection) , context)
+                isloading.set(false)
+                Utilities.enabletouch(context)
+            }
+        })
+    }
+    fun charge(money:String){
+        Utilities.disabletouch(context)
+        isloading.set(true)
+        val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
+            ApiInterface::class.java)
+        val call: Call<SubsribeModel?>? = apiService.chargewallet(Chargestatus(money))
+        call?.enqueue(object : Callback<SubsribeModel?> {
+            @RequiresApi(Build.VERSION_CODES.O)
+            override fun onResponse(call: Call<SubsribeModel?>, response: Response<SubsribeModel?>) {
+                if (response.code() == 200 || response.code() == 201) {
+                    var intent: Intent = Intent(context, WebviewActivity::class.java)
+                    intent.putExtra("url",response.body()!!.data?.redirectUrl ?: "")
+                    intent.putExtra("wallet","")
+//                    intent.putExtra("success",response.body()!!.data?.success_url ?: "")
+//                    intent.putExtra("fail",response.body()!!.data?.fail_url ?: "")
+                    context.startActivity(intent)
+                } else{
+                    val errorText = response.errorBody()?.string() ?: "{}"
+                    val errorResponse = Gson().fromJson(errorText, ErrorResponse::class.java)
+                    APIModel.handleFailure1(context, response.code(), errorResponse, object : APIModel.RefreshTokenListener {
+                        override fun onRefresh() {
+                            charge(money)
+                        }
+                    })
+                }
+                isloading.set(false)
+                Utilities.enabletouch(context)
+
+            }
+
+            override fun onFailure(call: Call<SubsribeModel?>, t: Throwable) {
                 Dialogs.showToast(context.getString(R.string.check_your_connection) , context)
                 isloading.set(false)
                 Utilities.enabletouch(context)
@@ -177,7 +220,13 @@ class WalletListViewModel(var catogaryFragment: WalletActivity) : BaseObservable
             }
         })
     }
+    fun charge(){
+        var fragment = WalletchargeFragment()
+        fragment.show(context.supportFragmentManager , "charge")
+    }
 
-
-
+    fun withdrawdialog(){
+        var fragment = DeletetFragment()
+        fragment.show(context.supportFragmentManager , "withdraw")
+    }
 }

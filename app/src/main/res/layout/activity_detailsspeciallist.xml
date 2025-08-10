@@ -253,6 +253,18 @@
                            android:orientation="horizontal"
                            bind:times="@{model.times}"
                            bind:fragment="@{model.context}"/>
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/darkblue"
+                           android:fontFamily="@font/cairoregular"
+                           android:textSize="16sp"
+                           android:visibility="@{model.times.size() == 0 ? View.VISIBLE : View.GONE}"
+                           android:text="@string/there_is_no_times_available"
+                           android:layout_marginTop="15dp"
+                           android:layout_marginStart="26dp"
+                           android:layout_gravity="center"
+                           android:layout_marginEnd="26dp"/>
                        <LinearLayout
                            android:layout_width="match_parent"
                            android:layout_height="wrap_content"

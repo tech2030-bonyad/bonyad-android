@@ -67,7 +67,7 @@ class Productrateadapter : RecyclerView.Adapter<Productrateadapter.MyViewHolder>
         movieItem.rate.rating = horizontalList.get(position).rate!!.toFloat()
 
         movieItem.rate.setOnRatingBarChangeListener { _, rating, _ ->
-            horizontalList.get(position).rate = rating.toString()
+            horizontalList.get(position).rate = rating.toInt().toString()
         }
         movieItem.comment.setText(horizontalList.get(position).comment)
 
