@@ -77,10 +77,10 @@ class ProductrateingViewModel(var catogaryFragment: RatingproductActivity) : Bas
         var error = ""
         for (item in productList){
             if (item.rate ?: "" == "" || item.rate ?: "" == "0"){
-                error = error + context.getString(R.string.make_rate_to_product_that_his_name_is) + " " + item.product?.name ?: ""
+                error = error + context.getString(R.string.make_rate_to_product_that_his_name_is) + " " + item.product?.name ?: "" + "\n"
             }
             if (item.comment ?: "" == "" ){
-                error = error + context.getString(R.string.make_comment_to_product_that_his_name_is) + " " + item.product?.name ?: ""
+                error = error + context.getString(R.string.make_comment_to_product_that_his_name_is) + " " + item.product?.name ?: ""  + "\n"
             }
         }
         if (error == "") {

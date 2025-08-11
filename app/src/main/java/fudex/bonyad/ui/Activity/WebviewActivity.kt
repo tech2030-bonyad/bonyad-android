@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat
 import fudex.bonyad.Helper.Dialogs
 import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
+import fudex.bonyad.ui.Activity.merchant.MerchanthomeActivity
 import fudex.bonyad.ui.Activity.technical.TechnicalHomeActivity
 import fudex.bonyad.ui.Activity.user.UserhomeActivity
 
@@ -56,7 +57,7 @@ class WebviewActivity : BaseActivity() {
                            startActivity(intent)
                            finish()
                        }else if (LoginSession.gettype(this@WebviewActivity) == 2){
-                           var intent: Intent = Intent(this@WebviewActivity, TechnicalHomeActivity::class.java)
+                           var intent: Intent = Intent(this@WebviewActivity, MerchanthomeActivity::class.java)
                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                            startActivity(intent)
                            finish()
