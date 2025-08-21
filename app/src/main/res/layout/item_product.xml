@@ -75,23 +75,27 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="8dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/cairosemibold"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:text="@{model.onservse.price + ' ' + @string/r_s}"
-                tools:text="95.33 ر.س"
-                android:textColor="@color/darkblue"/>
-            <TextView
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairosemibold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:text="@{model.onservse.price + ' ' + @string/r_s}"
+                    tools:text="95.33 ر.س"
+                    android:textColor="@color/darkblue"/>
+            </LinearLayout>
             <ImageView
                 android:onClick="@{ () -> model.edit() }"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_marginStart="8dp"
                 android:src="@drawable/ic_edit2231"
                 android:layout_gravity="center"
                 android:padding="4dp"

@@ -284,4 +284,12 @@
     <string name="your_request_has_been_successfully">تم إرسال طلبك بنجاح</string>
     <string name="and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved">وهو الآن قيد المراجعة. سيتم التواصل معك بعد اعتماد الطلب.</string>
     <string name="there_is_no_times_available">لا يوجد اوقات متاحة</string>
+    <string name="wallet_has_been_successfully_charged">تم شحن المحفظه بنجاح</string>
+    <string name="there_are_no_transactions_yet">لا يوجد تعاملات بعد</string>
+    <string name="there_is_no_balance_to_withdraw">لا يوجد رصيد للقيام بسحبه</string>
+    <string name="was_refunded_for_the_cancellation_of_the_order">نظير الغاء الطلب</string>
+    <string name="an_amount_of">تم استرداد مبلغ</string>
+    <string name="you_won_an_amount_of">لقد ربحت مبلغ</string>
+    <string name="an_amount_of1">لقد تم اضافه مبلغ</string>
+    <string name="has_been_added_for_the_completion_of_one_of_the_orders">نظير اكتمال احد الطلبات</string>
 </resources>

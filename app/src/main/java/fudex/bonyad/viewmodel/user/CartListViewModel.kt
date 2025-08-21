@@ -40,6 +40,7 @@ import retrofit2.Response
 
 class CartListViewModel(var catogaryFragment: CartActivity) : BaseObservable() {
     var isloading: ObservableBoolean = ObservableBoolean(false)
+    var ishiden: ObservableBoolean = ObservableBoolean(false)
     var context: CartActivity = CartActivity()
     var img = ObservableField<String>("")
     var name = ObservableField<String>("")
@@ -80,6 +81,11 @@ class CartListViewModel(var catogaryFragment: CartActivity) : BaseObservable() {
                     cartdata.set(data?.data)
                     productList.clear()
                     productList.addAll(data?.data?.products!!)
+                    if (data?.data?.tax?.toDouble() ?: 0.0 > 0 ){
+                        ishiden.set(false)
+                    }else {
+                        ishiden.set(true)
+                    }
                     notifyChange()
                 } else {
                     val errorText = response.errorBody()?.string() ?: "{}"
@@ -180,7 +186,7 @@ class CartListViewModel(var catogaryFragment: CartActivity) : BaseObservable() {
             override fun onResponse(call: Call<NotsModel?>, response: Response<NotsModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
-                    wallet.set(data?.balance ?: 0.0)
+                    wallet.set(data?.balance?.toDouble())
                     notifyChange()
                 }else {
                     val errorText = response.errorBody()?.string()

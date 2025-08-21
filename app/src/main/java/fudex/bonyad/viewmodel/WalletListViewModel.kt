@@ -41,10 +41,11 @@ import retrofit2.Response
 
 class WalletListViewModel(var catogaryFragment: WalletActivity) : BaseObservable() {
     var isloading: ObservableBoolean = ObservableBoolean(false)
+    var ishiden: ObservableBoolean = ObservableBoolean(false)
     var context: WalletActivity = WalletActivity()
     var transactionsList: ArrayList<TransactionsDatum> = ArrayList()
     var page = 1
-    var wallet = ObservableField<Double>(0.0)
+    var wallet = ObservableField<String>("")
     private var mLoading = false
     private val transactionsadapter = Transactionsadapter()
 
@@ -114,6 +115,10 @@ class WalletListViewModel(var catogaryFragment: WalletActivity) : BaseObservable
     }
 
     fun withdraw(){
+        if (ishiden.get() == true){
+            Dialogs.showToast(context.getString(R.string.there_is_no_balance_to_withdraw),context)
+            return
+        }
         Utilities.disabletouch(context)
         isloading.set(true)
         val apiService: ApiInterface = RetrofitClient.getClient(context)!!.create(
@@ -201,7 +206,12 @@ class WalletListViewModel(var catogaryFragment: WalletActivity) : BaseObservable
             override fun onResponse(call: Call<NotsModel?>, response: Response<NotsModel?>) {
                 if (response.code() == 200 || response.code() == 201) {
                     var data = response.body()
-                    wallet.set(data?.balance ?: 0.0)
+                    wallet.set(data?.balance ?: "")
+                    if(data?.balance?.toDouble() ?: 0.0 > 0){
+                        ishiden.set(false)
+                    }else {
+                        ishiden.set(true)
+                    }
                     notifyChange()
                 }else {
                     val errorText = response.errorBody()?.string()

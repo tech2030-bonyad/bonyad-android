@@ -54,7 +54,7 @@ class ProductorderViewModel : BaseObservable() {
     }
     fun rate(){
         var intent: Intent = Intent(context, RatingActivity::class.java)
-        intent.putExtra("id",onservse.get()?.id ?: 0)
+        intent.putExtra("id",onservse.get()?.product?.id ?: 0)
         intent.putExtra("type","Product")
         context?.startActivity(intent)
     }

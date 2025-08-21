@@ -62,6 +62,7 @@ class WebviewActivity : BaseActivity() {
                            startActivity(intent)
                            finish()
                        }
+                       Dialogs.showToast(getString(R.string.wallet_has_been_successfully_charged),this@WebviewActivity)
 
                    }else {
                        var intent: Intent = Intent(this@WebviewActivity, TechnicalHomeActivity::class.java)

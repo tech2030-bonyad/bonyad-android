@@ -310,7 +310,7 @@ interface ApiInterface {
     @POST("logout")
     fun logout(@Body requestBody: RequestBody): Call<ErrorResponse?>?
 
-    @POST("client/deleteAccount")
+    @POST("delete-account")
     fun deleteaccount(): Call<ErrorResponse?>?
 
     @GET("technician/availability-dates/{technicalId}") // Append this to the base URL

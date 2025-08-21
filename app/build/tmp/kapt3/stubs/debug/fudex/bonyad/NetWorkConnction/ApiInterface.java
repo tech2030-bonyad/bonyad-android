@@ -483,7 +483,7 @@ public abstract interface ApiInterface {
     @org.jetbrains.annotations.NotNull()
     okhttp3.RequestBody requestBody);
     
-    @retrofit2.http.POST(value = "client/deleteAccount")
+    @retrofit2.http.POST(value = "delete-account")
     @org.jetbrains.annotations.Nullable()
     public abstract retrofit2.Call<fudex.bonyad.Helper.ErrorResponse> deleteaccount();
     

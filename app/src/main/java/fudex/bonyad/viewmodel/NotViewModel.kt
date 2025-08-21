@@ -14,8 +14,10 @@ import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.ChatActivity
 import fudex.bonyad.ui.Activity.NotificationsActivity
+import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
+import fudex.bonyad.ui.Activity.user.DetailsuserorderActivity
 import fudex.bonyad.ui.Fragment.technical.TechnicalappointmentFragment
 import fudex.bonyad.ui.Fragment.user.UserappointmentFragment
 import java.io.IOException
@@ -39,6 +41,20 @@ class NotViewModel : BaseObservable() {
         if (LoginSession.gettype(context!!) == 1) {
             if (onservse.get()!!.type?.contains("reservation") == true){
                 var intent: Intent = Intent(context, DetailsappointmentActivity::class.java)
+                intent.putExtra("id",onservse.get()!!.item_id ?: 0)
+                context?.startActivity(intent)
+            }else if (onservse.get()!!.type?.contains("order") == true){
+                var intent: Intent = Intent(context, DetailsuserorderActivity::class.java)
+                intent.putExtra("id",onservse.get()!!.item_id ?: 0)
+                context?.startActivity(intent)
+            }else if (onservse.get()!!.type == "send_message"){
+                var intent: Intent = Intent(context, ChatActivity::class.java)
+                intent.putExtra("id",onservse.get()!!.item_id ?: 0)
+                context?.startActivity(intent)
+            }
+        }else  if (LoginSession.gettype(context!!) == 2) {
+            if (onservse.get()!!.type?.contains("order") == true){
+                var intent: Intent = Intent(context, DetailsordermerchantActivity::class.java)
                 intent.putExtra("id",onservse.get()!!.item_id ?: 0)
                 context?.startActivity(intent)
             }else if (onservse.get()!!.type == "send_message"){

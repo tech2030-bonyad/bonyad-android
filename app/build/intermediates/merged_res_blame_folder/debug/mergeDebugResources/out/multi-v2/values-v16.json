@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-66:/values-v16/values-v16.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-4:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/mahmoudezzat/.gradle/caches/8.9/transforms/775789490054efa76dac5b0ad61778d0/transformed/appcompat-1.5.1/res/values-v16/values-v16.xml",
+                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/775789490054efa76dac5b0ad61778d0/transformed/appcompat-1.5.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

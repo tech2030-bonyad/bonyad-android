@@ -32,8 +32,10 @@ import fudex.bonyad.R
 import fudex.bonyad.SharedPreferences.LoginSession
 import fudex.bonyad.ui.Activity.ChatActivity
 import fudex.bonyad.ui.Activity.NotificationsActivity
+import fudex.bonyad.ui.Activity.merchant.DetailsordermerchantActivity
 import fudex.bonyad.ui.Activity.technical.TechnicaldetailsapointmentActivity
 import fudex.bonyad.ui.Activity.user.DetailsappointmentActivity
+import fudex.bonyad.ui.Activity.user.DetailsuserorderActivity
 
 import org.greenrobot.eventbus.EventBus
 import org.json.JSONObject
@@ -92,6 +94,39 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 }else  if (LoginSession.gettype1(applicationContext) == 3){
                     notificationIntent =
                         Intent(getApplicationContext(), TechnicaldetailsapointmentActivity::class.java)
+                    notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
+                    notificationIntent.flags =
+                        Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    val random = Random()
+                    val notificationID = random.nextInt(9999 - 1000) + 1000
+                    show_not(
+                        notificationIntent,
+                        jsonObject.getString("title"),
+                        jsonObject.getString("body"),
+                        notificationID
+                    )
+                }
+
+
+            }else if (jsonObject.getString("type") == "create_order" ||  jsonObject.getString("type") == "order_change_status") {
+                var notificationIntent: Intent? = null
+                if (LoginSession.gettype1(applicationContext) == 1){
+                    notificationIntent =
+                        Intent(getApplicationContext(), DetailsuserorderActivity::class.java)
+                    notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
+                    notificationIntent.flags =
+                        Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    val random = Random()
+                    val notificationID = random.nextInt(9999 - 1000) + 1000
+                    show_not(
+                        notificationIntent,
+                        jsonObject.getString("title"),
+                        jsonObject.getString("body"),
+                        notificationID
+                    )
+                }else  if (LoginSession.gettype1(applicationContext) == 2){
+                    notificationIntent =
+                        Intent(getApplicationContext(), DetailsordermerchantActivity::class.java)
                     notificationIntent.putExtra("id", jsonObject.getInt("item_id"))
                     notificationIntent.flags =
                         Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

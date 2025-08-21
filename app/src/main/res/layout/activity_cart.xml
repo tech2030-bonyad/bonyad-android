@@ -214,6 +214,7 @@
                             tools:text="150  ر.س"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:visibility="@{model.ishiden ? View.GONE : View.VISIBLE}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -227,7 +228,7 @@
                             android:textSize="12sp"
                             android:layout_gravity="center"
                             android:fontFamily="@font/cairoregular"
-                            android:text="@string/tax"/>
+                            android:text="@{@string/tax + '(' + model.cartdata.tax + '%' + ')'}"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -238,7 +239,7 @@
                             android:textColor="@color/darkgray"
                             android:textSize="12sp"
                             android:layout_gravity="center"
-                            android:text="@{model.cartdata.tax + ' ' + @string/r_s}"
+                            android:text="@{model.cartdata.tax_value + ' ' + @string/r_s}"
                             android:fontFamily="@font/cairoregular"
                             tools:text="150  ر.س"/>
                     </LinearLayout>
@@ -276,7 +277,7 @@
                             android:textSize="14sp"
                             android:layout_gravity="center"
                             android:textStyle="bold"
-                            android:text="@{model.cartdata.total + ' ' + @string/r_s}"
+                            android:text="@{model.cartdata.total_after_tax + ' ' + @string/r_s}"
                             android:fontFamily="@font/cairobold"
                             tools:text="150  ر.س"/>
                     </LinearLayout>

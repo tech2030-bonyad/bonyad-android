@@ -1,11 +1,14 @@
 package fudex.bonyad.viewmodel.user
 
 
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -56,6 +59,18 @@ class DetailsorderuserViewModel(var catogaryFragment: DetailsuserorderActivity) 
         context.binding.productList.layoutManager = linearlayout
         context.binding.productList.adapter = productsorderadapter
         getorderdetails()
+        val filter = IntentFilter("message_received")
+        filter.addCategory(Intent.CATEGORY_DEFAULT)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.registerReceiver(context.messageReceiver, filter, null, null, Context.RECEIVER_NOT_EXPORTED)
+        }else {
+            ContextCompat.registerReceiver(
+                context,
+                context.messageReceiver,
+                IntentFilter("message_received"),
+                ContextCompat.RECEIVER_NOT_EXPORTED
+            )
+        }
     }
     fun getorderdetails() {
         isloading.set(true)

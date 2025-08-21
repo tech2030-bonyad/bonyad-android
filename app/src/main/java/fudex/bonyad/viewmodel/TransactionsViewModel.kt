@@ -34,6 +34,14 @@ class TransactionsViewModel : BaseObservable() {
             body = context.getString(R.string.wallet_has_been_loaded_with_an_amount_of) + " " + catModel.amount + " " + context.getString(R.string.r_s)
         }else if (catModel.type == 6){
             body = context.getString(R.string.a_request_has_been_made_to_withdraw_an_amount) + " " + catModel.amount + " " + context.getString(R.string.r_s)
+        }else if (catModel.type == 5){
+            body = context.getString(R.string.an_amount_of) + " " + catModel.amount + " " + context.getString(R.string.r_s) + " " + context.getString(
+                R.string.was_refunded_for_the_cancellation_of_the_order
+            )
+        }else if (catModel.type == 4){
+            body = context.getString(R.string.an_amount_of1) + " " + catModel.amount + " " + context.getString(R.string.r_s) + " " + context.getString(
+                R.string.has_been_added_for_the_completion_of_one_of_the_orders
+            )
         }
         onservse.set(catModel)
         this.catModel = catModel

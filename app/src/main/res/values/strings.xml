@@ -286,4 +286,12 @@
     <string name="your_request_has_been_successfully">Your request has been successfully submitted</string>
     <string name="and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved">and is now under review. You will be contacted after the request is approved.</string>
     <string name="there_is_no_times_available">there is no times available</string>
+    <string name="wallet_has_been_successfully_charged">Wallet has been successfully charged.</string>
+    <string name="there_are_no_transactions_yet">There are no transactions yet</string>
+    <string name="there_is_no_balance_to_withdraw">There is no balance to withdraw</string>
+    <string name="was_refunded_for_the_cancellation_of_the_order">was refunded for the cancellation of the order</string>
+    <string name="an_amount_of">An amount of</string>
+    <string name="you_won_an_amount_of">You won an amount of</string>
+    <string name="an_amount_of1">An amount of</string>
+    <string name="has_been_added_for_the_completion_of_one_of_the_orders">has been added for the completion of one of the orders</string>
 </resources>

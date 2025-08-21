@@ -4556,6 +4556,8 @@ string agree_to
 string agree_to_the_terms_and_conditions
 string all_construction_needs_are_in_your_hands
 string all_orders
+string an_amount_of
+string an_amount_of1
 string and_is_now_under_review_you_will_be_contacted_after_the_request_is_approved
 string androidx_startup
 string app_name
@@ -4778,6 +4780,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string gregorian_date
+string has_been_added_for_the_completion_of_one_of_the_orders
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string hijri_date
@@ -5021,6 +5024,8 @@ string there_are_no_orders_available
 string there_are_no_products_available
 string there_are_no_services_available
 string there_are_no_technicals_available
+string there_are_no_transactions_yet
+string there_is_no_balance_to_withdraw
 string there_is_no_times_available
 string there_is_time_not_added_in_day
 string thursday
@@ -5047,6 +5052,8 @@ string user_deleted
 string wallet
 string wallet_charge
 string wallet_has_been_loaded_with_an_amount_of
+string wallet_has_been_successfully_charged
+string was_refunded_for_the_cancellation_of_the_order
 string wednesday
 string welcome
 string welcome_back
@@ -5059,6 +5066,7 @@ string years_of_experience
 string yes
 string you_can_add_and_edit_your_appointments
 string you_can_follow_the_product_details
+string you_won_an_amount_of
 string your_request_has_been_successfully
 string your_smart_solution_for_construction_and_maintenance
 string your_work_is_ready_and_waiting_for_you
