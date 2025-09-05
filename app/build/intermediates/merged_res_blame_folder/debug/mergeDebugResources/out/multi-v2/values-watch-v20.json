@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-4:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-66:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/775789490054efa76dac5b0ad61778d0/transformed/appcompat-1.5.1/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/775789490054efa76dac5b0ad61778d0/transformed/appcompat-1.5.1/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

@@ -1,446 +1,442 @@
 [
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_merchantorders.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_merchantorders.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_statistics.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_statistics.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_userorders.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_userorders.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_merchantprofile.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_merchantprofile.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_detailsuserorder.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_detailsuserorder.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalhome.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_technicalhome.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_addadress.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_addadress.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_myservices.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_myservices.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_edittechnicaldata.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_edittechnicaldata.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_slider.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_slider.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_resetpassword.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_resetpassword.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalservices.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_technicalservices.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_serviceimage.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_serviceimage.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_userappointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_userappointment.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_merchanthome.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_merchanthome.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_onboarding.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_onboarding.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_statistics.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_statistics.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_addaccountbank.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_addaccountbank.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_edittrade.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_edittrade.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_products.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_products.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_technicalhome.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_technicalhome.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsspeciallist.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsspeciallist.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_technicalservice.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_technicalservice.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_speciallistreservedone.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_speciallistreservedone.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_addresses.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_addresses.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_time.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_time.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_userprofile.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_userprofile.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_subscriptions.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_subscriptions.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_filterproducts.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_filterproducts.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_rateing.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_rateing.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_splash.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_splash.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_productrate.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_productrate.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_services.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_services.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_technicalservice.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_technicalservice.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_userhome.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_userhome.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalappointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_technicalappointment.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/dialog_success_messag.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/dialog_success_messag.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_userappointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_userappointment.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_onboarding.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_onboarding.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_cart.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_cart.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_detailsproducts.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_detailsproducts.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_technicalprofile.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_technicalprofile.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_userregister.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_userregister.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_appointmentmanagectivity.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_appointmentmanagectivity.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_specialists.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_specialists.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_technicalregister.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_technicalregister.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_mostproduct.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_mostproduct.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_certificate.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_certificate.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_filterspecial.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_filterspecial.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_resetpassword.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_resetpassword.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_technicalregister.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_technicalregister.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_walletcharge.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_walletcharge.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_availablity.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_availablity.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_filterorders.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_filterorders.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_merchantprofile.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_merchantprofile.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_refuse1.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_refuse1.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_productorder.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_productorder.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsproducts.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsproducts.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_technicalservicedetails.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_technicalservicedetails.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_editphone.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_editphone.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_orders.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_orders.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_nots.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_nots.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_edituserdata.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_edituserdata.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_addadress.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_addadress.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_changelangue.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_changelangue.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_userorders.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_userorders.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_profile.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_profile.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_changelangue.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_changelangue.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_calenderdialog.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_calenderdialog.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_userorder.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_userorder.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_onboarding.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_onboarding.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_address.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_address.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_subscriptions.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_subscriptions.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_wallet.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_wallet.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_speciallistreservedone.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_speciallistreservedone.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_selecttype.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_selecttype.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_detailsordermerchant.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_detailsordermerchant.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_technicalappointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_technicalappointment.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_detailsproducttechnical.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_detailsproducttechnical.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_refuse.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_refuse.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_detailsappointment.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_detailsappointment.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_availablity.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_availablity.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_cart.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_cart.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_forgetpass.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_forgetpass.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_homeproduct1.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_homeproduct1.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_myproduct.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_myproduct.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_webview.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_webview.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_dep.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_dep.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_staticpage.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_staticpage.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/dialog_success_messag.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/dialog_success_messag.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_contactus.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_contactus.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_webview.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_webview.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_servicesdetails.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_servicesdetails.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_activeuser.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_activeuser.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_special.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_special.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_services.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_services.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_refuse1.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_refuse1.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_homeproduct1.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_homeproduct1.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_refuse.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_refuse.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_profile.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_profile.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_login.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_login.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsuserorder.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsuserorder.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_mostproducts.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_mostproducts.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_editpass.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_editpass.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_filterhome.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_filterhome.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_locationmap.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_locationmap.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_detailsspeciallist.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_detailsspeciallist.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_special.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_special.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_userorder.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_userorder.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_day.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_day.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_cart.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_cart.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_merchantregister.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_merchantregister.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_product.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_product.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_specialists.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_specialists.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_appointmentmanagectivity.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_appointmentmanagectivity.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsappointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsappointment.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_dep.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_dep.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_splash.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_splash.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_calendar.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_calendar.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_userprofile.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_userprofile.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_time.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_time.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_userhome.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_userhome.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_wallet.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_wallet.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_merchanthome.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_merchanthome.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_packages.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_packages.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_addservice.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_addservice.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_ratingdialog.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_ratingdialog.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_wallet.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_wallet.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_walletcharge.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_walletcharge.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_product.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_product.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_slider.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_slider.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_addproduct.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_addproduct.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_technicalprofile.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_technicalprofile.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_edittechnicaldata.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_edittechnicaldata.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_addservice.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_addservice.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_image.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_image.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_myproduct.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_myproduct.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_homeproduct.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_homeproduct.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_addproduct.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_addproduct.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_chat.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_chat.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_merchantorders.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_merchantorders.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_technical_home.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_technical_home.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_special1.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_special1.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsordermerchant.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsordermerchant.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_editpass.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_editpass.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_packages.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_packages.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_wallet.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_wallet.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_technicalservicedetails.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_technicalservicedetails.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_technicalappointment.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_technicalappointment.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_orders.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_orders.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_address.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_address.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_onboarding.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_onboarding.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_merchanthome.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_merchanthome.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_calendar.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_calendar.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_products.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_products.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_filterspecial.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_filterspecial.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_rateing.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_rateing.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_serviceimage.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_serviceimage.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_homeproduct.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_homeproduct.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_filterhome.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_filterhome.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_services1.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_services1.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_productorder.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_productorder.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_notifications.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_notifications.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_mostproducts.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_mostproducts.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_userhome.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_userhome.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_contactus.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_contactus.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_editphone.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_editphone.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_merchanthome.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_merchanthome.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_merchantregister.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_merchantregister.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_mostproduct.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_mostproduct.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_image.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_image.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_images.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_images.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_activeuser.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_activeuser.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_ratingproduct.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_ratingproduct.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_technicalservices.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_technicalservices.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_addresses.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_addresses.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_productrate.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_productrate.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_detailsproducttechnical.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_detailsproducttechnical.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_ratingproduct.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_ratingproduct.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_rating.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_rating.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_technicalappointment.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_technicalappointment.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_login.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_login.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_forgetpass.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_forgetpass.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_userhome.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_userhome.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_nots.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_nots.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_userregister.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_userregister.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_chat.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_chat.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_special1.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_special1.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_locationmap.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_locationmap.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_delete.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_delete.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_addaccountbank.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_addaccountbank.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_staticpage.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_staticpage.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_delete.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_delete.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_calenderdialog.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_calenderdialog.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_certificate.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_certificate.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_services1.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_services1.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_userappointment.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_userappointment.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_cart.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_cart.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_filterorders.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_filterorders.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_notifications.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_notifications.xml"
     },
     {
-        "merged": "fudex.bonyad.app-mergeDebugResources-5:/layout/activity_cart.xml",
-        "source": "fudex.bonyad.app-main-8:/layout/activity_cart.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_technicaldetailsapointment.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_technicaldetailsapointment.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_day.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_day.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_merchantorders.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_merchantorders.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_chat.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_chat.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_filterproducts.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_filterproducts.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_date.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_date.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_servicesdetails.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_servicesdetails.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_myservices.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_myservices.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_merchantorders.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_merchantorders.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/fragment_userappointment.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/fragment_userappointment.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_chat.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_chat.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/item_images.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/item_images.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/fragment_ratingdialog.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/fragment_ratingdialog.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_selecttype.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_selecttype.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_edittrade.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_edittrade.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_technical_home.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_technical_home.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/item_date.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/item_date.xml"
     },
     {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_rating.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_rating.xml"
-    },
-    {
-        "merged": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-mergeDebugResources-5:/layout/activity_technicaldetailsapointment.xml",
-        "source": "/Volumes/Taleen/fitnee-androidfudex/daemon/8.9/fudex.bonyad.app-main-8:/layout/activity_technicaldetailsapointment.xml"
+        "merged": "fudex.bonyad.app-mergeDebugResources-67:/layout/activity_edituserdata.xml",
+        "source": "fudex.bonyad.app-main-70:/layout/activity_edituserdata.xml"
     }
 ]

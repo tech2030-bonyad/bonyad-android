@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-4:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-66:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-4:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-66:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

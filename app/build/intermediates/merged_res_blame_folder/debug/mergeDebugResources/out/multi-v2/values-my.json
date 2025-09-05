@@ -1,10 +1,95 @@
 {
     "logs": [
         {
-            "outputFile": "fudex.bonyad.app-mergeDebugResources-4:/values-my/values-my.xml",
+            "outputFile": "fudex.bonyad.app-mergeDebugResources-66:/values-my/values-my.xml",
             "map": [
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/0d4c927b8adb2fa1a30929d366717885/transformed/jetified-exoplayer-ui-2.18.0/res/values-my/values-my.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/4ca9abfa46c6e81a80cfec74c7f4d062/transformed/browser-1.4.0/res/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,164,270,385",
+                        "endColumns": "108,105,114,106",
+                        "endOffsets": "159,265,380,487"
+                    },
+                    "to": {
+                        "startLines": "82,139,140,141",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7628,12148,12254,12369",
+                        "endColumns": "108,105,114,106",
+                        "endOffsets": "7732,12249,12364,12471"
+                    }
+                },
+                {
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/8c0e4fea840ac83eda2630bdb36cc7a3/transformed/biometric-1.2.0-alpha05/res/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,224,354,463,559,727,856,965,1085,1206,1340,1477,1607,1760,1849,2005,2122,2272,2415,2552,2675,2786,2939,3049,3198,3293,3430",
+                        "endColumns": "168,129,108,95,167,128,108,119,120,133,136,129,152,88,155,116,149,142,136,122,110,152,109,148,94,136,107",
+                        "endOffsets": "219,349,458,554,722,851,960,1080,1201,1335,1472,1602,1755,1844,2000,2117,2267,2410,2547,2670,2781,2934,3044,3193,3288,3425,3533"
+                    },
+                    "to": {
+                        "startLines": "50,51,81,83,137,138,142,143,144,145,146,147,148,149,150,151,152,153,154,208,211,212,213,214,215,216,217",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3728,3897,7519,7737,11851,12019,12476,12585,12705,12826,12960,13097,13227,13380,13469,13625,13742,13892,14035,18390,18700,18811,18964,19074,19223,19318,19455",
+                        "endColumns": "168,129,108,95,167,128,108,119,120,133,136,129,152,88,155,116,149,142,136,122,110,152,109,148,94,136,107",
+                        "endOffsets": "3892,4022,7623,7828,12014,12143,12580,12700,12821,12955,13092,13222,13375,13464,13620,13737,13887,14030,14167,18508,18806,18959,19069,19218,19313,19450,19558"
+                    }
+                },
+                {
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/dc1b3129212b1092df6aa0cf48740143/transformed/exoplayer-core-2.18.0/res/values-my/values-my.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,130,202,275,344,426,501,602,697",
+                        "endColumns": "74,71,72,68,81,74,100,94,77",
+                        "endOffsets": "125,197,270,339,421,496,597,692,770"
+                    },
+                    "to": {
+                        "startLines": "109,110,111,112,113,114,115,116,117",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "9915,9990,10062,10135,10204,10286,10361,10462,10557",
+                        "endColumns": "74,71,72,68,81,74,100,94,77",
+                        "endOffsets": "9985,10057,10130,10199,10281,10356,10457,10552,10630"
+                    }
+                },
+                {
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/e96448504ca3bd5e5b7516198503cf7c/transformed/play-services-places-17.0.0/res/values-my/values.xml",
+                    "from": {
+                        "startLines": "4,5",
+                        "startColumns": "0,0",
+                        "startOffsets": "193,300",
+                        "endColumns": "106,94",
+                        "endOffsets": "299,394"
+                    },
+                    "to": {
+                        "startLines": "206,207",
+                        "startColumns": "4,4",
+                        "startOffsets": "18180,18291",
+                        "endColumns": "110,98",
+                        "endOffsets": "18286,18385"
+                    }
+                },
+                {
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/713cae606de794f4b404425dce42a680/transformed/play-services-base-18.0.1/res/values-my/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,296,456,586,693,836,964,1083,1189,1361,1463,1629,1768,1922,2105,2171,2240",
+                        "endColumns": "102,159,129,106,142,127,118,105,171,101,165,138,153,182,65,68,84",
+                        "endOffsets": "295,455,585,692,835,963,1082,1188,1360,1462,1628,1767,1921,2104,2170,2239,2324"
+                    },
+                    "to": {
+                        "startLines": "63,64,65,66,67,68,69,70,72,73,74,75,76,77,78,79,80",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5165,5272,5436,5570,5681,5828,5960,6083,6347,6523,6629,6799,6942,7100,7287,7357,7430",
+                        "endColumns": "106,163,133,110,146,131,122,109,175,105,169,142,157,186,69,72,88",
+                        "endOffsets": "5267,5431,5565,5676,5823,5955,6078,6188,6518,6624,6794,6937,7095,7282,7352,7425,7514"
+                    }
+                },
+                {
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/26b5cae54d1650a188633170cb221c37/transformed/exoplayer-ui-2.18.0/res/values-my/values-my.xml",
                     "from": {
                         "startLines": "2,11,15,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,92 +108,7 @@
                     }
                 },
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/c62ac39fa4c801a90497016ebe34177c/transformed/core-1.13.0/res/values-my/values-my.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,158,262,365,467,572,678,797",
-                        "endColumns": "102,103,102,101,104,105,118,100",
-                        "endOffsets": "153,257,360,462,567,673,792,893"
-                    },
-                    "to": {
-                        "startLines": "53,54,55,56,57,58,59,210",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "4103,4206,4310,4413,4515,4620,4726,18599",
-                        "endColumns": "102,103,102,101,104,105,118,100",
-                        "endOffsets": "4201,4305,4408,4510,4615,4721,4840,18695"
-                    }
-                },
-                {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/e81d8210441e4699b740ac6a09dada8a/transformed/jetified-play-services-basement-18.1.0/res/values-my/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "149",
-                        "endOffsets": "344"
-                    },
-                    "to": {
-                        "startLines": "71",
-                        "startColumns": "4",
-                        "startOffsets": "6193",
-                        "endColumns": "153",
-                        "endOffsets": "6342"
-                    }
-                },
-                {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/4ca9abfa46c6e81a80cfec74c7f4d062/transformed/browser-1.4.0/res/values-my/values-my.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,164,270,385",
-                        "endColumns": "108,105,114,106",
-                        "endOffsets": "159,265,380,487"
-                    },
-                    "to": {
-                        "startLines": "82,139,140,141",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7628,12148,12254,12369",
-                        "endColumns": "108,105,114,106",
-                        "endOffsets": "7732,12249,12364,12471"
-                    }
-                },
-                {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/8c0e4fea840ac83eda2630bdb36cc7a3/transformed/biometric-1.2.0-alpha05/res/values-my/values-my.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,224,354,463,559,727,856,965,1085,1206,1340,1477,1607,1760,1849,2005,2122,2272,2415,2552,2675,2786,2939,3049,3198,3293,3430",
-                        "endColumns": "168,129,108,95,167,128,108,119,120,133,136,129,152,88,155,116,149,142,136,122,110,152,109,148,94,136,107",
-                        "endOffsets": "219,349,458,554,722,851,960,1080,1201,1335,1472,1602,1755,1844,2000,2117,2267,2410,2547,2670,2781,2934,3044,3193,3288,3425,3533"
-                    },
-                    "to": {
-                        "startLines": "50,51,81,83,137,138,142,143,144,145,146,147,148,149,150,151,152,153,154,208,211,212,213,214,215,216,217",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3728,3897,7519,7737,11851,12019,12476,12585,12705,12826,12960,13097,13227,13380,13469,13625,13742,13892,14035,18390,18700,18811,18964,19074,19223,19318,19455",
-                        "endColumns": "168,129,108,95,167,128,108,119,120,133,136,129,152,88,155,116,149,142,136,122,110,152,109,148,94,136,107",
-                        "endOffsets": "3892,4022,7623,7828,12014,12143,12580,12700,12821,12955,13092,13222,13375,13464,13620,13737,13887,14030,14167,18508,18806,18959,19069,19218,19313,19450,19558"
-                    }
-                },
-                {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/b6d1fcfe43517ecb73f049be5ef6bfb0/transformed/jetified-play-services-base-18.0.1/res/values-my/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,296,456,586,693,836,964,1083,1189,1361,1463,1629,1768,1922,2105,2171,2240",
-                        "endColumns": "102,159,129,106,142,127,118,105,171,101,165,138,153,182,65,68,84",
-                        "endOffsets": "295,455,585,692,835,963,1082,1188,1360,1462,1628,1767,1921,2104,2170,2239,2324"
-                    },
-                    "to": {
-                        "startLines": "63,64,65,66,67,68,69,70,72,73,74,75,76,77,78,79,80",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "5165,5272,5436,5570,5681,5828,5960,6083,6347,6523,6629,6799,6942,7100,7287,7357,7430",
-                        "endColumns": "106,163,133,110,146,131,122,109,175,105,169,142,157,186,69,72,88",
-                        "endOffsets": "5267,5431,5565,5676,5823,5955,6078,6188,6518,6624,6794,6937,7095,7282,7352,7425,7514"
-                    }
-                },
-                {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/775789490054efa76dac5b0ad61778d0/transformed/appcompat-1.5.1/res/values-my/values-my.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/775789490054efa76dac5b0ad61778d0/transformed/appcompat-1.5.1/res/values-my/values-my.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -125,41 +125,41 @@
                     }
                 },
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/da64c002c75354d07a140267a96f32aa/transformed/jetified-exoplayer-core-2.18.0/res/values-my/values-my.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/c62ac39fa4c801a90497016ebe34177c/transformed/core-1.13.0/res/values-my/values-my.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,130,202,275,344,426,501,602,697",
-                        "endColumns": "74,71,72,68,81,74,100,94,77",
-                        "endOffsets": "125,197,270,339,421,496,597,692,770"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,158,262,365,467,572,678,797",
+                        "endColumns": "102,103,102,101,104,105,118,100",
+                        "endOffsets": "153,257,360,462,567,673,792,893"
                     },
                     "to": {
-                        "startLines": "109,110,111,112,113,114,115,116,117",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "9915,9990,10062,10135,10204,10286,10361,10462,10557",
-                        "endColumns": "74,71,72,68,81,74,100,94,77",
-                        "endOffsets": "9985,10057,10130,10199,10281,10356,10457,10552,10630"
+                        "startLines": "53,54,55,56,57,58,59,210",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "4103,4206,4310,4413,4515,4620,4726,18599",
+                        "endColumns": "102,103,102,101,104,105,118,100",
+                        "endOffsets": "4201,4305,4408,4510,4615,4721,4840,18695"
                     }
                 },
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/5303bb1ee7390d1d6c6b10245e77fa73/transformed/jetified-play-services-places-17.0.0/res/values-my/values.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/c883183904b3e635b5a1a958a9ab6861/transformed/play-services-basement-18.1.0/res/values-my/values.xml",
                     "from": {
-                        "startLines": "4,5",
-                        "startColumns": "0,0",
-                        "startOffsets": "193,300",
-                        "endColumns": "106,94",
-                        "endOffsets": "299,394"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "149",
+                        "endOffsets": "344"
                     },
                     "to": {
-                        "startLines": "206,207",
-                        "startColumns": "4,4",
-                        "startOffsets": "18180,18291",
-                        "endColumns": "110,98",
-                        "endOffsets": "18286,18385"
+                        "startLines": "71",
+                        "startColumns": "4",
+                        "startOffsets": "6193",
+                        "endColumns": "153",
+                        "endOffsets": "6342"
                     }
                 },
                 {
-                    "source": "/Volumes/Taleen/fitnee-androidfudex/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/res/values-my/values-my.xml",
+                    "source": "/Users/ahmedfarahat/.gradle/caches/8.9/transforms/7248a71f2c1a95cff78a5ae65db9d635/transformed/material-1.7.0/res/values-my/values-my.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
